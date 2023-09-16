@@ -20,7 +20,7 @@ MonoBehaviour:
     prefab: {fileID: 5886912203995928085, guid: daa9152a3a5d6ca4aae72b3096ea6881, type: 3}
     possibility: 0.8
     scaleMin: 0.8
-    scaleMax: 1.2
+    scaleMax: 1.5988398
     placementOffset: {x: 0, y: 0, z: 0}
     lockedRotations: {x: 1, y: 0, z: 1}
     useNormalsForRotation: 0
