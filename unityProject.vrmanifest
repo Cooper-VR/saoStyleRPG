@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.saostylerpg.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "E:\\cooperBower\\3dStuff\\unity\\unityProjects\\SAOstyleRPG\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "SAOstyleRPG [Testing]"
+        }
+      }
+    }
+  ]
+}
