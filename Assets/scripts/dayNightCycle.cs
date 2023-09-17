@@ -10,6 +10,10 @@ public class dayNightCycle : MonoBehaviour
     public Gradient lightingColor;
     public Gradient moonColor;
 
+    public Gradient skyTint;
+    public Gradient exposure;
+    public Gradient cloudColor;
+
     [Header("Stars")]
     public Transform stars;
     public ParticleSystem star;
@@ -18,6 +22,12 @@ public class dayNightCycle : MonoBehaviour
     public GameObject Sun;
     public GameObject Moon;
     public Material MoonMaterial;
+    public Material skyBox;
+
+    [Header("clouds")]
+    public Material cloudMaterial1;
+    public Material cloudMaterial2;
+    public Transform clouds;
 
 
     #region private Vaiables
@@ -35,7 +45,8 @@ public class dayNightCycle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        clouds.position = transform.position;
+
         time = System.DateTime.Now.TimeOfDay;
         date = System.DateTime.Now.Date;
 
@@ -63,6 +74,12 @@ public class dayNightCycle : MonoBehaviour
         MoonMaterial.color = moonColor.Evaluate((float)time.TotalHours / 24);
         RenderSettings.ambientSkyColor = lightingColor.Evaluate((float)time.TotalHours / 24);
         RenderSettings.ambientLight = lightingColor.Evaluate((float)time.TotalHours / 24);
+
+        cloudMaterial1.SetColor("_CloudColor", cloudColor.Evaluate((float)time.TotalHours / 24));
+        cloudMaterial2.SetColor("_CloudColor", cloudColor.Evaluate((float)time.TotalHours / 24));
+
+
+        skyBox.SetFloat("_Exposure", exposure.Evaluate((float)time.TotalHours / 24).a / 255 + 0.3f);
     }
     private void RotateObjects()
     {
