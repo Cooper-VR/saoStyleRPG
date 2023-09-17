@@ -16,11 +16,11 @@ MonoBehaviour:
   prefabs:
   - allowedLayers:
       serializedVersion: 2
-      m_Bits: 55
-    prefab: {fileID: 1547096251602704, guid: e9ecf313aef9bd14e97af020ad19ff5e, type: 3}
-    possibility: 0.8
-    scaleMin: 0.8
-    scaleMax: 1.2
+      m_Bits: 63
+    prefab: {fileID: 4851677157302497715, guid: afe97b65148823f4aae99ecaf5af966e, type: 3}
+    possibility: 1
+    scaleMin: 0.9036807
+    scaleMax: 0.9036807
     placementOffset: {x: 0, y: 0, z: 0}
     lockedRotations: {x: 1, y: 0, z: 1}
     useNormalsForRotation: 0
