@@ -59,9 +59,11 @@ public class dayNightCycle : MonoBehaviour
         {
             Sun.SetActive(true);
             Moon.SetActive(false);
+            RenderSettings.sun = Sun.GetComponent<Light>();
         }
         else
         {
+            RenderSettings.sun = Moon.GetComponent<Light>();
             Sun.SetActive(false);
             Moon.SetActive(true);
         }
@@ -75,11 +77,14 @@ public class dayNightCycle : MonoBehaviour
         RenderSettings.ambientSkyColor = lightingColor.Evaluate((float)time.TotalHours / 24);
         RenderSettings.ambientLight = lightingColor.Evaluate((float)time.TotalHours / 24);
 
+        
+
         cloudMaterial1.SetColor("_CloudColor", cloudColor.Evaluate((float)time.TotalHours / 24));
         cloudMaterial2.SetColor("_CloudColor", cloudColor.Evaluate((float)time.TotalHours / 24));
 
-
-        skyBox.SetFloat("_Exposure", exposure.Evaluate((float)time.TotalHours / 24).a / 255 + 0.3f);
+        Debug.Log(exposure.Evaluate((float)time.TotalHours / 24).a);
+        skyBox.SetFloat("_Exposure", exposure.Evaluate((float)time.TotalHours / 24).a -0.2f / 0.9f + 0.3f);
+        skyBox.SetFloat("_AtmosphereThickness", exposure.Evaluate((float)time.TotalHours / 24).a / 1f);
     }
     private void RotateObjects()
     {
