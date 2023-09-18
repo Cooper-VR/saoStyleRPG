@@ -146,7 +146,7 @@ Material:
     - _FoamRoughness: 0.6
     - _FoamStochasticToggle: 0
     - _FoamToggle: 1
-    - _FogPower: 100
+    - _FogPower: 33.5
     - _FogToggle: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
