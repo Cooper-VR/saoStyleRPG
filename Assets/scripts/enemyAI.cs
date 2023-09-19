@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.AI;
-using Valve.VR.InteractionSystem;
 using System.Collections;
 using static Thry.AnimationParser;
 using Unity.Mathematics;
 using System;
+using Valve.VR.InteractionSystem;
 
 public class enemyAI : MonoBehaviour
 {
