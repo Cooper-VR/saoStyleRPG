@@ -14,7 +14,7 @@ public class enemyAI : MonoBehaviour
     public Vector3 toPlayer;
     public LayerMask groundPlayerMask;
     private NavMeshAgent agent;
-    private Animator bokoAnimator;
+    public Animator bokoAnimator;
     public Vector3 startDestination;
     private bool attacking;
     private float movingX;
