@@ -19,12 +19,10 @@ public class enemySpawner : MonoBehaviour
 
         if (Timer > scriptableObjectParems.waitTime)
         {
-            spawnEnemy();
-
+            totalEnemies = transform.childCount;
             if (totalEnemies < scriptableObjectParems.maxEnemies)
             {
                 spawnEnemy();
-                totalEnemies++;
             }
 
             Timer = 0;
@@ -42,7 +40,7 @@ public class enemySpawner : MonoBehaviour
 
     private Vector3 spawnPosition()
     {
-        float randomRotation = UnityEngine.Random.Range(0f, 360f);
+        float randomRotation = UnityEngine.Random.Range(0f, 2 * MathF.PI);
 
         float randomRadius = UnityEngine.Random.Range(0f, scriptableObjectParems.MaxRadius);
 
@@ -51,9 +49,6 @@ public class enemySpawner : MonoBehaviour
 
         xValue *= randomRadius;
         yValue *= randomRadius;
-
-        Debug.Log(xValue);
-        Debug.Log(yValue);
 
         Vector3 randomPosition = transform.position;
 
@@ -70,7 +65,7 @@ public class enemySpawner : MonoBehaviour
         RaycastHit hit;
 
 
-        if (Physics.Raycast(airPosition, Vector3.down, out hit, groundMask))
+        if (Physics.Raycast(airPosition, Vector3.down, out hit, 2000f, groundMask))
         {
             return hit.point;
         }
