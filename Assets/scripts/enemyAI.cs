@@ -34,6 +34,11 @@ public class enemyAI : MonoBehaviour
 
     private void Start()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("player");
+        }
+        
         velocity = GetComponent<VelocityEstimator>();
         agent = GetComponent<NavMeshAgent>();
         bokoAnimator = transform.GetChild(0).GetChild(0).gameObject.GetComponent<Animator>();
@@ -44,6 +49,7 @@ public class enemyAI : MonoBehaviour
 
     void Update()
     {
+        agent.updateRotation = true;
         RaycastHit alwaysHit;
 
         bool alwaysHitBool = Physics.Raycast(emenyHead.position, player.transform.position - emenyHead.position, out alwaysHit, Mathf.Infinity, groundPlayerMask);
@@ -161,6 +167,7 @@ public class enemyAI : MonoBehaviour
             bokoAnimator.SetBool("hostile", false);
             agent.destination = startDestination;
             find.interupt = true;
+            
             find.hasFound = false;
         }
 

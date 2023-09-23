@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29b291ac5d9f4434f9d1572e03786cc6, type: 3}
+  m_Name: bokoSpawner
+  m_EditorClassIdentifier: 
+  enemiesToSpawn:
+  - {fileID: 3972688461110004633, guid: b34f480f56602ea47af5a19ab134ea31, type: 3}
+  maxEnemies: 3
+  waitTime: 0
+  MaxRadius: 2
