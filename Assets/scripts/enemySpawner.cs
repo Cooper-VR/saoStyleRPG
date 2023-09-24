@@ -84,7 +84,7 @@ public class enemySpawner : MonoBehaviour
         return scriptableObjectParems.enemiesToSpawn[length];
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, scriptableObjectParems.MaxRadius);
     }

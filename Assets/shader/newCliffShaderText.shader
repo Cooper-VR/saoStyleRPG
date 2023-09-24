@@ -22,6 +22,7 @@ Shader "Custom/newCliffShaderText"
 		_normalVector("world vector", Vector) = (0, 1, 0)
 
 
+
 	}
 		SubShader
 		{
