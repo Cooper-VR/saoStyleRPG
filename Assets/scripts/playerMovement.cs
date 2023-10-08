@@ -43,6 +43,9 @@ public class playerMovement : MonoBehaviour
         playerJump();
     }
 
+    /// <summary>
+    /// allows the player to move
+    /// </summary>
     private void movePlayer()
     {
         Vector3 move = transform.right * indexInput.leftThumbstick.x + transform.forward * indexInput.leftThumbstick.y;
@@ -55,6 +58,9 @@ public class playerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// makes the player jump
+    /// </summary>
     private void playerJump()
     {
         grounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayerMask);
