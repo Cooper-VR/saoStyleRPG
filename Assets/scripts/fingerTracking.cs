@@ -15,32 +15,61 @@ public class fingerTracking : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rotateFinger(0, playerRig.GetBoneTransform(HumanBodyBones.LeftIndexProximal));
-        rotateFinger(0, playerRig.GetBoneTransform(HumanBodyBones.LeftIndexIntermediate));
-        rotateFinger(0, playerRig.GetBoneTransform(HumanBodyBones.LeftIndexProximal));
+        rotateFinger(0, playerRig.GetBoneTransform(HumanBodyBones.LeftIndexProximal), "left");
+        rotateFinger(0, playerRig.GetBoneTransform(HumanBodyBones.LeftIndexIntermediate), "left");
+        rotateFinger(0, playerRig.GetBoneTransform(HumanBodyBones.LeftIndexProximal), "left");
 
-        rotateFinger(1, playerRig.GetBoneTransform(HumanBodyBones.LeftMiddleProximal));
-        rotateFinger(1, playerRig.GetBoneTransform(HumanBodyBones.LeftMiddleIntermediate));
-        rotateFinger(1, playerRig.GetBoneTransform(HumanBodyBones.LeftMiddleProximal));
+        rotateFinger(1, playerRig.GetBoneTransform(HumanBodyBones.LeftMiddleProximal), "left");
+        rotateFinger(1, playerRig.GetBoneTransform(HumanBodyBones.LeftMiddleIntermediate), "left");
+        rotateFinger(1, playerRig.GetBoneTransform(HumanBodyBones.LeftMiddleProximal), "left");
 
-        rotateFinger(2, playerRig.GetBoneTransform(HumanBodyBones.LeftRingProximal));
-        rotateFinger(2, playerRig.GetBoneTransform(HumanBodyBones.LeftRingIntermediate));
-        rotateFinger(2, playerRig.GetBoneTransform(HumanBodyBones.LeftRingProximal));
+        rotateFinger(2, playerRig.GetBoneTransform(HumanBodyBones.LeftRingProximal), "left");
+        rotateFinger(2, playerRig.GetBoneTransform(HumanBodyBones.LeftRingIntermediate), "left");
+        rotateFinger(2, playerRig.GetBoneTransform(HumanBodyBones.LeftRingProximal), "left");
 
-        rotateFinger(3, playerRig.GetBoneTransform(HumanBodyBones.LeftLittleProximal));
-        rotateFinger(3, playerRig.GetBoneTransform(HumanBodyBones.LeftLittleIntermediate));
-        rotateFinger(3, playerRig.GetBoneTransform(HumanBodyBones.LeftLittleProximal));
+        rotateFinger(3, playerRig.GetBoneTransform(HumanBodyBones.LeftLittleProximal), "left");
+        rotateFinger(3, playerRig.GetBoneTransform(HumanBodyBones.LeftLittleIntermediate), "left");
+        rotateFinger(3, playerRig.GetBoneTransform(HumanBodyBones.LeftLittleProximal), "left");
 
-        rotateThumb(4, playerRig.GetBoneTransform(HumanBodyBones.LeftThumbProximal));
-        rotateThumb(4, playerRig.GetBoneTransform(HumanBodyBones.LeftThumbIntermediate));
-        rotateThumb(4, playerRig.GetBoneTransform(HumanBodyBones.LeftThumbProximal));
+        rotateThumb(4, playerRig.GetBoneTransform(HumanBodyBones.LeftThumbProximal), "left");
+        rotateThumb(4, playerRig.GetBoneTransform(HumanBodyBones.LeftThumbIntermediate), "left");
+        rotateThumb(4, playerRig.GetBoneTransform(HumanBodyBones.LeftThumbProximal), "left");
+
+        rotateFinger(0, playerRig.GetBoneTransform(HumanBodyBones.RightIndexProximal), "right");
+        rotateFinger(0, playerRig.GetBoneTransform(HumanBodyBones.RightIndexIntermediate), "right");
+        rotateFinger(0, playerRig.GetBoneTransform(HumanBodyBones.RightIndexProximal), "right");
+
+        rotateFinger(1, playerRig.GetBoneTransform(HumanBodyBones.RightMiddleProximal), "right");
+        rotateFinger(1, playerRig.GetBoneTransform(HumanBodyBones.RightMiddleIntermediate), "right");
+        rotateFinger(1, playerRig.GetBoneTransform(HumanBodyBones.RightMiddleProximal), "right");
+
+        rotateFinger(2, playerRig.GetBoneTransform(HumanBodyBones.RightRingProximal), "right");
+        rotateFinger(2, playerRig.GetBoneTransform(HumanBodyBones.RightRingIntermediate), "right");
+        rotateFinger(2, playerRig.GetBoneTransform(HumanBodyBones.RightRingProximal), "right");
+
+        rotateFinger(3, playerRig.GetBoneTransform(HumanBodyBones.RightLittleProximal), "right");
+        rotateFinger(3, playerRig.GetBoneTransform(HumanBodyBones.RightLittleIntermediate), "right");
+        rotateFinger(3, playerRig.GetBoneTransform(HumanBodyBones.RightLittleProximal), "right");
+
+        rotateThumb(4, playerRig.GetBoneTransform(HumanBodyBones.RightThumbProximal), "right");
+        rotateThumb(4, playerRig.GetBoneTransform(HumanBodyBones.RightThumbIntermediate), "right");
+        rotateThumb(4, playerRig.GetBoneTransform(HumanBodyBones.RightThumbProximal), "right");
     }
 
-    private void rotateFinger(int index, Transform fingerJoint)
+    private void rotateFinger(int index, Transform fingerJoint, string type)
     {
         float angle = -80f;
+        float amount;
 
-        float amount = fingerInput.leftFinger[index];
+        if (type == "left")
+        {
+            amount = fingerInput.leftFinger[index];
+        }
+        else
+        {
+            amount = fingerInput.rightFinger[index];
+        }
+        
 
         Vector3 rotation = new Vector3(0, 0, 0);
 
@@ -49,11 +78,21 @@ public class fingerTracking : MonoBehaviour
         fingerJoint.localEulerAngles = rotation;
     }
 
-    private void rotateThumb(int index, Transform fingerJoint)
+    private void rotateThumb(int index, Transform fingerJoint, string type)
     {
         float angle = -40f;
+        float amount;
 
-        float amount = fingerInput.leftFinger[index];
+        if (type == "left")
+        {
+            amount = fingerInput.leftFinger[index];
+            angle = -40f;
+        }
+        else
+        {
+            amount = fingerInput.rightFinger[index];
+            angle = 40f;
+        }
 
         Vector3 rotation = new Vector3(0, 0, 0);
 
