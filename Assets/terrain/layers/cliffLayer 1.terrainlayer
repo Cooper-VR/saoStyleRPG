@@ -7,10 +7,10 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: cliffLayer 1
-  m_DiffuseTexture: {fileID: 2800000, guid: be8b1a6c2dfdc474ab2b74a8c0013950, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: 7aad481c85b468d4e99104b9b4f8e206, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: 674acc31a67418e4fa8b370ded524ad1, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 90be2572eeb9f8b42b0029dd982c8337, type: 3}
   m_MaskMapTexture: {fileID: 0}
-  m_TileSize: {x: 2, y: 2}
+  m_TileSize: {x: 4, y: 4}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0
