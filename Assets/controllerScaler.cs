@@ -10,6 +10,14 @@ public class controllerScaler : MonoBehaviour
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
+
+        float height = camera.position.y - transform.position.y;
+        characterController.height = height;
+        Vector3 center = camera.position - transform.position;
+
+        center.y = (height / 2);
+
+        characterController.center = center;
     }
 
     private void FixedUpdate()
@@ -20,9 +28,7 @@ public class controllerScaler : MonoBehaviour
 
         Vector3 center = camera.position - transform.position;
 
-        center.y = transform.position.y;
-
-        center.y += height / 2;
+        center.y = (height / 2);
 
         characterController.center = center;
     }
