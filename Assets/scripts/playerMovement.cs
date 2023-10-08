@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
@@ -6,49 +7,25 @@ public class playerMovement : MonoBehaviour
 {
 	public Vector3 velocity;
 	public Vector3 angularVelocity;
-
-    public Vector3 moveVector;
-
+    public Transform camera;
+    private IndexInput indexInput;
 	public float speed = 5f;
+    public float deadzone;
 
     private CharacterController characterController;
 
-    //steam right hand input
-    public SteamVR_Action_Vector2 RightThumbstickAction = null;
-    public SteamVR_Action_Vector2 RightTrackpadAction = null;
-    public SteamVR_Action_Single RightSqueezeAction = null;
-    public SteamVR_Action_Boolean RightGripAction = null;
-    public SteamVR_Action_Boolean RightPinchAction = null;
-    public SteamVR_Action_Skeleton RightSkeletonAction = null;
 
-    //steam left hand input
-    public SteamVR_Action_Vector2 LeftThumbstickAction = null;
-    public SteamVR_Action_Vector2 LeftTrackpadAction = null;
-    public SteamVR_Action_Single LeftSqueezeAction = null;
-    public SteamVR_Action_Boolean LeftGripAction = null;
-    public SteamVR_Action_Boolean LeftPinchAction = null;
-    public SteamVR_Action_Skeleton LeftSkeletonAction = null;
-
-    // right hand input as normal variables
-    private Vector2 rightThumbstick;
-    private Vector2 rightTrackpad;
-    private float rightSqueeze;
-    private bool rightGrip;
-    private bool RightPinch;
-    public float[] rightFinger = new float[5];
-
-    //left hand input as normal variables
-    private Vector2 leftThumbstick;
-    private Vector2 leftTrackpad;
-    private float leftSqueeze;
-    private bool leftGrip;
-    private bool leftPinch;
-    public float[] leftFinger = new float[5];
-
+    public Vector3 gravityVelocity;
+    public Transform groundCheck;
+    public float groundDistance = 0.1f;
+    public LayerMask groundLayerMask;
+    public bool grounded;
+    public float jumpHeight = 3f;
     private VelocityEstimator velocityEstimator;
 
 	private void Start()
 	{
+        indexInput = GetComponent<IndexInput>();
 		velocityEstimator = GetComponent<VelocityEstimator>();
         characterController = GetComponent<CharacterController>();
 
@@ -56,32 +33,45 @@ public class playerMovement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+        
+
 		velocity = GetVelocity();
 		angularVelocity = GetAngularVelocity();
-        RightThumbstick();
-        RightTrackpad();
-        RightSqueeze();
-        RightGrip();
-        rightPinch();
-        RightFingers();
-        LeftThumbstick();
-        LeftTrackpad();
-        LeftSqueeze();
-        LeftGrip();
-        LeftPinch();
-        LeftFingers();
+        
 
-        moveVector.x = leftTrackpad.x;
-        moveVector.y = leftTrackpad.y;
+        movePlayer();
+        playerJump();
     }
 
     private void movePlayer()
     {
-        if (leftTrackpad.magnitude != 0f)
+        Vector3 move = transform.right * indexInput.leftThumbstick.x + transform.forward * indexInput.leftThumbstick.y;
+        if (move.magnitude > deadzone)
         {
-            characterController.Move(moveVector);
+            move = camera.InverseTransformVector(move);
+
+            characterController.Move(move * speed * Time.deltaTime);
+
         }
-        
+    }
+
+    private void playerJump()
+    {
+        grounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayerMask);
+
+        if (grounded && gravityVelocity.y < 0)
+        {
+            gravityVelocity.y = -2f;
+        }
+
+        if (indexInput.jumpInput.state && grounded)
+        {
+            gravityVelocity.y = Mathf.Sqrt(jumpHeight * -2f * -19.81f);
+        }
+
+        gravityVelocity.y += -9.81f * Time.deltaTime;
+
+        characterController.Move(gravityVelocity * Time.deltaTime);
     }
 
     /// <summary>
@@ -102,143 +92,5 @@ public class playerMovement : MonoBehaviour
 		return velocityEstimator.GetAngularVelocityEstimate();
 	}
 
-    // right and left hand input detection
-    public void RightThumbstick()
-    {
-        if (RightThumbstickAction.axis == Vector2.zero)
-        {
-            return;
-        }
-        rightThumbstick = RightThumbstickAction.axis;
-    }
-    public void RightTrackpad()
-    {
-        if (RightTrackpadAction.axis == Vector2.zero)
-        {
-            return;
-        }
-        rightTrackpad = RightTrackpadAction.axis;
-    }
-    public void RightSqueeze()
-    {
-        if (RightSqueezeAction.axis == 0.0f)
-        {
-            return;
-        }
-        rightSqueeze = RightSqueezeAction.axis;
-    }
-    public void RightGrip()
-    {
-        if (RightGripAction.stateDown)
-        {
-            rightGrip = true;
-        }
-        if (RightGripAction.stateUp)
-        {
-            rightGrip = false;
-        }
-    }
-    public void rightPinch()
-    {
-        if (RightPinchAction.stateDown)
-        {
-            RightPinch = false;
-        }
-        if (RightPinchAction.stateUp)
-        {
-            RightPinch = false;
-        }
-    }
-    public void RightFingers()
-    {
-        if (RightSkeletonAction.indexCurl != 0.0f)
-        {
-            rightFinger[0] = RightSkeletonAction.indexCurl;
-        }
-        if (RightSkeletonAction.middleCurl != 0.0f)
-        {
-            rightFinger[1] = RightSkeletonAction.middleCurl;
-        }
-        if (RightSkeletonAction.ringCurl != 0.0f)
-        {
-            rightFinger[2] = RightSkeletonAction.ringCurl;
-        }
-        if (RightSkeletonAction.pinkyCurl != 0.0f)
-        {
-            rightFinger[3] = RightSkeletonAction.pinkyCurl;
-        }
-        if (RightSkeletonAction.thumbCurl != 0.0f)
-        {
-            rightFinger[4] = RightSkeletonAction.thumbCurl;
-        }
-    }
-    public void LeftThumbstick()
-    {
-        if (LeftThumbstickAction.axis == Vector2.zero)
-        {
-            return;
-        }
-        leftThumbstick = LeftThumbstickAction.axis;
-    }
-    public void LeftTrackpad()
-    {
-        if (LeftTrackpadAction.axis == Vector2.zero)
-        {
-            return;
-        }
-        leftTrackpad = LeftTrackpadAction.axis;
-    }
-    public void LeftSqueeze()
-    {
-        if (LeftSqueezeAction.axis == 0.0f)
-        {
-            return;
-        }
-        leftSqueeze = LeftSqueezeAction.axis;
-    }
-    public void LeftGrip()
-    {
-        if (LeftGripAction.stateDown)
-        {
-            leftGrip = true;
-        }
-        if (LeftGripAction.stateUp)
-        {
-            leftGrip = false;
-        }
-    }
-    public void LeftPinch()
-    {
-        if (LeftPinchAction.stateDown)
-        {
-            leftPinch = true;
-        }
-        if (LeftPinchAction.stateUp)
-        {
-            leftPinch = false;
-        }
-    }
-    public void LeftFingers()
-    {
-        if (LeftSkeletonAction.indexCurl != 0.0f)
-        {
-            leftFinger[0] = LeftSkeletonAction.indexCurl;
-        }
-        if (LeftSkeletonAction.middleCurl != 0.0f)
-        {
-            leftFinger[1] = LeftSkeletonAction.middleCurl;
-        }
-        if (LeftSkeletonAction.ringCurl != 0.0f)
-        {
-            leftFinger[2] = LeftSkeletonAction.ringCurl;
-        }
-        if (LeftSkeletonAction.pinkyCurl != 0.0f)
-        {
-            leftFinger[3] = LeftSkeletonAction.pinkyCurl;
-        }
-        if (LeftSkeletonAction.thumbCurl != 0.0f)
-        {
-            leftFinger[4] = LeftSkeletonAction.thumbCurl;
-        }
-    }
+    
 }

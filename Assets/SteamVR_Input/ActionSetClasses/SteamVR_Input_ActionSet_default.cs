@@ -89,22 +89,6 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Boolean SnapTurnLeft
-        {
-            get
-            {
-                return SteamVR_Actions.default_SnapTurnLeft;
-            }
-        }
-        
-        public virtual SteamVR_Action_Boolean SnapTurnRight
-        {
-            get
-            {
-                return SteamVR_Actions.default_SnapTurnRight;
-            }
-        }
-        
         public virtual SteamVR_Action_Vector2 Thumbstick
         {
             get
@@ -118,6 +102,14 @@ namespace Valve.VR
             get
             {
                 return SteamVR_Actions.default_Trackpad;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean Jump
+        {
+            get
+            {
+                return SteamVR_Actions.default_Jump;
             }
         }
         
