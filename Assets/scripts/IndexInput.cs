@@ -31,12 +31,17 @@ public class IndexInput : MonoBehaviour
     public float[] rightFinger = new float[5];
 
     //left hand input as normal variables
+    [HideInInspector]
     public Vector2 leftThumbstick;
+    [HideInInspector]
     public Vector2 leftTrackpad;
     private float leftSqueeze;
     private bool leftGrip;
     private bool leftPinch;
     public float[] leftFinger = new float[5];
+
+    public bool isGrippingLeft;
+    public bool isGrippingRight;
 
     private void Update()
     {
@@ -52,6 +57,7 @@ public class IndexInput : MonoBehaviour
         LeftGrip();
         LeftPinch();
         LeftFingers();
+        gripChecker();
     }
 
     // right and left hand input detection
@@ -193,4 +199,29 @@ public class IndexInput : MonoBehaviour
             leftFinger[4] = LeftSkeletonAction.thumbCurl;
         }
     }
+
+    private void gripChecker()
+    {
+        isGrippingLeft = false;
+        isGrippingRight = false;
+
+        for (int i = 2; i <= 4; i++)
+        {
+            if (leftFinger[i] == 1)
+            {
+                isGrippingLeft = true;
+                break; // If you find a 1, you can break out of the loop early.
+            }
+        }
+
+        for (int i = 2; i <= 4; i++)
+        {
+            if (rightFinger[i] == 1)
+            {
+                isGrippingRight = true;
+                break; // If you find a 1, you can break out of the loop early.
+            }
+        }
+    }
+
 }
