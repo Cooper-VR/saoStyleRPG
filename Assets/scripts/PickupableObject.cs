@@ -9,19 +9,33 @@ public class PickupableObject : MonoBehaviour
     public rigidBodyGravity rigidBodyBehavior;
 
     [Header("test stuff")]
-    public Transform leftController;
-
-    private void Update()
-    {
-        transform.position = leftController.position;
-
-        transform.rotation = Quaternion.Euler(alignmentObject.rotation.eulerAngles + rotationOffset);
-    }
+    public Transform controller;
 
     public enum rigidBodyGravity
     {
         useGravity,
         noGravity
+    }
+    public void positionItem()
+    {
+        transform.position = controller.position;
+        transform.rotation = Quaternion.Euler(alignmentObject.rotation.eulerAngles + rotationOffset);
+
+        gameObject.GetComponent<Rigidbody>().useGravity = true;
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
+    }
+
+    public void itemDropped()
+    {
+        if (rigidBodyBehavior == rigidBodyGravity.useGravity)
+        {
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
+            gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        }
+        else
+        {
+            gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        }
     }
 }
 
