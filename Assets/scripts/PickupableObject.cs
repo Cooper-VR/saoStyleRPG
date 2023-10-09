@@ -8,6 +8,8 @@ public class PickupableObject : MonoBehaviour
     public Vector3 rotationOffset;
     public rigidBodyGravity rigidBodyBehavior;
 
+    private bool dropped;
+
     [Header("test stuff")]
     public Transform controller;
 

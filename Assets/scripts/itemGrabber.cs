@@ -4,108 +4,120 @@ using UnityEngine;
 
 public class itemGrabber : MonoBehaviour
 {
-    GameObject[] pickables = null;
-    GameObject closestObject;
+	GameObject[] pickables = null;
+	GameObject closestObject;
 
-    public Transform leftHand;
-    public Transform rightHand;
+	public Transform leftHand;
+	public Transform rightHand;
 
-    public GameObject leftClosest;
-    public GameObject rightClosest;
+	public GameObject leftClosest;
+	public GameObject rightClosest;
 
-    public float threshold = 0.3f;
+	public float threshold = 0.3f;
 
-    private IndexInput input;
+	private IndexInput input;
 
-    private void Start()
-    {
-        input = GetComponent<IndexInput>();
-    }
+	private bool leftDropped;
+	private bool rightDropped;
 
-    private void Update()
-    {
-        if (input.isGrippingLeft)
-        {
-            pickables = GameObject.FindGameObjectsWithTag("Pickupable");
+	private void Start()
+	{
+		input = GetComponent<IndexInput>();
+	}
 
-            leftClosest = findClosest(leftHand);
+	private void Update()
+	{
+		if (input.isGrippingLeft)
+		{
+			leftDropped = false;
+			pickables = GameObject.FindGameObjectsWithTag("Pickupable");
 
-            if (Mathf.Abs((leftClosest.transform.position - leftHand.position).magnitude) < threshold)
-            {
-                PickupableObject pickup = leftClosest.GetComponent<PickupableObject>();
-                pickup.controller = leftHand;
-                pickup.alignmentObject = leftHand;
-                pickup.positionItem();
-            }
-        }
-        else
-        {
-            pickables = GameObject.FindGameObjectsWithTag("Pickupable");
+			leftClosest = findClosest(leftHand);
 
-            rightClosest = findClosest(rightHand);
+			if (Mathf.Abs((leftClosest.transform.position - leftHand.position).magnitude) < threshold)
+			{
+				PickupableObject pickup = leftClosest.GetComponent<PickupableObject>();
+				pickup.controller = leftHand;
+				pickup.alignmentObject = leftHand;
+				pickup.positionItem();
+			}
+		}
+		else
+		{
+			if (!leftDropped)
+			{
+				pickables = GameObject.FindGameObjectsWithTag("Pickupable");
 
-            PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
-            pickup.controller = null;
-            pickup.alignmentObject = null;
-            pickup.itemDropped();
-        }
+				rightClosest = findClosest(rightHand);
 
-        if (input.isGrippingRight)
-        {
-            pickables = GameObject.FindGameObjectsWithTag("Pickupable");
+				PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
+				pickup.controller = null;
+				pickup.alignmentObject = null;
+				pickup.itemDropped();
+				leftDropped = true;
+			}
+		}
 
-            rightClosest = findClosest(rightHand);
+		if (input.isGrippingRight)
+		{
+			rightDropped = false;
+			pickables = GameObject.FindGameObjectsWithTag("Pickupable");
 
-            if (Mathf.Abs((rightClosest.transform.position - rightHand.position).magnitude) < threshold)
-            {
-                PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
-                pickup.controller = rightHand;
-                pickup.alignmentObject = rightHand;
-                pickup.positionItem();
-            }
-        }
-        else
-        {
-            pickables = GameObject.FindGameObjectsWithTag("Pickupable");
+			rightClosest = findClosest(rightHand);
 
-            rightClosest = findClosest(rightHand);
+			if (Mathf.Abs((rightClosest.transform.position - rightHand.position).magnitude) < threshold)
+			{
+				PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
+				pickup.controller = rightHand;
+				pickup.alignmentObject = rightHand;
+				pickup.positionItem();
+			}
+		}
+		else
+		{
+			if (!rightDropped)
+			{
+				pickables = GameObject.FindGameObjectsWithTag("Pickupable");
 
-            PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
-            pickup.controller = null;
-            pickup.alignmentObject = null;
-            pickup.itemDropped();
-        }
-        
-    }
+				rightClosest = findClosest(rightHand);
 
-    private GameObject findClosest(Transform controller)
-    {
-        float closestDistance = float.MaxValue;
+				PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
+				pickup.controller = null;
+				pickup.alignmentObject = null;
+				pickup.itemDropped();
+				rightDropped = true;
+			}
+		}
+	}
 
-        foreach (GameObject obj in pickables)
-        {
-            
-            float distance = Vector3.Distance(obj.transform.position, controller.position);
+	private GameObject findClosest(Transform controller)
+	{
+		float closestDistance = float.MaxValue;
 
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                closestObject = obj;
-            }
-        }
+		foreach (GameObject obj in pickables)
+		{
+			
+			float distance = Vector3.Distance(obj.transform.position, controller.position);
 
-        if (closestObject != null)
-        {
-            // You've found the closest GameObject
-            Debug.Log("Closest Object: " + closestObject.name);
+			if (distance < closestDistance)
+			{
+				closestDistance = distance;
+				closestObject = obj;
+			}
+		}
 
-            return closestObject;
-        }
-        else
-        {
-            return null;
-            // No objects in the array
-            Debug.Log("No objects to check.");
-        }
-    }
+		if (closestObject != null)
+		{
+			// You've found the closest GameObject
+			Debug.Log("Closest Object: " + closestObject.name);
+
+			return closestObject;
+		}
+		else
+		{
+			return null;
+			// No objects in the array
+			Debug.Log("No objects to check.");
+		}
+	}
 }
