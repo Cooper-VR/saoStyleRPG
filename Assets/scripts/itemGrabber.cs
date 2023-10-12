@@ -49,8 +49,8 @@ public class itemGrabber : MonoBehaviour
 				pickables = GameObject.FindGameObjectsWithTag("Pickupable");
 
 				rightClosest = findClosest(rightHand);
-
-				PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
+                
+                PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
 				pickup.controller = null;
 				pickup.alignmentObject = null;
 				pickup.itemDropped();
