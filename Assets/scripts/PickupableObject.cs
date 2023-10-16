@@ -3,48 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
-public class PickupableObject : MonoBehaviour
+namespace SAOrpg.items
 {
-    public Transform alignmentObject;
-    public Vector3 rotationOffset;
-    public rigidBodyGravity rigidBodyBehavior;
-
-    private bool dropped;
-
-    [Header("test stuff")]
-    public Transform controller;
-
-    public enum rigidBodyGravity
+    public class PickupableObject : MonoBehaviour
     {
-        useGravity,
-        noGravity
-    }
-    public void positionItem()
-    {
-        transform.position = controller.position;
-        transform.rotation = Quaternion.Euler(alignmentObject.rotation.eulerAngles + rotationOffset);
+        public Transform alignmentObject;
+        public Vector3 rotationOffset;
+        public rigidBodyGravity rigidBodyBehavior;
 
-        gameObject.GetComponent<Rigidbody>().useGravity = true;
-        gameObject.GetComponent<Rigidbody>().isKinematic = true;
-    }
+        private bool dropped;
 
-    public void itemDropped()
-    {
-        Vector3 droppedVelocity = gameObject.GetComponent<VelocityEstimator>().GetVelocityEstimate();
-        gameObject.GetComponent<Rigidbody>().velocity = droppedVelocity;
+        [Header("test stuff")]
+        public Transform controller;
 
-        if (rigidBodyBehavior == rigidBodyGravity.useGravity)
+        public enum rigidBodyGravity
         {
-            gameObject.GetComponent<Rigidbody>().useGravity = true;
-            gameObject.GetComponent<Rigidbody>().isKinematic = false;
-
-            
+            useGravity,
+            noGravity
         }
-        else
+        public void positionItem()
         {
+            transform.position = controller.position;
+            transform.rotation = Quaternion.Euler(alignmentObject.rotation.eulerAngles + rotationOffset);
+
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
             gameObject.GetComponent<Rigidbody>().isKinematic = true;
         }
+
+        public void itemDropped()
+        {
+            Vector3 droppedVelocity = gameObject.GetComponent<VelocityEstimator>().GetVelocityEstimate();
+            gameObject.GetComponent<Rigidbody>().velocity = droppedVelocity;
+
+            if (rigidBodyBehavior == rigidBodyGravity.useGravity)
+            {
+                gameObject.GetComponent<Rigidbody>().useGravity = true;
+                gameObject.GetComponent<Rigidbody>().isKinematic = false;
+
+
+            }
+            else
+            {
+                gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            }
+        }
     }
+
 }
 
 

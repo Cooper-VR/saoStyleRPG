@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaypaceScaler : MonoBehaviour
+namespace SAOrpg.playerAPI
 {
-    public float playerHeight = 2.5f;
-    public float height = 1.73f;
-
-    private void Update()
+    public class PlaypaceScaler : MonoBehaviour
     {
-        float scaleFactor = height / playerHeight;
+        public float playerHeight = 2.5f;
+        public float height = 1.73f;
 
-        transform.localScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
+        private void Update()
+        {
+            float scaleFactor = height / playerHeight;
+
+            transform.localScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
+        }
     }
 }
+

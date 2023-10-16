@@ -2,24 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class climbingHands : MonoBehaviour
+
+namespace SAOrpg.climbing
 {
-    public bool entered;
-    public bool exited;
-    public bool currentlyTouching;
-
-    private void OnTriggerEnter(Collider other)
+    public class climbingHands : MonoBehaviour
     {
-        entered = true;
-    }
+        public bool entered;
+        public bool exited;
+        public bool currentlyTouching;
 
-    private void OnTriggerExit(Collider other)
-    {
-        exited = true;
-    }
+        private void OnTriggerEnter(Collider other)
+        {
+            entered = true;
+        }
 
-    private void OnTriggerStay(Collider other)
-    {
-        currentlyTouching = true;
+        private void OnTriggerExit(Collider other)
+        {
+            exited = true;
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+            currentlyTouching = true;
+        }
     }
 }
+
