@@ -2,34 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class controllerScaler : MonoBehaviour
+namespace SAOrpg.playerAPI
 {
-    CharacterController characterController;
-    public Transform camera;
-
-    private void Start()
+    public class controllerScaler : MonoBehaviour
     {
-        characterController = GetComponent<CharacterController>();
+        CharacterController characterController;
+        public Transform camera;
 
-        float height = camera.position.y - transform.position.y;
-        characterController.height = height;
-        Vector3 center = camera.position - transform.position;
+        private void Start()
+        {
+            characterController = GetComponent<CharacterController>();
 
-        center.y = (height / 2);
+            float height = camera.position.y - transform.position.y;
+            characterController.height = height;
+            Vector3 center = camera.position - transform.position;
 
-        characterController.center = center;
-    }
+            center.y = (height / 2);
 
-    private void FixedUpdate()
-    {
-        float height = camera.position.y - transform.position.y;
+            characterController.center = center;
+        }
 
-        characterController.height = height;
+        private void FixedUpdate()
+        {
+            float height = camera.position.y - transform.position.y;
 
-        Vector3 center = camera.position - transform.position;
+            characterController.height = height;
 
-        center.y = (height / 2);
+            Vector3 center = camera.position - transform.position;
 
-        characterController.center = center;
+            center.y = (height / 2);
+
+            characterController.center = center;
+        }
     }
 }
+
