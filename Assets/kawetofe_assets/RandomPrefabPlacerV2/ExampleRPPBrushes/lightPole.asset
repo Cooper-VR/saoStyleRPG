@@ -19,8 +19,8 @@ MonoBehaviour:
       m_Bits: 63
     prefab: {fileID: 4851677157302497715, guid: afe97b65148823f4aae99ecaf5af966e, type: 3}
     possibility: 1
-    scaleMin: 0.9036807
-    scaleMax: 0.9036807
+    scaleMin: 0.23094624
+    scaleMax: 0.23094624
     placementOffset: {x: 0, y: 0, z: 0}
     lockedRotations: {x: 1, y: 0, z: 1}
     useNormalsForRotation: 0
