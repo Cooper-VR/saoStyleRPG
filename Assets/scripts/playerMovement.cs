@@ -1,3 +1,4 @@
+using SAOrpg.playerAPI.RPGsstuff;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Valve.VR;
@@ -30,6 +31,7 @@ namespace SAOrpg.playerAPI
             indexInput = GetComponent<IndexInput>();
             velocityEstimator = GetComponent<VelocityEstimator>();
             characterController = GetComponent<CharacterController>();
+            speed = GetComponent<playerStats>().speed;
 
         }
 

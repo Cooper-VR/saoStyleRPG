@@ -10,6 +10,8 @@ namespace SAOrpg.playerAPI.RPGsstuff
         public float maxDamageSpeed;
         public float maxHealth;
         public float health;
+        public float speed;
+        public float dashInterval;
     }
 }
 
