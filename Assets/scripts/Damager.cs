@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using SAOrpg.playerAPI.RPGsstuff;
 using UnityEngine;
 
-public class Damager : MonoBehaviour
+namespace SAOrpg.playerAPI.RPGsstuff
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Damager : MonoBehaviour
     {
+        public DamageColliderHandler DamageColliderHandler;
+        // Start is called before the first frame update
+        void Start()
+        {
         
-    }
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
+        // Update is called once per frame
+        void Update()
+        {
         
+        }
     }
 }
+
