@@ -87,7 +87,7 @@ namespace SAOrpg.climbing
 
             Vector3 handVelocity = rb.velocity;
 
-            GetComponent<playerMovement>().velocity = handVelocity;
+            GetComponent<playerMovement>().velocity = handVelocity * -1;
         }
         private void dropPlayer()
         {
