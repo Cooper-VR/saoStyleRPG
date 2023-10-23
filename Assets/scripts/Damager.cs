@@ -6,16 +6,21 @@ namespace SAOrpg.playerAPI.RPGsstuff
     public class Damager : MonoBehaviour
     {
         public DamageColliderHandler DamageColliderHandler;
-        // Start is called before the first frame update
-        void Start()
+
+        private collisionChecker[] playerColliders = new collisionChecker[5];
+
+        private void Start()
         {
-        
+            playerColliders[0] = DamageColliderHandler.torsoCheck;
+            playerColliders[0] = DamageColliderHandler.leftLegCheck;
+            playerColliders[0] = DamageColliderHandler.rightLegCheck;
+            playerColliders[0] = DamageColliderHandler.leftArmCheck;
+            playerColliders[0] = DamageColliderHandler.rightArmCheck;
         }
 
-        // Update is called once per frame
-        void Update()
+        private void FixedUpdate()
         {
-        
+            
         }
     }
 }

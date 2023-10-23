@@ -10,8 +10,8 @@ namespace SAOrpg.climbing
         private GameObject leftHand;
         private GameObject rightHand;
 
-        private climbingHands leftHandParems;
-        private climbingHands rightHandParems;
+        private collisionChecker leftHandParems;
+        private collisionChecker rightHandParems;
 
         private bool leftGrabbed;
         private bool rightGrabbed;
@@ -25,8 +25,8 @@ namespace SAOrpg.climbing
             leftHand = transform.GetChild(0).gameObject;
             rightHand = transform.GetChild(1).gameObject;
 
-            leftHandParems = leftHand.GetComponent<climbingHands>();
-            rightHandParems = rightHand.GetComponent<climbingHands>();
+            leftHandParems = leftHand.GetComponent<collisionChecker>();
+            rightHandParems = rightHand.GetComponent<collisionChecker>();
         }
 
         // Update is called once per frame

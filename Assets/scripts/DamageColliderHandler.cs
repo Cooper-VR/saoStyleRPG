@@ -12,6 +12,26 @@ namespace SAOrpg.playerAPI
         public CapsuleCollider leftArm;
         public CapsuleCollider rightArm;
 
+        [HideInInspector]
+        public collisionChecker torsoCheck;
+        [HideInInspector]
+        public collisionChecker leftLegCheck;
+        [HideInInspector]
+        public collisionChecker rightLegCheck;
+        [HideInInspector]
+        public collisionChecker leftArmCheck;
+        [HideInInspector]
+        public collisionChecker rightArmCheck;
+
+        private void Start()
+        {
+            torsoCheck = torso.GetComponent<collisionChecker>();
+            leftLegCheck = leftLeg.GetComponent<collisionChecker>();
+            rightLegCheck = rightLeg.GetComponent<collisionChecker>();
+            leftArmCheck = leftArm.GetComponent<collisionChecker>();
+            rightArmCheck = rightArm.GetComponent<collisionChecker>();
+        }
+
         void FixedUpdate()
         {
             torso.transform.position = midpoint(animator.GetBoneTransform(HumanBodyBones.Hips), animator.GetBoneTransform(HumanBodyBones.Head));

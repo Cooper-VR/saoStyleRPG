@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace SAOrpg.climbing
+namespace SAOrpg.playerAPI
 {
-    public class climbingHands : MonoBehaviour
+    public class collisionChecker : MonoBehaviour
     {
         public bool entered;
         public bool exited;

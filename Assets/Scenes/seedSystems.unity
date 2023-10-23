@@ -497,6 +497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 177088375}
   - component: {fileID: 177088376}
+  - component: {fileID: 177088377}
   m_Layer: 0
   m_Name: rightLeg
   m_TagString: Untagged
@@ -533,6 +534,21 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &177088377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177088374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entered: 0
+  exited: 0
+  currentlyTouching: 0
 --- !u!1 &205390787
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224673932}
   - component: {fileID: 224673933}
+  - component: {fileID: 224673934}
   m_Layer: 0
   m_Name: rightArm
   m_TagString: Untagged
@@ -744,6 +761,21 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &224673934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224673931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entered: 0
+  exited: 0
+  currentlyTouching: 0
 --- !u!1001 &457866649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -877,6 +909,11 @@ MonoBehaviour:
   rightLeg: {fileID: 177088376}
   leftArm: {fileID: 1558287177}
   rightArm: {fileID: 224673933}
+  torsoCheck: {fileID: 0}
+  leftLegCheck: {fileID: 0}
+  rightLegCheck: {fileID: 0}
+  leftArmCheck: {fileID: 0}
+  rightArmCheck: {fileID: 0}
 --- !u!1 &571822587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,6 +1047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 665823803}
   - component: {fileID: 665823804}
+  - component: {fileID: 665823805}
   m_Layer: 0
   m_Name: torso
   m_TagString: Untagged
@@ -1046,6 +1084,21 @@ CapsuleCollider:
   m_Height: 0
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &665823805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665823802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entered: 0
+  exited: 0
+  currentlyTouching: 0
 --- !u!21 &713002993
 Material:
   serializedVersion: 8
@@ -1981,7 +2034,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998947970}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f95ae048cf7dff41915199997224e44, type: 3}
   m_Name: 
@@ -2361,6 +2414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1558287176}
   - component: {fileID: 1558287177}
+  - component: {fileID: 1558287178}
   m_Layer: 0
   m_Name: leftArm
   m_TagString: Untagged
@@ -2397,6 +2451,21 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1558287178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558287175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entered: 0
+  exited: 0
+  currentlyTouching: 0
 --- !u!43 &1698332364
 Mesh:
   m_ObjectHideFlags: 0
@@ -2736,6 +2805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2052596505}
   - component: {fileID: 2052596506}
+  - component: {fileID: 2052596507}
   m_Layer: 0
   m_Name: leftLeg
   m_TagString: Untagged
@@ -2772,6 +2842,21 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2052596507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052596504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entered: 0
+  exited: 0
+  currentlyTouching: 0
 --- !u!1 &2072771780
 GameObject:
   m_ObjectHideFlags: 0
