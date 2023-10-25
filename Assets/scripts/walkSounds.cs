@@ -31,12 +31,10 @@ namespace SAOrpg.playerAPI.RPGsstuff.audio
         public AudioSource audioSource;
         public AudioSource landSound;
 
-        [ExecuteInEditMode]
         private void Start()
         {
-            movement = gameObject.GetComponent<playerMovement>();
-            dashScript = gameObject.GetComponent<dashing>();
-            audioSource = gameObject.GetComponent<AudioSource>();
+            movement = GetComponent<playerMovement>();
+            dashScript = GetComponent<dashing>();
             soundMasks = new LayerMask[soundArrays.Length];
         }
 
@@ -52,7 +50,6 @@ namespace SAOrpg.playerAPI.RPGsstuff.audio
                 dashWait = dashWait - 1 * Time.deltaTime;
 
             }
-            audioSource = GetComponent<AudioSource>();
             betweenAudio = betweenAudio + 1 * Time.deltaTime;
             if (betweenAudio > 20)
             {

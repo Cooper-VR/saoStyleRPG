@@ -3,12 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
+using SAOrpg.playerAPI.RPGsstuff.playerColliders;
 using SAOrpg.playerAPI.RPGsstuff;
 
 namespace SAOrpg.items
 {
     public class itemDamager : MonoBehaviour
     {
+        /// <summary>
+        /// enum for the sharp vector direction
+        /// </summary>
         public enum SharpDirection
         {
             forward,
@@ -20,11 +24,13 @@ namespace SAOrpg.items
             none
         }
 
+        #region variables
         public SharpDirection sharpDirection;
 
         public int strengthRequirement;
         public int duribility;
         public int maxDamage;
+        #endregion
 
         private void OnTriggerEnter(Collider hitObject)
         {
@@ -48,6 +54,7 @@ namespace SAOrpg.items
 
             Vector3 sharp = new Vector3();
 
+            //case statment for enum
             switch (sharpDirection)
             {
                 case SharpDirection.forward:
@@ -73,9 +80,11 @@ namespace SAOrpg.items
                     break;
             }
 
+            //angle between two vectors
             float angle = Mathf.Abs(Mathf.Acos(Vector3.Dot(velocity, sharp) / (velocity.magnitude * sharp.magnitude)));
             float percentage = Mathf.Cos(angle);
 
+            //get percent amount
             damage = Mathf.Round(maxDamage * percentage);
 
             Damager hitDamager;
