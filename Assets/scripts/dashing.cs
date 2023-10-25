@@ -1,4 +1,5 @@
 using SAOrpg.playerAPI.RPGsstuff;
+using SAOrpg.playerAPI.RPGsstuff.audio;
 using UnityEngine;
 
 namespace SAOrpg.playerAPI
@@ -10,11 +11,15 @@ namespace SAOrpg.playerAPI
         public Vector3 dashDirection;
         public float dashSpeed;
 
+
         private float currentIntervalTime;
         private float currentWaitTime;
-        private bool isDashing = false;
+        public bool isDashing = false;
         private bool dashReady;
         private float dashTime;
+        public AudioSource dashAudio;
+
+        
 
         private void Start()
         {
@@ -38,6 +43,7 @@ namespace SAOrpg.playerAPI
             if (dashReady && false)
             {
                 //do the dash
+                dashAudio.Play();
                 dashReady = false;
                 isDashing = true;
             }

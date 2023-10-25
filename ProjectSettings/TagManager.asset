@@ -5,15 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pickupable
+  - projectile
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - Grass
   - Water
   - UI
-  - 
-  - 
+  - Wood
+  - Stone
   - 
   - 
   - 
