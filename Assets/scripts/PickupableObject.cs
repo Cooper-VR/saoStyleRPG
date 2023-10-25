@@ -7,6 +7,7 @@ namespace SAOrpg.items
 {
     public class PickupableObject : MonoBehaviour
     {
+        #region variables
         public Transform alignmentObject;
         public Vector3 rotationOffset;
         public rigidBodyGravity rigidBodyBehavior;
@@ -15,12 +16,22 @@ namespace SAOrpg.items
 
         [Header("test stuff")]
         public Transform controller;
+        #endregion
 
+        #region helper function
+
+        /// <summary>
+        /// is the object should use gravity or not
+        /// </summary>
         public enum rigidBodyGravity
         {
             useGravity,
             noGravity
         }
+
+        /// <summary>
+        /// will align the object to the alignment object
+        /// </summary>
         public void positionItem()
         {
             transform.position = controller.position;
@@ -30,6 +41,9 @@ namespace SAOrpg.items
             gameObject.GetComponent<Rigidbody>().isKinematic = true;
         }
 
+        /// <summary>
+        /// when the item is dropped
+        /// </summary>
         public void itemDropped()
         {
             Vector3 droppedVelocity = gameObject.GetComponent<VelocityEstimator>().GetVelocityEstimate();
@@ -39,14 +53,14 @@ namespace SAOrpg.items
             {
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
                 gameObject.GetComponent<Rigidbody>().isKinematic = false;
-
-
             }
             else
             {
                 gameObject.GetComponent<Rigidbody>().isKinematic = true;
             }
         }
+
+        #endregion
     }
 
 }

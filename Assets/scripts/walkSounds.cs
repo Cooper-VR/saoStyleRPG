@@ -7,6 +7,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.audio
 {
     public class walkSounds : MonoBehaviour
     {
+        #region vaariables
         public soundArray[] soundArrays;
 
         public bool airTime;
@@ -30,6 +31,8 @@ namespace SAOrpg.playerAPI.RPGsstuff.audio
 
         public AudioSource audioSource;
         public AudioSource landSound;
+
+        #endregion
 
         private void Start()
         {
@@ -102,6 +105,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.audio
             
         }
 
+        //get the layer below the player
         private int getCurrentLayer()
         {
             Vector3 position = transform.position;

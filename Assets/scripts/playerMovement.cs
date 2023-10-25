@@ -8,6 +8,8 @@ namespace SAOrpg.playerAPI
 {
     public class playerMovement : MonoBehaviour
     {
+        #region variables
+
         public Vector3 velocity;
         public Vector3 angularVelocity;
         public Transform camera;
@@ -26,6 +28,8 @@ namespace SAOrpg.playerAPI
         public float jumpHeight = 3f;
         private VelocityEstimator velocityEstimator;
 
+        #endregion
+
         private void Start()
         {
             indexInput = GetComponent<IndexInput>();
@@ -37,11 +41,8 @@ namespace SAOrpg.playerAPI
 
         private void FixedUpdate()
         {
-
-
             velocity = GetVelocity();
             angularVelocity = GetAngularVelocity();
-
 
             movePlayer();
             playerJump();
@@ -101,8 +102,6 @@ namespace SAOrpg.playerAPI
         {
             return velocityEstimator.GetAngularVelocityEstimate();
         }
-
-
     }
 }
 
