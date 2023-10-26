@@ -8,6 +8,8 @@ namespace SAOrpg.playerAPI
     public class collisionChecker : MonoBehaviour
     {
         #region collision states
+        public string collidedObject;
+
         public bool entered;
         public bool exited;
         public bool currentlyTouching;
@@ -17,16 +19,19 @@ namespace SAOrpg.playerAPI
         private void OnTriggerEnter(Collider other)
         {
             entered = true;
+            collidedObject = other.name;
         }
 
         private void OnTriggerExit(Collider other)
         {
             exited = true;
+            collidedObject = string.Empty;
         }
 
         private void OnTriggerStay(Collider other)
         {
             currentlyTouching = true;
+            collidedObject = other.name;
         }
     }
 }
