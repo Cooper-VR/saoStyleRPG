@@ -9,14 +9,18 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
     {
         #region variables
 
-        private collisionChecker collisionChecker;
+        
 
         public Sprite alternateSprite;
+        public int menuIndex;
+
+        private collisionChecker collisionChecker;
+        private Animator menuController;
         private Sprite startingSprite;
-
         private Image imageCom;
-
         private Sprite currentSprite;
+
+
 
         #endregion
 
@@ -24,6 +28,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void Start()
         {
+            menuController = transform.parent.parent.GetComponent<Animator>();
             startingSprite = imageCom.sprite;
             collisionChecker = GetComponent<collisionChecker>();
             currentSprite = startingSprite;
@@ -31,7 +36,8 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void Update()
         {
-            if (collisionChecker.currentlyTouching)
+            imageCom.sprite = currentSprite;
+            if (collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
             {
                 currentSprite = alternateSprite;
             }
@@ -50,7 +56,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void buttonAction()
         {
-
+            menuController.SetInteger("firstLayer", menuIndex);
         }
     }
 }
