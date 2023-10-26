@@ -42,6 +42,7 @@ namespace SAOrpg.playerAPI
         private bool leftPinch;
         public float[] leftFinger = new float[5];
 
+        //gripping variables
         public bool isGrippingLeft;
         public bool isGrippingRight;
 

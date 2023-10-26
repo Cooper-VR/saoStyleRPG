@@ -7,6 +7,7 @@ namespace SAOrpg.items
 {
     public class itemGrabber : MonoBehaviour
     {
+        #region variables
         GameObject[] pickables = null;
         GameObject closestObject;
 
@@ -22,23 +23,32 @@ namespace SAOrpg.items
 
         private bool leftDropped;
         private bool rightDropped;
+        #endregion
+
+        #region start/update
 
         private void Start()
         {
+            //get index input
             input = GetComponent<IndexInput>();
         }
 
         private void Update()
         {
+            //check if they are gripping on left and right
             if (input.isGrippingLeft)
             {
+
                 leftDropped = false;
                 pickables = GameObject.FindGameObjectsWithTag("Pickupable");
 
+                //get closest pickup
                 leftClosest = findClosest(leftHand);
 
+                //check if its close enough
                 if (Mathf.Abs((leftClosest.transform.position - leftHand.position).magnitude) < threshold)
                 {
+                    //assign the values for the pickup script
                     PickupableObject pickup = leftClosest.GetComponent<PickupableObject>();
                     pickup.controller = leftHand;
                     pickup.alignmentObject = leftHand;
@@ -47,6 +57,7 @@ namespace SAOrpg.items
             }
             else
             {
+                //alternate for when its dropped
                 if (!leftDropped)
                 {
                     pickables = GameObject.FindGameObjectsWithTag("Pickupable");
@@ -63,6 +74,7 @@ namespace SAOrpg.items
 
             if (input.isGrippingRight)
             {
+                //same for other hand
                 rightDropped = false;
                 pickables = GameObject.FindGameObjectsWithTag("Pickupable");
 
@@ -78,6 +90,7 @@ namespace SAOrpg.items
             }
             else
             {
+                //alternate for when its dropped
                 if (!rightDropped)
                 {
                     pickables = GameObject.FindGameObjectsWithTag("Pickupable");
@@ -92,7 +105,15 @@ namespace SAOrpg.items
                 }
             }
         }
+        #endregion
 
+        #region helper functions
+
+        /// <summary>
+        /// finds the closest object to the argument
+        /// </summary>
+        /// <param name="controller">the controller that is grabbing</param>
+        /// <returns>the closes gameobject</returns>
         private GameObject findClosest(Transform controller)
         {
             float closestDistance = float.MaxValue;
@@ -123,6 +144,7 @@ namespace SAOrpg.items
                 Debug.Log("No objects to check.");
             }
         }
+        #endregion
     }
 }
 

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f7af6fe9553ca4e92cb208832ab3bf, type: 3}
+  m_Name: rocks
+  m_EditorClassIdentifier: 
+  audio:
+  - {fileID: 8300000, guid: 91d3857eb7d2fc9488d06269872efb14, type: 3}
+  - {fileID: 8300000, guid: 1795d1db9db608440bc9fb51cdd86e3f, type: 3}
+  - {fileID: 8300000, guid: 1e583f75ee0ed664cb9a2cc5af1fa75c, type: 3}
