@@ -50,13 +50,13 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
                 currentColor = alternateColor;
                 innerCurrentSprite = innerAlternateSprite;
             }
-            else
+            else if (!collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
             {
                 currentColor = startingColor;
                 innerCurrentSprite = innerStartingSprite;
             }
 
-            if (collisionChecker.entered && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
+            if (collisionChecker.exited && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
             {
                 buttonAction();
             }
@@ -66,7 +66,13 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void buttonAction()
         {
-            //menuController.SetInteger("firstLayer", menuIndex);
+            innerButtonHandler[] gameObjects = transform.parent.GetComponentsInChildren<innerButtonHandler>();
+            for (int i = 0; i < gameObjects.Length; i++)
+            {
+                gameObjects[i].transform.GetChild(0).gameObject.SetActive(false);
+            }
+
+            transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 }
