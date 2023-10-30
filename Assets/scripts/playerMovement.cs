@@ -53,7 +53,7 @@ namespace SAOrpg.playerAPI
         /// </summary>
         private void movePlayer()
         {
-            Vector3 move = transform.right * indexInput.leftThumbstick.x + transform.forward * indexInput.leftThumbstick.y;
+            Vector3 move = transform.right * indexInput.rightThumbstick.x + transform.forward * indexInput.rightThumbstick.y;
             if (move.magnitude > deadzone)
             {
                 move = camera.InverseTransformVector(move);
