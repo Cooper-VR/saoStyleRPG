@@ -39,7 +39,7 @@ namespace SAOrpg.playerAPI
 
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             velocity = GetVelocity();
             angularVelocity = GetAngularVelocity();
@@ -57,9 +57,13 @@ namespace SAOrpg.playerAPI
             if (move.magnitude > deadzone)
             {
                 move = camera.InverseTransformVector(move);
-
+                Debug.Log(move * speed * Time.deltaTime);
                 characterController.Move(move * speed * Time.deltaTime);
 
+            }
+            else
+            {
+                move = Vector3.zero;
             }
         }
 
