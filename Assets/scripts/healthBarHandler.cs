@@ -33,6 +33,16 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
 			healthValue.color = healthGradient.Evaluate(playerStats.health / playerStats.maxHealth);
 			scalarObject.transform.localScale = new Vector3 (playerStats.health / playerStats.maxHealth, playerStats.health / playerStats.maxHealth, 1);
-		}
+
+			followPlayer();
+
+        }
+
+		private void followPlayer()
+		{
+			playerMovement movement = playerObject.GetComponent<playerMovement>();
+			transform.position = movement.camera.transform.position;
+			transform.rotation = movement.camera.rotation;
+        }
 	}
 }

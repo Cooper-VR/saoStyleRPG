@@ -15,16 +15,18 @@ namespace SAOrpg.playerAPI.RPGsstuff.playerColliders
 
         private void Start()
         {
+            
+        }
+
+        private void FixedUpdate()
+        {
             //gets the collision check scripts
             playerColliders[0] = DamageColliderHandler.torsoCheck;
             playerColliders[1] = DamageColliderHandler.leftLegCheck;
             playerColliders[2] = DamageColliderHandler.rightLegCheck;
             playerColliders[3] = DamageColliderHandler.leftArmCheck;
             playerColliders[4] = DamageColliderHandler.rightArmCheck;
-        }
 
-        private void FixedUpdate()
-        {
             //check if one of them is hit
             for (int i = 0; i < playerColliders.Length; i++)
             {

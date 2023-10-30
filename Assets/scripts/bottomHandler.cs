@@ -28,6 +28,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void Start()
         {
+            imageCom = GetComponent<Image>();
             menuController = transform.parent.parent.GetComponent<Animator>();
             startingSprite = imageCom.sprite;
             collisionChecker = GetComponent<collisionChecker>();

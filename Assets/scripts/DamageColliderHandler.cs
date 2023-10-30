@@ -26,7 +26,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.playerColliders
         #endregion
 
         #region
-        private void Start()
+        private void Awake()
         {
             //get the collider checkers
             torsoCheck = torso.GetComponent<collisionChecker>();
