@@ -6,6 +6,7 @@ namespace SAOrpg.playerAPI.RPGsstuff
 {
     public class playerStats : MonoBehaviour
     {
+        public int level;
         public int strength;
         public float maxDamageSpeed;
         public float maxHealth;
