@@ -27,6 +27,7 @@ namespace SAOrpg.playerAPI
         public bool grounded;
         public float jumpHeight = 3f;
         private VelocityEstimator velocityEstimator;
+        
 
         #endregion
 
@@ -57,9 +58,9 @@ namespace SAOrpg.playerAPI
             if (move.magnitude > deadzone)
             {
                 move = camera.InverseTransformVector(move);
-                Debug.Log(move * speed * Time.deltaTime);
+                Debug.Log(move);
+                
                 characterController.Move(move * speed * Time.deltaTime);
-
             }
             else
             {
