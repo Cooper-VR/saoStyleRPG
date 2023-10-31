@@ -16,7 +16,8 @@ namespace SAOrpg.playerAPI
         private float currentIntervalTime;
         private float currentWaitTime;
         private bool dashReady;
-        private float dashTime;
+        public float dashTime;
+
         private playerMovement movementScript;
         private playerStats stats;
         #endregion
@@ -31,21 +32,18 @@ namespace SAOrpg.playerAPI
 
         private void FixedUpdate()
         {
-            //check if the player is moving
-            if (movementScript.velocity == Vector3.zero)
+            dashDirection = movementScript.velocity.normalized;
+            dashDirection.y = 0;
+            dashDirection = dashDirection.normalized;
+
+            if (dashDirection.magnitude == 0f)
             {
                 dashDirection = movementScript.camera.forward;
             }
-            else
-            {
-                dashDirection = movementScript.velocity;
-            }
-
-            //
-            dashDirection *= dashSpeed * Time.fixedDeltaTime;
+            
 
             //proform dashing
-            if (dashReady && false)
+            if (dashReady && Input.GetButton("Fire1"))
             {
                 //do the dash
                 dashAudio.Play();
@@ -57,7 +55,10 @@ namespace SAOrpg.playerAPI
             if (isDashing)
             {
                 currentIntervalTime += Time.deltaTime;
-                movementScript.velocity = dashDirection * dashSpeed;
+                dashDirection *= dashSpeed;
+                movementScript.velocityAddon = dashDirection;
+                
+                
             }
             //check if their time is up
             if (currentIntervalTime >= dashTime)
@@ -70,6 +71,7 @@ namespace SAOrpg.playerAPI
             if (!isDashing)
             {
                 currentWaitTime += Time.deltaTime;
+                movementScript.velocityAddon = Vector3.zero;
             }
             if (currentWaitTime >= stats.dashInterval)
             {

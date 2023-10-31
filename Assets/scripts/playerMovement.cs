@@ -11,14 +11,15 @@ namespace SAOrpg.playerAPI
         #region variables
 
         public Vector3 velocity;
-        public Vector3 angularVelocity;
         public Transform camera;
         private IndexInput indexInput;
         public float speed = 5f;
         public float deadzone;
 
-        private CharacterController characterController;
+        [HideInInspector]
+        public CharacterController characterController;
 
+        public Vector3 velocityAddon = Vector3.zero;
 
         public Vector3 gravityVelocity;
         public Transform groundCheck;
@@ -42,11 +43,13 @@ namespace SAOrpg.playerAPI
 
         private void Update()
         {
-            velocity = GetVelocity();
-            angularVelocity = GetAngularVelocity();
-
+            velocity = Vector3.zero;
             movePlayer();
             playerJump();
+
+            velocity += velocityAddon;
+
+            characterController.Move(velocity * Time.deltaTime);
         }
 
         /// <summary>
@@ -54,7 +57,8 @@ namespace SAOrpg.playerAPI
         /// </summary>
         private void movePlayer()
         {
-            Vector3 move = new Vector3 (indexInput.leftThumbstick.x, 0, indexInput.rightThumbstick.y);
+            //Vector3 move = new Vector3 (indexInput.leftThumbstick.x, 0, indexInput.rightThumbstick.y);
+            Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             if (move.magnitude > deadzone)
             {
                 move = camera.InverseTransformVector(move);
@@ -66,6 +70,7 @@ namespace SAOrpg.playerAPI
             {
                 move = Vector3.zero;
             }
+            velocity += move;
         }
 
         /// <summary>
@@ -87,7 +92,7 @@ namespace SAOrpg.playerAPI
 
             gravityVelocity.y += -9.81f * Time.deltaTime;
 
-            characterController.Move(gravityVelocity * Time.deltaTime);
+            velocity += gravityVelocity;
         }
 
         /// <summary>
