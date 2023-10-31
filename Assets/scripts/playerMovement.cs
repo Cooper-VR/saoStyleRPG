@@ -54,7 +54,7 @@ namespace SAOrpg.playerAPI
         /// </summary>
         private void movePlayer()
         {
-            Vector3 move = transform.right * indexInput.rightThumbstick.x + transform.forward * indexInput.rightThumbstick.y;
+            Vector3 move = new Vector3 (indexInput.leftThumbstick.x, 0, indexInput.rightThumbstick.y);
             if (move.magnitude > deadzone)
             {
                 move = camera.InverseTransformVector(move);
@@ -80,7 +80,7 @@ namespace SAOrpg.playerAPI
                 gravityVelocity.y = -2f;
             }
 
-            if (indexInput.jumpInput.state && grounded)
+            if ((indexInput.jumpInput.state && grounded) || (Input.GetButton("Jump") && grounded))
             {
                 gravityVelocity.y = Mathf.Sqrt(jumpHeight * -2f * -19.81f);
             }
