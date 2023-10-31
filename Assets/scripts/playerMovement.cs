@@ -62,7 +62,6 @@ namespace SAOrpg.playerAPI
             if (move.magnitude > deadzone)
             {
                 move = camera.InverseTransformVector(move);
-                Debug.Log(move);
                 
                 characterController.Move(move * speed * Time.deltaTime);
             }

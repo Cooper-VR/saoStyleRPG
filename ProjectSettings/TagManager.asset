@@ -7,6 +7,9 @@ TagManager:
   - Pickupable
   - projectile
   - FxTemporaire
+  - Grass
+  - Stone
+  - Wood
   layers:
   - Default
   - TransparentFX

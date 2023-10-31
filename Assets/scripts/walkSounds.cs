@@ -5,77 +5,95 @@ using UnityEngine.Networking.Types;
 
 namespace SAOrpg.playerAPI.RPGsstuff.audio
 {
-    public class walkSounds : MonoBehaviour
-    {
-        #region variables
-        public soundArray[] soundArrays;
+	public class walkSounds : MonoBehaviour
+	{
+		#region variables
+		public soundArray[] soundArrays;
 
-        private playerMovement movement;
-        private dashing dashScript;
+		private playerMovement movement;
+		private dashing dashScript;
 
-        public Vector2 velocity;
+		public Vector2 velocity;
 
 
-        public LayerMask[] soundMasks;
+		public string[] soundMasks;
+		public LayerMask allMasks;
 
-        private int randomNum;
+		private int randomNum;
 
-        public AudioSource audioSource;
-        public AudioSource landSound;
+		public AudioSource audioSource;
+		public AudioSource landSound;
 
-        public float betweenSounds = 0.7f;
-        public float currentTime;
-        public float speedThreshold;
+		public float betweenSounds = 0.7f;
+		public float currentTime;
+		public float speedThreshold;
 
-        #endregion
 
-        private void Start()
-        {
-            movement = GetComponent<playerMovement>();
-            dashScript = GetComponent<dashing>();
-        }
 
-        void Update()
-        {
-            
+		#endregion
 
-            velocity.x = movement.velocity.x;
-            velocity.y = movement.velocity.z;
+		private void Start()
+		{
+			movement = GetComponent<playerMovement>();
+			dashScript = GetComponent<dashing>();
+		}
 
-            if (velocity.magnitude > speedThreshold)
-            {
-                currentTime += 1 * Time.deltaTime;
+		void Update()
+		{
+			
 
-                if (currentTime  >= betweenSounds / velocity.magnitude)
-                {
-                    //play sound
-                    
-                    randomNum = Random.Range(0, soundArrays[0].audio.Length);
-                    audioSource.clip = soundArrays[0].audio[randomNum];
-                    audioSource.Play();
-                    
-                    currentTime = 0f;
+			velocity.x = movement.velocity.x;
+			velocity.y = movement.velocity.z;
 
-                }
-            }
-            
-        }
+			if (velocity.magnitude > speedThreshold)
+			{
+				currentTime += 1 * Time.deltaTime;
 
-        //get the layer below the player
-        private int getCurrentLayer()
-        {
-            Vector3 position = transform.position;
-            position.y += 1;
+				if (currentTime  >= betweenSounds / velocity.magnitude)
+				{
+					if (!dashScript.isDashing && movement.grounded)
+					{
+						//play sound
+						randomNum = Random.Range(0, soundArrays[getCurrentLayer()].audio.Length);
+						audioSource.clip = soundArrays[getCurrentLayer()].audio[randomNum];
+						audioSource.Play();
 
-            for (int i = 0; i < soundMasks.Length; i++)
-            {
-                if (Physics.Raycast(position, Vector3.down, 3f, soundMasks[i]))
-                {
-                    return i;
-                }
-            }
-            return -1;
-            
-        }
-    }
+						currentTime = 0f;
+					}
+				}
+			}
+			
+		}
+
+		//get the layer below the player
+		private int getCurrentLayer()
+		{
+			Vector3 position = transform.position;
+			position.y += 1;
+
+			RaycastHit hit;
+
+			string hitLayer;
+
+			if (Physics.Raycast(position, Vector3.down, out hit, 3f, allMasks))
+			{
+				hitLayer = hit.transform.gameObject.tag;
+
+				
+
+				for (int i = 0; i < soundMasks.Length; i++)
+				{
+					if (hitLayer == soundMasks[i])
+					{
+						return i;
+					}
+				}
+			}
+			
+			
+
+			return -1;
+			
+		}
+	}
 }
