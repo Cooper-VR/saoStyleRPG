@@ -4,11 +4,12 @@ using UnityEngine;
 
 namespace SAOrpg.playerAPI.RPGsstuff.inventory
 {
-    [CreateAssetMenu(fileName = "audioArrays", menuName = "ScriptableObjects/player/inventoryObjects", order = 1)]
-    public class inventoryObjects : MonoBehaviour
+    [CreateAssetMenu(fileName = "inventoryObject", menuName = "ScriptableObjects/player/inventoryObjects", order = 3)]
+    public class inventoryObjects : ScriptableObject
     {
         public GameObject objectPrefab;
         public ObjectType objectType;
+        public string objectName;
 
         public enum ObjectType
         {

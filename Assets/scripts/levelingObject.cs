@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SAOrpg.playerAPI.RPGsstuff.stats
 {
-    [CreateAssetMenu(fileName = "audioArrays", menuName = "ScriptableObjects/player/skill", order = 1)]
+    [CreateAssetMenu(fileName = "skill", menuName = "ScriptableObjects/player/skill", order = 2)]
     public class levelingObject : ScriptableObject
     {
         public string skillType;
