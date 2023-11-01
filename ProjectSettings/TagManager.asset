@@ -10,6 +10,7 @@ TagManager:
   - Grass
   - Stone
   - Wood
+  - Terrain
   layers:
   - Default
   - TransparentFX
