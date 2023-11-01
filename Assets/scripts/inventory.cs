@@ -9,6 +9,9 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
         public inventoryObjects[] weapons;
         public inventoryObjects[] items;
 
+        public GameObject weaponRoot;
+        public GameObject itemsRoot;
+
         public void addObject()
         {
             //update menu
