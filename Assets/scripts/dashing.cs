@@ -1,5 +1,4 @@
-using SAOrpg.playerAPI.RPGsstuff;
-using SAOrpg.playerAPI.RPGsstuff.audio;
+using SAOrpg.playerAPI.RPGsstuff.stats;
 using UnityEngine;
 
 namespace SAOrpg.playerAPI
@@ -26,7 +25,7 @@ namespace SAOrpg.playerAPI
         private void Start()
         {
             //get player scripts
-            dashSpeed = GetComponent<playerStats>().speed * 1.6f;
+            dashSpeed = GetComponent<playerStats>().skills[0].level * 1.6f;
             movementScript = GetComponent<playerMovement>();
             stats = GetComponent<playerStats>();
         }

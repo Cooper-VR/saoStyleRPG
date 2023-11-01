@@ -1,4 +1,4 @@
-using SAOrpg.playerAPI.RPGsstuff;
+using SAOrpg.playerAPI.RPGsstuff.stats;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Valve.VR;
@@ -37,12 +37,13 @@ namespace SAOrpg.playerAPI
             indexInput = GetComponent<IndexInput>();
             velocityEstimator = GetComponent<VelocityEstimator>();
             characterController = GetComponent<CharacterController>();
-            speed = GetComponent<playerStats>().speed;
+            
 
         }
 
         private void Update()
         {
+            speed = GetComponent<playerStats>().skills[0].level;
             velocity = Vector3.zero;
             movePlayer();
             playerJump();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using SAOrpg.playerAPI.RPGsstuff.stats;
 
 namespace SAOrpg.playerAPI.RPGsstuff.Menu
 {

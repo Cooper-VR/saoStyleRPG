@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 using SAOrpg.playerAPI.RPGsstuff.playerColliders;
-using SAOrpg.playerAPI.RPGsstuff;
+using SAOrpg.playerAPI.RPGsstuff.stats;
 
 namespace SAOrpg.items
 {
@@ -43,7 +43,7 @@ namespace SAOrpg.items
             //might need to convert to float
             try
             {
-                float damage = maxDamage * (GetComponent<PickupableObject>().alignmentObject.parent.gameObject.GetComponent<playerStats>().strength / strengthRequirement);
+                float damage = maxDamage * (GetComponent<PickupableObject>().alignmentObject.parent.gameObject.GetComponent<playerStats>().skills[1].level / strengthRequirement);
 
                 Vector3 velocity = gameObject.GetComponent<VelocityEstimator>().GetVelocityEstimate();
 

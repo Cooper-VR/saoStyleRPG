@@ -1,18 +1,52 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SAOrpg.playerAPI.RPGsstuff
+namespace SAOrpg.playerAPI.RPGsstuff.stats
 {
     public class playerStats : MonoBehaviour
     {
         public int level;
-        public int strength;
         public float maxDamageSpeed;
-        public float maxHealth;
+        public int maxHealth;
         public float health;
-        public float speed;
         public float dashInterval;
+
+        public int EXP;
+        public int nextLevelEXP;
+
+        public int levelPoints;
+
+
+        public levelingObject[] skills;
+
+        public void incrementLevel()
+        {
+            level++;
+            maxHealth = Mathf.RoundToInt(Mathf.Pow(1.104f, level) + 249);
+        }
+
+        public void incrementEXP(int increaseAmount)
+        {
+            EXP += increaseAmount;
+
+            while (EXP > nextLevelEXP)
+            {
+                EXP -= nextLevelEXP;
+
+                incrementLevel();
+            }
+        }
+
+        public void usePoint(levelingObject skill)
+        {
+            if (levelPoints > 0)
+            {
+                skill.incrementLevel();
+                levelPoints--;
+            }
+        }
     }
 }
 
