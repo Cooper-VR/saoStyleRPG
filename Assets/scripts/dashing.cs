@@ -26,6 +26,7 @@ namespace SAOrpg.playerAPI
         private void Start()
         {
             //get player scripts
+            dashSpeed = GetComponent<playerStats>().speed * 1.6f;
             movementScript = GetComponent<playerMovement>();
             stats = GetComponent<playerStats>();
         }

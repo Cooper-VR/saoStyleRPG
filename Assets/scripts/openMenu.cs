@@ -16,6 +16,9 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void Start()
         {
+            movement = GetComponent<playerMovement>();
+            input = GetComponent<IndexInput>();
+
             leftHand = transform.GetChild(0).gameObject.GetComponent<Rigidbody>();
             rightHand = transform.GetChild(1).gameObject.GetComponent<Rigidbody>();
 
@@ -24,24 +27,24 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void Update()
         {
-            if (leftHand.velocity.y * -1 > threshold && input.isGrippingLeft)
+            if ((leftHand.velocity.y * -1 > threshold && input.isGrippingLeft) || Input.GetKeyDown(KeyCode.M))
             {
                 menu.SetBool("open", true);
                 menu.transform.position = leftHand.position;
                 menu.transform.LookAt(movement.camera);
             }
-            else if (rightHand.velocity.y * -1 > threshold && input.isGrippingRight)
+            else if ((rightHand.velocity.y * -1 > threshold && input.isGrippingRight) || Input.GetKey(KeyCode.M))
             {
-                menu .SetBool("open", true);
+                menu.SetBool("open", true);
                 menu.transform.position = rightHand.position;
                 menu.transform.LookAt(movement.camera);
             }
 
-            if (leftHand.velocity.y > threshold)
+            if (leftHand.velocity.y > threshold || Input.GetKey(KeyCode.N))
             {
                 menu.SetBool("open", false);
             }
-            else if (rightHand.velocity.y > threshold)
+            else if (rightHand.velocity.y > threshold || Input.GetKey(KeyCode.N))
             {
                 menu.SetBool("open", false);
             }
