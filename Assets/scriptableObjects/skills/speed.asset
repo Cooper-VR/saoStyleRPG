@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: speed
   m_EditorClassIdentifier: 
   skillType: speed
-  level: 62
+  level: 2
   EXP: 0
   nextLevelEXP: 0

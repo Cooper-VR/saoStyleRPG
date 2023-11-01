@@ -21,9 +21,13 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
 
         public levelingObject[] skills;
 
+        
+
         public void incrementLevel()
         {
             level++;
+            levelPoints++;
+
             maxHealth = Mathf.RoundToInt(Mathf.Pow(1.104f, level) + 249);
         }
 
@@ -31,9 +35,11 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
         {
             EXP += increaseAmount;
 
-            while (EXP > nextLevelEXP)
+            while (EXP >= nextLevelEXP)
             {
                 EXP -= nextLevelEXP;
+
+                nextLevelEXP += 50;
 
                 incrementLevel();
             }
