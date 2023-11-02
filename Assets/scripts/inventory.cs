@@ -49,7 +49,8 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 
 				newObject.transform.GetChild(1).GetComponent<TMP_Text>().text = weapons[i].name;
 
-                newObject.GetComponent<itemButtonHandler>().item = weapons[i];
+                newObject.transform.GetChild(2).GetChild(0).GetComponent<itemButtonHandler>().item = weapons[i];
+                newObject.transform.GetChild(2).GetChild(1).GetComponent<itemButtonHandler>().item = weapons[i];
             }
 
 			//update menu
@@ -61,7 +62,8 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 
 				newObject.transform.GetChild(1).GetComponent<TMP_Text>().text = items[i].name;
 
-				newObject.GetComponent<itemButtonHandler>().item = items[i];
+                newObject.transform.GetChild(2).GetChild(0).GetComponent<itemButtonHandler>().item = items[i];
+                newObject.transform.GetChild(2).GetChild(1).GetComponent<itemButtonHandler>().item = items[i];
             }
 
 			gameObject.GetComponent<playerStats>().weapons = weapons;
@@ -76,13 +78,19 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 			if (itemType == inventoryObjects.ObjectType.weapon)
 			{
 				newArray = new inventoryObjects[weapons.Length - 1];
-				for (int i = 0;i < weapons.Length;i++)
+				for (int i = 0;i < newArray.Length;i++)
 				{
 					if (i != index)
 					{
 						newArray[i] = weapons[i];
 					}
+					else
+					{
+						i++;
+					}
 				}
+
+				weapons = newArray;
 			}
 
             if (itemType == inventoryObjects.ObjectType.item)
@@ -95,6 +103,8 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
                         newArray[i] = items[i];
                     }
                 }
+
+				items = newArray;
             }
         }
 	}

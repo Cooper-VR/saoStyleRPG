@@ -10,6 +10,8 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
     {
         int index;
 
+        public bool deleteObjectTest;
+
         public inventoryObjects item;
 
         public enum buttonType{
@@ -21,13 +23,19 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 
         private void Update()
         {
-            index = Convert.ToInt32(gameObject.name.Split(":")[0]);
+            index = Convert.ToInt32(transform.parent.parent.name[transform.parent.parent.name.Length - 1]);
 
-            if (type == buttonType.spawn)
+            if (deleteObjectTest)
+            {
+                deleteItem();
+                deleteObjectTest = false;
+            }
+
+            if (type == buttonType.spawn && gameObject.GetComponent<collisionChecker>().entered)
             {
                 spawnItem();
             }
-            else
+            else if (type == buttonType.delete && gameObject.GetComponent<collisionChecker>().entered)
             {
                 deleteItem();
             }
@@ -35,6 +43,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 
         private void deleteItem()
         {
+            Debug.Log("die");
             GameObject.Find("[CameraRig]").GetComponent<inventory>().removeItem(index, item.objectType);
         }
         private void spawnItem()
