@@ -95,16 +95,20 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 
             if (itemType == inventoryObjects.ObjectType.item)
             {
-                newArray = new inventoryObjects[weapons.Length - 1];
-                for (int i = 0; i < items.Length; i++)
+                newArray = new inventoryObjects[items.Length - 1];
+                for (int i = 0; i < newArray.Length; i++)
                 {
                     if (i != index)
                     {
                         newArray[i] = items[i];
                     }
+                    else
+                    {
+                        i++;
+                    }
                 }
 
-				items = newArray;
+                items = newArray;
             }
         }
 	}

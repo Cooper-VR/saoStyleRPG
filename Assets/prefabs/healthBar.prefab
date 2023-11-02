@@ -274,6 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8026212109780996385}
   - component: {fileID: 8026212109780996386}
+  - component: {fileID: 246170330}
   m_Layer: 0
   m_Name: healthBar
   m_TagString: Untagged
@@ -344,6 +345,32 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   scalarObject: {fileID: 8026212110005838682}
   healthValue: {fileID: 8026212111027493012}
+--- !u!1773428102 &246170330
+ParentConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8026212109780996387}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffsets:
+  - {x: 0, y: 0, z: 0}
+  m_RotationOffsets:
+  - {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 0}
+    weight: 1
 --- !u!1 &8026212109871326264
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,8 +895,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -32}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -31.602417, y: 410.09985}
-  m_SizeDelta: {x: 102.4, y: 100}
+  m_AnchoredPosition: {x: -17, y: 356.30014}
+  m_SizeDelta: {x: 97.8, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8026212111027493003
 CanvasRenderer:
@@ -918,8 +945,8 @@ PositionConstraint:
   m_GameObject: {fileID: 8026212111027493015}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: -1013.2, y: 377.60406, z: 0}
-  m_TranslationOffset: {x: -726.6024, y: 342.39996, z: 0}
+  m_TranslationAtRest: {x: -17, y: 401, z: 0}
+  m_TranslationOffset: {x: -712, y: 333.3001, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
@@ -961,6 +988,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1169, y: 38.7}
+  m_AnchoredPosition: {x: 1169, y: -6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
