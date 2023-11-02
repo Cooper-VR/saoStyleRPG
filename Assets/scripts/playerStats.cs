@@ -1,3 +1,4 @@
+using SAOrpg.playerAPI.RPGsstuff.inventory;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,7 +22,8 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
 
         public levelingObject[] skills;
 
-        
+        public inventoryObjects[] weapons;
+        public inventoryObjects[] items;
 
         public void incrementLevel()
         {
