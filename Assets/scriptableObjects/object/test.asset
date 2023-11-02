@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 0}
   objectType: 0
-  objectName: 
+  objectName: test
