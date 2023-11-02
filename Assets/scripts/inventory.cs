@@ -1,6 +1,8 @@
 using SAOrpg.playerAPI.RPGsstuff.stats;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 namespace SAOrpg.playerAPI.RPGsstuff.inventory
 {
@@ -43,24 +45,57 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 			{
 				GameObject newObject = GameObject.Instantiate(itemSlotBase, weaponRoot.transform.GetChild(0).GetChild(0));
 
-				newObject.name = weapons[i].name;
+				newObject.name = weapons[i].name + ": " + i.ToString();
 
 				newObject.transform.GetChild(1).GetComponent<TMP_Text>().text = weapons[i].name;
-			}
+
+                newObject.GetComponent<itemButtonHandler>().item = weapons[i];
+            }
 
 			//update menu
 			for (int i = 0; i < items.Length; i++)
 			{
 				GameObject newObject = GameObject.Instantiate(itemSlotBase, itemsRoot.transform.GetChild(0).GetChild(0));
 
-				newObject.name = items[i].name;
+				newObject.name = items[i].name + ": " + i.ToString();
 
 				newObject.transform.GetChild(1).GetComponent<TMP_Text>().text = items[i].name;
-			}
+
+				newObject.GetComponent<itemButtonHandler>().item = items[i];
+            }
 
 			gameObject.GetComponent<playerStats>().weapons = weapons;
 			gameObject.GetComponent<playerStats>().items = items;
 			ArrayLength = items.Length + weapons.Length;
 		}
+
+		public void removeItem(int index, inventoryObjects.ObjectType itemType)
+		{
+			inventoryObjects[] newArray;
+
+			if (itemType == inventoryObjects.ObjectType.weapon)
+			{
+				newArray = new inventoryObjects[weapons.Length - 1];
+				for (int i = 0;i < weapons.Length;i++)
+				{
+					if (i != index)
+					{
+						newArray[i] = weapons[i];
+					}
+				}
+			}
+
+            if (itemType == inventoryObjects.ObjectType.item)
+            {
+                newArray = new inventoryObjects[weapons.Length - 1];
+                for (int i = 0; i < items.Length; i++)
+                {
+                    if (i != index)
+                    {
+                        newArray[i] = items[i];
+                    }
+                }
+            }
+        }
 	}
 }

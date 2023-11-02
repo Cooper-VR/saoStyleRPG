@@ -14,9 +14,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
         public enum ObjectType
         {
             weapon,
-            heal,
-            item,
-            armor
+            item
         }
     }
 }
