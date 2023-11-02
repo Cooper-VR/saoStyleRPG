@@ -11,12 +11,17 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
         int index;
 
         public bool deleteObjectTest;
-
+        public collisionChecker collisionChecker;
         public inventoryObjects item;
 
         public enum buttonType{
             delete,
             spawn
+        }
+
+        private void Start()
+        {
+            collisionChecker = GetComponent<collisionChecker>();
         }
 
         public buttonType type;
@@ -31,11 +36,11 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
                 deleteObjectTest = false;
             }
 
-            if (type == buttonType.spawn && gameObject.GetComponent<collisionChecker>().entered)
+            if (type == buttonType.spawn && collisionChecker.entered && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
             {
                 spawnItem();
             }
-            else if (type == buttonType.delete && gameObject.GetComponent<collisionChecker>().entered)
+            else if (type == buttonType.delete && collisionChecker.entered && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
             {
                 deleteItem();
             }
@@ -43,7 +48,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 
         private void deleteItem()
         {
-            Debug.Log("die");
+            Debug.Log("poof");
             GameObject.Find("[CameraRig]").GetComponent<inventory>().removeItem(index, item.objectType);
         }
         private void spawnItem()
