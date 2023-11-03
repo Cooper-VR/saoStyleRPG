@@ -1,0 +1,32 @@
+Locations/QuadrentBased(reletive to hmd):
+	pros:
+		easier to implement
+		easy for the user to do
+	cons:
+		not very scalable
+
+location + rotation(reletve to hmd + floor)
+	pros:
+		more skills
+		bigger learning curve
+		more options
+	cons:
+		harder learning curve
+		harder to implement
+
+
+sword hand rotation can be checked with a second collider at the end of the sword that would move to different quadrents
+
+to get poses:
+	prefered, make a editor script:
+		on button press wait 5 sec
+		after 5 sec, get the colliding quaderents for the hands and the end of the sword
+		create a new scriptable object that that has three values for the hands and sword
+		assign the values to the quadrents hit, could use string name, or int, or enums
+		the user would then have a certain onces base on the level
+		
+		to check if they are doing it, loop through an array of their poses and check of any match
+
+		this same recording technich could be applied to the combos aswell using a dummy and the directions
+
+
