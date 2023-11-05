@@ -10,6 +10,7 @@ Material:
   m_Name: face
   m_Shader: {fileID: 4800000, guid: 76a3501b6f96f874abe72562d44fcceb, type: 3}
   m_ValidKeywords:
+  - POI_RIM2
   - VIGNETTE_MASKED
   - _GLOSSYREFLECTIONS_OFF
   - _LIGHTINGMODE_TEXTURERAMP
@@ -428,7 +429,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 47d3bf829f4b55741b96282f5664c05f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2ea9c8d6a68905d4ab81ff700dcee342, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatCap:
@@ -644,7 +645,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RimTex:
-        m_Texture: {fileID: 2800000, guid: 47d3bf829f4b55741b96282f5664c05f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2ea9c8d6a68905d4ab81ff700dcee342, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RimWidthNoiseTexture:
@@ -756,7 +757,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ToonRamp:
-        m_Texture: {fileID: 2800000, guid: 61bd594533da4fc42bd46ef93ba5a4f6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 00725763efbb8cc47bc32262aa434931, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ToonRamp1:
@@ -1649,7 +1650,7 @@ Material:
     - _EnableMirrorTexture: 0
     - _EnablePathing: 0
     - _EnableRandom: 0
-    - _EnableRim2Lighting: 0
+    - _EnableRim2Lighting: 1
     - _EnableRimLighting: 1
     - _EnableSSS: 0
     - _EnableScifiSpawnIn: 0
@@ -2116,7 +2117,7 @@ Material:
     - _LightingAdditiveType: 1
     - _LightingCap: 1
     - _LightingCapEnabled: 1
-    - _LightingCastedShadows: 1
+    - _LightingCastedShadows: 0
     - _LightingColorMode: 0
     - _LightingDebugVisualize: 0
     - _LightingDetailShadowMapsUV: 0
@@ -2128,7 +2129,7 @@ Material:
     - _LightingDetailShadowsUV: 0
     - _LightingDetailStrength: 1
     - _LightingDirectColorMode: 0
-    - _LightingDirectionMode: 0
+    - _LightingDirectionMode: 4
     - _LightingEnableAO: 0
     - _LightingEnableHSL: 0
     - _LightingForceColorEnabled: 0
@@ -2140,11 +2141,11 @@ Material:
     - _LightingIndirectColorMode: 0
     - _LightingIndirectContribution: 0.2
     - _LightingIndirectUsesNormals: 0
-    - _LightingMapMode: 2
-    - _LightingMinLightBrightness: 0.513
+    - _LightingMapMode: 0
+    - _LightingMinLightBrightness: 0.572
     - _LightingMinShadowBrightnessRatio: 0
     - _LightingMode: 0
-    - _LightingMonochromatic: 0
+    - _LightingMonochromatic: 1
     - _LightingMulitlayerNonLinear: 1
     - _LightingNoIndirectMultiplier: 0.5
     - _LightingNoIndirectThreshold: 0.01
@@ -2597,7 +2598,7 @@ Material:
     - _Rim2ApplyGlobalMaskBlendType: 2
     - _Rim2ApplyGlobalMaskIndex: 0
     - _Rim2BackfaceMask: 1
-    - _Rim2BaseColorMix: 0
+    - _Rim2BaseColorMix: 1
     - _Rim2BlendMode: 0
     - _Rim2BlendStrength: 1
     - _Rim2Blur: 0.65
@@ -2634,12 +2635,12 @@ Material:
     - _Rim2ShadowMaskStrength: 1
     - _Rim2ShadowToggle: 0
     - _Rim2ShadowWidth: 0
-    - _Rim2Sharpness: 0.25
+    - _Rim2Sharpness: 1
     - _Rim2Strength: 0
     - _Rim2Style: 0
     - _Rim2TexUV: 0
     - _Rim2VRParallaxStrength: 1
-    - _Rim2Width: 0.8
+    - _Rim2Width: 1
     - _RimApColorThemeIndex: 0
     - _RimApplyGlobalMaskBlendType: 2
     - _RimApplyGlobalMaskIndex: 0
@@ -2678,7 +2679,7 @@ Material:
     - _RimLight_FeatherOff: 0
     - _RimLight_InsideMask: 0.0001
     - _RimLight_Power: 0.1
-    - _RimLightingInvert: 1
+    - _RimLightingInvert: 0
     - _RimMainStrength: 0
     - _RimMaskChannel: 0
     - _RimMaskInvert: 0
@@ -2691,12 +2692,12 @@ Material:
     - _RimShadowMaskStrength: 1
     - _RimShadowToggle: 0
     - _RimShadowWidth: 0
-    - _RimSharpness: 0
+    - _RimSharpness: 1
     - _RimStrength: 0
     - _RimStyle: 0
     - _RimTexUV: 0
     - _RimVRParallaxStrength: 1
-    - _RimWidth: 1
+    - _RimWidth: 0.37
     - _RimWidthNoiseStrength: 0.1
     - _RimWidthNoiseTextureUV: 0
     - _SDFBlur: 0.1
@@ -2723,7 +2724,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 1
+    - _ShaderOptimizerEnabled: 0
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
@@ -2744,7 +2745,7 @@ Material:
     - _ShadowMix: 0
     - _ShadowMixThreshold: 0.5
     - _ShadowMixWidthMod: 0.5
-    - _ShadowOffset: -0.34
+    - _ShadowOffset: -0.18
     - _ShadowOffset1: 0
     - _ShadowOffset2: 0
     - _ShadowReceive: 0
@@ -3564,7 +3565,7 @@ Material:
     - m_start_ralivPenetrator: 0
     - m_start_reflectionRim: 0
     - m_start_rgbanormals: 0
-    - m_start_rim2LightOptions: 0
+    - m_start_rim2LightOptions: 1
     - m_start_rimHueShift: 0
     - m_start_rimLight1Options: 0
     - m_start_rimLightOptions: 0
