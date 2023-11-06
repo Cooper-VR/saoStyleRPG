@@ -6,15 +6,12 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
     [CreateAssetMenu(fileName = "pose", menuName = "ScriptableObjects/player/Pose", order = 2)]
     public class poseDirectionObject : ScriptableObject
     {
-        public int leftHandQuadrent_L;
-        public int rightHandQuadrent_L;
-        public int swordQuadrent_L;
+        public int[] using_L = new int[3];
 
-        public int leftHandQuadrent_R;
-        public int rightHandQuadrent_R;
-        public int swordQuadrent_R;
+        public int[] using_R = new int[3];
 
-        public List<directions> comboDirection = new List<directions>();
+        public List<directions> comboDirection_L = new List<directions>();
+        public List<directions> comboDirection_R = new List<directions>();
 
 
         public enum directions
