@@ -204,6 +204,11 @@ namespace SAOrpg
             }
         }
 
+		private void recordCombo()
+		{
+
+		}
+
 		public enum usingHand
 		{
 			left,
