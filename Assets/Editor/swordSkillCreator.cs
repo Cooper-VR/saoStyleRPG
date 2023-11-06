@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using SAOrpg.playerAPI;
 using SAOrpg.playerAPI.RPGsstuff.stats;
 using System.Collections;
 using UnityEditor;
@@ -12,7 +13,14 @@ namespace SAOrpg
 		private recordMode mode;
 		private usingHand swingHand;
 
-		[MenuItem("Window/Tools/SwordSkilCreator")]
+		private GameObject quaderentContainer;
+
+		private collisionChecker leftHand;
+		private collisionChecker rightHand;
+        private collisionChecker swordEnd_L;
+        private collisionChecker swordEnd_R;
+
+        [MenuItem("Window/Tools/SwordSkilCreator")]
 		private static void click()
 		{
 			EditorWindow.GetWindow(typeof(swordSkillCreator), false, "Sword Skill Creator");
@@ -20,7 +28,8 @@ namespace SAOrpg
 
 		private void OnGUI()
 		{
-			EditorGUILayout.LabelField("Record pose");
+            EditorGUILayout.LabelField("record buttons");
+            EditorGUILayout.LabelField("Record pose");
 
 			// Add a button
 			if (GUILayout.Button("start recording"))
@@ -73,9 +82,20 @@ namespace SAOrpg
                 Debug.Log("Mirror");
 			}
 
-			writtingObject = EditorGUILayout.ObjectField("object To write to", writtingObject, typeof(poseDirectionObject), true) as poseDirectionObject;
+            EditorGUILayout.Space(15);
+            EditorGUILayout.LabelField("settings");
+            writtingObject = EditorGUILayout.ObjectField("object To write to", writtingObject, typeof(poseDirectionObject), true) as poseDirectionObject;
 			swingHand = (usingHand)EditorGUILayout.EnumPopup("swinging hand", swingHand);
-		}
+            quaderentContainer = EditorGUILayout.ObjectField("quaderent Container", quaderentContainer, typeof(GameObject), true) as GameObject;
+
+			EditorGUILayout.Space(15);
+			EditorGUILayout.LabelField("collision objects");
+
+            leftHand = EditorGUILayout.ObjectField("left hand", leftHand, typeof(collisionChecker), true) as collisionChecker;
+            rightHand = EditorGUILayout.ObjectField("right hand", rightHand, typeof(collisionChecker), true) as collisionChecker;
+            swordEnd_L = EditorGUILayout.ObjectField("left sword end", swordEnd_L, typeof(collisionChecker), true) as collisionChecker;
+            swordEnd_R = EditorGUILayout.ObjectField("right sword end", swordEnd_R, typeof(collisionChecker), true) as collisionChecker;
+        }
 
 		private poseDirectionObject.directions[] mirrorDirection(poseDirectionObject.directions[] directionsList)
 		{
@@ -150,6 +170,22 @@ namespace SAOrpg
             }
 		}
 
+		private void recordPose()
+		{
+			collisionChecker swordEnd;
+
+			if (swingHand == usingHand.left)
+			{
+				swordEnd = swordEnd_L;
+
+
+            }
+			else
+			{
+				swordEnd = swordEnd_R;
+			}
+		}
+
 		public enum usingHand
 		{
 			left,
@@ -174,7 +210,9 @@ namespace SAOrpg
 			if (mode == recordMode.pose)
 			{
 				//get quaderents
-			}
+				recordPose();
+
+            }
 			else
 			{
 				//get directions

@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba5642c59860b14ea6821f93be0c87d, type: 3}
   m_Name: pose
   m_EditorClassIdentifier: 
-  leftHandQuadrent: 0
-  rightHandQuadrent: 0
-  swordQuadrent: 0
-  leftHandQuadrent_M: 0
-  rightHandQuadrent_M: 0
-  swordQuadrent_M: 0
-  comboDirection: 
+  using_L: 010000000300000000000000
+  using_R: 020000000400000003000000
+  comboDirection_L: 0000000000000000000000000000000001000000010000000100000001000000
+  comboDirection_R: 01000000010000000100000001000000
