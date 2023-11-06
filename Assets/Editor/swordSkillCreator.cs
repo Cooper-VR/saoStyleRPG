@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using SAOrpg.playerAPI.RPGsstuff.stats;
+using System.Collections;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,7 +9,7 @@ namespace SAOrpg
 	public class swordSkillCreator : EditorWindow
 	{
 		private poseDirectionObject writtingObject;
-
+		private recordMode mode;
 		private usingHand swingHand;
 
 		[MenuItem("Window/Tools/SwordSkilCreator")]
@@ -24,7 +26,10 @@ namespace SAOrpg
 			if (GUILayout.Button("start recording"))
 			{
 				Debug.Log("wait 5 sec");
-			}
+				mode = recordMode.pose;
+
+                recordWait();
+            }
 
 			EditorGUILayout.LabelField("Record Combo");
 
@@ -32,13 +37,38 @@ namespace SAOrpg
 			if (GUILayout.Button("start recording"))
 			{
 				Debug.Log("wait 5 sec till record");
-			}
+				mode = recordMode.directions;
+
+				recordWait();
+
+            }
 
 			// Add a button
 			if (GUILayout.Button("Mirror pose/movement"))
 			{
 				mirrorPose(writtingObject);
 
+				if (swingHand == usingHand.left)
+				{
+					writtingObject.comboDirection_R.Clear();
+                    poseDirectionObject.directions[] directions = mirrorDirection(writtingObject.comboDirection_L.ToArray());
+
+                    for (int i = 0; i < directions.Length; i++)
+                    {
+                        writtingObject.comboDirection_R.Add(directions[i]);
+                    }
+				}
+				else
+				{
+                    writtingObject.comboDirection_L.Clear();
+                    poseDirectionObject.directions[] directions = mirrorDirection(writtingObject.comboDirection_R.ToArray());
+
+                    for (int i = 0; i < directions.Length; i++)
+                    {
+                        writtingObject.comboDirection_L.Add(directions[i]);
+                    }
+                }
+				
 
                 Debug.Log("Mirror");
 			}
@@ -51,17 +81,36 @@ namespace SAOrpg
 		{
 			poseDirectionObject.directions[] mirroredDirection = new poseDirectionObject.directions[directionsList.Length];
 
-			if (swingHand == usingHand.left)
+			for (int i = 0; i < directionsList.Length; i++)
 			{
-				
+				switch (directionsList[i])
+				{
+					case (poseDirectionObject.directions.left):
+						mirroredDirection[i] = poseDirectionObject.directions.right;
+						break;
+                    case (poseDirectionObject.directions.right):
+                        mirroredDirection[i] = poseDirectionObject.directions.right;
+                        break;
+                    case (poseDirectionObject.directions.leftDown):
+                        mirroredDirection[i] = poseDirectionObject.directions.leftDown;
+                        break;
+                    case (poseDirectionObject.directions.rightDown):
+                        mirroredDirection[i] = poseDirectionObject.directions.rightDown;
+                        break;
+                    case (poseDirectionObject.directions.leftUp):
+                        mirroredDirection[i] = poseDirectionObject.directions.leftUp;
+                        break;
+                    case (poseDirectionObject.directions.rightUp):
+                        mirroredDirection[i] = poseDirectionObject.directions.rightUp;
+                        break;
+					default:
+						mirroredDirection[i] = directionsList[i];
+						break;
+                }
 			}
 
-			if (swingHand == usingHand.right)
-			{
-
-			}
-
-			return directionsList;
+			return mirroredDirection;
+			
 		}
 
 		private void mirrorPose(poseDirectionObject poseObject)
@@ -106,5 +155,30 @@ namespace SAOrpg
 			left,
 			right
 		}
-	}
+
+		public enum recordMode
+		{
+			pose,
+			directions
+		}
+
+        IEnumerator recordWait()
+        {
+            
+            Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+            yield return new WaitForSeconds(5);
+
+            Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+
+			if (mode == recordMode.pose)
+			{
+				//get quaderents
+			}
+			else
+			{
+				//get directions
+			}
+        }
+    }
 }

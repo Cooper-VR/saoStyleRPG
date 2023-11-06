@@ -7,7 +7,6 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
     public class poseDirectionObject : ScriptableObject
     {
         public int[] using_L = new int[3];
-
         public int[] using_R = new int[3];
 
         public List<directions> comboDirection_L = new List<directions>();
