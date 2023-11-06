@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using SAOrpg.playerAPI;
 using SAOrpg.playerAPI.RPGsstuff.stats;
+using System;
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
@@ -177,14 +178,31 @@ namespace SAOrpg
 			if (swingHand == usingHand.left)
 			{
 				swordEnd = swordEnd_L;
-
-
             }
 			else
 			{
 				swordEnd = swordEnd_R;
 			}
-		}
+
+			//check if the name is correct
+			//get number
+			//put in array
+            if (leftHand.collidedGameobject.name.Contains("Q:"))
+            {
+
+                writtingObject.using_L[0] = Convert.ToInt32(rightHand.collidedGameobject.name[rightHand.collidedGameobject.name.Length - 1]);
+            }
+            if (rightHand.collidedGameobject.name.Contains("Q:"))
+            {
+
+                writtingObject.using_L[1] = Convert.ToInt32(leftHand.collidedGameobject.name[leftHand.collidedGameobject.name.Length - 1]);
+            }
+            if (swordEnd.collidedGameobject.name.Contains("Q:"))
+            {
+
+                writtingObject.using_L[2] = Convert.ToInt32(swordEnd.collidedGameobject.name[swordEnd.collidedGameobject.name.Length - 1]);
+            }
+        }
 
 		public enum usingHand
 		{
