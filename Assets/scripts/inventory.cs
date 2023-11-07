@@ -16,6 +16,9 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 		public GameObject weaponRoot;
 		public GameObject itemsRoot;
 
+		public inventoryObjects upperArmor;
+		public inventoryObjects lowerArmor;
+
 		private int ArrayLength;
 
 		private void Update()

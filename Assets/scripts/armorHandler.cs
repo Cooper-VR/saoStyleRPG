@@ -1,12 +1,15 @@
 using System;
 using UnityEngine;
+using SAOrpg.playerAPI.RPGsstuff.inventory;
 
 namespace SAOrpg.playerAPI.RPGsstuff.Armor
 {
     public class armorHandler : MonoBehaviour
     {
-        public GameObject upperOBJ;
-        public GameObject lowerOBJ;
+        public GameObject player;
+
+        private GameObject upperOBJ;
+        private GameObject lowerOBJ;
 
         private GameObject currentUpper;
         private GameObject currentLower;
@@ -20,15 +23,19 @@ namespace SAOrpg.playerAPI.RPGsstuff.Armor
         public Animator armorObject2;
         public Transform[] armorBonesArray2;
 
-        public Animator sourceObject;
-        public Transform[] sourceBonesArray;
+        private Animator sourceObject;
+        private Transform[] sourceBonesArray;
 
         private void Start()
         {
+            sourceObject = transform.parent.gameObject.GetComponent<Animator>();
         }
 
         private void Update()
         {
+            upperOBJ = player.GetComponent<SAOrpg.playerAPI.RPGsstuff.inventory.inventory>().upperArmor.objectPrefab;
+            lowerOBJ = player.GetComponent<SAOrpg.playerAPI.RPGsstuff.inventory.inventory>().lowerArmor.objectPrefab;
+
             if (transform.childCount != 2)
             {
                 for (int i = 0; i < transform.childCount; i++)
@@ -72,7 +79,6 @@ namespace SAOrpg.playerAPI.RPGsstuff.Armor
             {
                 if (!armorObject1.transform.GetChild(i).name.ToLower().Contains("upper") && armorObject1.transform.GetChild(i).name != "Armature")
                 {
-                    Debug.Log("test");
                     armorObject1.transform.GetChild(i).gameObject.SetActive(false);
                 }
             }
