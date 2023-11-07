@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using SAOrpg.items;
 using SAOrpg.playerAPI;
 using SAOrpg.playerAPI.RPGsstuff.stats;
 using System;
@@ -14,7 +15,12 @@ namespace SAOrpg
 		private recordMode mode;
 		private usingHand swingHand;
 
+		private bool recordingPose;
+		private bool recordingCombo;
+
 		private GameObject quaderentContainer;
+		private GameObject sword;
+		private GameObject hittingDummy;
 
 		private collisionChecker leftHand;
 		private collisionChecker rightHand;
@@ -88,8 +94,10 @@ namespace SAOrpg
             writtingObject = EditorGUILayout.ObjectField("object To write to", writtingObject, typeof(poseDirectionObject), true) as poseDirectionObject;
 			swingHand = (usingHand)EditorGUILayout.EnumPopup("swinging hand", swingHand);
             quaderentContainer = EditorGUILayout.ObjectField("quaderent Container", quaderentContainer, typeof(GameObject), true) as GameObject;
+            sword = EditorGUILayout.ObjectField("test sword", sword, typeof(GameObject), true) as GameObject;
+			hittingDummy = EditorGUILayout.ObjectField("dummy object", hittingDummy, typeof(GameObject), true) as GameObject;
 
-			EditorGUILayout.Space(15);
+            EditorGUILayout.Space(15);
 			EditorGUILayout.LabelField("collision objects");
 
             leftHand = EditorGUILayout.ObjectField("left hand", leftHand, typeof(collisionChecker), true) as collisionChecker;
@@ -202,14 +210,37 @@ namespace SAOrpg
 
                 writtingObject.using_L[2] = Convert.ToInt32(swordEnd.collidedGameobject.name[swordEnd.collidedGameobject.name.Length - 1]);
             }
+
+			recordingPose = false;
         }
 
-		private void recordCombo()
+		private void recordCombo(GameObject hitObject)
 		{
+			itemDamager damger = sword.GetComponent<itemDamager>();
+			collisionChecker checker = sword.GetComponent<collisionChecker>();
 
+			if (checker.entered)
+			{
+				if (checker.collidedGameobject == hitObject)
+				{
+					writtingObject.comboDirection_L.Add(damger.lastHitDirection);
+				}
+			}
 		}
 
-		public enum usingHand
+        private void Update()
+        {
+            if (recordingPose)
+			{
+				recordPose();
+            }
+			if (recordingCombo)
+			{
+				recordCombo(hittingDummy);
+			}
+        }
+
+        public enum usingHand
 		{
 			left,
 			right
@@ -233,11 +264,12 @@ namespace SAOrpg
 			if (mode == recordMode.pose)
 			{
 				//get quaderents
-				recordPose();
+				recordingPose = true;
 
             }
 			else
 			{
+				recordingCombo = true;
 				//get directions
 			}
         }
