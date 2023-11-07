@@ -5,30 +5,102 @@ namespace SAOrpg.playerAPI.RPGsstuff.Armor
 {
     public class armorHandler : MonoBehaviour
     {
-        public Animator armorObject;
-        public Transform[] armorBonesArray;
+        public GameObject upperOBJ;
+        public GameObject lowerOBJ;
+
+        private GameObject currentUpper;
+        private GameObject currentLower;
+
+        private GameObject previousUpper;
+        private GameObject previousLower;
+
+        public Animator armorObject1;
+        public Transform[] armorBonesArray1;
+
+        public Animator armorObject2;
+        public Transform[] armorBonesArray2;
 
         public Animator sourceObject;
         public Transform[] sourceBonesArray;
 
         private void Start()
         {
-            getBones();
         }
 
         private void Update()
         {
+            if (transform.childCount != 2)
+            {
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    Destroy(transform.GetChild(i).gameObject);
+                }
+
+                currentUpper = Instantiate(upperOBJ, transform.position, transform.rotation, transform);
+                currentLower = Instantiate(lowerOBJ, transform.position, transform.rotation, transform);
+            }
+
+            if (previousUpper != upperOBJ || previousLower != lowerOBJ)
+            {
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    Destroy(transform.GetChild(i).gameObject);
+                }
+
+                currentUpper = Instantiate(upperOBJ, transform.position, transform.rotation, transform);
+                currentLower = Instantiate(lowerOBJ, transform.position, transform.rotation, transform);
+            }
+
+            armorObject1 = currentUpper.GetComponent<Animator>();
+            armorObject2 = currentLower.GetComponent<Animator>();
+
+            previousUpper = upperOBJ;
+            previousLower = lowerOBJ;
+
+            hideParts();
+
             setTransform();
+            getBones();
+            armorObject1.GetBoneTransform(HumanBodyBones.Hips).position = sourceObject.GetBoneTransform(HumanBodyBones.Hips).position;
+            armorObject2.GetBoneTransform(HumanBodyBones.Hips).position = sourceObject.GetBoneTransform(HumanBodyBones.Hips).position;
+        }
+
+        private void hideParts()
+        {
+            
+            for (int i = 0; i < armorObject1.transform.childCount; i++)
+            {
+                if (!armorObject1.transform.GetChild(i).name.ToLower().Contains("upper") && armorObject1.transform.GetChild(i).name != "Armature")
+                {
+                    Debug.Log("test");
+                    armorObject1.transform.GetChild(i).gameObject.SetActive(false);
+                }
+            }
+
+            for (int i = 0; i < armorObject2.transform.childCount; i++)
+            {
+                if (!armorObject2.transform.GetChild(i).name.ToLower().Contains("lower") && armorObject2.transform.GetChild(i).name != "Armature")
+                {
+                    armorObject2.transform.GetChild(i).gameObject.SetActive(false);
+                }
+            }
         }
 
         private void getBones()
         {
             HumanBodyBones[] boneEnumValues = (HumanBodyBones[])Enum.GetValues(typeof(HumanBodyBones));
-            armorBonesArray = new Transform[boneEnumValues.Length];
+            armorBonesArray1 = new Transform[boneEnumValues.Length];
 
             for (int i = 0; i < 55; i++)
             {
-                armorBonesArray[i] = armorObject.GetBoneTransform(boneEnumValues[i]);
+                armorBonesArray1[i] = armorObject1.GetBoneTransform(boneEnumValues[i]);
+            }
+
+            armorBonesArray2 = new Transform[boneEnumValues.Length];
+
+            for (int i = 0; i < 55; i++)
+            {
+                armorBonesArray2[i] = armorObject2.GetBoneTransform(boneEnumValues[i]);
             }
 
             sourceBonesArray = new Transform[boneEnumValues.Length];
@@ -41,13 +113,22 @@ namespace SAOrpg.playerAPI.RPGsstuff.Armor
 
         private void setTransform()
         {
-            for (int i = 0; i < armorBonesArray.Length;i++)
+            for (int i = 0; i < armorBonesArray1.Length;i++)
             {
-                if (armorBonesArray[i] != null)
+                if (armorBonesArray1[i] != null)
                 {
-                    armorBonesArray[i].rotation = sourceBonesArray[i].rotation;
+                    armorBonesArray1[i].rotation = sourceBonesArray[i].rotation;
                 }
                 
+            }
+
+            for (int i = 0; i < armorBonesArray2.Length; i++)
+            {
+                if (armorBonesArray2[i] != null)
+                {
+                    armorBonesArray2[i].rotation = sourceBonesArray[i].rotation;
+                }
+
             }
         }
     }
