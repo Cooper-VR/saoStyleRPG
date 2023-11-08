@@ -77,8 +77,29 @@ namespace SAOrpg.items
                             newArray[i] = tempArray[i];
                         }
                     }
+                    gameObject.GetComponent<itemDamager>().playerCamera.parent.GetComponent<inventory>().weapons = newArray;
                 }
-                
+                if (scriptbleObejct.objectType == inventoryObjects.ObjectType.item)
+                {
+                    inventoryObjects[] tempArray = gameObject.GetComponent<itemDamager>().playerCamera.parent.GetComponent<inventory>().items;
+
+                    inventoryObjects[] newArray = new inventoryObjects[tempArray.Length + 1];
+
+                    for (int i = 0; i < newArray.Length; i++)
+                    {
+
+                        if (i < tempArray.Length - 1)
+                        {
+                            newArray[i] = scriptbleObejct;
+                        }
+                        else
+                        {
+                            newArray[i] = tempArray[i];
+                        }
+                    }
+                    gameObject.GetComponent<itemDamager>().playerCamera.parent.GetComponent<inventory>().items = newArray;
+                }
+
             }
             else
             {
