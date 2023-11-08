@@ -1,3 +1,4 @@
+using SAOrpg.playerAPI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ namespace SAOrpg.items
         public Transform alignmentObject;
         public Vector3 rotationOffset;
         public rigidBodyGravity rigidBodyBehavior;
+
+        private collisionChecker collisionChecker;
 
         private bool dropped;
 
@@ -46,18 +49,31 @@ namespace SAOrpg.items
         /// </summary>
         public void itemDropped()
         {
-            Vector3 droppedVelocity = gameObject.GetComponent<VelocityEstimator>().GetVelocityEstimate();
-            gameObject.GetComponent<Rigidbody>().velocity = droppedVelocity;
-
-            if (rigidBodyBehavior == rigidBodyGravity.useGravity)
+            collisionChecker = GetComponent<collisionChecker>();
+            if (collisionChecker.currentlyTouching && collisionChecker.collidedObject.Contains("sheath"))
             {
-                gameObject.GetComponent<Rigidbody>().useGravity = true;
-                gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                transform.SetParent(collisionChecker.collidedGameobject.transform);
+                transform.localPosition = Vector3.zero;
+                transform.localRotation = Quaternion.identity;
+                gameObject.GetComponent<Rigidbody>().isKinematic = true;
             }
             else
             {
-                gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                Vector3 droppedVelocity = gameObject.GetComponent<VelocityEstimator>().GetVelocityEstimate();
+                gameObject.GetComponent<Rigidbody>().velocity = droppedVelocity;
+
+                if (rigidBodyBehavior == rigidBodyGravity.useGravity)
+                {
+                    gameObject.GetComponent<Rigidbody>().useGravity = true;
+                    gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                }
+                else
+                {
+                    gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                }
             }
+
+            
         }
 
         #endregion
