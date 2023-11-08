@@ -2,14 +2,25 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: blade
-  m_Shader: {fileID: 4800000, guid: e50c7474c056a4d4c81061958ef97ad9, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: fdf48b740347c3e46aa32ab28176262d, type: 3}
+  m_ValidKeywords:
+  - POI_ANISOTROPICS
+  - POI_MATCAP0
+  - POI_RIM2
+  - VIGNETTE_MASKED
+  - _EMISSION
+  - _GLOSSYREFLECTIONS_OFF
+  - _LIGHTINGMODE_TEXTURERAMP
+  - _RIM2STYLE_POIYOMI
+  - _RIMSTYLE_POIYOMI
+  - _STOCHASTICMODE_DELIOT_HEITZ
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,9 +31,9 @@ Material:
       _GLOSSYREFLECTIONS_OFF _LIGHTINGMODE_TEXTURERAMP _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI
       _STOCHASTICMODE_DELIOT_HEITZ
     OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro
-    RenderType: Opaque
     _EmissionColorAnimated: 1
     _EmissionStrengthAnimated: 1
+    _GeoDissolveAlphaAnimated: 1
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -228,6 +239,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FlipbookTexArray:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GeoDissolveGradient:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GeoDissolveMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GeoDissolveTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -508,7 +531,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ToonRamp:
-        m_Texture: {fileID: 2800000, guid: a003b38ed22d33c4e87e9fd46ebb2889, type: 3}
+        m_Texture: {fileID: 2800000, guid: 61bd594533da4fc42bd46ef93ba5a4f6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TruchetMask:
@@ -547,6 +570,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - GeometryShader_Enabled: 1
     - Instancing: 0
@@ -1315,6 +1339,31 @@ Material:
     - _GITDEWorldOrMesh1: 0
     - _GITDEWorldOrMesh2: 0
     - _GITDEWorldOrMesh3: 0
+    - _GeoDissolveAlpha: 1
+    - _GeoDissolveBlendType: 0
+    - _GeoDissolveColorThemeIndex: 0
+    - _GeoDissolveExpansionTime: 0.454
+    - _GeoDissolveGradientType: 1
+    - _GeoDissolveMaskInvert: 0
+    - _GeoDissolveMaskUV: 0
+    - _GeoDissolveNoiseSpeed: 2
+    - _GeoDissolveNoiseThreshold: 0.646
+    - _GeoDissolvePointToPointDebug: 0
+    - _GeoDissolveShapeType: 0
+    - _GeoDissolveTextureUV: 0
+    - _GeoDissolveTravelDistance: 0.1
+    - _GeoDissolveUV: 0
+    - _GeoDissolveVertexColor: 0
+    - _GeoDissolveWireframeColorToggle: 1
+    - _GeoDissolveWireframeEmissionToggle: 1
+    - _GeoDissolveWireframeOffset: 0.11
+    - _GeoDissolveWireframeOnlyToggle: 0
+    - _GeoDissolveWireframeThickness: 0
+    - _GeoDissolveWireframeToggle: 1
+    - _GeometricDissolveUVLocalPos0: 0
+    - _GeometricDissolveUVLocalPos1: 1
+    - _GeometricDissolveUVWorldPos0: 0
+    - _GeometricDissolveUVWorldPos1: 1
     - _GlitterAngleRange: 90
     - _GlitterBias: 0.8
     - _GlitterBlendType: 0
@@ -2179,7 +2228,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 1
+    - _ShaderOptimizerEnabled: 0
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
@@ -2467,6 +2516,7 @@ Material:
     - _WriggleSpeed: 0.28
     - _ZTest: 4
     - _ZWrite: 1
+    - _geoEmissionStrength: 1
     - _glitterFrequencyLinearEmissive: 20
     - footer_discord: 0
     - footer_github: 0
@@ -2496,6 +2546,9 @@ Material:
     - g_end_decal3_position: 0
     - g_end_decal_position: 0
     - g_end_deliot: 0
+    - g_end_geoDissolveColorEmission: 0
+    - g_end_geoDissolveMotionSize: 0
+    - g_end_geoDissolveWireframeBorder: 0
     - g_end_hextile: 0
     - g_start_BRDFTPSMaskGroup: 0
     - g_start_ClearCoatTPSMaskGroup: 0
@@ -2520,6 +2573,9 @@ Material:
     - g_start_decal3_position: 0
     - g_start_decal_position: 0
     - g_start_deliot: 0
+    - g_start_geoDissolveColorEmission: 0
+    - g_start_geoDissolveMotionSize: 0
+    - g_start_geoDissolveWireframeBorder: 0
     - g_start_hextile: 0
     - m_AudioLinkCategory: 0
     - m_end_ALDecalSpectrum: 0
@@ -2663,12 +2719,13 @@ Material:
     - m_end_videoEffects: 0
     - m_end_voronoi: 0
     - m_end_voronoiRandom: 0
-    - m_lightingCategory: 1
-    - m_mainCategory: 1
+    - m_geoDissolve: 1
+    - m_lightingCategory: 0
+    - m_mainCategory: 0
     - m_modifierCategory: 0
     - m_postprocessing: 0
     - m_renderingCategory: 0
-    - m_specialFXCategory: 1
+    - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
     - m_start_ALVolumeColor: 0
     - m_start_Alpha: 0
@@ -2993,6 +3050,19 @@ Material:
     - _FlipbookScaleOffset: {r: 1, g: 1, b: 0, a: 0}
     - _FlipbookSideOffset: {r: 0, g: 0, b: 0, a: 0}
     - _FlipbookTexArrayPan: {r: 0, g: 0, b: 0, a: 0}
+    - _GeoDissolveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GeoDissolveColorRange: {r: 0, g: 0.75, b: 0, a: 0}
+    - _GeoDissolveEmissionRange: {r: 0, g: 0.75, b: 0, a: 0}
+    - _GeoDissolveEndPoint: {r: 0, g: 0, b: 1, a: 1}
+    - _GeoDissolveGradientPan: {r: 0, g: 0, b: 0, a: 0}
+    - _GeoDissolveHeightRange: {r: 0, g: 1, b: 0, a: 0.2}
+    - _GeoDissolveMaskPan: {r: 0, g: 0, b: 0, a: 0}
+    - _GeoDissolveNoiseDensity: {r: 3, g: 3, b: 0, a: 0}
+    - _GeoDissolveRotationMax: {r: 400, g: 400, b: 400, a: 1}
+    - _GeoDissolveRotationMin: {r: -400, g: -400, b: -400, a: 1}
+    - _GeoDissolveScaleRange: {r: 1, g: 0, b: 0, a: 1}
+    - _GeoDissolveStartPoint: {r: 0, g: 0, b: 0, a: 1}
+    - _GeoDissolveTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _GlitterColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlitterColorMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _GlitterMaskPan: {r: 0, g: 0, b: 0, a: 0}
@@ -3221,3 +3291,4 @@ Material:
     - _VoronoiRandomMinMaxBrightness: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiRandomMinMaxSaturation: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiSpeed: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

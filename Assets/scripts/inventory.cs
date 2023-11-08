@@ -1,4 +1,5 @@
 using SAOrpg.playerAPI.RPGsstuff.stats;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -93,7 +94,14 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 					}
 				}
 
-				weapons = newArray;
+				List<inventoryObjects> tempList = new List<inventoryObjects>();
+                for (int i = 0; i < weapons.Length; i++)
+				{
+					tempList.Add(weapons[i]);
+				}
+
+                tempList.RemoveAt(index);
+                weapons = tempList.ToArray();
 			}
 
             if (itemType == inventoryObjects.ObjectType.item)

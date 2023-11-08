@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -255,6 +256,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d4bbf74793bbb44a313264a454f8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deleteObjectTest: 0
+  collisionChecker: {fileID: 0}
+  item: {fileID: 0}
   type: 0
 --- !u!1 &983967525817017243
 GameObject:
@@ -361,6 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -376,6 +381,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d4bbf74793bbb44a313264a454f8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deleteObjectTest: 0
+  collisionChecker: {fileID: 0}
+  item: {fileID: 0}
   type: 1
 --- !u!1 &3887703235602027442
 GameObject:
@@ -654,6 +662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0

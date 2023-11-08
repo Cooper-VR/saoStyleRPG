@@ -39,6 +39,11 @@ namespace SAOrpg.items
 
         #endregion
 
+        private void Start()
+        {
+            playerCamera = GameObject.Find("Camera").transform;
+        }
+
         private void OnTriggerEnter(Collider hitObject)
         {
             //get direction
