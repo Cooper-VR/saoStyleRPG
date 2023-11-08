@@ -81,18 +81,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 
 			if (itemType == inventoryObjects.ObjectType.weapon)
 			{
-				newArray = new inventoryObjects[weapons.Length - 1];
-				for (int i = 0;i < newArray.Length;i++)
-				{
-					if (i != index)
-					{
-						newArray[i] = weapons[i];
-					}
-					else
-					{
-						i++;
-					}
-				}
+				
 
 				List<inventoryObjects> tempList = new List<inventoryObjects>();
                 for (int i = 0; i < weapons.Length; i++)
@@ -106,20 +95,14 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 
             if (itemType == inventoryObjects.ObjectType.item)
             {
-                newArray = new inventoryObjects[items.Length - 1];
-                for (int i = 0; i < newArray.Length; i++)
+                List<inventoryObjects> tempList = new List<inventoryObjects>();
+                for (int i = 0; i < items.Length; i++)
                 {
-                    if (i != index)
-                    {
-                        newArray[i] = items[i];
-                    }
-                    else
-                    {
-                        i++;
-                    }
+                    tempList.Add(items[i]);
                 }
 
-                items = newArray;
+                tempList.RemoveAt(index);
+                items = tempList.ToArray();
             }
         }
 	}

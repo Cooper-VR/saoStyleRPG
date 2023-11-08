@@ -34,6 +34,7 @@ Material:
     _EmissionColorAnimated: 1
     _EmissionStrengthAnimated: 1
     _GeoDissolveAlphaAnimated: 1
+    _GeoDissolveGradientTypeAnimated: 1
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -542,6 +543,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _UnderWaveTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _VertexGlitchMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -567,6 +572,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _VoronoiNoise:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaveMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaveTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -2255,6 +2268,8 @@ Material:
     - _Shape2Duration: 0.1
     - _Shape3Depth: 0.3
     - _Shape3Duration: 0.1
+    - _ShatterWaveAudioLinkEnabled: 0
+    - _ShowUnderWave: 1
     - _SkinThicknessMapInvert: 0
     - _SkinThicknessMapUV: 0
     - _SkinThicknessPower: 1
@@ -2424,6 +2439,10 @@ Material:
     - _UVTileDissolveDiscardAtMax: 1
     - _UVTileDissolveEnabled: 0
     - _UVTileDissolveUV: 0
+    - _UnderWaveEmission: 0
+    - _UnderWaveGlobalMaskBlendType: 0
+    - _UnderWaveGlobalMaskIndex: 0
+    - _UnderWaveTextureUV: 0
     - _Unlit_Intensity: 1
     - _UseLightColor: 1
     - _Use_1stAs2nd: 0
@@ -2512,6 +2531,25 @@ Material:
     - _VoronoiScale: 5
     - _VoronoiSpace: 0
     - _VoronoiType: 1
+    - _WaveChronoBand: 0
+    - _WaveChronoIntensity: 0
+    - _WaveChronoSpeed: 0.5
+    - _WaveChronoType: 0
+    - _WaveEmission: 1
+    - _WaveEmissionALAddBand: 0
+    - _WaveEmissionALMultiplierBand: 0
+    - _WaveGlobalMaskBlendType: 0
+    - _WaveGlobalMaskIndex: 0
+    - _WaveHeight: 0
+    - _WaveHeightALAddBand: 0
+    - _WaveHeightALMultiplierBand: 0
+    - _WaveHeightThreshold: 0.98
+    - _WaveHeightThresholdALAddBand: 0
+    - _WaveHeightThresholdALMultiplierBand: 0
+    - _WaveMaskChannel: 0
+    - _WaveMaskUV: 0
+    - _WaveTextureUV: 0
+    - _WaveVertexMask: 0
     - _Wriggle: 0
     - _WriggleSpeed: 0.28
     - _ZTest: 4
@@ -2705,6 +2743,7 @@ Material:
     - m_end_rim1LightOptions: 0
     - m_end_rim2LightOptions: 0
     - m_end_rimLightOptions: 0
+    - m_end_shatterWaveAudioLink: 0
     - m_end_stylizedSpec: 0
     - m_end_subsurfaceScattering: 0
     - m_end_tps_penetrator: 0
@@ -2725,6 +2764,7 @@ Material:
     - m_modifierCategory: 0
     - m_postprocessing: 0
     - m_renderingCategory: 0
+    - m_shatterWaveCategory: 1
     - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
     - m_start_ALVolumeColor: 0
@@ -2853,6 +2893,7 @@ Material:
     - m_start_rim2LightOptions: 1
     - m_start_rimLight1Options: 0
     - m_start_rimLightOptions: 0
+    - m_start_shatterWaveAudioLink: 0
     - m_start_stylizedSpec: 0
     - m_start_subsurfaceScattering: 0
     - m_start_tps_penetrator: 0
@@ -3262,6 +3303,8 @@ Material:
     - _TruchetMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _TruchetPanOffset: {r: 0, g: 0, b: 0, a: 0}
     - _TruchetTexPan: {r: 0, g: 0, b: 0, a: 0}
+    - _UnderWaveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnderWaveTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _VertexLocalRotationAL: {r: 0, g: 0, b: 0, a: 1}
     - _VertexLocalRotationCTALSpeed: {r: 0, g: 0, b: 0, a: 1}
     - _VertexLocalScaleALMax: {r: 0, g: 0, b: 0, a: 0}
@@ -3291,4 +3334,16 @@ Material:
     - _VoronoiRandomMinMaxBrightness: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiRandomMinMaxSaturation: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiSpeed: {r: 1, g: 1, b: 1, a: 1}
+    - _WaveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _WaveDensity: {r: 10, g: 8, b: 9, a: 0}
+    - _WaveEmissionALAdd: {r: 0, g: 0, b: 0, a: 0}
+    - _WaveEmissionALMultiplier: {r: 1, g: 1, b: 0, a: 0}
+    - _WaveHeightALAdd: {r: 0, g: 0, b: 0, a: 0}
+    - _WaveHeightALMultiplier: {r: 1, g: 1, b: 0, a: 0}
+    - _WaveHeightThresholdALAdd: {r: 0, g: 0, b: 0, a: 0}
+    - _WaveHeightThresholdALMultiplier: {r: 1, g: 1, b: 0, a: 0}
+    - _WaveMaskPan: {r: 0, g: 0, b: 0, a: 0}
+    - _WaveSlope: {r: 2, g: 2, b: 2, a: 0}
+    - _WaveSpeed: {r: 0.5, g: 0.6, b: 0.7, a: 0}
+    - _WaveTexturePan: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
