@@ -16,10 +16,10 @@ namespace SAOrpg.playerAPI.RPGsstuff.sheath
 
         private void FixedUpdate()
         {
-            Hips.transform.position = animator.GetBoneTransform(HumanBodyBones.Chest).transform.position;
+            Hips.transform.position = animator.GetBoneTransform(HumanBodyBones.Hips).transform.position;
             Back.transform.position = animator.GetBoneTransform (HumanBodyBones.Chest).transform.position;
 
-            Hips.transform.rotation = animator.GetBoneTransform(HumanBodyBones.Chest).transform.rotation;
+            Hips.transform.rotation = animator.GetBoneTransform(HumanBodyBones.Hips).transform.rotation;
             Back.transform.rotation = animator.GetBoneTransform(HumanBodyBones.Chest).transform.rotation;
         }
     }

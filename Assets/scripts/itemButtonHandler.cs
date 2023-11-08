@@ -1,3 +1,4 @@
+using SAOrpg.items;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -83,6 +84,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 		{
 			spawnedItem = Instantiate(item.objectPrefab, transform.position, transform.rotation);
 
+			spawnedItem.GetComponent<PickupableObject>().scriptbleObejct = item;
 			mats = spawnedItem.transform.GetChild(0).GetComponent<MeshRenderer>().materials;
 
 			spawned = true;

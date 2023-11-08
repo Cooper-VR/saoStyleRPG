@@ -1,4 +1,5 @@
 using SAOrpg.playerAPI;
+using SAOrpg.playerAPI.RPGsstuff.inventory;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace SAOrpg.items
         public Transform alignmentObject;
         public Vector3 rotationOffset;
         public rigidBodyGravity rigidBodyBehavior;
-
+        public inventoryObjects scriptbleObejct;
         private collisionChecker collisionChecker;
 
         private bool dropped;
@@ -56,6 +57,28 @@ namespace SAOrpg.items
                 transform.localPosition = Vector3.zero;
                 transform.localRotation = Quaternion.identity;
                 gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            }else if (collisionChecker.currentlyTouching && collisionChecker.collidedObject.Contains("Canvas"))
+            {
+                if (scriptbleObejct.objectType == inventoryObjects.ObjectType.weapon)
+                {
+                    inventoryObjects[] tempArray = gameObject.GetComponent<itemDamager>().playerCamera.parent.GetComponent<inventory>().weapons;
+
+                    inventoryObjects[] newArray = new inventoryObjects[tempArray.Length + 1];
+
+                    for (int i = 0; i < newArray.Length; i++)
+                    {
+                        
+                        if (i < tempArray.Length - 1)
+                        {
+                            newArray[i] = scriptbleObejct;
+                        }
+                        else
+                        {
+                            newArray[i] = tempArray[i];
+                        }
+                    }
+                }
+                
             }
             else
             {

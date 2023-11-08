@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +5,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 {
     public class scrollRectController : MonoBehaviour
     {
+
         private ScrollRect scroll;
         public Vector2 scrollPos;
         private collisionChecker collisionChecker;
@@ -19,7 +18,6 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
         {
             scroll = GetComponent<ScrollRect>();
             collisionChecker = GetComponent<collisionChecker>();
-            
         }
 
         private void Update()
