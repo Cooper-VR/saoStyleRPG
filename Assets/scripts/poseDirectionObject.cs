@@ -6,6 +6,10 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
     [CreateAssetMenu(fileName = "pose", menuName = "ScriptableObjects/player/Pose", order = 2)]
     public class poseDirectionObject : ScriptableObject
     {
+        public int unlockLevel;
+        public levelingObject skillType;
+        public Color trailColor;
+
         //left, right, sword
         public int[] using_L = new int[3];
         public int[] using_R = new int[3];

@@ -1333,7 +1333,7 @@ Material:
     - _GITDEWorldOrMesh1: 0
     - _GITDEWorldOrMesh2: 0
     - _GITDEWorldOrMesh3: 0
-    - _GeoDissolveAlpha: 1
+    - _GeoDissolveAlpha: -1
     - _GeoDissolveBlendType: 0
     - _GeoDissolveColorThemeIndex: 0
     - _GeoDissolveExpansionTime: 0.454

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba5642c59860b14ea6821f93be0c87d, type: 3}
   m_Name: pose
   m_EditorClassIdentifier: 
+  unlockLevel: 0
+  trailColor: {r: 1, g: 0, b: 0, a: 1}
   using_L: 010000000300000000000000
   using_R: 020000000400000003000000
   comboDirection_L: 0000000000000000000000000000000001000000010000000100000001000000
