@@ -1,3 +1,4 @@
+using SAOrpg.items;
 using SAOrpg.playerAPI.RPGsstuff.stats;
 using System;
 using System.Collections.Generic;
@@ -17,8 +18,10 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 		public GameObject weaponRoot;
 		public GameObject itemsRoot;
 
+		[Header("equiped stuff")]
 		public inventoryObjects upperArmor;
 		public inventoryObjects lowerArmor;
+		public PickupableObject holdingObject;
 
 		private int ArrayLength;
 

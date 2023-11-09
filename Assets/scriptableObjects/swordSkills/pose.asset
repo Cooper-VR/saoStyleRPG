@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: pose
   m_EditorClassIdentifier: 
   unlockLevel: 0
+  skillType: {fileID: 11400000, guid: a45a3172a0482a24bb815e8734817d64, type: 2}
   trailColor: {r: 1, g: 0, b: 0, a: 1}
   using_L: 010000000300000000000000
   using_R: 020000000400000003000000
