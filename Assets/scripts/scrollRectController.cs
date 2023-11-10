@@ -27,7 +27,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
             scroll.normalizedPosition = scrollPos;
 
             //while touching:
-            if (collisionChecker.entered && collisionChecker.collidedObject.Contains("hand"))
+            if (collisionChecker.entered && collisionChecker.collidedObject.Contains("Controller"))
             {
                 currentHand = GameObject.Find(collisionChecker.collidedObject);
                 initalOffset = currentHand.transform.position - transform.position;
@@ -35,6 +35,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
             if (collisionChecker.currentlyTouching)
             {
+                currentHand = GameObject.Find(collisionChecker.collidedObject);
                 newOffset = (currentHand.transform.position - transform.position) - initalOffset;
             }
 

@@ -45,18 +45,18 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
         private void Update()
         {
             imageCom.color = currentColor;
-            if (collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
+            if (collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "rightFinger"))
             {
                 currentColor = alternateColor;
                 innerCurrentSprite = innerAlternateSprite;
             }
-            else if (!collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
+            else if (!collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "rightFinger"))
             {
                 currentColor = startingColor;
                 innerCurrentSprite = innerStartingSprite;
             }
 
-            if (collisionChecker.exited && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
+            if (collisionChecker.exited && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "rightFinger"))
             {
                 buttonAction();
             }

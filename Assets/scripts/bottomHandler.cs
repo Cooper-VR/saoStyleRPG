@@ -50,7 +50,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
             if (collisionChecker.entered && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "rightFinger"))
             {
                 buttonAction();
-            }
+            } 
         }
 
         #endregion

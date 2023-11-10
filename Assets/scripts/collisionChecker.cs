@@ -35,7 +35,7 @@ namespace SAOrpg.playerAPI
 
             if (currentTime1 >= 1)
             {
-                entered = false;
+                //entered = false;
             }
 
             if (exited)
