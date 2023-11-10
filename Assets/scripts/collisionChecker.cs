@@ -14,7 +14,39 @@ namespace SAOrpg.playerAPI
         public bool entered;
         public bool exited;
         public bool currentlyTouching;
+
+        private float currentTime1;
+        private float currentTime2;
         #endregion
+
+        private void Update()
+        {
+            if (collidedObject == "")
+            {
+                entered = false;
+                currentlyTouching = false;
+                collidedGameobject = null;
+            }
+
+            if (entered)
+            {
+                currentTime1 += Time.deltaTime;
+            }
+
+            if (currentTime1 >= 1)
+            {
+                entered = false;
+            }
+
+            if (exited)
+            {
+                currentTime2 += Time.deltaTime;
+            }
+            if (currentTime2 >= 1)
+            {
+                exited = false;
+            }
+        }
 
         //set the state values to the state of the collider
         private void OnTriggerEnter(Collider other)

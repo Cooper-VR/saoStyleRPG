@@ -50,7 +50,7 @@ namespace SAOrpg.playerAPI
 
             velocity += velocityAddon;
 
-            characterController.Move(velocity * Time.deltaTime);
+            characterController.Move(velocity * speed * Time.deltaTime);
         }
 
         /// <summary>
@@ -58,19 +58,16 @@ namespace SAOrpg.playerAPI
         /// </summary>
         private void movePlayer()
         {
-            //Vector3 move = new Vector3 (indexInput.leftThumbstick.x, 0, indexInput.rightThumbstick.y);
-            Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            Vector3 move = new Vector3 (indexInput.leftThumbstick.x, 0, indexInput.rightThumbstick.y);
+            //Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             if (move.magnitude > deadzone)
             {
-                move = camera.InverseTransformVector(move);
-                
-                characterController.Move(move * speed * Time.deltaTime);
+                velocity += camera.TransformVector(move);
             }
             else
             {
-                move = Vector3.zero;
+                velocity += Vector3.zero;
             }
-            velocity += move;
         }
 
         /// <summary>

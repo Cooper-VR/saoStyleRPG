@@ -41,17 +41,22 @@
       "requirement": "optional"
     },
     {
-      "name": "/actions/default/in/Thumbstick",
+      "name": "/actions/default/in/thumbstick",
       "type": "vector2",
       "requirement": "mandatory"
     },
     {
-      "name": "/actions/default/in/Trackpad",
+      "name": "/actions/default/in/trackpad",
       "type": "vector2",
       "requirement": "mandatory"
     },
     {
       "name": "/actions/default/in/Jump",
+      "type": "boolean",
+      "requirement": "mandatory"
+    },
+    {
+      "name": "/actions/default/in/dash",
       "type": "boolean",
       "requirement": "mandatory"
     },

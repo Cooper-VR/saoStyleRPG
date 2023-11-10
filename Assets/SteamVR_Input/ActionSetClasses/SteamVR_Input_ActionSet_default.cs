@@ -89,19 +89,19 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Vector2 Thumbstick
+        public virtual SteamVR_Action_Vector2 thumbstick
         {
             get
             {
-                return SteamVR_Actions.default_Thumbstick;
+                return SteamVR_Actions.default_thumbstick;
             }
         }
         
-        public virtual SteamVR_Action_Vector2 Trackpad
+        public virtual SteamVR_Action_Vector2 trackpad
         {
             get
             {
-                return SteamVR_Actions.default_Trackpad;
+                return SteamVR_Actions.default_trackpad;
             }
         }
         
@@ -110,6 +110,14 @@ namespace Valve.VR
             get
             {
                 return SteamVR_Actions.default_Jump;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean dash
+        {
+            get
+            {
+                return SteamVR_Actions.default_dash;
             }
         }
         
