@@ -8,21 +8,14 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
     public class innerButtonHandler : MonoBehaviour
     {
         #region variables
-
-        public int menuIndex;
-
         private collisionChecker collisionChecker;
-        private Animator menuController;
-        private Image imageCom;
+        private Image image;
 
-        public Color alternateColor;
-        private Color startingColor;
-        private Color currentColor;
+        public Color clickColor = Color.white;
+        private Color startingColor = Color.white;
 
-        public Sprite innerAlternateSprite;
-        private Sprite innerStartingSprite;
-        private Image innerImageCom;
-        private Sprite innerCurrentSprite;
+        public bool testBool = false;
+        
 
         #endregion
 
@@ -30,34 +23,25 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void Start()
         {
-            menuController = transform.parent.parent.GetComponent<Animator>();
             collisionChecker = GetComponent<collisionChecker>();
-
-            imageCom = GetComponent<Image>();
-            startingColor = imageCom.color;
-            currentColor = startingColor;
-
-            innerImageCom = transform.GetChild(1).GetComponent<Image>();
-            innerStartingSprite = innerImageCom.sprite;
-            innerCurrentSprite = innerStartingSprite;
+            image = GetComponent<Image>();
+            startingColor = image.color;
         }
 
         private void Update()
         {
-            imageCom.color = currentColor;
-            if (collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "rightFinger"))
+            if (collisionChecker.currentlyTouching)
             {
-                currentColor = alternateColor;
-                innerCurrentSprite = innerAlternateSprite;
-            }
-            else if (!collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "rightFinger"))
-            {
-                currentColor = startingColor;
-                innerCurrentSprite = innerStartingSprite;
-            }
+                image.color = clickColor;
 
-            if (collisionChecker.exited && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "rightFinger"))
+            }
+            if (collisionChecker.exited || testBool)
             {
+                image.color = startingColor;
+
+                testBool = false;
+
+                turnButtonsOff();
                 buttonAction();
             }
         }
@@ -66,13 +50,17 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void buttonAction()
         {
-            innerButtonHandler[] gameObjects = transform.parent.GetComponentsInChildren<innerButtonHandler>();
-            for (int i = 0; i < gameObjects.Length; i++)
-            {
-                gameObjects[i].transform.GetChild(0).gameObject.SetActive(false);
-            }
-
             transform.GetChild(0).gameObject.SetActive(true);
+        }
+        private void turnButtonsOff()
+        {
+            for (int i = 0; i < transform.parent.childCount; i++)
+            {
+                if (transform.parent.GetChild(i) != transform)
+                {
+                    transform.parent.GetChild(i).GetChild(0).gameObject.SetActive(false);
+                }
+            }
         }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 namespace SAOrpg.playerAPI.RPGsstuff.Menu
 {
@@ -24,7 +25,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void Update()
         {
-            scroll.normalizedPosition = scrollPos;
+            transform.GetChild(0).transform.localPosition = scrollPos;
 
             //while touching:
             if (collisionChecker.entered && collisionChecker.collidedObject.Contains("Controller"))
@@ -33,7 +34,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
                 initalOffset = currentHand.transform.position - transform.position;
             }
 
-            if (collisionChecker.currentlyTouching)
+            if (collisionChecker.currentlyTouching && collisionChecker.collidedObject.Contains("Controller"))
             {
                 currentHand = GameObject.Find(collisionChecker.collidedObject);
                 newOffset = (currentHand.transform.position - transform.position) - initalOffset;
@@ -41,7 +42,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
             //get vertical offset of finger vs scroll center
 
-            scrollPos.y -= newOffset.y;
+            scrollPos.y = newOffset.y;
             //as the finger moves get a new offset and subtract it from the first one
 
             //use that new offset as the position;

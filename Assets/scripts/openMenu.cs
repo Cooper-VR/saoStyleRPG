@@ -28,7 +28,6 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void Update()
         {
-            Debug.Log(leftHand.GetVelocityEstimate().y);
             if ((leftHand.GetVelocityEstimate().y * -1 > threshold && input.isGrippingLeft) || Input.GetKeyDown(KeyCode.M))
             {
                 menu.SetBool("open", true);
