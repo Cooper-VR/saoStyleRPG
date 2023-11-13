@@ -9,10 +9,10 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
     {
         #region variables
 
-        
-
         public Sprite alternateSprite;
         public int menuIndex;
+
+        public AudioSource click;
 
         private collisionChecker collisionChecker;
         private Animator menuController;
@@ -20,14 +20,14 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
         private Image imageCom;
         private Sprite currentSprite;
 
-
-
         #endregion
 
         #region start/update
 
         private void Start()
         {
+            click = transform.root.GetChild(0).gameObject.GetComponent<AudioSource>();
+
             imageCom = GetComponent<Image>();
             menuController = transform.parent.parent.GetComponent<Animator>();
             startingSprite = imageCom.sprite;
@@ -58,6 +58,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
         private void buttonAction()
         {
             menuController.SetInteger("firstLayer", menuIndex);
+            click.Play();
         }
     }
 }

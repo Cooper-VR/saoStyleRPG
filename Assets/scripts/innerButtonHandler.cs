@@ -13,7 +13,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         public Color clickColor = Color.white;
         private Color startingColor = Color.white;
-
+        public AudioSource click;
         public bool testBool = false;
         
 
@@ -23,6 +23,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void Start()
         {
+            click = transform.root.GetChild(0).gameObject.GetComponent<AudioSource>();
             collisionChecker = GetComponent<collisionChecker>();
             image = GetComponent<Image>();
             startingColor = image.color;
@@ -51,6 +52,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
         private void buttonAction()
         {
             transform.GetChild(0).gameObject.SetActive(true);
+            click.Play();
         }
         private void turnButtonsOff()
         {

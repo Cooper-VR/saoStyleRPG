@@ -47,7 +47,9 @@ namespace SAOrpg.playerAPI
 			speed = GetComponent<playerStats>().skills[0].level;
 			velocity = Vector3.zero;
 			movePlayer();
-			playerJump();
+			rotatePlayer();
+
+            playerJump();
 
 			velocity += velocityAddon;
 
