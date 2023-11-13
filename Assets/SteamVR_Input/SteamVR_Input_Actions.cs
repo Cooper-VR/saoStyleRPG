@@ -35,11 +35,13 @@ namespace Valve.VR
         
         private static SteamVR_Action_Boolean p_default_HeadsetOnHead;
         
-        private static SteamVR_Action_Vector2 p_default_Thumbstick;
+        private static SteamVR_Action_Vector2 p_default_thumbstick;
         
-        private static SteamVR_Action_Vector2 p_default_Trackpad;
+        private static SteamVR_Action_Vector2 p_default_trackpad;
         
         private static SteamVR_Action_Boolean p_default_Jump;
+        
+        private static SteamVR_Action_Boolean p_default_dash;
         
         private static SteamVR_Action_Vibration p_default_Haptic;
         
@@ -129,19 +131,19 @@ namespace Valve.VR
             }
         }
         
-        public static SteamVR_Action_Vector2 default_Thumbstick
+        public static SteamVR_Action_Vector2 default_thumbstick
         {
             get
             {
-                return SteamVR_Actions.p_default_Thumbstick.GetCopy<SteamVR_Action_Vector2>();
+                return SteamVR_Actions.p_default_thumbstick.GetCopy<SteamVR_Action_Vector2>();
             }
         }
         
-        public static SteamVR_Action_Vector2 default_Trackpad
+        public static SteamVR_Action_Vector2 default_trackpad
         {
             get
             {
-                return SteamVR_Actions.p_default_Trackpad.GetCopy<SteamVR_Action_Vector2>();
+                return SteamVR_Actions.p_default_trackpad.GetCopy<SteamVR_Action_Vector2>();
             }
         }
         
@@ -150,6 +152,14 @@ namespace Valve.VR
             get
             {
                 return SteamVR_Actions.p_default_Jump.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean default_dash
+        {
+            get
+            {
+                return SteamVR_Actions.p_default_dash.GetCopy<SteamVR_Action_Boolean>();
             }
         }
         
@@ -229,9 +239,10 @@ namespace Valve.VR
                     SteamVR_Actions.default_SkeletonRightHand,
                     SteamVR_Actions.default_Squeeze,
                     SteamVR_Actions.default_HeadsetOnHead,
-                    SteamVR_Actions.default_Thumbstick,
-                    SteamVR_Actions.default_Trackpad,
+                    SteamVR_Actions.default_thumbstick,
+                    SteamVR_Actions.default_trackpad,
                     SteamVR_Actions.default_Jump,
+                    SteamVR_Actions.default_dash,
                     SteamVR_Actions.default_Haptic,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
@@ -250,9 +261,10 @@ namespace Valve.VR
                     SteamVR_Actions.default_SkeletonRightHand,
                     SteamVR_Actions.default_Squeeze,
                     SteamVR_Actions.default_HeadsetOnHead,
-                    SteamVR_Actions.default_Thumbstick,
-                    SteamVR_Actions.default_Trackpad,
+                    SteamVR_Actions.default_thumbstick,
+                    SteamVR_Actions.default_trackpad,
                     SteamVR_Actions.default_Jump,
+                    SteamVR_Actions.default_dash,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Steering,
@@ -274,6 +286,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_GrabGrip,
                     SteamVR_Actions.default_HeadsetOnHead,
                     SteamVR_Actions.default_Jump,
+                    SteamVR_Actions.default_dash,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Brake,
                     SteamVR_Actions.buggy_Reset};
@@ -281,8 +294,8 @@ namespace Valve.VR
                     SteamVR_Actions.default_Squeeze,
                     SteamVR_Actions.buggy_Throttle};
             Valve.VR.SteamVR_Input.actionsVector2 = new Valve.VR.SteamVR_Action_Vector2[] {
-                    SteamVR_Actions.default_Thumbstick,
-                    SteamVR_Actions.default_Trackpad,
+                    SteamVR_Actions.default_thumbstick,
+                    SteamVR_Actions.default_trackpad,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.buggy_Steering};
             Valve.VR.SteamVR_Input.actionsVector3 = new Valve.VR.SteamVR_Action_Vector3[0];
@@ -296,9 +309,10 @@ namespace Valve.VR
                     SteamVR_Actions.default_GrabGrip,
                     SteamVR_Actions.default_Squeeze,
                     SteamVR_Actions.default_HeadsetOnHead,
-                    SteamVR_Actions.default_Thumbstick,
-                    SteamVR_Actions.default_Trackpad,
+                    SteamVR_Actions.default_thumbstick,
+                    SteamVR_Actions.default_trackpad,
                     SteamVR_Actions.default_Jump,
+                    SteamVR_Actions.default_dash,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Steering,
@@ -318,9 +332,10 @@ namespace Valve.VR
             SteamVR_Actions.p_default_SkeletonRightHand = ((SteamVR_Action_Skeleton)(SteamVR_Action.Create<SteamVR_Action_Skeleton>("/actions/default/in/SkeletonRightHand")));
             SteamVR_Actions.p_default_Squeeze = ((SteamVR_Action_Single)(SteamVR_Action.Create<SteamVR_Action_Single>("/actions/default/in/Squeeze")));
             SteamVR_Actions.p_default_HeadsetOnHead = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/HeadsetOnHead")));
-            SteamVR_Actions.p_default_Thumbstick = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/default/in/Thumbstick")));
-            SteamVR_Actions.p_default_Trackpad = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/default/in/Trackpad")));
+            SteamVR_Actions.p_default_thumbstick = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/default/in/thumbstick")));
+            SteamVR_Actions.p_default_trackpad = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/default/in/trackpad")));
             SteamVR_Actions.p_default_Jump = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/Jump")));
+            SteamVR_Actions.p_default_dash = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/dash")));
             SteamVR_Actions.p_default_Haptic = ((SteamVR_Action_Vibration)(SteamVR_Action.Create<SteamVR_Action_Vibration>("/actions/default/out/Haptic")));
             SteamVR_Actions.p_platformer_Move = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/platformer/in/Move")));
             SteamVR_Actions.p_platformer_Jump = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/platformer/in/Jump")));

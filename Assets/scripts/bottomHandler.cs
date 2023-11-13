@@ -38,7 +38,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
         private void Update()
         {
             imageCom.sprite = currentSprite;
-            if (collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
+            if (collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "rightFinger"))
             {
                 currentSprite = alternateSprite;
             }
@@ -47,10 +47,10 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
                 currentSprite = startingSprite;
             }
 
-            if (collisionChecker.entered && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
+            if (collisionChecker.entered && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "rightFinger"))
             {
                 buttonAction();
-            }
+            } 
         }
 
         #endregion

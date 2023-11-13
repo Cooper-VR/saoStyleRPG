@@ -168,6 +168,11 @@ namespace SAOrpg.items
             }
         }
 
+        private void Start()
+        {
+            playerCamera = GameObject.Find("Camera").transform;
+        }
+
         private void Update()
         {
             //get direction
