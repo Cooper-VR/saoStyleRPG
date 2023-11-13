@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -230.4541}
-  m_SizeDelta: {x: 200, y: 946.97003}
+  m_SizeDelta: {x: 200, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348943259
 MonoBehaviour:
@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &576925543
 RectTransform:
   m_ObjectHideFlags: 0
@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -260,7 +261,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576925542}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 204, y: 427.9, z: 10}
@@ -301,7 +302,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -230.4541}
-  m_SizeDelta: {x: 200, y: 946.97003}
+  m_SizeDelta: {x: 200, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8367688744645022159
 MonoBehaviour:
@@ -366,7 +367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4254366035748386918
 RectTransform:
   m_ObjectHideFlags: 0
@@ -498,6 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -525,7 +527,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4094689160480517138}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 204, y: 427.9, z: 10}
@@ -636,6 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -653,6 +656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alternateSprite: {fileID: 21300000, guid: 1c9e5ad2fbaf2fb408378a471da3e034, type: 3}
   menuIndex: 0
+  click: {fileID: 0}
 --- !u!54 &7674587751713167662
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -763,9 +767,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuIndex: 0
-  alternateColor: {r: 0.9215687, g: 0.6509804, b: 0.003921569, a: 1}
-  innerAlternateSprite: {fileID: 21300000, guid: 3bdc9e4bdb5bc9346ac657383b180d36, type: 3}
+  clickColor: {r: 1, g: 1, b: 1, a: 1}
+  click: {fileID: 0}
+  testBool: 0
 --- !u!114 &7674587751726154979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,6 +783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -919,6 +924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -936,6 +942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alternateSprite: {fileID: 21300000, guid: 4559b5a29e10ba649af488af896cfada, type: 3}
   menuIndex: 0
+  click: {fileID: 0}
 --- !u!54 &7674587751738943431
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1397,7 +1404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7674587751937511155
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1471,9 +1478,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuIndex: 0
-  alternateColor: {r: 0.9215687, g: 0.6509804, b: 0.003921569, a: 1}
-  innerAlternateSprite: {fileID: 21300000, guid: 9944c0050c5396f499584c22d8834c7b, type: 3}
+  clickColor: {r: 1, g: 0.60990745, b: 0, a: 1}
+  click: {fileID: 0}
+  testBool: 0
 --- !u!114 &7674587751937511152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1487,6 +1494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -2052,6 +2060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -2069,6 +2078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alternateSprite: {fileID: 21300000, guid: 409fa1188e9d466469056590b7eaa13a, type: 3}
   menuIndex: 0
+  click: {fileID: 0}
 --- !u!54 &7674587752336240398
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2106,7 +2116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7674587752442871086
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2180,9 +2190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuIndex: 0
-  alternateColor: {r: 0.9215687, g: 0.6509804, b: 0.003921569, a: 1}
-  innerAlternateSprite: {fileID: 21300000, guid: dacf6fb63d3bd50408f6dc3e9171e2db, type: 3}
+  clickColor: {r: 1, g: 0.60990745, b: 0, a: 1}
+  click: {fileID: 0}
+  testBool: 0
 --- !u!114 &7674587752442871075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2196,6 +2206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -2322,9 +2333,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuIndex: 0
-  alternateColor: {r: 0.9215687, g: 0.6509804, b: 0.003921569, a: 1}
-  innerAlternateSprite: {fileID: 21300000, guid: cdeb4b73c1fbb8e4fae942ad67e1b5a8, type: 3}
+  clickColor: {r: 1, g: 1, b: 1, a: 1}
+  click: {fileID: 0}
+  testBool: 0
 --- !u!114 &7674587752483677390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2338,6 +2349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -2677,9 +2689,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuIndex: 0
-  alternateColor: {r: 0.9215687, g: 0.6509804, b: 0.003921569, a: 1}
-  innerAlternateSprite: {fileID: 21300000, guid: aa7d63d7904391143876ed88cc20d3c5, type: 3}
+  clickColor: {r: 1, g: 1, b: 1, a: 1}
+  click: {fileID: 0}
+  testBool: 0
 --- !u!114 &7674587752604865025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2693,6 +2705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -2819,9 +2832,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuIndex: 0
-  alternateColor: {r: 0.9215687, g: 0.6509804, b: 0.003921569, a: 1}
-  innerAlternateSprite: {fileID: 21300000, guid: 20738beaa2046db47b0fb28d6b6c7e09, type: 3}
+  clickColor: {r: 1, g: 1, b: 1, a: 1}
+  click: {fileID: 0}
+  testBool: 0
 --- !u!114 &7674587752606060981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2835,6 +2848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -2976,6 +2990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -2993,6 +3008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alternateSprite: {fileID: 21300000, guid: b737b60bc4c04e64a9bd90f164d063f0, type: 3}
   menuIndex: 0
+  click: {fileID: 0}
 --- !u!54 &7674587752617690386
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3677,9 +3693,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuIndex: 0
-  alternateColor: {r: 0.9215687, g: 0.6509804, b: 0.003921569, a: 1}
-  innerAlternateSprite: {fileID: 21300000, guid: 41146ca20519e374e83589aa014d6234, type: 3}
+  clickColor: {r: 1, g: 1, b: 1, a: 1}
+  click: {fileID: 0}
+  testBool: 0
 --- !u!114 &7674587752882404416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3693,6 +3709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -3737,6 +3754,7 @@ GameObject:
   - component: {fileID: 7674587752966460930}
   - component: {fileID: 7674587752966460931}
   - component: {fileID: 7674587752966460940}
+  - component: {fileID: 1700646133}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -3830,6 +3848,102 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!82 &1700646133
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7674587752966460942}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7674587753039831694
 GameObject:
   m_ObjectHideFlags: 0
@@ -3840,6 +3954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7674587753039831692}
   - component: {fileID: 7674587753039831693}
+  - component: {fileID: 967053693}
   m_Layer: 0
   m_Name: playerMenu
   m_TagString: Untagged
@@ -3884,6 +3999,102 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &967053693
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7674587753039831694}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.02
+  MaxDistance: 2.5
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7674587753111820170
 GameObject:
   m_ObjectHideFlags: 0
@@ -3993,6 +4204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -4010,6 +4222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alternateSprite: {fileID: 21300000, guid: 49624fe687081e745bf32cd4f0ff32c2, type: 3}
   menuIndex: 0
+  click: {fileID: 0}
 --- !u!54 &7674587753111820163
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4047,7 +4260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7674587753169547754
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4121,9 +4334,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuIndex: 0
-  alternateColor: {r: 0.9215687, g: 0.6509804, b: 0.003921569, a: 1}
-  innerAlternateSprite: {fileID: 21300000, guid: 7e126079fb087e8418604ad588c3becb, type: 3}
+  clickColor: {r: 1, g: 0.60990745, b: 0, a: 1}
+  click: {fileID: 0}
+  testBool: 0
 --- !u!114 &7674587753169547759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4137,6 +4350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -4263,9 +4477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuIndex: 0
-  alternateColor: {r: 0.9215687, g: 0.6509804, b: 0.003921569, a: 1}
-  innerAlternateSprite: {fileID: 21300000, guid: 289b4f7d941b7944cb051bddd9582c0a, type: 3}
+  clickColor: {r: 1, g: 1, b: 1, a: 1}
+  click: {fileID: 0}
+  testBool: 0
 --- !u!114 &7674587753236168114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4279,6 +4493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -4751,9 +4966,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuIndex: 0
-  alternateColor: {r: 0.9215687, g: 0.6509804, b: 0.003921569, a: 1}
-  innerAlternateSprite: {fileID: 21300000, guid: 82889938a6d79be40ad66179e84fdf5f, type: 3}
+  clickColor: {r: 1, g: 1, b: 1, a: 1}
+  click: {fileID: 0}
+  testBool: 0
 --- !u!114 &7674587753487209145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4767,6 +4982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -5028,9 +5244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuIndex: 0
-  alternateColor: {r: 0.9215687, g: 0.6509804, b: 0.003921569, a: 1}
-  innerAlternateSprite: {fileID: 21300000, guid: 3a11dbeb9d9838449a5f9cab0573fef4, type: 3}
+  clickColor: {r: 1, g: 1, b: 1, a: 1}
+  click: {fileID: 0}
+  testBool: 0
 --- !u!114 &7674587753696149343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5044,6 +5260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
@@ -5388,7 +5605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &328351603253749277
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5520,6 +5737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidedObject: 
+  collidedGameobject: {fileID: 0}
   entered: 0
   exited: 0
   currentlyTouching: 0
