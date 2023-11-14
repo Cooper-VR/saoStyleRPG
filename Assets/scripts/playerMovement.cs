@@ -61,7 +61,8 @@ namespace SAOrpg.playerAPI
 		private void movePlayer()
 		{
 			Vector3 move = new Vector3 (indexInput.leftThumbstick.x, 0, indexInput.rightThumbstick.y);
-			//Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+			
+			move += new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 			if (move.magnitude > deadzone)
 			{
 				velocity += camera.TransformVector(move);

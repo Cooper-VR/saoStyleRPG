@@ -69,11 +69,18 @@ namespace SAOrpg.playerAPI.RPGsstuff.audio
 					if (!dashScript.isDashing && movement.grounded)
 					{
 						//play sound
-						randomNum = UnityEngine.Random.Range(0, soundArrays[getCurrentLayer()].audio.Length);
-						audioSource.clip = soundArrays[getCurrentLayer()].audio[randomNum];
-						audioSource.Play();
+						try {
+                            randomNum = UnityEngine.Random.Range(0, soundArrays[getCurrentLayer()].audio.Length);
+                            audioSource.clip = soundArrays[getCurrentLayer()].audio[randomNum];
+                            audioSource.Play();
 
-						currentTime = 0f;
+                            currentTime = 0f;
+                        }
+						catch
+						{
+							Debug.Log("in air");
+						}
+						
 					}
 				}
 			}

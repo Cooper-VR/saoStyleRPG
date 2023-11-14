@@ -95,7 +95,7 @@ public class dayNightCycle : MonoBehaviour
     
     private void FollowPlayer()
     {
-        transform.position = GameObject.FindGameObjectWithTag("player").transform.position;
+        transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
     #endregion
 }

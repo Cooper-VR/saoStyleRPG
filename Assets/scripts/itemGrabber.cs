@@ -35,75 +35,84 @@ namespace SAOrpg.items
 
         private void Update()
         {
-            //check if they are gripping on left and right
-            if (input.isGrippingLeft)
+            try
             {
-
-                leftDropped = false;
-                pickables = GameObject.FindGameObjectsWithTag("Pickupable");
-
-                //get closest pickup
-                leftClosest = findClosest(leftHand);
-
-                //check if its close enough
-                if (Mathf.Abs((leftClosest.transform.position - leftHand.position).magnitude) < threshold)
+                //check if they are gripping on left and right
+                if (input.isGrippingLeft)
                 {
-                    //assign the values for the pickup script
-                    PickupableObject pickup = leftClosest.GetComponent<PickupableObject>();
-                    pickup.controller = leftHand;
-                    pickup.alignmentObject = leftHand;
-                    pickup.positionItem();
+
+                    leftDropped = false;
+                    pickables = GameObject.FindGameObjectsWithTag("Pickupable");
+
+                    //get closest pickup
+                    leftClosest = findClosest(leftHand);
+
+                    //check if its close enough
+                    if (Mathf.Abs((leftClosest.transform.position - leftHand.position).magnitude) < threshold)
+                    {
+                        //assign the values for the pickup script
+                        PickupableObject pickup = leftClosest.GetComponent<PickupableObject>();
+                        pickup.controller = leftHand;
+                        pickup.alignmentObject = leftHand;
+                        pickup.positionItem();
+                    }
                 }
-            }
-            else
-            {
-                //alternate for when its dropped
-                if (!leftDropped)
+                else
                 {
+                    //alternate for when its dropped
+                    if (!leftDropped)
+                    {
+                        pickables = GameObject.FindGameObjectsWithTag("Pickupable");
+
+                        rightClosest = findClosest(rightHand);
+
+                        PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
+                        pickup.controller = null;
+                        pickup.alignmentObject = null;
+                        pickup.itemDropped();
+                        leftDropped = true;
+                    }
+                }
+
+                if (input.isGrippingRight)
+                {
+                    //same for other hand
+                    rightDropped = false;
                     pickables = GameObject.FindGameObjectsWithTag("Pickupable");
 
                     rightClosest = findClosest(rightHand);
 
-                    PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
-                    pickup.controller = null;
-                    pickup.alignmentObject = null;
-                    pickup.itemDropped();
-                    leftDropped = true;
+                    if (Mathf.Abs((rightClosest.transform.position - rightHand.position).magnitude) < threshold)
+                    {
+                        PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
+                        pickup.controller = rightHand;
+                        pickup.alignmentObject = rightHand;
+                        pickup.positionItem();
+                    }
                 }
-            }
-
-            if (input.isGrippingRight)
-            {
-                //same for other hand
-                rightDropped = false;
-                pickables = GameObject.FindGameObjectsWithTag("Pickupable");
-
-                rightClosest = findClosest(rightHand);
-
-                if (Mathf.Abs((rightClosest.transform.position - rightHand.position).magnitude) < threshold)
+                else
                 {
-                    PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
-                    pickup.controller = rightHand;
-                    pickup.alignmentObject = rightHand;
-                    pickup.positionItem();
+                    //alternate for when its dropped
+                    if (!rightDropped)
+                    {
+                        pickables = GameObject.FindGameObjectsWithTag("Pickupable");
+
+                        rightClosest = findClosest(rightHand);
+
+                        PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
+                        pickup.controller = null;
+                        pickup.alignmentObject = null;
+                        pickup.itemDropped();
+                        rightDropped = true;
+                    }
                 }
             }
-            else
+            catch
             {
-                //alternate for when its dropped
-                if (!rightDropped)
-                {
-                    pickables = GameObject.FindGameObjectsWithTag("Pickupable");
-
-                    rightClosest = findClosest(rightHand);
-
-                    PickupableObject pickup = rightClosest.GetComponent<PickupableObject>();
-                    pickup.controller = null;
-                    pickup.alignmentObject = null;
-                    pickup.itemDropped();
-                    rightDropped = true;
-                }
+                Debug.Log("no pickupable items");
             }
+
+            
         }
         #endregion
 
