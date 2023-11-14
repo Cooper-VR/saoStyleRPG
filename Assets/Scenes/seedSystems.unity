@@ -899,6 +899,10 @@ PrefabInstance:
       value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: 597948601, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1858270264}
+    - target: {fileID: 597948601, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -3715,14 +3719,6 @@ PrefabInstance:
     - target: {fileID: 8026212109780996387, guid: ff7691002bf7ad14aaa80e2bba4934db, type: 3}
       propertyPath: m_Name
       value: healthBar
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026212111027493014, guid: ff7691002bf7ad14aaa80e2bba4934db, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026212111027493014, guid: ff7691002bf7ad14aaa80e2bba4934db, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff7691002bf7ad14aaa80e2bba4934db, type: 3}

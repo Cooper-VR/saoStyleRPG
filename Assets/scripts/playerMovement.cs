@@ -1,6 +1,5 @@
 using SAOrpg.playerAPI.RPGsstuff.stats;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
@@ -49,7 +48,7 @@ namespace SAOrpg.playerAPI
 			movePlayer();
 			rotatePlayer();
 
-            playerJump();
+			playerJump();
 
 			velocity += velocityAddon;
 
