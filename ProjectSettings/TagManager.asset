@@ -11,6 +11,8 @@ TagManager:
   - Stone
   - Wood
   - Terrain
+  - player
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -21,6 +23,10 @@ TagManager:
   - Wood
   - Stone
   - Terrain
+  - Ground
+  - Player
+  - 
+  - 
   - 
   - 
   - 
