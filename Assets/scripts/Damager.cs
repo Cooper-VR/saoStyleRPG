@@ -1,4 +1,5 @@
 using SAOrpg.playerAPI.RPGsstuff;
+using SAOrpg.playerAPI.RPGsstuff.stats;
 using UnityEngine;
 
 namespace SAOrpg.playerAPI.RPGsstuff.playerColliders
@@ -8,8 +9,9 @@ namespace SAOrpg.playerAPI.RPGsstuff.playerColliders
         #region variables
         public DamageColliderHandler DamageColliderHandler;
         private collisionChecker[] playerColliders = new collisionChecker[5];
-
+        private playerStats stats;
         public bool hit;
+
         #endregion
 
 
@@ -30,7 +32,19 @@ namespace SAOrpg.playerAPI.RPGsstuff.playerColliders
             //check if one of them is hit
             for (int i = 0; i < playerColliders.Length; i++)
             {
-                hit = playerColliders[i].currentlyTouching;
+                if (playerColliders[i].collidedGameobject.tag.Contains("Enemy"))
+                {
+                    hit = playerColliders[i].currentlyTouching;
+                }
+            }
+
+            if (hit)
+            {
+
+                stats.health -= 10;
+                hit = false;
+
+                //-10
             }
         }
     }
