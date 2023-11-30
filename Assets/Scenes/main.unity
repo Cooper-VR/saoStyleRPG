@@ -22190,7 +22190,7 @@ GameObject:
   - component: {fileID: 857562697}
   - component: {fileID: 857562696}
   m_Layer: 0
-  m_Name: dummy
+  m_Name: Skilldummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
