@@ -82,7 +82,7 @@ public class dayNightCycle : MonoBehaviour
         cloudMaterial1.SetColor("_CloudColor", cloudColor.Evaluate((float)time.TotalHours / 24));
         cloudMaterial2.SetColor("_CloudColor", cloudColor.Evaluate((float)time.TotalHours / 24));
 
-        Debug.Log(exposure.Evaluate((float)time.TotalHours / 24).a);
+        //Debug.Log(exposure.Evaluate((float)time.TotalHours / 24).a);
         skyBox.SetFloat("_Exposure", exposure.Evaluate((float)time.TotalHours / 24).a -0.2f / 0.9f + 0.3f);
         skyBox.SetFloat("_AtmosphereThickness", exposure.Evaluate((float)time.TotalHours / 24).a / 1f);
     }

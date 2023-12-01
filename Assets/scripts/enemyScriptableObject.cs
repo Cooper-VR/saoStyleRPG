@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SAOrpg
+namespace SAOrpg.enemies
 {
     [CreateAssetMenu(fileName = "enemy", menuName = "ScriptableObjects/enemy/enemy", order = 0)]
     public class enemyScriptableObject : ScriptableObject

@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5386b62a3a11d61409a55bac9ad8239d, type: 3}
   m_Name: dummy
   m_EditorClassIdentifier: 
+  behavior: 0
+  RunSpeed: 2
+  WalkSpeed: 1
+  health: 250
+  level: 1
+  itemDrops: []

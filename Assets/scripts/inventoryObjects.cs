@@ -11,6 +11,10 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
         public ObjectType objectType;
         public string objectName;
 
+
+        [Tooltip("these are weapon exlusive")]
+        public int maxDamage;
+
         public enum ObjectType
         {
             weapon,
