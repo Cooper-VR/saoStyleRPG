@@ -177,6 +177,7 @@ public class swordDamager : MonoBehaviour
             deltDamage = false;
             Debug.Log("fullHit");
             enemy.GetComponent<enemyHandler>().DealDamage(stats.maxDamage);
+            enemy.GetComponent<enemyHandler>().damgerItem = this.gameObject;
             delayTime = 0f;
         }
 
@@ -201,13 +202,6 @@ public class swordDamager : MonoBehaviour
             }
             
         }
-    }
-
-    private void DamageEnemy(GameObject enemy)
-    {
-        enemyHandler handler = enemy.GetComponent<enemyHandler>();
-
-        handler.DealDamage(10);
     }
 
     private void raycastCollision()

@@ -1,3 +1,4 @@
+using SAOrpg.playerAPI.RPGsstuff.inventory;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +14,9 @@ namespace SAOrpg.enemies
         public int health;
         public int level;
         //damge will be based on the holding weapon
+        public int dropEXP;
 
-        public GameObject[] itemDrops;
+        public inventoryObjects[] itemDrops;
 
         public enum generalBehavior
         {
