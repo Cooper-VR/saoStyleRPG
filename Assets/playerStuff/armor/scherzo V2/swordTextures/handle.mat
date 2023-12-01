@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: handle
-  m_Shader: {fileID: 4800000, guid: fdf48b740347c3e46aa32ab28176262d, type: 3}
+  m_Shader: {fileID: 4800000, guid: b351bcb3159c4994aa52baf3105d3c39, type: 3}
   m_ValidKeywords:
   - POI_MATCAP0
   - POI_RIM2
@@ -17,7 +17,6 @@ Material:
   - _LIGHTINGMODE_TEXTURERAMP
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
-  - _STOCHASTICMODE_DELIOT_HEITZ
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -273,6 +272,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GlobalMaskTexture3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrabPassBlendMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -1245,6 +1248,7 @@ Material:
     - _EnableALDecal: 0
     - _EnableAniso: 0
     - _EnableAudioLink: 0
+    - _EnableBlur: 0
     - _EnableDepthBulge: 0
     - _EnableDepthRimLighting: 0
     - _EnableDissolve: 0
@@ -1261,6 +1265,7 @@ Material:
     - _EnableGITDEmission1: 0
     - _EnableGITDEmission2: 0
     - _EnableGITDEmission3: 0
+    - _EnableGrabpass: 1
     - _EnableIridescence: 0
     - _EnableMirrorOptions: 0
     - _EnablePathing: 0
@@ -1634,6 +1639,17 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _GrabBlurDirections: 4
+    - _GrabBlurDistance: 0
+    - _GrabBlurQuality: 2
+    - _GrabDstBlend: 2
+    - _GrabPassBlendFactor: 1
+    - _GrabPassBlendGlobalMask: 0
+    - _GrabPassBlendGlobalMaskBlendType: 2
+    - _GrabPassBlendMapChannel: 0
+    - _GrabPassBlendMapUV: 0
+    - _GrabPassUseAlpha: 1
+    - _GrabSrcBlend: 0
     - _GreenAlphaAdd: 0
     - _GreenColorThemeIndex: 0
     - _GreenTextureStochastic: 0
@@ -2062,6 +2078,12 @@ Material:
     - _RedTextureStochastic: 0
     - _RedTextureUV: 0
     - _RefSpecFresnel: 1
+    - _RefractionCABlurHelp0: 0
+    - _RefractionCABlurHelp1: 0
+    - _RefractionChromaticAberattion: 0
+    - _RefractionEnabled: 0
+    - _RefractionFalloff: 20
+    - _RefractionIndex: 1.333333
     - _RenderingReduceClipDistance: 0
     - _RgbAlphaGlobalMaskBlendType: 2
     - _RgbAlphaGlobalMaskChannel: 0
@@ -2578,6 +2600,7 @@ Material:
     - m_end_AlphaGlobalMask: 0
     - m_end_Ansio: 0
     - m_end_BlackLightMasking: 0
+    - m_end_Blur: 0
     - m_end_BonusSliders: 0
     - m_end_CRT: 0
     - m_end_CenterOutDissolve: 0
@@ -2627,6 +2650,7 @@ Material:
     - m_end_GlobalThemeColor2: 0
     - m_end_GlobalThemeColor3: 0
     - m_end_GlobalThemes: 0
+    - m_end_GrabPass: 0
     - m_end_Iridescence: 0
     - m_end_IridescenceAudioLink: 0
     - m_end_MainHueShift: 0
@@ -2640,6 +2664,7 @@ Material:
     - m_end_PoiShading: 0
     - m_end_RGBAColors: 0
     - m_end_RGBMask: 0
+    - m_end_Refraction: 0
     - m_end_Rim2AudioLink: 0
     - m_end_RimAudioLink: 0
     - m_end_SphericalDissolve: 0
@@ -2714,6 +2739,7 @@ Material:
     - m_end_voronoi: 0
     - m_end_voronoiRandom: 0
     - m_geoDissolve: 1
+    - m_grabPassCategory: 0
     - m_lightingCategory: 1
     - m_mainCategory: 1
     - m_modifierCategory: 0
@@ -2726,6 +2752,7 @@ Material:
     - m_start_AlphaGlobalMask: 0
     - m_start_Aniso: 0
     - m_start_BlackLightMasking: 0
+    - m_start_Blur: 0
     - m_start_BonusSliders: 0
     - m_start_CRT: 0
     - m_start_CenterOutDissolve: 0
@@ -2775,6 +2802,7 @@ Material:
     - m_start_GlobalThemeColor2: 0
     - m_start_GlobalThemeColor3: 0
     - m_start_GlobalThemes: 0
+    - m_start_GrabPass: 0
     - m_start_Iridescence: 0
     - m_start_IridescenceAudioLink: 0
     - m_start_MainHueShift: 0
@@ -2788,6 +2816,7 @@ Material:
     - m_start_PoiShading: 1
     - m_start_RGBAColors: 0
     - m_start_RGBMask: 0
+    - m_start_Refraction: 0
     - m_start_Rim2AudioLink: 0
     - m_start_RimAudioLink: 0
     - m_start_SphericalDissolve: 0
@@ -3114,6 +3143,7 @@ Material:
     - _GlobalThemeColor1: {r: 1, g: 1, b: 1, a: 1}
     - _GlobalThemeColor2: {r: 1, g: 1, b: 1, a: 1}
     - _GlobalThemeColor3: {r: 1, g: 1, b: 1, a: 1}
+    - _GrabPassBlendMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _GreenColor: {r: 1, g: 1, b: 1, a: 0}
     - _GreenTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _HeightMapPan: {r: 0, g: 0, b: 0, a: 0}

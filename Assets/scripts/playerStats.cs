@@ -55,6 +55,40 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
                 levelPoints--;
             }
         }
+
+        public void savePlayer()
+        {
+            saveSystem.SavePlayer(this);
+        }
+        public void loadPlayer()
+        {
+            saveData data = saveSystem.LoadPlayer();
+
+            level = data.level;
+            maxHealth = data.maxHealth;
+            health = data.health;
+            EXP = data.EXP;
+            dashInterval = data.dashInterval;
+            nextLevelEXP = data.nextLevelEXP;
+            levelPoints = data.levelPoints;
+            //skills = data.skills;
+            //weapons = data.weapons;
+            //items = data.items;
+
+            Vector3 position = new Vector3();
+
+            position.x = data.position[0];
+            position.y = data.position[1];
+            position.z = data.position[2];
+
+            Debug.Log(position);
+
+            GetComponent<playerMovement>().enabled = false;
+
+            transform.position = position;
+
+            GetComponent<playerMovement>().enabled = true;
+        }
     }
 }
 
