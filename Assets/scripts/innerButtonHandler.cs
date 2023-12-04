@@ -10,11 +10,12 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
         #region variables
         private collisionChecker collisionChecker;
         private Image image;
-
+        public GameObject logoutPrefab;
         public Color clickColor = Color.white;
         private Color startingColor = Color.white;
         public AudioSource click;
         public bool testBool = false;
+        public bool logout = false;
         
 
         #endregion
@@ -51,7 +52,15 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void buttonAction()
         {
-            transform.GetChild(0).gameObject.SetActive(true);
+            
+            if (!logout)
+            {
+                transform.GetChild(0).gameObject.SetActive(true);
+            }
+            else
+            {
+                Instantiate(logoutPrefab, transform.position, transform.rotation);
+            }
             click.Play();
         }
         private void turnButtonsOff()

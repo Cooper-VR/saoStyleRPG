@@ -1,10 +1,9 @@
 using SAOrpg.playerAPI.RPGsstuff.stats;
-using Unity.VisualScripting;
 using UnityEditor;
 
 namespace SAOrpg
 {
-	[System.Serializable]
+    [System.Serializable]
 	public class saveData
 	{
 		public float[] position = new float[3];
@@ -28,10 +27,9 @@ namespace SAOrpg
 		public int[] Skilllevel;
 		public int[] SkillEXP;
 		public int[] SkillnextLevelEXP;
-		//public levelingObject[] skills;
 
-		//public inventoryObjects[] weapons;
-		//public inventoryObjects[] items;
+		public string UserName;
+		public string password;
 
 		public saveData(playerStats stats)
 		{
@@ -47,6 +45,9 @@ namespace SAOrpg
             Skilllevel = new int[stats.skills.Length];
             SkillEXP = new int[stats.skills.Length];
             SkillnextLevelEXP = new int[stats.skills.Length];
+
+			UserName = stats.UserName;
+			password = stats.Password;
 
 			for (int i = 0; stats.skills.Length > i; i++)
 			{
@@ -68,11 +69,6 @@ namespace SAOrpg
 			{
 				itemNames[i] = AssetDatabase.GetAssetPath(stats.items[i]);
 			}
-
-			
-			//skills = stats.skills;
-			//weapons = stats.weapons;
-			//items = stats.items;
 
 			position[0] = stats.transform.position.x;
 			position[1] = stats.transform.position.y;
