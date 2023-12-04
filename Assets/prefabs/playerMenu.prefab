@@ -767,9 +767,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logoutPrefab: {fileID: 0}
   clickColor: {r: 1, g: 0.61737454, b: 0, a: 1}
   click: {fileID: 0}
   testBool: 0
+  logout: 0
 --- !u!114 &7674587751726154979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1476,9 +1478,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logoutPrefab: {fileID: 0}
   clickColor: {r: 1, g: 0.61737454, b: 0, a: 1}
   click: {fileID: 0}
   testBool: 0
+  logout: 0
 --- !u!114 &7674587751937511152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2186,9 +2190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logoutPrefab: {fileID: 0}
   clickColor: {r: 1, g: 0.61737454, b: 0, a: 1}
   click: {fileID: 0}
   testBool: 0
+  logout: 0
 --- !u!114 &7674587752442871075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2329,9 +2335,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logoutPrefab: {fileID: 0}
   clickColor: {r: 1, g: 0.61737454, b: 0, a: 1}
   click: {fileID: 0}
   testBool: 0
+  logout: 0
 --- !u!114 &7674587752483677390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2683,9 +2691,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logoutPrefab: {fileID: 0}
   clickColor: {r: 1, g: 0.61737454, b: 0, a: 1}
   click: {fileID: 0}
   testBool: 0
+  logout: 0
 --- !u!114 &7674587752604865025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2826,9 +2836,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logoutPrefab: {fileID: 0}
   clickColor: {r: 1, g: 0.61737454, b: 0, a: 1}
   click: {fileID: 0}
   testBool: 0
+  logout: 0
 --- !u!114 &7674587752606060981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3616,7 +3628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7674587752882404419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3689,9 +3701,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logoutPrefab: {fileID: 345515664323830845, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
   clickColor: {r: 1, g: 0.61737454, b: 0, a: 1}
   click: {fileID: 0}
   testBool: 0
+  logout: 1
 --- !u!114 &7674587752882404416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4330,9 +4344,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logoutPrefab: {fileID: 0}
   clickColor: {r: 1, g: 0.61737454, b: 0, a: 1}
   click: {fileID: 0}
   testBool: 0
+  logout: 0
 --- !u!114 &7674587753169547759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4473,9 +4489,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logoutPrefab: {fileID: 0}
   clickColor: {r: 1, g: 0.61737454, b: 0, a: 1}
   click: {fileID: 0}
   testBool: 0
+  logout: 0
 --- !u!114 &7674587753236168114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4962,9 +4980,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logoutPrefab: {fileID: 0}
   clickColor: {r: 1, g: 0.61737454, b: 0, a: 1}
   click: {fileID: 0}
   testBool: 0
+  logout: 0
 --- !u!114 &7674587753487209145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5240,9 +5260,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e215c0b771f095458b31ed4951af41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logoutPrefab: {fileID: 0}
   clickColor: {r: 1, g: 0.61737454, b: 0, a: 1}
   click: {fileID: 0}
   testBool: 0
+  logout: 0
 --- !u!114 &7674587753696149343
 MonoBehaviour:
   m_ObjectHideFlags: 0

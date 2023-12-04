@@ -1,4 +1,3 @@
-using SAOrpg.playerAPI;
 using SAOrpg.playerAPI.RPGsstuff.stats;
 using UnityEngine;
 
@@ -18,11 +17,11 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
 
         private void Update()
         {
-            if (isLogout && collisionChecker.exited)
+            if (isLogout && collisionChecker.exited && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "Controller (right)"))
             {
                 saveSystem.SavePlayer(stats);
             }
-            else if (collisionChecker.exited)
+            else if (collisionChecker.exited && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "Controller (right)"))
             {
                 Destroy(transform.parent.parent.gameObject);
             }

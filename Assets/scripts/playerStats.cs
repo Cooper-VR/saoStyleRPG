@@ -1,7 +1,4 @@
 using SAOrpg.playerAPI.RPGsstuff.inventory;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
