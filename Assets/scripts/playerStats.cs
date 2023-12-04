@@ -2,6 +2,7 @@ using SAOrpg.playerAPI.RPGsstuff.inventory;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace SAOrpg.playerAPI.RPGsstuff.stats
@@ -71,9 +72,28 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
             dashInterval = data.dashInterval;
             nextLevelEXP = data.nextLevelEXP;
             levelPoints = data.levelPoints;
-            //skills = data.skills;
-            //weapons = data.weapons;
-            //items = data.items;
+
+            
+            weapons = new inventoryObjects[data.weaponNames.Length];
+            items = new inventoryObjects[data.itemNames.Length];
+
+            for (int i = 0; i < data.SkillEXP.Length; i++)
+            {
+                skills[i].skillType = data.SkillskillType[i];
+                skills[i].level = data.Skilllevel[i];
+                skills[i].nextLevelEXP = data.SkillnextLevelEXP[i];
+                skills[i].EXP = data.SkillEXP[i];
+            }
+
+            for (int i = 0; i < data.weaponNames.Length; i++)
+            {
+                weapons[i] = (inventoryObjects)AssetDatabase.LoadAssetAtPath(data.weaponNames[i], typeof(inventoryObjects));
+            }
+            for (int i = 0; i < data.itemNames.Length; i++)
+            {
+                items[i] = (inventoryObjects)AssetDatabase.LoadAssetAtPath(data.itemNames[i], typeof(inventoryObjects));
+            }
+
 
             Vector3 position = new Vector3();
 

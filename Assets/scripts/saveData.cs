@@ -1,45 +1,87 @@
 using SAOrpg.playerAPI.RPGsstuff.stats;
+using Unity.VisualScripting;
+using UnityEditor;
 
 namespace SAOrpg
 {
-    [System.Serializable]
-    public class saveData
-    {
-        public float[] position = new float[3];
+	[System.Serializable]
+	public class saveData
+	{
+		public float[] position = new float[3];
 
-        public int level;
-        public float maxDamageSpeed;
-        public int maxHealth;
-        public float health;
-        public float dashInterval;
+		public int level;
+		public float maxDamageSpeed;
+		public int maxHealth;
+		public float health;
+		public float dashInterval;
 
-        public int EXP;
-        public int nextLevelEXP;
+		public int EXP;
+		public int nextLevelEXP;
 
-        public int levelPoints;
+		public int levelPoints;
 
 
-        //public levelingObject[] skills;
+		public string[] weaponNames;
+		public string[] itemNames;
 
-        //public inventoryObjects[] weapons;
-        //public inventoryObjects[] items;
+		public string[] SkillskillType;
+		public int[] Skilllevel;
+		public int[] SkillEXP;
+		public int[] SkillnextLevelEXP;
+		//public levelingObject[] skills;
 
-        public saveData(playerStats stats)
-        {
-            level = stats.level;
-            maxHealth = stats.maxHealth;
-            health = stats.health;
-            EXP = stats.EXP;
-            dashInterval = stats.dashInterval;
-            nextLevelEXP = stats.nextLevelEXP;
-            levelPoints = stats.levelPoints;
-            //skills = stats.skills;
-            //weapons = stats.weapons;
-            //items = stats.items;
+		//public inventoryObjects[] weapons;
+		//public inventoryObjects[] items;
 
-            position[0] = stats.transform.position.x;
-            position[1] = stats.transform.position.y;
-            position[2] = stats.transform.position.z;
-        }
-    }
+		public saveData(playerStats stats)
+		{
+			level = stats.level;
+			maxHealth = stats.maxHealth;
+			health = stats.health;
+			EXP = stats.EXP;
+			dashInterval = stats.dashInterval;
+			nextLevelEXP = stats.nextLevelEXP;
+			levelPoints = stats.levelPoints;
+
+            SkillskillType = new string[stats.skills.Length];
+            Skilllevel = new int[stats.skills.Length];
+            SkillEXP = new int[stats.skills.Length];
+            SkillnextLevelEXP = new int[stats.skills.Length];
+
+			for (int i = 0; stats.skills.Length > i; i++)
+			{
+				SkillskillType[i] = stats.skills[i].skillType;
+				Skilllevel[i] = stats.skills[i].level;
+				SkillEXP[i] = stats.skills[i].EXP;
+				SkillnextLevelEXP[i] = stats.skills[i].nextLevelEXP;
+			}
+
+			weaponNames = new string[stats.weapons.Length];
+			itemNames = new string[stats.items.Length];
+
+			
+			for (int i = 0; i < stats.weapons.Length; i++)
+			{
+				weaponNames[i] = AssetDatabase.GetAssetPath(stats.weapons[i]);
+			}
+			for (int i = 0; i < stats.items.Length; i++)
+			{
+				itemNames[i] = AssetDatabase.GetAssetPath(stats.items[i]);
+			}
+
+			
+			//skills = stats.skills;
+			//weapons = stats.weapons;
+			//items = stats.items;
+
+			position[0] = stats.transform.position.x;
+			position[1] = stats.transform.position.y;
+			position[2] = stats.transform.position.z;
+		}
+	}
+
+	public class scriptableMethods
+	{
+	   
+	}
 }
