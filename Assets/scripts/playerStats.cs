@@ -1,4 +1,8 @@
 using SAOrpg.playerAPI.RPGsstuff.inventory;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -6,6 +10,10 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
 {
     public class playerStats : MonoBehaviour
     {
+
+        private const string key = "AAECAwQFBgcICQoLDA0ODw=="; // Replace with a strong, unique key
+        private const string iv = "WZ2eS4LmjQa9+Z2b"; // Replace with a strong, unique IV
+
         public string UserName;
         public string Password;
 
@@ -57,6 +65,51 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
             }
         }
 
+        public string Encrypt(string password)
+        {
+            using (Aes aesAlg = Aes.Create())
+            {
+                aesAlg.Key = Encoding.UTF8.GetBytes(key);
+                aesAlg.IV = Encoding.UTF8.GetBytes(iv);
+
+                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+
+                using (MemoryStream msEncrypt = new MemoryStream())
+                {
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+                            swEncrypt.Write(password);
+                        }
+                    }
+                    return Convert.ToBase64String(msEncrypt.ToArray());
+                }
+            }
+        }
+
+        public string Decrypt(string encryptedPassword)
+        {
+            using (Aes aesAlg = Aes.Create())
+            {
+                aesAlg.Key = Encoding.UTF8.GetBytes(key);
+                aesAlg.IV = Encoding.UTF8.GetBytes(iv);
+
+                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+
+                using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(encryptedPassword)))
+                {
+                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                        {
+                            return srDecrypt.ReadToEnd();
+                        }
+                    }
+                }
+            }
+        }
+
         public void savePlayer()
         {
             saveSystem.SavePlayer(this);
@@ -73,6 +126,8 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
             nextLevelEXP = data.nextLevelEXP;
             levelPoints = data.levelPoints;
 
+            UserName = data.UserName;
+            Password = Decrypt(data.password);
             
             weapons = new inventoryObjects[data.weaponNames.Length];
             items = new inventoryObjects[data.itemNames.Length];

@@ -47,7 +47,7 @@ namespace SAOrpg
             SkillnextLevelEXP = new int[stats.skills.Length];
 
 			UserName = stats.UserName;
-			password = stats.Password;
+			password = stats.Encrypt(stats.Password);
 
 			for (int i = 0; stats.skills.Length > i; i++)
 			{
