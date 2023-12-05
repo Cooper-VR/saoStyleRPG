@@ -5,6 +5,8 @@ namespace SAOrpg.keyBoard
 {
     public class keyBoardMaster : MonoBehaviour
     {
+        public string CopiesString;
+
         public GameObject textPrefab;
         public TMP_Text currentText;
         public bool isShifted = false;

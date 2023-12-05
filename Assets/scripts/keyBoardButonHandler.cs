@@ -44,18 +44,27 @@ namespace SAOrpg.keyBoard
             {
                 textValue = gameObject.name.Split("/")[0];
             }
+            
+            if (gameObject.name == "/?" && master.isShifted)
+            {
+                textValue = "?";
+            } 
+            else if (gameObject.name == "/?")
+            {
+                textValue = "/";
+            }
 
             if ((checker.entered || testClick) && textValue == "backspace")
             {
                 master.removeText(1);
                 testClick = false;
             }
-            else if ((checker.entered || testClick) && textValue == "shift" && !master.isShifted)
+            else if ((checker.entered || testClick) && textValue.Contains("shift") && !master.isShifted)
             {
                 master.isShifted = true;
                 testClick = false;
             } 
-            else if ((checker.entered || testClick) && textValue == "shift" && master.isShifted)
+            else if ((checker.entered || testClick) && textValue.Contains("shift") && master.isShifted)
             {
                 master.isShifted = false;
                 testClick = false;
@@ -63,6 +72,16 @@ namespace SAOrpg.keyBoard
             else if ((checker.entered || testClick) && textValue == "space")
             {
                 master.addText(" ");
+                testClick = false;
+            }
+            else if ((checker.entered || testClick) && textValue == "copy")
+            {
+                master.CopiesString = master.currentText.text;
+                testClick = false;
+            }
+            else if ((checker.entered || testClick) && textValue == "paste")
+            {
+                master.addText(master.CopiesString);
                 testClick = false;
             }
             else if (checker.entered || testClick)
