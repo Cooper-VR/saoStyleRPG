@@ -30,7 +30,15 @@ namespace SAOrpg.keyBoard
 
             if (master.isShifted)
             {
-                textValue = gameObject.name.Split('/')[1];
+                try
+                {
+                    textValue = gameObject.name.Split('/')[1];
+                }
+                catch
+                {
+                    Debug.Log("spacial/not named key");
+                }
+                
             }
             else
             {
@@ -50,6 +58,11 @@ namespace SAOrpg.keyBoard
             else if ((checker.entered || testClick) && textValue == "shift" && master.isShifted)
             {
                 master.isShifted = false;
+                testClick = false;
+            }
+            else if ((checker.entered || testClick) && textValue == "space")
+            {
+                master.addText(" ");
                 testClick = false;
             }
             else if (checker.entered || testClick)
