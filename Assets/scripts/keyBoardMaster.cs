@@ -30,5 +30,9 @@ namespace SAOrpg.keyBoard
 
             currentText.text = newString;
         }
+        public void preformAction()
+        {
+
+        }
     }
 }

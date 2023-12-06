@@ -54,37 +54,42 @@ namespace SAOrpg.keyBoard
                 textValue = "/";
             }
 
-            if ((checker.entered || testClick) && textValue == "backspace")
+            if (checker.entered && textValue == "backspace" && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
             {
                 master.removeText(1);
                 testClick = false;
             }
-            else if ((checker.entered || testClick) && textValue.Contains("shift") && !master.isShifted)
+            else if (checker.entered && textValue.Contains("shift") && !master.isShifted && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
             {
                 master.isShifted = true;
                 testClick = false;
             } 
-            else if ((checker.entered || testClick) && textValue.Contains("shift") && master.isShifted)
+            else if (checker.entered && textValue.Contains("shift") && master.isShifted && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
             {
                 master.isShifted = false;
                 testClick = false;
             }
-            else if ((checker.entered || testClick) && textValue == "space")
+            else if (checker.entered && textValue == "space" && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
             {
                 master.addText(" ");
                 testClick = false;
             }
-            else if ((checker.entered || testClick) && textValue == "copy")
+            else if (checker.entered  && textValue == "copy" && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
             {
                 master.CopiesString = master.currentText.text;
                 testClick = false;
             }
-            else if ((checker.entered || testClick) && textValue == "paste")
+            else if (checker.entered && textValue == "paste" && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
             {
                 master.addText(master.CopiesString);
                 testClick = false;
             }
-            else if (checker.entered || testClick)
+            else if (checker.entered && textValue == "enter" && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
+            {
+                master.preformAction();
+                testClick = false;
+            }
+            else if (checker.entered && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
             {
                 testClick = false;
                 master.addText(textValue);
