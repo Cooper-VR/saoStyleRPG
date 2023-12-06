@@ -7,12 +7,13 @@ namespace SAOrpg.keyBoard
     public class keyBoardMaster : MonoBehaviour
     {
         public string CopiesString;
-
+        public bool createAcount;
         public GameObject textPrefab;
         public TMP_Text currentText;
         public bool isShifted = false;
         public playerStats stats;
 
+        public TMP_Text displayName;
         public TMP_Text userName;
         public TMP_Text password;
 
@@ -37,10 +38,23 @@ namespace SAOrpg.keyBoard
         }
         public void preformAction()
         {
-            stats.UserName = userName.text;
-            stats.Password = password.text;
 
-            stats.loadPlayer();
+            if (createAcount)
+            {
+                stats.UserName = userName.text;
+                stats.Password = password.text;
+                stats.displayName = displayName.text;
+
+                stats.savePlayer();
+            }
+            else
+            {
+                stats.UserName = userName.text;
+                stats.Password = password.text;
+
+                stats.loadPlayer();
+            }
+            
         }
     }
 }

@@ -120,6 +120,14 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
         {
             saveData data = saveSystem.LoadPlayer(UserName, Password);
 
+            if (data == null)
+            {
+                //do method to make them make an acount
+
+                //just return
+                return;
+            }
+
             level = data.level;
             maxHealth = data.maxHealth;
             health = data.health;
@@ -158,13 +166,19 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
             position.y = data.position[1];
             position.z = data.position[2];
 
-            Debug.Log(position);
+            try
+            {
+                GetComponent<playerMovement>().enabled = false;
 
-            GetComponent<playerMovement>().enabled = false;
+                transform.position = position;
 
-            transform.position = position;
+                GetComponent<playerMovement>().enabled = true;
+            } catch (Exception e)
+            {
+                Debug.LogError("youre not supposed to call this method");
+            }
 
-            GetComponent<playerMovement>().enabled = true;
+            
         }
     }
 }
