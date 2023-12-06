@@ -18,7 +18,7 @@ namespace SAOrpg
 		public int nextLevelEXP;
 
 		public int levelPoints;
-
+		public string displayName;
 
 		public string[] weaponNames;
 		public string[] itemNames;
@@ -40,12 +40,13 @@ namespace SAOrpg
 			dashInterval = stats.dashInterval;
 			nextLevelEXP = stats.nextLevelEXP;
 			levelPoints = stats.levelPoints;
+			displayName = stats.displayName;
 
             SkillskillType = new string[stats.skills.Length];
             Skilllevel = new int[stats.skills.Length];
             SkillEXP = new int[stats.skills.Length];
             SkillnextLevelEXP = new int[stats.skills.Length];
-
+			
 			UserName = stats.UserName;
 			password = stats.Encrypt(stats.Password);
 
@@ -74,10 +75,5 @@ namespace SAOrpg
 			position[1] = stats.transform.position.y;
 			position[2] = stats.transform.position.z;
 		}
-	}
-
-	public class scriptableMethods
-	{
-	   
 	}
 }

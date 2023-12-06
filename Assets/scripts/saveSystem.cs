@@ -1,6 +1,8 @@
 using SAOrpg.playerAPI.RPGsstuff.stats;
+using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 namespace SAOrpg
@@ -10,7 +12,7 @@ namespace SAOrpg
         public static void SavePlayer(playerStats player)
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            string path = Application.persistentDataPath + "player.rsu";
+            string path = Application.persistentDataPath + $"/{player.UserName}.rsu";
             FileStream stream = new FileStream(path, FileMode.Create);
 
             saveData data = new saveData(player);
@@ -19,26 +21,43 @@ namespace SAOrpg
             stream.Close();
         }
 
-        public static saveData LoadPlayer()
+        public static saveData LoadPlayer(string userName, string password)
         {
-            string path = Application.persistentDataPath + "player.rsu";
+            //first: loop tough all files ending in .rsu
 
-            if (File.Exists(path))
+            string[] rsuFiles = Directory.GetFiles(Application.persistentDataPath);
+
+            Debug.Log(Application.persistentDataPath);
+
+            // Loop through the files
+            for (int i = 0; i < rsuFiles.Length; i++)
             {
                 BinaryFormatter formatter = new BinaryFormatter();
-                FileStream steam = new FileStream(path, FileMode.Open);
+                FileStream steam = new FileStream(rsuFiles[0], FileMode.Open);
 
                 saveData data = formatter.Deserialize(steam) as saveData;
 
-                steam.Close();
+                if (userName == data.UserName && password == playerStats.Decrypt(data.password))
+                {
+                    Debug.Log("found");
+                    return data;
+                }
+                else
+                {
+                    Debug.Log("this file is wrong");
+                }
 
-                return data;
+                steam.Close();
             }
-            else
-            {
-                Debug.LogError("save file not found");
-                return null;
-            }
+            Debug.LogError("save file not found");
+            return null;
+
+            //check the userName and password for each
+            //if good, then return the data
+            //if not, continue to the next
+            //if loop ends then return null
+
+            
         }
     }
 }

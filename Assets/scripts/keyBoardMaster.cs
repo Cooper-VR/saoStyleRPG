@@ -1,3 +1,4 @@
+using SAOrpg.playerAPI.RPGsstuff.stats;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +11,10 @@ namespace SAOrpg.keyBoard
         public GameObject textPrefab;
         public TMP_Text currentText;
         public bool isShifted = false;
+        public playerStats stats;
+
+        public TMP_Text userName;
+        public TMP_Text password;
 
         public void addText(string text)
         {
@@ -32,7 +37,10 @@ namespace SAOrpg.keyBoard
         }
         public void preformAction()
         {
+            stats.UserName = userName.text;
+            stats.Password = password.text;
 
+            stats.loadPlayer();
         }
     }
 }

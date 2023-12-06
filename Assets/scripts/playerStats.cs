@@ -14,6 +14,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
         private const string key = "AAECAwQFBgcICQoLDA0ODw=="; // Replace with a strong, unique key
         private const string iv = "WZ2eS4LmjQa9+Z2b"; // Replace with a strong, unique IV
 
+        public string displayName;
         public string UserName;
         public string Password;
 
@@ -88,7 +89,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
             }
         }
 
-        public string Decrypt(string encryptedPassword)
+        public static string Decrypt(string encryptedPassword)
         {
             using (Aes aesAlg = Aes.Create())
             {
@@ -114,9 +115,10 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
         {
             saveSystem.SavePlayer(this);
         }
+
         public void loadPlayer()
         {
-            saveData data = saveSystem.LoadPlayer();
+            saveData data = saveSystem.LoadPlayer(UserName, Password);
 
             level = data.level;
             maxHealth = data.maxHealth;
@@ -125,7 +127,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.stats
             dashInterval = data.dashInterval;
             nextLevelEXP = data.nextLevelEXP;
             levelPoints = data.levelPoints;
-
+            displayName = data.displayName;
             UserName = data.UserName;
             Password = Decrypt(data.password);
             
