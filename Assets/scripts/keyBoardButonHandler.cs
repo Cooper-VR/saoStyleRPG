@@ -84,7 +84,7 @@ namespace SAOrpg.keyBoard
                 master.addText(master.CopiesString);
                 testClick = false;
             }
-            else if (checker.entered && textValue == "enter" && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
+            else if (checker.entered && textValue == "enter" && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)") || testClick)
             {
                 master.preformAction();
                 testClick = false;

@@ -45,10 +45,13 @@ namespace SAOrpg.keyBoard
                 stats.Password = password.text;
                 stats.displayName = displayName.text;
 
+                stats.transform.position = new Vector3(0, 100, 0);
+
                 stats.savePlayer();
             }
             else
             {
+
                 stats.UserName = userName.text;
                 stats.Password = password.text;
 
