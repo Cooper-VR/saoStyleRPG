@@ -8,8 +8,8 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
     public class openMenu : MonoBehaviour
     {
         public float threshold;
-        VelocityEstimator leftHand;
-        VelocityEstimator rightHand;
+        Rigidbody leftHand;
+        Rigidbody rightHand;
 
         private playerMovement movement;
         private IndexInput input;
@@ -20,32 +20,32 @@ namespace SAOrpg.playerAPI.RPGsstuff.Menu
             movement = GetComponent<playerMovement>();
             input = GetComponent<IndexInput>();
 
-            leftHand = transform.GetChild(0).gameObject.GetComponent<VelocityEstimator>();
-            rightHand = transform.GetChild(1).gameObject.GetComponent<VelocityEstimator>();
+            leftHand = transform.GetChild(0).gameObject.GetComponent<Rigidbody>();
+            rightHand = transform.GetChild(1).gameObject.GetComponent<Rigidbody>();
 
             menu = GameObject.Find("playerMenu").GetComponent<Animator>();
         }
 
         private void Update()
         {
-            if ((leftHand.GetVelocityEstimate().y * -1 > threshold && input.isGrippingLeft) || Input.GetKeyDown(KeyCode.M))
+            if ((leftHand.velocity.y * -1 > threshold && input.isGrippingLeft) || Input.GetKeyDown(KeyCode.M))
             {
                 menu.SetBool("open", true);
                 menu.transform.position = leftHand.transform.position;
                 menu.transform.LookAt(movement.camera);
             }
-            else if ((rightHand.GetVelocityEstimate().y * -1 > threshold && input.isGrippingRight) || Input.GetKey(KeyCode.M))
+            else if ((rightHand.velocity.y * -1 > threshold && input.isGrippingRight) || Input.GetKey(KeyCode.M))
             {
                 menu.SetBool("open", true);
                 menu.transform.position = rightHand.transform.position;
                 menu.transform.LookAt(movement.camera);
             }
 
-            if (leftHand.GetVelocityEstimate().y > threshold || Input.GetKey(KeyCode.N))
+            if (leftHand.velocity.y > threshold || Input.GetKey(KeyCode.N))
             {
                 menu.SetBool("open", false);
             }
-            else if (rightHand.GetVelocityEstimate().y > threshold || Input.GetKey(KeyCode.N))
+            else if (rightHand.velocity.y > threshold || Input.GetKey(KeyCode.N))
             {
                 menu.SetBool("open", false);
             }
