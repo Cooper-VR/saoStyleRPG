@@ -5,6 +5,7 @@ using Valve.VR.InteractionSystem;
 using SAOrpg.enemies;
 using SAOrpg.playerAPI.RPGsstuff.inventory;
 using SAOrpg.playerAPI.RPGsstuff.stats;
+using Unity.VisualScripting;
 
 namespace SAOrpg.playerAPI.RPGsstuff.combat
 {
@@ -168,6 +169,7 @@ namespace SAOrpg.playerAPI.RPGsstuff.combat
         {
             velocityEstimator = GetComponent<VelocityEstimator>();
             playerCamera = GameObject.Find("Camera").transform;
+
         }
 
         private void Update()

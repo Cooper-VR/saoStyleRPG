@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using SAOrpg.playerAPI.RPGsstuff.inventory;
 
 namespace SAOrpg.playerAPI.RPGsstuff.Armor
 {
@@ -33,8 +32,8 @@ namespace SAOrpg.playerAPI.RPGsstuff.Armor
 
         private void Update()
         {
-            upperOBJ = player.GetComponent<SAOrpg.playerAPI.RPGsstuff.inventory.inventory>().upperArmor.objectPrefab;
-            lowerOBJ = player.GetComponent<SAOrpg.playerAPI.RPGsstuff.inventory.inventory>().lowerArmor.objectPrefab;
+            upperOBJ = player.GetComponent<inventory.inventory>().upperArmor.objectPrefab;
+            lowerOBJ = player.GetComponent<inventory.inventory>().lowerArmor.objectPrefab;
 
             if (transform.childCount != 2)
             {
@@ -56,6 +55,8 @@ namespace SAOrpg.playerAPI.RPGsstuff.Armor
 
                 currentUpper = Instantiate(upperOBJ, transform.position, transform.rotation, transform);
                 currentLower = Instantiate(lowerOBJ, transform.position, transform.rotation, transform);
+
+                //get rotation offsets (for fingers)
             }
 
             armorObject1 = currentUpper.GetComponent<Animator>();
