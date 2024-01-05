@@ -216,7 +216,7 @@ namespace SAOrpg
 
 		private void recordCombo(GameObject hitObject)
 		{
-			itemDamager damger = sword.GetComponent<itemDamager>();
+			swordDamager damger = sword.GetComponent<swordDamager>();
 			collisionChecker checker = sword.GetComponent<collisionChecker>();
 
 			if (checker.entered)
