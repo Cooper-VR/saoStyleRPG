@@ -15,4 +15,4 @@ MonoBehaviour:
   objectPrefab: {fileID: 1137475870787665822, guid: e5d217446e5ba5044bee068942fc72e8, type: 3}
   objectType: 0
   objectName: ScherzoSword
-  maxDamage: 10
+  maxDamage: 100
