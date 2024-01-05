@@ -109,7 +109,7 @@ namespace SAOrpg.items
             }
             catch
             {
-                Debug.Log("no pickupable items");
+                //Debug.Log("no pickupable items");
             }
 
             
