@@ -1,23 +1,38 @@
+using SAOrpg.playerAPI;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
 namespace SAOrpg.UI
 {
     public class confirmationWindow : MonoBehaviour
     {
-        public GameObject window;
-
+        //fuck it byte cause cant null a boolean
         /// <summary>
         /// opens a yes/no window. will call the method in the atached script
         /// </summary>
         /// <param name="attachedScript">attached script (jus use 'this')</param>
         /// <param name="endMethod">could have this be called at all times untll a boolean is !null</param>
-        public static void openWindow(MonoBehaviour attachedScript, string endMethod)
+        public static byte openWindow(MonoBehaviour attachedScript, string endMethod)
         {
-            //spawn the window
+            //can make it global for some reason
+            confirmationWindowControl window = null;
 
-            //get both buttons collision data
+            //spawn the window, just turn it on and off...no spawn
+            window = GameObject.Find("windowName").GetComponent<confirmationWindowControl>();
 
             //check if any of them are a finger
+            if (window.yes.collidedGameobject != null)
+            {
+                return 1;
+            }
+            else if (window.no.collidedGameobject != null)
+            {
+                return 0;
+            }
+            else
+            {
+                return 2;
+            } 
 
             //return yes/no
 
