@@ -36,6 +36,7 @@ namespace SAOrpg.playerAPI
 
 		private void Start()
 		{
+			//gotta get the compoents
 			indexInput = GetComponent<IndexInput>();
 			velocityEstimator = GetComponent<VelocityEstimator>();
 			characterController = GetComponent<CharacterController>();
@@ -43,15 +44,20 @@ namespace SAOrpg.playerAPI
 
 		private void Update()
 		{
+			//set need to set the values from player stats
 			speed = GetComponent<playerStats>().skills[0].level;
 			velocity = Vector3.zero;
+			
+			//calling the methods for the controls
 			movePlayer();
 			rotatePlayer();
 
 			playerJump();
 
+			//use this or else jumping gonna break
 			velocity += velocityAddon;
 
+			//extra shit, dont make dashing cry
 			characterController.Move(velocity * speed * Time.deltaTime);
 		}
 
@@ -61,7 +67,7 @@ namespace SAOrpg.playerAPI
 		private void movePlayer()
 		{
 			Vector3 move = new Vector3 (indexInput.leftThumbstick.x, 0, indexInput.rightThumbstick.y);
-			
+		
 			move += new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 			if (move.magnitude > deadzone)
 			{
@@ -85,15 +91,18 @@ namespace SAOrpg.playerAPI
 				gravityVelocity.y = -2f;
 			}
 
+			//idk why the hell this is here, it works, who cares
 			if ((indexInput.jumpInput.state && grounded) || (Input.GetButton("Jump") && grounded))
 			{
 				gravityVelocity.y = Mathf.Sqrt(jumpHeight * -2f * -19.81f);
 			}
-
 			gravityVelocity.y += -9.81f * Time.deltaTime;
+
 
 			velocity += gravityVelocity;
 		}
+
+		//valves velocity estrimator sucks
 
 		/// <summary>
 		/// get the velocity of the player
