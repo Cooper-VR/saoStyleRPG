@@ -9,5 +9,6 @@ namespace SAOrpg.UI
     {
         public collisionChecker yes;
         public collisionChecker no;
+        public string text;
     }
 }

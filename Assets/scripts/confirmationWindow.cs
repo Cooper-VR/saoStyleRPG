@@ -12,13 +12,14 @@ namespace SAOrpg.UI
         /// </summary>
         /// <param name="attachedScript">attached script (jus use 'this')</param>
         /// <param name="endMethod">could have this be called at all times untll a boolean is !null</param>
-        public static byte openWindow(MonoBehaviour attachedScript, string endMethod)
+        public static byte openWindow(MonoBehaviour attachedScript, string endMethod, string alertText)
         {
             //can make it global for some reason
             confirmationWindowControl window = null;
 
             //spawn the window, just turn it on and off...no spawn
             window = GameObject.Find("windowName").GetComponent<confirmationWindowControl>();
+            window.text= alertText;
 
             //check if any of them are a finger
             if (window.yes.collidedGameobject != null)
