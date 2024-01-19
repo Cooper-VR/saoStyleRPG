@@ -16,7 +16,7 @@ namespace SAOrpg.keyBoard
         // Start is called before the first frame update
         void Start()
         {
-            checker = new collisionChecker();
+            checker = gameObject.GetComponent<collisionChecker>();
             textPrefab = Instantiate(master.textPrefab, transform).GetComponent<TMP_Text>();
 
             textValue = gameObject.name.Split('/')[0];

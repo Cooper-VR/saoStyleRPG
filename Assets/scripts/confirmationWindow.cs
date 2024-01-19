@@ -6,42 +6,54 @@ namespace SAOrpg.UI
 {
     public class confirmationWindow : MonoBehaviour
     {
+
+        public enum windowStates
+        {
+            yes,
+            no,
+            undecided
+        }
+
         //fuck it byte cause cant null a boolean
         /// <summary>
         /// opens a yes/no window. will call the method in the atached script
         /// </summary>
         /// <param name="attachedScript">attached script (jus use 'this')</param>
         /// <param name="endMethod">could have this be called at all times untll a boolean is !null</param>
-        public static byte openWindow(MonoBehaviour attachedScript, string endMethod, string alertText)
+        public static windowStates openWindow(MonoBehaviour attachedScript, string alertText)
         {
-            //can make it global for some reason
+            //cant make it global for some reason
             confirmationWindowControl window = null;
 
             //spawn the window, just turn it on and off...no spawn
-            window = GameObject.Find("windowName").GetComponent<confirmationWindowControl>();
+            window = GameObject.Find("windowManger").GetComponent<confirmationWindowMaster>().window;
+            window.gameObject.SetActive(true);
             window.text= alertText;
 
             //check if any of them are a finger
-            if (window.yes.collidedGameobject != null)
+            if (window.yes.TestEnter)
             {
-                return 1;
+                return windowStates.yes;
             }
-            else if (window.no.collidedGameobject != null)
+            else if (window.no.TestEnter)
             {
-                return 0;
+                return windowStates.no;
             }
             else
             {
-                return 2;
-            } 
+                return windowStates.undecided;
+            }     
+        }
 
-            //return yes/no
+        public static void closeWindow()
+        {
+            //cant make it global for some reason
+            confirmationWindowControl window = null;
 
-            //if no finger is tuoch ing it return null
+            //spawn the window, just turn it on and off...no spawn
+            window = GameObject.Find("windowManger").GetComponent<confirmationWindowMaster>().window;
+            window.gameObject.SetActive(false);
 
-            //in other script just use a null check
-
-            attachedScript.SendMessage(endMethod);
         }
     }
 }

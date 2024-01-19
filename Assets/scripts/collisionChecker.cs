@@ -14,13 +14,26 @@ namespace SAOrpg.playerAPI
         public bool entered;
         public bool exited;
         public bool currentlyTouching;
+        public bool TestEnter;
 
         private float currentTime1;
         private float currentTime2;
+
+        private float aTime;
         #endregion
 
         private void Update()
         {
+            if (TestEnter)
+            {
+                aTime += Time.deltaTime;
+            }
+            if (aTime >= 0.1f)
+            {
+                aTime = 0;
+                TestEnter = false;
+            }
+
             if (collidedObject == "")
             {
                 entered = false;
