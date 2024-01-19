@@ -5,6 +5,8 @@ using UnityEngine;
 
 namespace SAOrpg.playerAPI
 {
+
+    //made this cause  unity collision suck dick
     public class collisionChecker : MonoBehaviour
     {
         #region collision states
@@ -19,11 +21,13 @@ namespace SAOrpg.playerAPI
         private float currentTime1;
         private float currentTime2;
 
+        //testing var
         private float aTime;
         #endregion
 
         private void Update()
         {
+            //added this for testing
             if (TestEnter)
             {
                 aTime += Time.deltaTime;

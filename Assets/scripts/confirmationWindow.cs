@@ -45,14 +45,10 @@ namespace SAOrpg.UI
             }     
         }
 
-        public static void closeWindow()
+        public static void closeWindow(GameObject theWindow)
         {
-            //cant make it global for some reason
-            confirmationWindowControl window = null;
 
-            //spawn the window, just turn it on and off...no spawn
-            window = GameObject.Find("windowManger").GetComponent<confirmationWindowMaster>().window;
-            window.gameObject.SetActive(false);
+            Destroy(theWindow);
 
         }
     }
