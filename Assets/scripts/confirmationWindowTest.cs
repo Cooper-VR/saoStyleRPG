@@ -17,13 +17,14 @@ namespace SAOrpg.UI
             //this is the window logic
             if (spawnWindow)
             {
+                //spawns in the master so that it can spawn the window, ima be honest idk why i did it this way
                 if (MasterInstance == null)
                 {
                     //I would try to reference 1 window but muliple became an issue
                     MasterInstance = Instantiate(MasterPrefab, Vector3.zero,  Quaternion.identity, transform);
                 }
 
-
+                //this is horrible, i want it modular
                 if (confirmationWindow.openWindow(MasterInstance.GetComponent<confirmationWindowMaster>(), text) == confirmationWindow.windowStates.no)
                 {
                     Debug.Log("answered no");

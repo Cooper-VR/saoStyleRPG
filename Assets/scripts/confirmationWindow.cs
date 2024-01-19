@@ -18,8 +18,8 @@ namespace SAOrpg.UI
         /// <summary>
         /// opens a yes/no window. will call the method in the atached script
         /// </summary>
-        /// <param name="attachedScript">attached script (jus use 'this')</param>
-        /// <param name="endMethod">could have this be called at all times untll a boolean is !null</param>
+        /// <param name="attachedScript">The little master script that should be spawned</param>
+        /// <param name="alertText">the message being displayed</param>
         public static windowStates openWindow(confirmationWindowMaster attachedScript, string alertText)
         {
             //cant make it global for some reason
@@ -45,11 +45,13 @@ namespace SAOrpg.UI
             }     
         }
 
+        /// <summary>
+        /// destryoes the window
+        /// </summary>
+        /// <param name="theWindow">MAKE THIS THE MASTER SO IT DESTROYES THE KID</param>
         public static void closeWindow(GameObject theWindow)
         {
-
             Destroy(theWindow);
-
         }
     }
 }

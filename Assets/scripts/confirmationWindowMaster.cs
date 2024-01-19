@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace SAOrpg.UI
 {
+    //idk why this couldnt be done aother way but it works
     public class confirmationWindowMaster : MonoBehaviour
     {
         public confirmationWindowControl window;
