@@ -16,6 +16,11 @@ namespace SAOrpg.UI
         public Transform cam;
         public float maxSpeed = 1f;
 
+        private void Start()
+        {
+            cam = FindObjectOfType<Camera>().transform;
+        }
+
         private void Update()
         {
             alertText.text = text;

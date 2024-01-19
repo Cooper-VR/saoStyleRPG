@@ -20,13 +20,13 @@ namespace SAOrpg.UI
         /// </summary>
         /// <param name="attachedScript">attached script (jus use 'this')</param>
         /// <param name="endMethod">could have this be called at all times untll a boolean is !null</param>
-        public static windowStates openWindow(MonoBehaviour attachedScript, string alertText)
+        public static windowStates openWindow(confirmationWindowMaster attachedScript, string alertText)
         {
             //cant make it global for some reason
             confirmationWindowControl window = null;
 
             //spawn the window, just turn it on and off...no spawn
-            window = GameObject.Find("windowManger").GetComponent<confirmationWindowMaster>().window;
+            window = attachedScript.window;
             window.gameObject.SetActive(true);
             window.text= alertText;
 
