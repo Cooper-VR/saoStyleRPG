@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SAOrpg.UI
 {
-	public class confirmationWindowTest : MonoBehaviour
+	public class confirmationWindowLogic: MonoBehaviour
 	{
 		public bool spawnWindow;
 		public GameObject MasterPrefab;
@@ -17,8 +17,14 @@ namespace SAOrpg.UI
 		i would call a static method to spawn it in with no issue but i think statics are kinda gay so i wont, maybe just inharite from new class with it + monobehavior
 		 */
 		public string methodName;
-		
-		private void Update()
+		public GameObject rootButton;
+
+        private void Start()
+        {
+            spawnWindow = true;
+        }
+
+        private void Update()
 		{
 			//this is the window logic
 			if (spawnWindow)
@@ -43,7 +49,7 @@ namespace SAOrpg.UI
 						Debug.Log("answered yes");
 						confirmationWindow.closeWindow(MasterInstance);
 						spawnWindow = false;
-						//do something
+						rootButton.SendMessage(methodName);
 						break;
 					case (confirmationWindow.windowStates.undecided):
 						Debug.Log("waiting");
