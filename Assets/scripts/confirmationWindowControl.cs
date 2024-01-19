@@ -16,8 +16,15 @@ namespace SAOrpg.UI
         public Transform cam;
         public float maxSpeed = 1f;
 
+        private float y;
+        private float z;
+
         private void Start()
         {
+            y = Random.RandomRange(-0.3f, 0);
+            z = Random.RandomRange(0.4f, 0.8f);
+
+
             cam = FindObjectOfType<Camera>().transform;
         }
 
@@ -30,7 +37,8 @@ namespace SAOrpg.UI
 
         private void DampenToCamera()
         {
-            Vector3 targetPosition = cam.TransformPoint(new Vector3(0, -0.2f, 0.7f));
+
+            Vector3 targetPosition = cam.TransformPoint(new Vector3(0, y, z));
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, maxSpeed * Time.deltaTime);
 
                     }
