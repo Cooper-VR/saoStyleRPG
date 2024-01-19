@@ -11,11 +11,7 @@ namespace SAOrpg.UI
 		public GameObject MasterInstance;
 		public string text;
 
-		/*
-		might try to use a method name + making this a prefab. then when i need to i can just instaiate it and call the method
-		seems like way to much work but it might work, idk we'll see
-		i would call a static method to spawn it in with no issue but i think statics are kinda gay so i wont, maybe just inharite from new class with it + monobehavior
-		 */
+		//for the instaiting class
 		public string methodName;
 		public GameObject rootButton;
 
