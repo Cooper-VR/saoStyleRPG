@@ -1,10 +1,9 @@
-using SAOrpg.playerAPI.RPGstuff.Fighting;
 using System;
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
 
-namespace SAOrpg
+namespace SAOrpg.playerAPI.RPGstuff.Fighting
 {
     public class swordSkillCreator : EditorWindow
 	{
