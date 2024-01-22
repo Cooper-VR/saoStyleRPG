@@ -8,7 +8,7 @@ namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
         public GameObject objectPrefab;
         public ObjectType objectType;
         public string objectName;
-
+        public int cost;
 
         [Header("these are weapon exlusive")]
         public int maxDamage;

@@ -1,4 +1,5 @@
 using SAOrpg.playerAPI.RPGstuff.Menu;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,8 +8,8 @@ namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
 {
     public class inventory : MonoBehaviour
 	{
-		public inventoryObjects[] weapons;
-		public inventoryObjects[] items;
+		public List<inventoryObjects> weapons;
+		public List<inventoryObjects> items;
 
 		public GameObject itemSlotBase;
 
@@ -22,7 +23,7 @@ namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
 
 		private void Update()
 		{
-			if (ArrayLength != weapons.Length + items.Length)
+			if (ArrayLength != weapons.Count + items.Count)
 			{
 				addObject();
 			}
@@ -43,7 +44,7 @@ namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
 			}
 
 			//update menu
-			for (int i = 0; i < weapons.Length; i++)
+			for (int i = 0; i < weapons.Count; i++)
 			{
 				GameObject newObject = GameObject.Instantiate(itemSlotBase, weaponRoot.transform.GetChild(0).GetChild(0));
 
@@ -56,7 +57,7 @@ namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
             }
 
 			//update menu
-			for (int i = 0; i < items.Length; i++)
+			for (int i = 0; i < items.Count; i++)
 			{
 				GameObject newObject = GameObject.Instantiate(itemSlotBase, itemsRoot.transform.GetChild(0).GetChild(0));
 
@@ -68,9 +69,9 @@ namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
                 newObject.transform.GetChild(2).GetChild(1).GetComponent<itemButtonHandler>().item = items[i];
             }
 
-			gameObject.GetComponent<playerStats>().weapons = weapons;
-			gameObject.GetComponent<playerStats>().items = items;
-			ArrayLength = items.Length + weapons.Length;
+			gameObject.GetComponent<playerStats>().weapons = weapons.ToArray();
+			gameObject.GetComponent<playerStats>().items = items.ToArray();
+			ArrayLength = items.Count + weapons.Count;
 		}
 
 		public void removeItem(int index, inventoryObjects.ObjectType itemType)
@@ -82,25 +83,25 @@ namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
 				
 
 				List<inventoryObjects> tempList = new List<inventoryObjects>();
-                for (int i = 0; i < weapons.Length; i++)
+                for (int i = 0; i < weapons.Count; i++)
 				{
 					tempList.Add(weapons[i]);
 				}
 
                 tempList.RemoveAt(index);
-                weapons = tempList.ToArray();
+				weapons = tempList;
 			}
 
             if (itemType == inventoryObjects.ObjectType.item)
             {
                 List<inventoryObjects> tempList = new List<inventoryObjects>();
-                for (int i = 0; i < items.Length; i++)
+                for (int i = 0; i < items.Count; i++)
                 {
                     tempList.Add(items[i]);
                 }
 
                 tempList.RemoveAt(index);
-                items = tempList.ToArray();
+                items = tempList;
             }
         }
 	}

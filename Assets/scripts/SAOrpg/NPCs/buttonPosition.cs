@@ -26,7 +26,8 @@ namespace SAOrpg.NPCs
             direction *= distanceThreshold * 0.35f;
             mainButton.transform.position = direction + transform.position;
 
-            mainButton.transform.LookAt(cam);
+            //hackfix cause i have no control over transform.lookat
+            mainButton.transform.LookAt(cam, transform.forward * -1);
         }
     }
 }

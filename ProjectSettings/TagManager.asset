@@ -13,6 +13,7 @@ TagManager:
   - Terrain
   - player
   - Enemy
+  - PlayerBody
   layers:
   - Default
   - TransparentFX
@@ -25,10 +26,6 @@ TagManager:
   - Terrain
   - Ground
   - Player
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 

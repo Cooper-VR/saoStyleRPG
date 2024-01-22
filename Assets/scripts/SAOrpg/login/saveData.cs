@@ -31,6 +31,8 @@ namespace SAOrpg.Login
 		public string UserName;
 		public string password;
 
+		public int col;
+
 		public saveData(playerStats stats)
 		{
 			level = stats.level;
@@ -46,6 +48,8 @@ namespace SAOrpg.Login
             Skilllevel = new int[stats.skills.Length];
             SkillEXP = new int[stats.skills.Length];
             SkillnextLevelEXP = new int[stats.skills.Length];
+
+			col = stats.col;
 			
 			UserName = stats.UserName;
 			password = stats.Encrypt(stats.Password);

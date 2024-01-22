@@ -6,6 +6,7 @@ namespace SAOrpg.UI
 {
     public class confirmationWindowInstaciatingClass : MonoBehaviour
     {
+        [Tooltip("use prefab called windowLogic")]
         public GameObject confirmationWindow;
         public string windowText;
         public string methodName;

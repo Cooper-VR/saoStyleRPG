@@ -31,15 +31,7 @@ namespace SAOrpg.enemies
         {
             damgerItem.GetComponent<PickupableObject>().alignmentObject.parent.GetComponent<playerStats>().incrementEXP(enemyBehavior.dropEXP);
 
-            inventoryObjects[] playeritems = damgerItem.GetComponent<PickupableObject>().alignmentObject.parent.GetComponent<inventory>().items;
-
-            inventoryObjects[] newItems = new inventoryObjects[playeritems.Length + 1];
-
-            for (int i = 0; i < playeritems.Length; i++) 
-            {
-                newItems[i] = playeritems[i];
-            }
-            newItems[newItems.Length - 1] = enemyBehavior.itemDrops[Random.Range(0, enemyBehavior.itemDrops.Length)];
+            damgerItem.GetComponent<PickupableObject>().alignmentObject.parent.GetComponent<inventory>().items.Add(enemyBehavior.itemDrops[Random.Range(0, enemyBehavior.itemDrops.Length)]);
         }
     }
 }

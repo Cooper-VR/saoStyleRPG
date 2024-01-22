@@ -28,8 +28,9 @@ namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
         public int EXP;
         public int nextLevelEXP;
 
-        public int levelPoints;
+        public int col;
 
+        public int levelPoints;
 
         public levelingObject[] skills;
 
