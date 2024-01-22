@@ -1,7 +1,6 @@
-using SAOrpg.playerAPI;
 using UnityEngine;
 
-namespace SAOrpg.playerAPI.RPGsstuff.playerColliders
+namespace SAOrpg.playerAPI.RPGstuff.Fighting
 {
     public class DamageColliderHandler : MonoBehaviour
     {

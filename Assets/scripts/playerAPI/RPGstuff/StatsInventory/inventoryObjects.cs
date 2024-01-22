@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace SAOrpg.playerAPI.RPGsstuff.inventory
+namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
 {
     [CreateAssetMenu(fileName = "inventoryObject", menuName = "ScriptableObjects/player/inventoryObjects", order = 3)]
     public class inventoryObjects : ScriptableObject

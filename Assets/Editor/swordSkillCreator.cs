@@ -1,6 +1,4 @@
-using SAOrpg.playerAPI.RPGsstuff.combat;
-using SAOrpg.playerAPI;
-using SAOrpg.playerAPI.RPGsstuff.stats;
+using SAOrpg.playerAPI.RPGstuff.Fighting;
 using System;
 using System.Collections;
 using UnityEditor;
@@ -8,7 +6,7 @@ using UnityEngine;
 
 namespace SAOrpg
 {
-	public class swordSkillCreator : EditorWindow
+    public class swordSkillCreator : EditorWindow
 	{
 		private poseDirectionObject writtingObject;
 		private recordMode mode;

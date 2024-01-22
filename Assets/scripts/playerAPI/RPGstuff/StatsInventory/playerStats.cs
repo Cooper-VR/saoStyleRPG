@@ -1,12 +1,13 @@
-using SAOrpg.playerAPI.RPGsstuff.inventory;
+using SAOrpg.playerAPI.RPGstuff.Movement;
+using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using System;
 using UnityEditor;
 using UnityEngine;
+using SAOrpg.Login;
 
-namespace SAOrpg.playerAPI.RPGsstuff.stats
+namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
 {
     public class playerStats : MonoBehaviour
     {

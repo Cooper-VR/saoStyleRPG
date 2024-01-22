@@ -1,6 +1,4 @@
-using SAOrpg.playerAPI.RPGsstuff.inventory;
-using System.Collections;
-using System.Collections.Generic;
+using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 using UnityEngine;
 
 namespace SAOrpg.enemies

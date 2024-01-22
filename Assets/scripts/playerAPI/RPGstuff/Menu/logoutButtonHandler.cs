@@ -1,7 +1,8 @@
-using SAOrpg.playerAPI.RPGsstuff.stats;
+using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 using UnityEngine;
+using SAOrpg.Login;
 
-namespace SAOrpg.playerAPI.RPGsstuff.Menu
+namespace SAOrpg.playerAPI.RPGstuff.Menu
 {
     public class logoutButtonHandler : MonoBehaviour
     {

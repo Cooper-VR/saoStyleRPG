@@ -1,11 +1,11 @@
-using SAOrpg.playerAPI.RPGsstuff.stats;
+using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
-namespace SAOrpg
+namespace SAOrpg.Login
 {
     public static class saveSystem
     {

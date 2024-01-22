@@ -1,12 +1,10 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 
-namespace SAOrpg.playerAPI.RPGsstuff.inventory
+namespace SAOrpg.playerAPI.RPGstuff.Menu
 {
-	public class itemButtonHandler : MonoBehaviour
+    public class itemButtonHandler : MonoBehaviour
 	{
 		int index;
 
@@ -31,7 +29,6 @@ namespace SAOrpg.playerAPI.RPGsstuff.inventory
 		private void Start()
 		{
 			collisionChecker = GetComponent<collisionChecker>();
-            
         }
 
 		public buttonType type;

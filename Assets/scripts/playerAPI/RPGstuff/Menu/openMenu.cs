@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Valve.VR.InteractionSystem;
+using SAOrpg.playerAPI.RPGstuff.Movement;
 
-namespace SAOrpg.playerAPI.RPGsstuff.Menu
+namespace SAOrpg.playerAPI.RPGstuff.Menu
 {
     public class openMenu : MonoBehaviour
     {

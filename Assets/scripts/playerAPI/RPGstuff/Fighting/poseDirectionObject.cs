@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SAOrpg.playerAPI.RPGsstuff.stats
+namespace SAOrpg.playerAPI.RPGstuff.Fighting
 {
     [CreateAssetMenu(fileName = "pose", menuName = "ScriptableObjects/player/Pose", order = 2)]
     public class poseDirectionObject : ScriptableObject

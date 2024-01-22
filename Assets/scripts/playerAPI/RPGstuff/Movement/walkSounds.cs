@@ -1,13 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking.Types;
-using UnityEngine.Rendering;
 
-namespace SAOrpg.playerAPI.RPGsstuff.audio
+namespace SAOrpg.playerAPI.RPGstuff.Movement
 {
-	public class walkSounds : MonoBehaviour
+    public class walkSounds : MonoBehaviour
 	{
 		#region variables
 

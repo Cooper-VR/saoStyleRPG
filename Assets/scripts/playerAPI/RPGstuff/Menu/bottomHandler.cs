@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SAOrpg.playerAPI.RPGsstuff.Menu
+namespace SAOrpg.playerAPI.RPGstuff.Menu
 {
     public class bottomHandler : MonoBehaviour
     {

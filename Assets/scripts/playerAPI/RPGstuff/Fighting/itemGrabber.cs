@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using SAOrpg.playerAPI;
 
-namespace SAOrpg.items
+namespace SAOrpg.playerAPI.RPGstuff.Fighting
 {
     public class itemGrabber : MonoBehaviour
     {

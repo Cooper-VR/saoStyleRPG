@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace SAOrpg.playerAPI
+namespace SAOrpg
 {
 
     //made this cause  unity collision suck dick

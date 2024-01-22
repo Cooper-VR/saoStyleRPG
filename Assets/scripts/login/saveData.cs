@@ -1,7 +1,7 @@
-using SAOrpg.playerAPI.RPGsstuff.stats;
+using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 using UnityEditor;
 
-namespace SAOrpg
+namespace SAOrpg.Login
 {
     [System.Serializable]
 	public class saveData

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SAOrpg.playerAPI.RPGsstuff.stats
+namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
 {
     [CreateAssetMenu(fileName = "skill", menuName = "ScriptableObjects/player/skill", order = 2)]
     public class levelingObject : ScriptableObject

@@ -1,11 +1,9 @@
-using SAOrpg.playerAPI.RPGsstuff.stats;
-using System;
+using SAOrpg.playerAPI.RPGstuff.Menu;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static UnityEditor.Progress;
 
-namespace SAOrpg.playerAPI.RPGsstuff.inventory
+namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
 {
     public class inventory : MonoBehaviour
 	{

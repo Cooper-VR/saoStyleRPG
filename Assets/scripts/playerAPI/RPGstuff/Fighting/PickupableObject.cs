@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
-namespace SAOrpg.items
+namespace SAOrpg.playerAPI.RPGstuff.Fighting
 {
     public class PickupableObject : MonoBehaviour
     {

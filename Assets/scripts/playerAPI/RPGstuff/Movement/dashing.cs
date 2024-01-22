@@ -1,7 +1,7 @@
-using SAOrpg.playerAPI.RPGsstuff.stats;
+using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 using UnityEngine;
 
-namespace SAOrpg.playerAPI
+namespace SAOrpg.playerAPI.RPGstuff.Movement
 {
     public class dashing : MonoBehaviour
     {

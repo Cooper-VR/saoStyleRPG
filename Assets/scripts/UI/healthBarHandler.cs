@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using SAOrpg.playerAPI.RPGsstuff.stats;
+using SAOrpg.playerAPI.RPGstuff.Movement;
 
-namespace SAOrpg.playerAPI.RPGsstuff.Menu
+namespace SAOrpg.UI
 {
-	public class healthBarHandler : MonoBehaviour
+    public class healthBarHandler : MonoBehaviour
 	{
 		public GameObject playerObject;
 

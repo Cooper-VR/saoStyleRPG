@@ -1,11 +1,7 @@
-using SAOrpg.playerAPI;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SAOrpg.playerAPI.RPGsstuff.Menu
+namespace SAOrpg.playerAPI.RPGstuff.Menu
 {
     public class scrollButtonHandler : MonoBehaviour
     {

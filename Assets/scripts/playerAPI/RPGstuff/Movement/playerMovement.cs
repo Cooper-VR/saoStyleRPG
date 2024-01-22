@@ -1,11 +1,10 @@
-using SAOrpg.playerAPI.RPGsstuff.stats;
+using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 using UnityEngine;
-using Valve.VR;
 using Valve.VR.InteractionSystem;
 
-namespace SAOrpg.playerAPI
+namespace SAOrpg.playerAPI.RPGstuff.Movement
 {
-	public class playerMovement : MonoBehaviour
+    public class playerMovement : MonoBehaviour
 	{
 		#region variables
 

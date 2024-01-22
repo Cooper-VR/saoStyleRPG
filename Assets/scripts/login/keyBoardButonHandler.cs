@@ -1,8 +1,7 @@
-using SAOrpg.playerAPI;
 using TMPro;
 using UnityEngine;
 
-namespace SAOrpg.keyBoard
+namespace SAOrpg.Login
 {
     public class keyBoardButonHandler : MonoBehaviour
     {

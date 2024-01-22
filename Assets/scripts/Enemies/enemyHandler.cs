@@ -1,8 +1,7 @@
-using SAOrpg.items;
-using SAOrpg.playerAPI.RPGsstuff.inventory;
-using SAOrpg.playerAPI.RPGsstuff.stats;
+using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 using UnityEngine;
 using UnityEngine.AI;
+using SAOrpg.playerAPI.RPGstuff.Fighting;
 
 namespace SAOrpg.enemies
 {

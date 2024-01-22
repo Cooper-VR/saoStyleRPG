@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-namespace SAOrpg.keyBoard
+namespace SAOrpg.Login
 {
     public class textSelector : MonoBehaviour
     {

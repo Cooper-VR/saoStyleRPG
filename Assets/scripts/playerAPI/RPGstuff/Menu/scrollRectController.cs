@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
-namespace SAOrpg.playerAPI.RPGsstuff.Menu
+namespace SAOrpg.playerAPI.RPGstuff.Menu
 {
     public class scrollRectController : MonoBehaviour
     {

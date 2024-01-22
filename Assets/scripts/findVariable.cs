@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class findVariable : MonoBehaviour
+namespace SAOrpg
 {
-    public bool hasFound = false;
-    public bool interupt = true;
-    public void switchVariable()
+    public class findVariable : MonoBehaviour
     {
-        interupt = false;
-        hasFound = true;
+        public bool hasFound = false;
+        public bool interupt = true;
+        public void switchVariable()
+        {
+            interupt = false;
+            hasFound = true;
+        }
     }
 }

@@ -1,7 +1,6 @@
-using SAOrpg.playerAPI;
 using UnityEngine;
 
-namespace SAOrpg.climbing
+namespace SAOrpg.playerAPI.RPGstuff.Movement
 {
     public class climbingMaster : MonoBehaviour
     {

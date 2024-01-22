@@ -1,8 +1,8 @@
-using SAOrpg.playerAPI.RPGsstuff.stats;
+using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 using TMPro;
 using UnityEngine;
 
-namespace SAOrpg.keyBoard
+namespace SAOrpg.Login
 {
     public class keyBoardMaster : MonoBehaviour
     {

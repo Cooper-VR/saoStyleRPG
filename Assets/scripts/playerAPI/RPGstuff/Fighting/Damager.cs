@@ -1,8 +1,7 @@
-using SAOrpg.playerAPI.RPGsstuff;
-using SAOrpg.playerAPI.RPGsstuff.stats;
+using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 using UnityEngine;
 
-namespace SAOrpg.playerAPI.RPGsstuff.playerColliders
+namespace SAOrpg.playerAPI.RPGstuff.Fighting
 {
     public class Damager : MonoBehaviour
     {

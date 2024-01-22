@@ -1,13 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using SAOrpg.enemies;
+using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
-using SAOrpg.enemies;
-using SAOrpg.playerAPI.RPGsstuff.inventory;
-using SAOrpg.playerAPI.RPGsstuff.stats;
-using Unity.VisualScripting;
 
-namespace SAOrpg.playerAPI.RPGsstuff.combat
+namespace SAOrpg.playerAPI.RPGstuff.Fighting
 {
     public class swordDamager : MonoBehaviour
     {

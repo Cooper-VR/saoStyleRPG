@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace SAOrpg.playerAPI.RPGsstuff.Armor
+namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
 {
     public class armorHandler : MonoBehaviour
     {
@@ -32,8 +32,8 @@ namespace SAOrpg.playerAPI.RPGsstuff.Armor
 
         private void Update()
         {
-            upperOBJ = player.GetComponent<inventory.inventory>().upperArmor.objectPrefab;
-            lowerOBJ = player.GetComponent<inventory.inventory>().lowerArmor.objectPrefab;
+            upperOBJ = player.GetComponent<inventory>().upperArmor.objectPrefab;
+            lowerOBJ = player.GetComponent<inventory>().lowerArmor.objectPrefab;
 
             if (transform.childCount != 2)
             {
