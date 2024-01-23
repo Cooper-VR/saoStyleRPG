@@ -1,0 +1,6 @@
+1. walking around or strafing (ranom direction), happens most with groups of enemies
+2. pathfind to target, player or cover or something like that
+3. melee attack (prolly just use an animation)
+4. ranged attack (rare in melee games but could be trowing)
+5. take cover (prolly not needed in a melee game)
+6. scripted movement, garud route, wondering person. similar to 1
