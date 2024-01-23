@@ -1,4 +1,4 @@
-using SAOrpg.enemies;
+using SAOrpg.Enemies;
 using SAOrpg.playerAPI.RPGstuff.StatsInventory;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
@@ -182,8 +182,10 @@ namespace SAOrpg.playerAPI.RPGstuff.Fighting
                 deltDamage = false;
                 Debug.Log("fullHit");
 
-                enemy.GetComponent<enemyHandler>().DealDamage(findDamage());
-                enemy.GetComponent<enemyHandler>().damgerItem = this.gameObject;
+
+                //this is from old system
+                //enemy.GetComponent<EnemyBehavior>().DealDamage(findDamage());
+                //enemy.GetComponent<EnemyBehavior>().damgerItem = this.gameObject;
                 delayTime = 0f;
             }
             currentPos = transform.position;
