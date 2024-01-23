@@ -19,12 +19,12 @@ namespace SAOrpg.Enemies
 		public GameObject player;
 		public float attackRange;
 
-		[Header ("roaming")]
-		private NavMeshAgent agent;
-		public bool atPoint;
-		private Vector3 startPosition;
-		public Vector3 randomPositon;
+        private NavMeshAgent agent;
 
+
+		[Header("roaming")]
+		Vector3 startPosition;
+		Vector3 randomPosition;
 
         public enum RangeType{
 			close,
@@ -37,8 +37,7 @@ namespace SAOrpg.Enemies
             agent = GetComponent<NavMeshAgent>();
 			startPosition = transform.position;
 
-            randomPositon = new Vector3((Random.value - 0.5f) * 4, (Random.value - 0.5f) * 4, (Random.value - 0.5f) * 4) + startPosition;
-            agent.destination = randomPositon;
+            randomPosition = new Vector3((Random.value - 0.5f) * 4, (Random.value - 0.5f) * 4, (Random.value - 0.5f) * 4) + startPosition;
 
         }
 
@@ -51,21 +50,8 @@ namespace SAOrpg.Enemies
 
 		private void roam()
 		{
-			if (Mathf.Ceil(transform.position.x) == Mathf.Ceil(randomPositon.x) && Mathf.Ceil(transform.position.z) == Mathf.Ceil(randomPositon.z))
-			{
-				atPoint = true;
-			}
-			else
-			{
-				atPoint = false;
-            }
-
-			if (atPoint)
-			{
-                randomPositon = new Vector3((Random.value - 0.5f) * 4, (Random.value - 0.5f) * 4, (Random.value - 0.5f) * 4) + startPosition;
-			}
-				agent.destination = randomPositon;
-        }
+			
+		}
 
         private void updateRange()
 		{
