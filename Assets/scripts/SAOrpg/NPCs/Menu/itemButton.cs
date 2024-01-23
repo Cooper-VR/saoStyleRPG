@@ -28,7 +28,7 @@ namespace SAOrpg.NPCs.Menu
 
             collisionChecker = GetComponent<collisionChecker>();
 
-            itemCost = itemPrefab.cost.ToString();
+            itemCost = $"{itemPrefab.cost.ToString()} col";
             itemName = itemPrefab.objectName;
 
             cost.text = itemCost;
