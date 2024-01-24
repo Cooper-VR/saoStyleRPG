@@ -48,24 +48,33 @@ namespace SAOrpg.Enemies
 		{
             updateStates();
 
-			StateManager();
-		}
-
-		private void StateManager()
-		{
-			if (inView && closeEnough && !healthIsLow)
-			{
-				ChasePlayer();
-			}else if (!inView || !closeEnough)
+            if (inView || closeEnough || healthIsLow)
+            {
+                StateManager();
+			}
+			else
 			{
 				roam();
-			} else if (closeEnough && healthIsLow)
-			{
-				FleePlayer();
 			}
-		}
+        }
 
-		private void updateChaseDistance()
+        private void StateManager()
+        {
+            if (healthIsLow)
+            {
+                FleePlayer();
+            }
+            else if (inView && closeEnough)
+            {
+                ChasePlayer();
+            }
+            else
+            {
+                roam();
+            }
+        }
+
+        private void updateChaseDistance()
 		{
 			switch (rangeType)
 			{
@@ -96,18 +105,18 @@ namespace SAOrpg.Enemies
             }
         }
 
-		private void ChasePlayer()
-		{
-			if (player != null)
-			{
-				float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        private void ChasePlayer()
+        {
+            if (player != null)
+            {
+                float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-				if (distanceToPlayer <= chaseDistance)
-				{
-					agent.SetDestination(player.transform.position);
-				}
-			}
-		}
+                if (distanceToPlayer <= chaseDistance)
+                {
+                    agent.SetDestination(player.transform.position);
+                }
+            }
+        }
 
         private void roam()
 		{
@@ -182,7 +191,7 @@ namespace SAOrpg.Enemies
 
 			float angle = Vector3.Angle(forwardDirection, playerDirection);
 
-			if (Mathf.Abs(angle) > 65)
+			if (Mathf.Abs(angle) > 90)
 			{
 				inView = false;
 			}
