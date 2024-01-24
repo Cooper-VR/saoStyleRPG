@@ -23,6 +23,7 @@ namespace SAOrpg.Enemies
 
 		private float roamingRadius = 7f;
 		private float scaredDistance = 15f;
+		private float chaseDistance;
 
 
 		[Header("roaming")]
@@ -45,12 +46,42 @@ namespace SAOrpg.Enemies
 
         private void Update()
 		{
-			roam(); // Destination reached, trigger roaming again
-
             updateStates();
+
+			StateManager();
 		}
 
-        void FleePlayer()
+		private void StateManager()
+		{
+			if (inView && closeEnough && !healthIsLow)
+			{
+				ChasePlayer();
+			}else if (!inView || !closeEnough)
+			{
+				roam();
+			} else if (closeEnough && healthIsLow)
+			{
+				FleePlayer();
+			}
+		}
+
+		private void updateChaseDistance()
+		{
+			switch (rangeType)
+			{
+				case RangeType.close:
+					chaseDistance = 0.7f;
+					break;
+				case RangeType.far:
+					chaseDistance = 10f;
+					break;
+				case RangeType.both:
+					chaseDistance = 5f;
+					break;
+			}
+		}
+
+        private void FleePlayer()
         {
             if (player != null)
             {
@@ -65,14 +96,18 @@ namespace SAOrpg.Enemies
             }
         }
 
-        void ChasePlayer()
-        {
-            if (player != null)
-            {
-                agent.SetDestination(player.transform.position);
-            }
-        }
+		private void ChasePlayer()
+		{
+			if (player != null)
+			{
+				float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
+				if (distanceToPlayer <= chaseDistance)
+				{
+					agent.SetDestination(player.transform.position);
+				}
+			}
+		}
 
         private void roam()
 		{
@@ -95,13 +130,13 @@ namespace SAOrpg.Enemies
 			switch (rangeType)
 			{
 				case RangeType.close:
-					attackRange = 1f;
+					attackRange = 10f;
 					break;
 				case RangeType.far:
-					attackRange = 5f;
+					attackRange = 15f;
 					break;
 				case RangeType.both:
-					attackRange = 4f;
+					attackRange = 14f;
 					break;
 			}
 		}
@@ -111,6 +146,8 @@ namespace SAOrpg.Enemies
 			viewChecker(ref inView);
 			distanceChecker();
 			updateRange();
+
+			updateChaseDistance();
         }
 
         private void distanceChecker()
