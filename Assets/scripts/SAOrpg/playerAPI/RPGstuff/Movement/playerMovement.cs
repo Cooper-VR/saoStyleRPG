@@ -29,11 +29,11 @@ namespace SAOrpg.playerAPI.RPGstuff.Movement
 
 		private Vector3 currentRotation;
 		private VelocityEstimator velocityEstimator;
-		
 
-		#endregion
 
-		private void Start()
+        #endregion
+
+        private void Start()
 		{
 			//gotta get the compoents
 			indexInput = GetComponent<IndexInput>();
@@ -43,8 +43,10 @@ namespace SAOrpg.playerAPI.RPGstuff.Movement
 
 		private void Update()
 		{
-			//set need to set the values from player stats
-			speed = GetComponent<playerStats>().skills[0].level;
+
+
+            //set need to set the values from player stats
+            speed = GetComponent<playerStats>().skills[0].level;
 			velocity = Vector3.zero;
 			
 			//calling the methods for the controls
@@ -114,9 +116,21 @@ namespace SAOrpg.playerAPI.RPGstuff.Movement
 		
 		public void rotatePlayer()
 		{
-			currentRotation += new Vector3(0, indexInput.rightThumbstick.x * rotationSpeed * Time.deltaTime, 0);
+			if (GetComponent<DesktopController>().inVR)
+			{
+                currentRotation += new Vector3(0, indexInput.rightThumbstick.x * rotationSpeed * Time.deltaTime, 0);
 
-			transform.rotation = Quaternion.Euler(currentRotation);
+                transform.rotation = Quaternion.Euler(currentRotation);
+
+			}
+			else
+			{
+
+                float mouseX = Input.GetAxis("Mouse X") * 100f * Time.deltaTime;
+                float mouseY = Input.GetAxis("Mouse Y") * 100f * Time.deltaTime;
+
+				transform.Rotate(Vector3.up);
+			}
 		}
 
 		/// <summary>
