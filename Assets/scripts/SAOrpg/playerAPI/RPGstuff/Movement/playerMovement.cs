@@ -30,6 +30,8 @@ namespace SAOrpg.playerAPI.RPGstuff.Movement
 		private Vector3 currentRotation;
 		private VelocityEstimator velocityEstimator;
 
+		private float xRotation = 0f;
+
 
         #endregion
 
@@ -129,7 +131,10 @@ namespace SAOrpg.playerAPI.RPGstuff.Movement
                 float mouseX = Input.GetAxis("Mouse X") * 100f * Time.deltaTime;
                 float mouseY = Input.GetAxis("Mouse Y") * 100f * Time.deltaTime;
 
-				transform.Rotate(Vector3.up);
+				xRotation -= mouseY;
+
+				camera.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+				transform.Rotate(Vector3.up * mouseX);
 			}
 		}
 

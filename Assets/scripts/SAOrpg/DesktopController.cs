@@ -15,9 +15,29 @@ namespace SAOrpg
         public GameObject Controller_L;
         public GameObject Controller_R;
 
+        public Transform tinyColider;
+        private bool moving;
+
+
 
         void Update()
         {
+            if (Input.GetAxis("Fire3") == 1)
+            {
+                desktopTouch();
+            }
+
+            if (moving)
+            {
+                tinyColider.localPosition += (new Vector3(0, 0, 1f) * Time.deltaTime); // Move the object in the direction of the target's forward direction
+            }
+
+            if ((tinyColider.transform.position - cameraHelper.transform.position).magnitude > 5f)
+            {
+                moving = false;
+                tinyColider.transform.position = cameraHelper.transform.position;
+            }
+
             updateDevices();
 
             if (headsetOnHead != null)
@@ -48,6 +68,14 @@ namespace SAOrpg
 
             Controller_L.SetActive(inVR);
             Controller_R.SetActive(inVR);
+            tinyColider.gameObject.SetActive(!inVR);
+        }
+
+        void desktopTouch()
+        {
+            tinyColider.position = cameraHelper.transform.position;
+
+            moving = true;
         }
     }
 }

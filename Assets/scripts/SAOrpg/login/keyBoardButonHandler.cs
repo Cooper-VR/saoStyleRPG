@@ -53,42 +53,48 @@ namespace SAOrpg.Login
                 textValue = "/";
             }
 
-            if (checker.entered && textValue == "backspace" && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
+            //if (checker.entered){
+                //testClick = false;
+                //master.addText(textValue);
+
+            //}
+
+            if (checker.entered && textValue == "backspace" && checker.collidedObject.Contains("finger"))
             {
                 master.removeText(1);
                 testClick = false;
             }
-            else if (checker.entered && textValue.Contains("shift") && !master.isShifted && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
+            else if (checker.entered && textValue.Contains("shift") && !master.isShifted && checker.collidedObject.Contains("finger"))
             {
                 master.isShifted = true;
                 testClick = false;
             } 
-            else if (checker.entered && textValue.Contains("shift") && master.isShifted && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
+            else if (checker.entered && textValue.Contains("shift") && master.isShifted && checker.collidedObject.Contains("finger"))
             {
                 master.isShifted = false;
                 testClick = false;
             }
-            else if (checker.entered && textValue == "space" && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
+            else if (checker.entered && textValue == "space" && checker.collidedObject.Contains("finger"))
             {
                 master.addText(" ");
                 testClick = false;
             }
-            else if (checker.entered  && textValue == "copy" && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
+            else if (checker.entered  && textValue == "copy" && checker.collidedObject.Contains("finger"))
             {
                 master.CopiesString = master.currentText.text;
                 testClick = false;
             }
-            else if (checker.entered && textValue == "paste" && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
+            else if (checker.entered && textValue == "paste" && checker.collidedObject.Contains("finger"))
             {
                 master.addText(master.CopiesString);
                 testClick = false;
             }
-            else if (checker.entered && textValue == "enter" && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)") || testClick)
+            else if (checker.entered && textValue == "enter" && checker.collidedObject.Contains("finger"))
             {
                 master.preformAction();
                 testClick = false;
             }
-            else if (checker.entered && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)"))
+            else if (checker.entered && checker.collidedObject.Contains("finger"))
             {
                 testClick = false;
                 master.addText(textValue);

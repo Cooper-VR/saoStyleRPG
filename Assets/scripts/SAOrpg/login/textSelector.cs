@@ -19,7 +19,7 @@ namespace SAOrpg.Login
 
         private void Update()
         {
-            if (checker.entered && (checker.collidedObject == "Controller (left)" || checker.collidedObject == "Controller (right)") || testBool)
+            if (checker.entered && checker.collidedObject.Contains("finger"))
             {
                 master.currentText = GetComponent<TMP_Text>();
                 testBool = false;

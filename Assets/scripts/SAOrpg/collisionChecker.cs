@@ -26,15 +26,15 @@ namespace SAOrpg
         private void Update()
         {
             //added this for testing
-            if (TestEnter)
-            {
-                aTime += Time.deltaTime;
-            }
-            if (aTime >= 0.1f)
-            {
-                aTime = 0;
-                TestEnter = false;
-            }
+            //if (TestEnter)
+            //{
+              //  aTime += Time.deltaTime;
+            //}
+            //if (aTime >= 0.1f)
+            //{
+              //  aTime = 0;
+                //TestEnter = false;
+            //}
 
             if (collidedObject == "")
             {
@@ -73,7 +73,7 @@ namespace SAOrpg
 
         private void OnTriggerExit(Collider other)
         {
-            collidedGameobject = other.gameObject;
+            collidedGameobject = null;
             exited = true;
             collidedObject = string.Empty;
         }
