@@ -1,4 +1,5 @@
 using SAOrpg.playerAPI.RPGstuff.StatsInventory;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ namespace SAOrpg.Login
         public TMP_Text displayName;
         public TMP_Text userName;
         public TMP_Text password;
+        public Transform spawn;
 
         public void addText(string text)
         {
@@ -45,9 +47,10 @@ namespace SAOrpg.Login
                 stats.Password = password.text;
                 stats.displayName = displayName.text;
 
-                stats.transform.position = new Vector3(0, 100, 0);
-
+                stats.transform.position = spawn.transform.position;
+                Debug.Log(stats.transform.position);
                 stats.savePlayer();
+                StartCoroutine(ExampleCoroutine());
             }
             else
             {
@@ -58,6 +61,19 @@ namespace SAOrpg.Login
                 stats.loadPlayer();
             }
             
+        }
+
+        IEnumerator ExampleCoroutine()
+        {
+            //Print the time of when the function is first called.
+            Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+            //yield on a new YieldInstruction that waits for 5 seconds.
+            yield return new WaitForSeconds(2);
+
+            //After we have waited 5 seconds print the time again.
+            Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+            stats.loadPlayer();
         }
     }
 }

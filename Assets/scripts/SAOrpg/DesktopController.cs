@@ -73,6 +73,9 @@ namespace SAOrpg
 
         void desktopTouch()
         {
+
+            //move collider cause unity cant handle collisions good at all
+            //this means that the collsion script we have fucks up and break if you turn off an object WHILE its colliding
             tinyColider.position = cameraHelper.transform.position;
 
             moving = true;
