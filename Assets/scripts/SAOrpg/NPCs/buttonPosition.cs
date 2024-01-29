@@ -27,7 +27,7 @@ namespace SAOrpg.NPCs
             mainButton.transform.position = direction + transform.position;
 
             //hackfix cause i have no control over transform.lookat
-            mainButton.transform.LookAt(cam, transform.forward * -1);
+            mainButton.transform.LookAt(mainButton.transform.position + cam.forward);
         }
     }
 }
