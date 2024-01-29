@@ -31,11 +31,11 @@ namespace SAOrpg.UI
             window.text= alertText;
 
             //check if any of them are a finger
-            if (window.yes.TestEnter)
+            if (window.yes.entered)
             {
                 return windowStates.yes;
             }
-            else if (window.no.TestEnter)
+            else if (window.no.entered)
             {
                 return windowStates.no;
             }

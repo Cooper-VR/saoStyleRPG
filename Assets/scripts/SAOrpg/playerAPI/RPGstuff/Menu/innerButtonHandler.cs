@@ -33,9 +33,10 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
             if (collisionChecker.currentlyTouching)
             {
                 image.color = clickColor;
+                testBool = true;
 
             }
-            if (collisionChecker.exited || testBool)
+            if (!collisionChecker.entered && testBool)
             {
                 image.color = startingColor;
 

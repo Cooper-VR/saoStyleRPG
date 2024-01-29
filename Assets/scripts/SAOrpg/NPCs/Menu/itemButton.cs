@@ -37,7 +37,7 @@ namespace SAOrpg.NPCs.Menu
 
         private void Update()
         {
-            if ((collisionChecker.entered && collisionChecker.collidedObject.Contains("finger")) || collisionChecker.TestEnter)
+            if (collisionChecker.entered && collisionChecker.collidedObject.Contains("finger"))
             {
                 //do action
                 if (opened)

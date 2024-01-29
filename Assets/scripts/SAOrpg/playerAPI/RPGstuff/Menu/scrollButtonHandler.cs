@@ -44,7 +44,7 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
                 buttonAction();
 
             }
-            else if (!collisionChecker.entered && collisionChecker.collidedObject.Contains("finger"))
+            else if (!collisionChecker.entered)
             {
                 outerImage.color = initalColor;
             }
