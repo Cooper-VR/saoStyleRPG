@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 3524888243040196082}
   - component: {fileID: 5608910659486200495}
   - component: {fileID: 7802375754301267991}
+  - component: {fileID: 547395956659380944}
   m_Layer: 5
   m_Name: noButton
   m_TagString: Untagged
@@ -286,7 +287,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 250, y: 250, z: 1}
+  m_Size: {x: 250, y: 250, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5608910659486200495
 MonoBehaviour:
@@ -305,6 +306,7 @@ MonoBehaviour:
   entered: 0
   exited: 0
   currentlyTouching: 0
+  TestEnter: 0
 --- !u!114 &7802375754301267991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +320,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLogout: 0
+--- !u!54 &547395956659380944
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214893236731187536}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2115886116970392015
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +348,7 @@ GameObject:
   - component: {fileID: 3389209995440397751}
   - component: {fileID: 8108517131972747772}
   - component: {fileID: 190053457556181338}
+  - component: {fileID: 5870297954700197215}
   m_Layer: 5
   m_Name: yesButton
   m_TagString: Untagged
@@ -368,7 +387,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 250, y: 250, z: 1}
+  m_Size: {x: 250, y: 250, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8108517131972747772
 MonoBehaviour:
@@ -387,6 +406,7 @@ MonoBehaviour:
   entered: 0
   exited: 0
   currentlyTouching: 0
+  TestEnter: 0
 --- !u!114 &190053457556181338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,6 +420,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLogout: 0
+--- !u!54 &5870297954700197215
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115886116970392015}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4626065743057920287
 GameObject:
   m_ObjectHideFlags: 0

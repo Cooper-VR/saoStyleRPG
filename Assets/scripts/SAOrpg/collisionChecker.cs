@@ -48,7 +48,7 @@ namespace SAOrpg
                 currentTime1 += Time.deltaTime;
             }
 
-            if (currentTime1 >= 1)
+            if (currentTime1 >= 0.1f)
             {
                 //entered = false;
             }
@@ -57,7 +57,7 @@ namespace SAOrpg
             {
                 currentTime2 += Time.deltaTime;
             }
-            if (currentTime2 >= 1)
+            if (currentTime2 >= 0.1f)
             {
                 exited = false;
             }
@@ -69,6 +69,7 @@ namespace SAOrpg
             collidedGameobject = other.gameObject;
             entered = true;
             collidedObject = other.name;
+            currentTime1 = 0;
         }
 
         private void OnTriggerExit(Collider other)
@@ -76,6 +77,8 @@ namespace SAOrpg
             collidedGameobject = null;
             exited = true;
             collidedObject = string.Empty;
+            currentTime2 = 0;
+
         }
 
         private void OnTriggerStay(Collider other)

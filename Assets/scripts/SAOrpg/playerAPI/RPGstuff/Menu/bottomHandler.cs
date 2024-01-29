@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 namespace SAOrpg.playerAPI.RPGstuff.Menu
 {
@@ -36,7 +37,7 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
         private void Update()
         {
             imageCom.sprite = currentSprite;
-            if (collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "rightFinger"))
+            if (collisionChecker.currentlyTouching && collisionChecker.collidedObject.Contains("finger"))
             {
                 currentSprite = alternateSprite;
             }
@@ -45,7 +46,7 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
                 currentSprite = startingSprite;
             }
 
-            if (collisionChecker.entered && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "rightFinger"))
+            if (collisionChecker.entered && collisionChecker.collidedObject.Contains("finger"))
             {
                 buttonAction();
             } 
@@ -55,8 +56,19 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
 
         private void buttonAction()
         {
-            menuController.SetInteger("firstLayer", menuIndex);
-            click.Play();
+            try
+            {
+                menuController.SetInteger("firstLayer", menuIndex);
+                //click.Play();
+
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e);
+                menuController = transform.parent.parent.GetComponent<Animator>();
+                menuController.SetInteger("firstLayer", menuIndex);
+                //click.Play();
+            }
         }
     }
 }

@@ -18,11 +18,13 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
 
         private void Update()
         {
-            if (isLogout && collisionChecker.exited && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "Controller (right)"))
+            if (isLogout && collisionChecker.entered && collisionChecker.collidedObject.Contains("finger"))
             {
                 saveSystem.SavePlayer(stats);
+
+                Destroy(transform.parent.parent.gameObject);
             }
-            else if (collisionChecker.exited && (collisionChecker.collidedObject == "Controller (left)" || collisionChecker.collidedObject == "Controller (right)"))
+            else if (collisionChecker.entered && collisionChecker.collidedObject.Contains("finger"))
             {
                 Destroy(transform.parent.parent.gameObject);
             }

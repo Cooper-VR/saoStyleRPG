@@ -29,7 +29,7 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
             if ((leftHand.velocity.y * -1 > threshold && input.isGrippingLeft) || Input.GetKeyDown(KeyCode.M))
             {
                 menu.SetBool("open", true);
-                menu.transform.position = leftHand.transform.position;
+                menu.transform.position = movement.camera.transform.position + (movement.camera.transform.forward * 0.5f);
                 menu.transform.LookAt(movement.camera);
             }
             else if ((rightHand.velocity.y * -1 > threshold && input.isGrippingRight) || Input.GetKey(KeyCode.M))

@@ -35,21 +35,18 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
             if (!testBool)
             {
 
-                buttonAction1();
+            //    buttonAction1();
             }
 
-            if (collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
+            if (collisionChecker.entered && collisionChecker.collidedObject.Contains("finger"))
             {
                 outerImage.color = alternalColor;
+                buttonAction();
+
             }
-            else if (!collisionChecker.currentlyTouching && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
+            else if (!collisionChecker.entered && collisionChecker.collidedObject.Contains("finger"))
             {
                 outerImage.color = initalColor;
-            }
-
-            if (collisionChecker.exited && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
-            {
-                buttonAction();
             }
         }
 

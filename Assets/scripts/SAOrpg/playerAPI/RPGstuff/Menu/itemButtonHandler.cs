@@ -43,11 +43,11 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
 				deleteObjectTest = false;
 			}
 
-			if (type == buttonType.spawn && collisionChecker.entered && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
+			if (type == buttonType.spawn && collisionChecker.entered && collisionChecker.collidedObject.Contains("finger"))
 			{
 				spawnItem();
 			}
-			else if (type == buttonType.delete && collisionChecker.entered && (collisionChecker.collidedObject == "leftFinger" || collisionChecker.collidedObject == "rightFinger"))
+			else if (type == buttonType.delete && collisionChecker.entered && collisionChecker.collidedObject.Contains("finger"))
 			{
 				deleteItem();
 			}
