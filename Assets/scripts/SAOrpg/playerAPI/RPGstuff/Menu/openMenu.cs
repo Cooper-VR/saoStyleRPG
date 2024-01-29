@@ -30,13 +30,13 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
             {
                 menu.SetBool("open", true);
                 menu.transform.position = movement.camera.transform.position + (movement.camera.transform.forward * 0.5f);
-                menu.transform.LookAt(movement.camera);
+                menu.transform.LookAt(menu.transform.position + movement.camera.forward);
             }
             else if ((rightHand.velocity.y * -1 > threshold && input.isGrippingRight) || Input.GetKey(KeyCode.M))
             {
                 menu.SetBool("open", true);
                 menu.transform.position = movement.camera.transform.position + (movement.camera.transform.forward * 0.5f);
-                menu.transform.LookAt(movement.camera);
+                menu.transform.LookAt(menu.transform.position + movement.camera.forward);
             }
 
             if (leftHand.velocity.y > threshold || Input.GetKey(KeyCode.N))
