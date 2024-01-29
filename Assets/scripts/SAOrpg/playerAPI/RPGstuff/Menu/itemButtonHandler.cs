@@ -21,6 +21,8 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
 		GameObject spawnedItem;
 		bool spawned = false;
 
+		Animator parent;
+
         public enum buttonType{
 			delete,
 			spawn
@@ -29,6 +31,7 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
 		private void Start()
 		{
 			collisionChecker = GetComponent<collisionChecker>();
+			parent = transform.parent.parent.gameObject.GetComponent<Animator>();
         }
 
 		public buttonType type;
@@ -78,6 +81,7 @@ namespace SAOrpg.playerAPI.RPGstuff.Menu
 		}
 		private void spawnItem()
 		{
+			parent.SetBool("on", false);
 			spawnedItem = Instantiate(item.objectPrefab, transform.position, transform.rotation);
 
 			mats = spawnedItem.transform.GetChild(0).GetComponent<MeshRenderer>().materials;
