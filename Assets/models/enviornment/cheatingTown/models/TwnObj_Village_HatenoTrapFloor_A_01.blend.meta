@@ -3,7 +3,17 @@ guid: 2bc009d3504e4804eafb8e8a23bab454
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Sign_HatenoSeal_A
+    second: {fileID: 2100000, guid: 04f20a1c5d462c647af688537f4739e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_Village_Hateno_A
+    second: {fileID: 2100000, guid: 2ed1aa98c157afe41a8d77bed28e301c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

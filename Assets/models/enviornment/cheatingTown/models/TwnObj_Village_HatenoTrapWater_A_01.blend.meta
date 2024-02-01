@@ -3,7 +3,12 @@ guid: c77ab183f3bfa094c98da0c97b8ae363
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TwnObj_Village_HatenoTrapWater_A_01-Cliff__Grass
+    second: {fileID: 2100000, guid: bfaf03f763dd6544bbbe2ebcc92537a0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

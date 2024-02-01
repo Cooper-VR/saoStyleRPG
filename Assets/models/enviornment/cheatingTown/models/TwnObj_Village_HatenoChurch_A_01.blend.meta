@@ -3,7 +3,127 @@ guid: feecf02c650a95c40a504b5b113d0b84
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Builparts_HatenoHouse_C
+    second: {fileID: 2100000, guid: 6161826871948434888fca43c58bc547, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Builparts_HatenoHouse_D
+    second: {fileID: 2100000, guid: af6738a19761e094bb36d84cf372266e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Builparts_HatenoStone_B
+    second: {fileID: 2100000, guid: 01a43ed2864c9ca40a40125ea932560e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Builparts_HatenoStucco_A
+    second: {fileID: 2100000, guid: 82c03b6ac64ae8f429bcd79083fc8cc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Glass_HatenoHouseWindow_A1
+    second: {fileID: 2100000, guid: f0aa544323a187140b624ca743525582, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Glass_HatenoHouseWindow_Inside_A
+    second: {fileID: 2100000, guid: 3b9a4e65f116ba748b26da70b8036f03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Glass_HatenoHouseWindow_Outside_A
+    second: {fileID: 2100000, guid: 3b9a4e65f116ba748b26da70b8036f03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Rock_HatenoHouse_A
+    second: {fileID: 2100000, guid: cc37e4cf59db8504fae9c43e354e9216, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Rock_HatenoHouse_D
+    second: {fileID: 2100000, guid: 47b7217c46e0439468d872bdccba1d21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Sign_HatenoSeal_A
+    second: {fileID: 2100000, guid: 04f20a1c5d462c647af688537f4739e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouseEdge_C
+    second: {fileID: 2100000, guid: cfa115643aec4434aa0a44a0088947a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_N_blend
+    second: {fileID: 2100000, guid: 56586c5ae8d64964b881eb86770052d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_P
+    second: {fileID: 2100000, guid: 4ebd926294e32cc4c9589c56b30fc8d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_Q_Seal_Trans
+    second: {fileID: 2100000, guid: 638227ae1d7f08344be08087175dc694, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_R
+    second: {fileID: 2100000, guid: 818d6a4e3560326449e8324406659cf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_S
+    second: {fileID: 2100000, guid: aa40f60948eb8f34a90cab0546076a41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_T
+    second: {fileID: 2100000, guid: 30251ed358472d4439872ff9c0390c89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoCeiling_A
+    second: {fileID: 2100000, guid: a3998636e53a58d4a8e0a3d6877ccfb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoHousefloor_A
+    second: {fileID: 2100000, guid: 52396b491cfb4f64fb4bfdfdfcc01f51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoHouseplant01_A
+    second: {fileID: 2100000, guid: fe55089be22bb9441952d51b73d8dfad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoPillar_A
+    second: {fileID: 2100000, guid: 715cdf780232bea4ca3b6c0a05895219, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoShutter_A
+    second: {fileID: 2100000, guid: 059882920d4e54247bb4034d5a45afa6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_Village_Hateno_F
+    second: {fileID: 2100000, guid: 801be84ec80b6fc40a52d2faa28cc0ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_InsideMat_A
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

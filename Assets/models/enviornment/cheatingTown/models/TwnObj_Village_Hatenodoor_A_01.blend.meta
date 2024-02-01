@@ -3,7 +3,12 @@ guid: 4e395c90ef4401748af498887cd0fff6
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_Builparts_Door_Wood_A
+    second: {fileID: 2100000, guid: 3fa1c7191e6cfca459b63ccab4a5c35a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

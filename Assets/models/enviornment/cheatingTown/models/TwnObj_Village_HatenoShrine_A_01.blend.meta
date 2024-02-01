@@ -3,7 +3,32 @@ guid: e079f7e08c1f02c4f9249ee7f0a3a1de
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Builparts_HatenoStone_B_Alb
+    second: {fileID: 2100000, guid: 01a43ed2864c9ca40a40125ea932560e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Plant_TempleOfTimeIvy_A
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_P
+    second: {fileID: 2100000, guid: 4ebd926294e32cc4c9589c56b30fc8d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_T
+    second: {fileID: 2100000, guid: 04f20a1c5d462c647af688537f4739e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_U
+    second: {fileID: 2100000, guid: e4f2dccdd62b9f34a8e131622d927b36, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

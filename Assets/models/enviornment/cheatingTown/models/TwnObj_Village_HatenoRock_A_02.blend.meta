@@ -3,7 +3,12 @@ guid: 413b4545f293ad44e995677dd84fe31c
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MT_Rock_HatenoStoneMasonry_A
+    second: {fileID: 2100000, guid: 3e433ca22795e9c40b6c60c417193e09, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

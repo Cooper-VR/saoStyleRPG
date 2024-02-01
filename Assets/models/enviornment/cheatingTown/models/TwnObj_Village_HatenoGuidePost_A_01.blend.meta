@@ -3,7 +3,27 @@ guid: 65880947885b7124e843ad1ed595da57
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_TreeSection_Stump
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_TreeSection_Trunk
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_Tree_Stump
+    second: {fileID: 2100000, guid: 7d7e9a1d0fff72a4fa9dfab2cf601ee0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_Tree_Trunk
+    second: {fileID: 2100000, guid: 7d7e9a1d0fff72a4fa9dfab2cf601ee0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

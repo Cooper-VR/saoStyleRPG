@@ -3,7 +3,12 @@ guid: 8e67219dd4ea6024da6499dc02b32ec8
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoFence_B
+    second: {fileID: 2100000, guid: 1adf17accac78304dbcbe0a6fcb16a25, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

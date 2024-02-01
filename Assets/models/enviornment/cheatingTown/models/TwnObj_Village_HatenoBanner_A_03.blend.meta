@@ -3,7 +3,17 @@ guid: b13e2d6beb1ab6643a89bd5900091046
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Cloth_HatenoFabric_A
+    second: {fileID: 2100000, guid: 2fce9351966123342890c27f38d25235, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoPillar_A
+    second: {fileID: 2100000, guid: 715cdf780232bea4ca3b6c0a05895219, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
