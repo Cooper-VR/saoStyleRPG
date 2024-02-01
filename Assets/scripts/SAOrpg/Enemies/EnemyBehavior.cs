@@ -58,7 +58,7 @@ namespace SAOrpg.Enemies
 			}
         }
 
-        private void StateManager()
+        public virtual void StateManager()
         {
             if (healthIsLow)
             {
@@ -90,7 +90,7 @@ namespace SAOrpg.Enemies
 			}
 		}
 
-        private void FleePlayer()
+        public void FleePlayer()
         {
             if (player != null)
             {

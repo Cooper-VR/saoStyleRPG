@@ -5069,15 +5069,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6bead8047d36277488f2d39ac3bc192a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 30.000021
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6bead8047d36277488f2d39ac3bc192a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6bead8047d36277488f2d39ac3bc192a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 30.000021
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6bead8047d36277488f2d39ac3bc192a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5135,6 +5135,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 834567787b33e62478be983d5ca9d9b6, type: 2}
+    - target: {fileID: -4683669308469848369, guid: 6bead8047d36277488f2d39ac3bc192a, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 75795c865ff78dc45a05cb20fc9e86ae, type: 2}
+    - target: {fileID: -4683669308469848369, guid: 6bead8047d36277488f2d39ac3bc192a, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: d9c6ce49925e19b4fa0220e46a0b0281, type: 2}
+    - target: {fileID: -1461304994638716399, guid: 6bead8047d36277488f2d39ac3bc192a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d9c6ce49925e19b4fa0220e46a0b0281, type: 2}
+    - target: {fileID: -1439730007547781893, guid: 6bead8047d36277488f2d39ac3bc192a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 75795c865ff78dc45a05cb20fc9e86ae, type: 2}
     - target: {fileID: -1294892128559850198, guid: 6bead8047d36277488f2d39ac3bc192a, type: 3}
       propertyPath: m_Range
       value: 26
@@ -29072,7 +29088,7 @@ GameObject:
   - component: {fileID: 986211077}
   m_Layer: 0
   m_Name: testEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
