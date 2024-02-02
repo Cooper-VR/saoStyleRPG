@@ -8,19 +8,19 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mt_CmnTex_Glass_HatenoHouseWindow_A2
-  m_Shader: {fileID: 4800000, guid: 2c046c1ade5c6d84e891cb759942737a, type: 3}
-  m_ValidKeywords:
-  - VIGNETTE_MASKED
+  m_Shader: {fileID: 4800000, guid: 4c50a89ea86821545850ec8ad983ca4f, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _LIGHTINGMODE_MULTILAYER_MATH
-  - _RIM2STYLE_POIYOMI
-  - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords: []
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
+    AllLockedGUIDS: 3b9a4e65f116ba748b26da70b8036f03,460aca47a8393c44db8cb11000cb7db7,081d748c4e42f0f4dbfd2543b34178d3
+    OriginalKeywords: _LIGHTINGMODE_MULTILAYER_MATH _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro World
     RenderType: TransparentCutout
   disabledShaderPasses: []
   m_SavedProperties:
@@ -2182,7 +2182,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1

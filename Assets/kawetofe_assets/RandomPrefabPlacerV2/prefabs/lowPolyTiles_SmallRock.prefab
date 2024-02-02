@@ -28,8 +28,7 @@ Transform:
   m_GameObject: {fileID: 1691437701069892}
   m_LocalRotation: {x: 0.000001809995, y: -0.00000004371139, z: 7.917863e-14, w: 1}
   m_LocalPosition: {x: 0.3904063, y: 0.023011036, z: 0.40506724}
-  m_LocalScale: {x: 4.1657968, y: 4.1657968, z: 4.1657968}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.3532035, y: 1.3532035, z: 1.3532035}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53,12 +52,9 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -70,7 +66,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -83,7 +78,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &64900078695882690
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -94,7 +88,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
-  m_CookingOptions: 30
+  m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 6879858b25a65a747a9605a4264aadcc, type: 3}

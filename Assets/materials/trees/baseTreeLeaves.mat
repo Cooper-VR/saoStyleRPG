@@ -8,8 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: baseTreeLeaves
-  m_Shader: {fileID: 4800000, guid: 7b930b87172049241bbd94d0763b9c48, type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: 4800000, guid: 4a6330b20947e8e4884d1ff347f1a82d, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
   - POI_LIGHT_DATA_ADDITIVE_ENABLE
   - POI_VERTEXLIGHT_ON
@@ -18,15 +19,17 @@ Material:
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords:
-  - _ALPHATEST_ON
-  - _NORMALMAP
-  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
-  stringTagMap: {}
+  stringTagMap:
+    AllLockedGUIDS: 0f739307b2dc73548ad06324ca9d4af1,47ef1db5d2688df499495801663d13b0
+    OriginalKeywords: POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE POI_LIGHT_DATA_ADDITIVE_ENABLE
+      POI_VERTEXLIGHT_ON VIGNETTE_MASKED _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI
+      _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro World
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -2050,7 +2053,7 @@ Material:
     - _Set_HighColorMaskChannel: 1
     - _Set_HighColorMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1

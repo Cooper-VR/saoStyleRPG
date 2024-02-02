@@ -8,8 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: gloves
-  m_Shader: {fileID: 4800000, guid: 76a3501b6f96f874abe72562d44fcceb, type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: 4800000, guid: 7c2f762d1dadcf04990f76e959ba9803, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - POI_RIM2
   - VIGNETTE_MASKED
   - _GLOSSYREFLECTIONS_OFF
@@ -17,16 +18,16 @@ Material:
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
     AllLockedGUIDS: 91fa56bb3eeb3bb42980dda125fea2c5
-    OriginalKeywords: VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF _LIGHTINGMODE_TEXTURERAMP
+    OriginalKeywords: POI_RIM2 VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF _LIGHTINGMODE_TEXTURERAMP
       _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
     OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3

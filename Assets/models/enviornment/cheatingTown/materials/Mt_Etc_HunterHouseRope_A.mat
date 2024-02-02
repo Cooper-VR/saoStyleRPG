@@ -8,8 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mt_Etc_HunterHouseRope_A
-  m_Shader: {fileID: 4800000, guid: 2c046c1ade5c6d84e891cb759942737a, type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: 4800000, guid: 9819b86039a032e4a952d7ec668fdcf1, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - AUTO_EXPOSURE
   - POI_CLEARCOAT
   - VIGNETTE_MASKED
@@ -17,12 +18,15 @@ Material:
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
   stringTagMap:
+    AllLockedGUIDS: 4516cee835ce1b74689dc0f08c5d51af
+    OriginalKeywords: AUTO_EXPOSURE POI_CLEARCOAT VIGNETTE_MASKED _LIGHTINGMODE_MULTILAYER_MATH
+      _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro World
     RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
@@ -2184,7 +2188,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1

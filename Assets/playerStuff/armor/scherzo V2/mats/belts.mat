@@ -8,8 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: belts
-  m_Shader: {fileID: 4800000, guid: 76a3501b6f96f874abe72562d44fcceb, type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: 4800000, guid: c9a49d87fd87d5849925062214e34e17, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - POI_RIM2
   - VIGNETTE_MASKED
   - _GLOSSYREFLECTIONS_OFF
@@ -17,14 +18,16 @@ Material:
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
-    AllLockedGUIDS: a8db78adb0be12444ac43a3de6a03cf9,d648126d7fe6a2546b5139a4738d03d2
+    AllLockedGUIDS: d648126d7fe6a2546b5139a4738d03d2,ac70deb6e68e79f45ac8f3ae94443b24,a8db78adb0be12444ac43a3de6a03cf9
+    OriginalKeywords: POI_RIM2 VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF _LIGHTINGMODE_TEXTURERAMP
+      _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
     OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -2205,7 +2208,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1

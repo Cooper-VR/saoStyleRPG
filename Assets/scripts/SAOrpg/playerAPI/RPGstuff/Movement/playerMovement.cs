@@ -12,7 +12,7 @@ namespace SAOrpg.playerAPI.RPGstuff.Movement
 		public Transform camera;
 		private IndexInput indexInput;
 		public float speed = 5f;
-		public float rotationSpeed = 10f;
+		public float rotationSpeed = 5f;
 		public float deadzone;
 
 		[HideInInspector]

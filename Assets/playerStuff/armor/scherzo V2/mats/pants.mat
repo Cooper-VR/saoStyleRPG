@@ -8,21 +8,25 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: pants
-  m_Shader: {fileID: 4800000, guid: 76a3501b6f96f874abe72562d44fcceb, type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: 4800000, guid: fe9347ad8355cf3498ba616b0bcdef15, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - VIGNETTE_MASKED
   - _GLOSSYREFLECTIONS_OFF
   - _LIGHTINGMODE_TEXTURERAMP
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
-    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro
+    AllLockedGUIDS: b27e80a8c63d7734db8a99ce59a6eb21
+    OriginalKeywords: VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF _LIGHTINGMODE_TEXTURERAMP
+      _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro
+    RenderType: Opaque
     _ClearCoatMaps_texPack_a_channel: 4
     _ClearCoatMaps_texPack_a_fallback: 1
     _ClearCoatMaps_texPack_a_guid: dd291fc0dd09d0e4e95d04aaa56000b2
@@ -2220,7 +2224,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1

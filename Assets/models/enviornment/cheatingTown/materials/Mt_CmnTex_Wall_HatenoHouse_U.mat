@@ -8,19 +8,19 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mt_CmnTex_Wall_HatenoHouse_U
-  m_Shader: {fileID: 4800000, guid: 2c046c1ade5c6d84e891cb759942737a, type: 3}
-  m_ValidKeywords:
-  - VIGNETTE_MASKED
+  m_Shader: {fileID: 4800000, guid: 6237a77033dcddb4ea94b2f6bd150153, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _LIGHTINGMODE_MULTILAYER_MATH
-  - _RIM2STYLE_POIYOMI
-  - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
+    AllLockedGUIDS: f86279a58d30faa44888b221fa543caa,52396b491cfb4f64fb4bfdfdfcc01f51,cfa115643aec4434aa0a44a0088947a2,4ebd926294e32cc4c9589c56b30fc8d2,a9c8378a912e72b47802a5df57bb2bc4,059882920d4e54247bb4034d5a45afa6,6161826871948434888fca43c58bc547,af6738a19761e094bb36d84cf372266e,818d6a4e3560326449e8324406659cf5,715cdf780232bea4ca3b6c0a05895219,56586c5ae8d64964b881eb86770052d2,cc37e4cf59db8504fae9c43e354e9216,a3998636e53a58d4a8e0a3d6877ccfb8,0b3d6d2c25bb0fd4db3ba76bb01e2079,32b08720875b5f142b6244df3561af34,f3a06a62f36f0524995f4e02f44344dd,da2467f1f5b281c4aabb4820c386a328,92a70ced45edc824cbcb223ddaa61df5,4af1faefe73e34445883576b2ce0ad26,df7038c1066202249ac8a60886cf978d,ddb47b22f46c8ad4d9ffcdd78cc87d44,67a8d0e574e37e04389933256c24c9a8,ddfcd009f176b3642bd716f1ed192fe6,d2352b2a76e9f05479aa664d96459da0,e014c642165be034d804ac6060a482e7,3fa1c7191e6cfca459b63ccab4a5c35a,195d20314551b2340959c8846e7e55ec,e7ab552458a28444b91add0eac368874,5dd1aa06dd3103041b8cacebcf1d94c3,c0a33939ef7a8cd48994eaecf924c80c,01a43ed2864c9ca40a40125ea932560e,2fce9351966123342890c27f38d25235,edb900404a350ff4fba7c49f8401d214,f34a4368a61398c45b28e1c2a7565944,63cde07cce2467f42a314c112d7aeafc,601aa20c71f7cb84aa0809b33b0e8799,9dac550d621f54b4380e0782b2ccd6b1,f0aa544323a187140b624ca743525582,47b7217c46e0439468d872bdccba1d21,e4f2dccdd62b9f34a8e131622d927b36,1adf17accac78304dbcbe0a6fcb16a25,b7f69127d5373db4185fe4707d7f9f0f,2ed1aa98c157afe41a8d77bed28e301c,801be84ec80b6fc40a52d2faa28cc0ef,ea12a207f6301344bbbb57d47d5efcf0,8643f34c99ac5324087ac3beab22429d,1ad9331756d57674da2e324104ed75b8,55809ec56b4b681458632e984d82a7ed,c4269d7a6e0bc094b9368eede867efd8,3e433ca22795e9c40b6c60c417193e09,7d7e9a1d0fff72a4fa9dfab2cf601ee0,52186d583a1870b48843296dba8c9c2d
+    OriginalKeywords: _LIGHTINGMODE_MULTILAYER_MATH _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro World
     RenderType: TransparentCutout
   disabledShaderPasses: []
   m_SavedProperties:
@@ -2182,7 +2182,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
