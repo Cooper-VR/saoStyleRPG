@@ -1,9 +1,42 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 2ab895621ad3b2a4cbf3d57b8acd98c9
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects: {}
+=======
+guid: 8f1e5c3028aa5d64a866c46375fd57bf
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Cloth_HatenoRope_A
+    second: {fileID: 2100000, guid: df7038c1066202249ac8a60886cf978d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoArticles_C
+    second: {fileID: 2100000, guid: e014c642165be034d804ac6060a482e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoBoard_A
+    second: {fileID: 2100000, guid: 63cde07cce2467f42a314c112d7aeafc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoFence_C
+    second: {fileID: 2100000, guid: b7f69127d5373db4185fe4707d7f9f0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoHouseHovel_A
+    second: {fileID: 2100000, guid: f86279a58d30faa44888b221fa543caa, type: 2}
+>>>>>>> bcb5fb250590c9ada8499ff187ca989a6caeb5dd
   materials:
     materialImportMode: 2
     materialName: 0

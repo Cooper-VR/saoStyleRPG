@@ -1,9 +1,22 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 55f3b0625be30a9459515f7d43148d1c
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects: {}
+=======
+guid: 00c8df68a85272a4e877666df89fb0e6
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoHotelDoor_A
+    second: {fileID: 2100000, guid: 9dac550d621f54b4380e0782b2ccd6b1, type: 2}
+>>>>>>> bcb5fb250590c9ada8499ff187ca989a6caeb5dd
   materials:
     materialImportMode: 2
     materialName: 0

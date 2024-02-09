@@ -1,9 +1,22 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 023f41bf51ff6a346a566794f0af23cf
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects: {}
+=======
+guid: 97890b638d5eb544dae6ca0fb8edb986
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoFence_C
+    second: {fileID: 2100000, guid: b7f69127d5373db4185fe4707d7f9f0f, type: 2}
+>>>>>>> bcb5fb250590c9ada8499ff187ca989a6caeb5dd
   materials:
     materialImportMode: 2
     materialName: 0

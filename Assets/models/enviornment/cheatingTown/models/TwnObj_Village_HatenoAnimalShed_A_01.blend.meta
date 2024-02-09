@@ -1,9 +1,62 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: dca8dbe1e2088c74ca2c258459f407a5
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects: {}
+=======
+guid: 881a53f4b31ed9b4cb339e54012ff914
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Builparts_HatenoHouse_E
+    second: {fileID: 2100000, guid: c0a33939ef7a8cd48994eaecf924c80c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Cloth_DesertIceRoom_X1
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Cloth_HatenoRope_A
+    second: {fileID: 2100000, guid: df7038c1066202249ac8a60886cf978d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Cloth_HatenoRope_A1
+    second: {fileID: 2100000, guid: df7038c1066202249ac8a60886cf978d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_SmallOasis_B
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_P
+    second: {fileID: 2100000, guid: 4ebd926294e32cc4c9589c56b30fc8d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_U
+    second: {fileID: 2100000, guid: e4f2dccdd62b9f34a8e131622d927b36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_BridgeBoard_A1
+    second: {fileID: 2100000, guid: f86279a58d30faa44888b221fa543caa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_Village_Hateno_G
+    second: {fileID: 2100000, guid: ea12a207f6301344bbbb57d47d5efcf0, type: 2}
+>>>>>>> bcb5fb250590c9ada8499ff187ca989a6caeb5dd
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,9 +1,57 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: e575b9a5173135744aa5aaee531d42db
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects: {}
+=======
+guid: af78e43ffc70082488c7b01b4b3f1a4b
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoArticles_Book_A
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoArticles_Z
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoChest_A
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoContainer_A
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_wood_HatenoChair_A
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_wood_HatenoDesk_A
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_Lamp_A
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_Lamp_B
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+>>>>>>> bcb5fb250590c9ada8499ff187ca989a6caeb5dd
   materials:
     materialImportMode: 2
     materialName: 0

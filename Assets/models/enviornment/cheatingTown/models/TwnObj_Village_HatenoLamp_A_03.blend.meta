@@ -1,9 +1,32 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 0ea84b6056e98b9419b1cb860d6e3b83
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects: {}
+=======
+guid: b8d2c8a2a183bc14698f68f24a106b5f
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoArticles_P
+    second: {fileID: 2100000, guid: edb900404a350ff4fba7c49f8401d214, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Glass_HatenoHouseWindow_A
+    second: {fileID: 2100000, guid: 460aca47a8393c44db8cb11000cb7db7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoHouseHovel_A
+    second: {fileID: 2100000, guid: f86279a58d30faa44888b221fa543caa, type: 2}
+>>>>>>> bcb5fb250590c9ada8499ff187ca989a6caeb5dd
   materials:
     materialImportMode: 2
     materialName: 0

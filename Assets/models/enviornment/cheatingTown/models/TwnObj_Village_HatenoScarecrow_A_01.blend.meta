@@ -1,9 +1,42 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 70d5809730b58034883be733ec377c18
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects: {}
+=======
+guid: de8bf78b507c7af4a9837552a2301838
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Cloth_HatenoRope_A
+    second: {fileID: 2100000, guid: df7038c1066202249ac8a60886cf978d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoArticles_B
+    second: {fileID: 2100000, guid: 92a70ced45edc824cbcb223ddaa61df5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoBasket_A
+    second: {fileID: 2100000, guid: d2352b2a76e9f05479aa664d96459da0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_Straw_A
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoFence_C
+    second: {fileID: 2100000, guid: b7f69127d5373db4185fe4707d7f9f0f, type: 2}
+>>>>>>> bcb5fb250590c9ada8499ff187ca989a6caeb5dd
   materials:
     materialImportMode: 2
     materialName: 0

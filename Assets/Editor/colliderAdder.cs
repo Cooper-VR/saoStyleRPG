@@ -8,7 +8,7 @@ public class colliderAdder : EditorWindow
 	private GameObject rootObject;
 
 
-	[MenuItem("Window/Tools/colliderAdder")]
+	[MenuItem("Window/colliderAdder")]
 	private static void click()
 	{
 		EditorWindow.GetWindow(typeof(colliderAdder), false, "collider adder");

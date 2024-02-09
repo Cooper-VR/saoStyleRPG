@@ -1,9 +1,37 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c0f7759d940a1fa4ca610846f8358ff5
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects: {}
+=======
+guid: 8fc855d3b3df3d249bf9c29ea975816d
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_Cloth_HatenoWindmill_A_01
+    second: {fileID: 2100000, guid: fd590cd1764831b468dcf2d8efb4f4cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Cloth_HatenoRope_A
+    second: {fileID: 2100000, guid: df7038c1066202249ac8a60886cf978d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_Wood_Windmill_A
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_Wood_Windmill_A1
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+>>>>>>> bcb5fb250590c9ada8499ff187ca989a6caeb5dd
   materials:
     materialImportMode: 2
     materialName: 0

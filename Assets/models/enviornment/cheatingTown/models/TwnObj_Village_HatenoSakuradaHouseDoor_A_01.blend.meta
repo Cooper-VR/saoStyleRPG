@@ -1,9 +1,27 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 8f02f41cd1ccbe442ab790646db2dee7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects: {}
+=======
+guid: 7fa23394abf498b48a4ab6ddd25cd6e4
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Metal_IchikaraHouse_A
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_Wood_HatenoSakuradaDoor_A
+    second: {fileID: 2100000, guid: 52186d583a1870b48843296dba8c9c2d, type: 2}
+>>>>>>> bcb5fb250590c9ada8499ff187ca989a6caeb5dd
   materials:
     materialImportMode: 2
     materialName: 0

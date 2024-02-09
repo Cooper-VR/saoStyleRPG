@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using UnityEditor;
+//using UnityEditor;
 using UnityEngine;
 using SAOrpg.Login;
 
@@ -154,11 +154,11 @@ namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
 
             for (int i = 0; i < data.weaponNames.Length; i++)
             {
-                weapons[i] = (inventoryObjects)AssetDatabase.LoadAssetAtPath(data.weaponNames[i], typeof(inventoryObjects));
+                //weapons[i] = (inventoryObjects)AssetDatabase.LoadAssetAtPath(data.weaponNames[i], typeof(inventoryObjects));
             }
             for (int i = 0; i < data.itemNames.Length; i++)
             {
-                items[i] = (inventoryObjects)AssetDatabase.LoadAssetAtPath(data.itemNames[i], typeof(inventoryObjects));
+                //items[i] = (inventoryObjects)AssetDatabase.LoadAssetAtPath(data.itemNames[i], typeof(inventoryObjects));
             }
 
 

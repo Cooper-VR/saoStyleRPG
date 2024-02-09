@@ -16,8 +16,8 @@ MonoBehaviour:
   prefabs:
   - allowedLayers:
       serializedVersion: 2
-      m_Bits: 63
-    prefab: {fileID: 5886912203995928085, guid: daa9152a3a5d6ca4aae72b3096ea6881, type: 3}
+      m_Bits: 55
+    prefab: {fileID: 1644918953325098, guid: ede7754b8e21c2549acb449660f64910, type: 3}
     possibility: 0.8
     scaleMin: 0.8
     scaleMax: 1.674138
@@ -25,15 +25,4 @@ MonoBehaviour:
     lockedRotations: {x: 1, y: 0, z: 1}
     useNormalsForRotation: 0
     maxSlopeAngle: 45
-  - allowedLayers:
-      serializedVersion: 2
-      m_Bits: 63
-    prefab: {fileID: 1640267132927392523, guid: 5d1cb0a312791a541b529d6d99b3afc4, type: 3}
-    possibility: 0.63
-    scaleMin: 0.8
-    scaleMax: 2.470088
-    placementOffset: {x: 0, y: 0, z: 0}
-    lockedRotations: {x: 1, y: 0, z: 1}
-    useNormalsForRotation: 0
-    maxSlopeAngle: 29
   objectsToPlace: 10

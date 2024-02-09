@@ -364,6 +364,90 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 		[VectorLabel(Min, Max)] _AudioLinkRimBrightnessAdd ("Brightness Add", Vector) = (0, 0, 0, 0)
 		[HideInInspector] m_end_RimAudioLink ("Audio Link", Float) = 0
 		[HideInInspector] m_end_rim1LightOptions ("Rim Lighting", Float) = 0
+		[HideInInspector] m_start_rim2LightOptions ("Rim Lighting 2--{reference_property:_EnableRim2Lighting,button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/shading/rim-lighting},hover:Documentation}}", Float) = 0
+		[HideInInspector][ThryToggle(POI_RIM2)]_EnableRim2Lighting ("Enable Rim2 Lighting", Float) = 0
+		[KeywordEnum(Poiyomi, UTS2, LilToon)] _Rim2Style ("Style", Float) = 0
+		[sRGBWarning(true)]_Rim2Tex ("Rim Texture--{reference_properties:[_Rim2TexPan, _Rim2TexUV], condition_showS:_Rim2Style==0}", 2D) = "white" { }
+		[HideInInspector][Vector2]_Rim2TexPan ("Panning", Vector) = (0, 0, 0, 0)
+		[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)] _Rim2TexUV ("UV", Int) = 0
+		[sRGBWarning]_Rim2Mask ("Rim Mask--{reference_properties:[_Rim2MaskPan, _Rim2MaskUV, _Rim2MaskChannel, _Rim2MaskInvert], condition_showS:_Rim2Style==0}", 2D) = "white" { }
+		[HideInInspector][Vector2]_Rim2MaskPan ("Panning", Vector) = (0, 0, 0, 0)
+		[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)] _Rim2MaskUV ("UV", Int) = 0
+		[HideInInspector][ToggleUI]_Rim2MaskInvert("Invert Mask", Float) = 0
+		[HideInInspector][Enum(R, 0, G, 1, B, 2, A, 3)]_Rim2MaskChannel ("Channel", Float) = 0
+		[ThryWideEnum(Off, 0, 1R, 1, 1G, 2, 1B, 3, 1A, 4, 2R, 5, 2G, 6, 2B, 7, 2A, 8, 3R, 9, 3G, 10, 3B, 11, 3A, 12, 4R, 13, 4G, 14, 4B, 15, 4A, 16)] _Rim2GlobalMask ("Global Mask--{reference_property:_Rim2GlobalMaskBlendType}", Int) = 0
+		[HideInInspector][ThryWideEnum(Add, 0, Subtract, 1, Multiply, 2, Divide, 3, Min, 4, Max, 5, Average, 6)] _Rim2GlobalMaskBlendType ("Blending", Int) = 2
+		_Is_NormalMapToRim2Light ("Normal Strength", Range(0, 1)) = 1
+		[ToggleUI]_Rim2LightingInvert ("Invert Rim Lighting--{ condition_showS:_Rim2Style==0}", Float) = 0
+		_Rim2LightColor ("Rim Color--{condition_showS:_Rim2Style==0||_Rim2Style==1,reference_property:_Rim2LightColorThemeIndex}", Color) = (1, 1, 1, 1)
+		[HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _Rim2LightColorThemeIndex ("", Int) = 0
+		_Rim2Width ("Rim Width--{ condition_showS:_Rim2Style==0}", Range(0, 1)) = 0.8
+		_Rim2Sharpness ("Rim Sharpness--{ condition_showS:_Rim2Style==0}", Range(0, 1)) = .25
+		_Rim2Power ("Rim Power--{ condition_showS:_Rim2Style==0}", Range(0, 10)) = 1
+		_Rim2Strength ("Rim Emission--{ condition_showS:_Rim2Style==0}", Range(0, 20)) = 0
+		_Rim2BaseColorMix ("Mix Base Color--{ condition_showS:_Rim2Style==0}", Range(0, 1)) = 0
+		[ThryWideEnum(Add, 0, Replace, 1, Multiply, 2, Mixed, 3)] _Rim2BlendMode ("Blend Mode--{ condition_showS:_Rim2Style==0}", Int) = 0
+		_Rim2Brightness ("Brightness--{ condition_showS:_Rim2Style==0}", Range(0, 10)) = 1
+		_Rim2BlendStrength ("Blend Strength--{ condition_showS:_Rim2Style==0}", Range(0, 1)) = 1
+		[ThryToggle(false)] _Rim2Clamp ("Clamp Intensity", Float) = 0
+		[ThryWideEnum(Off, 0, 1R, 1, 1G, 2, 1B, 3, 1A, 4, 2R, 5, 2G, 6, 2B, 7, 2A, 8, 3R, 9, 3G, 10, 3B, 11, 3A, 12, 4R, 13, 4G, 14, 4B, 15, 4A, 16)] _Rim2ApplyGlobalMaskIndex ("Apply to Global Mask--{reference_property:_Rim2ApplyGlobalMaskBlendType,condition_showS:_Rim2Style==0}", Int) = 0
+		[HideInInspector][ThryWideEnum(Add, 0, Subtract, 1, Multiply, 2, Divide, 3, Min, 4, Max, 5, Average, 6)] _Rim2ApplyGlobalMaskBlendType ("Blending", Int) = 2
+		[sRGBWarning]_Set_Rim2LightMask ("Set_RimLightMask--{reference_properties:[_Set_Rim2LightMaskPan, _Set_Rim2LightMaskUV, _Set_Rim2LightMaskChannel], condition_showS:_RimStyle==1}", 2D) = "white" { }
+		[HideInInspector][Vector2]_Set_Rim2LightMaskPan ("Panning", Vector) = (0, 0, 0, 0)
+		[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)] _Set_Rim2LightMaskUV ("UV", Int) = 0
+		[HideInInspector][Enum(R, 0, G, 1, B, 2, A, 3)]_Set_Rim2LightMaskChannel ("Channel", Float) = 1
+		_Tweak_Rim2LightMaskLevel ("Tweak_RimLightMaskLevel--{ condition_showS:_Rim2Style==1}", Range(-1, 1)) = 0
+		_Is_LightColor_Rim2Light ("Mix Light Color--{ condition_showS:_Rim2Style==1}", Range(0, 1)) = 1
+		_Rim2Light_Power ("Rim Power--{ condition_showS:_Rim2Style==1}", Range(0, 1)) = 0.1
+		_Rim2Light_InsideMask ("Inside Mask--{ condition_showS:_Rim2Style==1}", Range(0.0001, 1)) = 0.0001
+		[Toggle(_)] _Rim2Light_FeatherOff ("Feather Off--{ condition_showS:_Rim2Style==1}", Float) = 0
+		[ThryToggleUI(true)] _LightDirection_MaskOn2 ("<size=13><b>  Light Direction Mask</b></size>--{ condition_showS:_Rim2Style==1}", Float) = 0
+		_Tweak_LightDirection_MaskLevel2 ("Light Dir Mask Level--{ condition_showS:_LightDirection_MaskOn2==1&&_Rim2Style==1}", Range(0, 0.5)) = 0
+		[ThryToggleUI(true)] _Add_Antipodean_Rim2Light ("<size=13><b>  Antipodean(Ap) Rim</b></size>--{ condition_showS:_LightDirection_MaskOn2==1&&_Rim2Style==1}", Float) = 0
+		_Is_LightColor_Ap_Rim2Light ("Ap Light Color Mix--{ condition_showS:_LightDirection_MaskOn2==1&&_Add_Antipodean_Rim2Light==1&&_Rim2Style==1}", Range(0, 1)) = 1
+		_Ap_Rim2LightColor ("Ap Color--{reference_property:_Rim2ApColorThemeIndex, condition_showS:_LightDirection_MaskOn2==1&&_Add_Antipodean_Rim2Light==1&&_Rim2Style==1}", Color) = (1, 1, 1, 1)
+		[HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _Rim2ApColorThemeIndex ("", Int) = 0
+		_Ap_Rim2Light_Power ("Ap Power--{ condition_showS:_LightDirection_MaskOn2==1&&_Add_Antipodean_Rim2Light==1&&_Rim2Style==1}", Range(0, 1)) = 0.1
+		[Toggle(_)] _Ap_Rim2Light_FeatherOff ("Ap Feather Off--{ condition_showS:_LightDirection_MaskOn2==1&&_Add_Antipodean_Rim2Light==1&&_Rim2Style==1}", Float) = 0
+		[HDR][Gamma]_Rim2Color ("Rim Color--{condition_showS:_Rim2Style==2,reference_property:_Rim2LightColorThemeIndex}", Color) = (0.66,0.5,0.48,1)
+		[sRGBWarning(true)] _Rim2ColorTex ("Texture--{condition_showS:_Rim2Style==2,reference_properties:[_Rim2ColorTexPan, _Rim2ColorTexUV]}", 2D) = "white" {}
+		[HideInInspector][Vector2] _Rim2ColorTexPan ("Panning", Vector) = (0, 0, 0, 0)
+		[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)] _Rim2ColorTexUV ("UV", Int) = 0
+		_Rim2MainStrength ("Main Color Blend--{condition_showS:_Rim2Style==2}", Range(0, 1)) = 0
+		_Rim2NormalStrength ("Normal Strength--{condition_showS:_Rim2Style==2}", Range(0, 1)) = 1.0
+		_Rim2Border ("Border--{condition_showS:_Rim2Style==2}", Range(0, 1)) = 0.5
+		_Rim2Blur ("Blur--{condition_showS:_Rim2Style==2}", Range(0, 1)) = 0.65
+		[PowerSlider(3.0)]_Rim2FresnelPower ("Fresnel Power--{condition_showS:_Rim2Style==2}", Range(0.01, 50)) = 3.5
+		_Rim2EnableLighting ("Enable Lighting--{condition_showS:_Rim2Style==2}", Range(0, 1)) = 1
+		_Rim2ShadowMask ("Shadow Mask--{condition_showS:_Rim2Style==2}", Range(0, 1)) = 0.5
+		[ToggleUI]_Rim2BackfaceMask ("Backface Mask--{condition_showS:_Rim2Style==2}", Int) = 1
+		_Rim2VRParallaxStrength ("VR Parallax Strength--{condition_showS:_Rim2Style==2}", Range(0, 1)) = 1
+		_Rim2DirStrength ("Light direction strength--{condition_showS:_Rim2Style==2}", Range(0, 1)) = 0
+		_Rim2DirRange ("Direction Light Width--{condition_showS:_Rim2Style==2}", Range(-1, 1)) = 0
+		_Rim2IndirRange ("Indirection Light Width--{condition_showS:_Rim2Style==2}", Range(-1, 1)) = 0
+		[HDR][Gamma]_Rim2IndirColor ("Indirection Color--{condition_showS:_Rim2Style==2}", Color) = (1,1,1,1)
+		_Rim2IndirBorder ("Indirection Border--{condition_showS:_Rim2Style==2}", Range(0, 1)) = 0.5
+		_Rim2IndirBlur ("Indirection Blur--{condition_showS:_Rim2Style==2}", Range(0, 1)) = 0.1
+		[ThryToggleUI(true)] _Rim2ShadowToggle ("<size=13><b>  Light Direction Mask</b></size>--{ condition_showS:_Rim2Style==0}", Float) = 0
+		[Enum(Shadow Map, 0, Custom, 1)]_Rim2ShadowMaskRampType ("Light Falloff Type--{ condition_showS:_Rim2Style==0&&_Rim2ShadowToggle==1}", Int) = 0
+		[ToggleUI]_Rim2ShadowMaskInvert ("Invert Shadow Mask--{ condition_showS:_Rim2Style==0&&_Rim2ShadowToggle==1}", Float) = 0
+		_Rim2ShadowMaskStrength ("Shadow Mask Strength--{ condition_showS:_Rim2Style==0&&_Rim2ShadowToggle==1}", Range(0, 1)) = 1
+		[MultiSlider]_Rim2ShadowAlpha ("Hide In Shadow--{ condition_showS:_Rim2Style==0&&_Rim2ShadowToggle==1&&_Rim2ShadowMaskRampType==1}", Vector) = (0.0, 0.0, 0, 1)
+		_Rim2ShadowWidth ("Shrink In Shadow--{ condition_showS:_Rim2Style==0&&_Rim2ShadowToggle==1}", Range(0, 1)) = 0
+		[ThryToggleUI(true)] _Rim2HueShiftEnabled ("<size=13><b>  Hue Shift</b></size>", Float) = 0
+		_Rim2HueShiftSpeed ("Shift Speed--{condition_showS:(_Rim2HueShiftEnabled==1)}", Float) = 0
+		_Rim2HueShift ("Hue Shift--{condition_showS:(_Rim2HueShiftEnabled==1)}", Range(0, 1)) = 0
+		[HideInInspector] m_start_Rim2AudioLink ("Audio Link ♫--{ condition_showS:_EnableAudioLink==1&&_Rim2Style==0}", Float) = 0
+		[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkRim2WidthBand ("Width Add Band", Int) = 0
+		[VectorLabel(Min, Max)] _AudioLinkRim2WidthAdd ("Width Add", Vector) = (0, 0, 0, 0)
+		[Space(7)]
+		[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkRim2EmissionBand ("Emission Add Band", Int) = 0
+		[VectorLabel(Min, Max)] _AudioLinkRim2EmissionAdd ("Emission Add", Vector) = (0, 0, 0, 0)
+		[Space(7)]
+		[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkRim2BrightnessBand ("Brightness Band", Int) = 0
+		[VectorLabel(Min, Max)] _AudioLinkRim2BrightnessAdd ("Brightness Add", Vector) = (0, 0, 0, 0)
+		[HideInInspector] m_end_Rim2AudioLink ("Audio Link", Float) = 0
+		[HideInInspector] m_end_rim2LightOptions ("Rim2 Lighting", Float) = 0
 		[HideInInspector] m_end_rimLightOptions ("Rim Lighting", Float) = 0
 		[HideInInspector] m_specialFXCategory ("Special FX", Float) = 0
 		[HideInInspector] m_modifierCategory ("Modifiers", Float) = 0
@@ -484,13 +568,13 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 			BlendOp [_BlendOp], [_BlendOpAlpha]
 			Blend [_SrcBlend] [_DstBlend], [_SrcBlendAlpha] [_DstBlendAlpha]
 			CGPROGRAM
+ #define POI_RIM2 
  #define VIGNETTE_MASKED 
  #define _GLOSSYREFLECTIONS_OFF 
  #define _LIGHTINGMODE_TEXTURERAMP 
  #define _RIM2STYLE_POIYOMI 
  #define _RIMSTYLE_POIYOMI 
  #define _STOCHASTICMODE_DELIOT_HEITZ 
- #define PROP_BUMPMAP 
  #define PROP_RIMTEX 
  #define OPTIMIZER_ENABLED 
 			#pragma target 5.0
@@ -747,6 +831,63 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 			float _RimHueShiftEnabled;
 			float _RimHueShiftSpeed;
 			float _RimHueShift;
+			#endif
+			#ifdef POI_RIM2
+			float _Is_NormalMapToRim2Light;
+			float4 _Rim2LightColor;
+			float _Rim2LightColorThemeIndex;
+			float _Rim2Clamp;
+			#ifdef _RIM2STYLE_POIYOMI
+			float _Rim2LightingInvert;
+			float _Rim2Width;
+			float _Rim2Strength;
+			float _Rim2Sharpness;
+			float _Rim2BaseColorMix;
+			float _EnableRim2Lighting;
+			float _Rim2WidthNoiseStrength;
+			float4 _Rim2ShadowAlpha;
+			float _Rim2ShadowWidth;
+			float _Rim2BlendStrength;
+			float _Rim2BlendMode;
+			float _Rim2ShadowToggle;
+			float _Rim2Power;
+			float _Rim2ShadowMaskStrength;
+			float _Rim2ShadowMaskRampType;
+			float _Rim2ShadowMaskInvert;
+			float _Rim2Brightness;
+			#if defined(PROP_RIM2TEX) || !defined(OPTIMIZER_ENABLED)
+			Texture2D _Rim2Tex;
+			#endif
+			float4 _Rim2Tex_ST;
+			float2 _Rim2TexPan;
+			float _Rim2TexUV;
+			#if defined(PROP_RIM2MASK) || !defined(OPTIMIZER_ENABLED)
+			Texture2D _Rim2Mask;
+			#endif
+			float4 _Rim2Mask_ST;
+			float2 _Rim2MaskPan;
+			float _Rim2MaskUV;
+			float _Rim2MaskChannel;
+			float _Rim2MaskInvert;
+			#if defined(PROP_RIM2WIDTHNOISETEXTURE) || !defined(OPTIMIZER_ENABLED)
+			Texture2D _Rim2WidthNoiseTexture;
+			#endif
+			#ifdef POI_AUDIOLINK
+			half _AudioLinkRim2WidthBand;
+			float2 _AudioLinkRim2WidthAdd;
+			half _AudioLinkRim2EmissionBand;
+			float2 _AudioLinkRim2EmissionAdd;
+			half _AudioLinkRim2BrightnessBand;
+			float2 _AudioLinkRim2BrightnessAdd;
+			#endif
+			#endif
+			float _Rim2GlobalMask;
+			float _Rim2GlobalMaskBlendType;
+			float _Rim2ApplyGlobalMaskIndex;
+			float _Rim2ApplyGlobalMaskBlendType;
+			float _Rim2HueShiftEnabled;
+			float _Rim2HueShiftSpeed;
+			float _Rim2HueShift;
 			#endif
 			float _PPLightingMultiplier;
 			float _PPLightingAddition;
@@ -2569,7 +2710,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 				shadowStrength = lerp(0, shadowStrength, _OutlineShadowStrength);
 				#endif
 				#ifdef _LIGHTINGMODE_TEXTURERAMP
-				poiLight.rampedLightMap = lerp(1, UNITY_SAMPLE_TEX2D(_ToonRamp, poiLight.lightMap + (-0.34 /*_ShadowOffset*/)).rgb, shadowStrength);
+				poiLight.rampedLightMap = lerp(1, UNITY_SAMPLE_TEX2D(_ToonRamp, poiLight.lightMap + (-0.18 /*_ShadowOffset*/)).rgb, shadowStrength);
 				poiLight.finalLighting = lerp(float4(1,1,1,1) * lerp(poiLight.indirectColor, poiLight.rampedLightMap * poiLight.directColor, (0.0 /*_LightingIgnoreAmbientColor*/)) * poiLight.occlusion, poiLight.directColor, poiLight.rampedLightMap);
 				#endif
 				#endif
@@ -3001,18 +3142,18 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 					OpenLitShadeSH9ToonDouble(lightDirectionForSH9, poiLight.directColor, poiLight.indirectColor);
 					poiLight.directColor += _LightColor0.rgb;
 				}
-				float lightMapMode = (2.0 /*_LightingMapMode*/);
-				if ((0.0 /*_LightingDirectionMode*/) == 0)
+				float lightMapMode = (0.0 /*_LightingMapMode*/);
+				if ((4.0 /*_LightingDirectionMode*/) == 0)
 				{
 					poiLight.direction = _WorldSpaceLightPos0.xyz + unity_SHAr.xyz + unity_SHAg.xyz + unity_SHAb.xyz;
 				}
-				if ((0.0 /*_LightingDirectionMode*/) == 1 || (0.0 /*_LightingDirectionMode*/) == 2)
+				if ((4.0 /*_LightingDirectionMode*/) == 1 || (4.0 /*_LightingDirectionMode*/) == 2)
 				{
-					if ((0.0 /*_LightingDirectionMode*/) == 1)
+					if ((4.0 /*_LightingDirectionMode*/) == 1)
 					{
 						poiLight.direction = mul(unity_ObjectToWorld, float4(0,0,0,1)).xyz;;
 					}
-					if ((0.0 /*_LightingDirectionMode*/) == 2)
+					if ((4.0 /*_LightingDirectionMode*/) == 2)
 					{
 						poiLight.direction = float4(0,0,0,1);
 					}
@@ -3021,13 +3162,13 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 						lightMapMode == 1;
 					}
 				}
-				if ((0.0 /*_LightingDirectionMode*/) == 3) // UTS
+				if ((4.0 /*_LightingDirectionMode*/) == 3) // UTS
 				{
 					float3 defaultLightDirection = normalize(UNITY_MATRIX_V[2].xyz + UNITY_MATRIX_V[1].xyz);
 					float3 lightDirection = normalize(lerp(defaultLightDirection, _WorldSpaceLightPos0.xyz, any(_WorldSpaceLightPos0.xyz)));
 					poiLight.direction = lightDirection;
 				}
-				if ((0.0 /*_LightingDirectionMode*/) == 4) // OpenLit
+				if ((4.0 /*_LightingDirectionMode*/) == 4) // OpenLit
 				{
 					poiLight.direction = OpenLitLightingDirection(); // float4 customDir = 0; // Do we want to give users to alter this (OpenLit always does!)?
 				}
@@ -3036,7 +3177,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 					poiLight.direction = float3(.4, 1, .4);
 				}
 				poiLight.direction = normalize(poiLight.direction);
-				poiLight.attenuationStrength = (1.0 /*_LightingCastedShadows*/);
+				poiLight.attenuationStrength = (0.0 /*_LightingCastedShadows*/);
 				poiLight.attenuation = 1;
 				if (!all(_LightColor0.rgb == 0.0))
 				{
@@ -3055,7 +3196,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 				if (!any(poiLight.directColor) && !any(poiLight.indirectColor) && lightMapMode == 0)
 				{
 					lightMapMode = 1;
-					if ((0.0 /*_LightingDirectionMode*/) == 0)
+					if ((4.0 /*_LightingDirectionMode*/) == 0)
 					{
 						poiLight.direction = normalize(float3(.4, 1, .4));
 					}
@@ -3100,15 +3241,15 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 				poiLight.indirectColor = max(poiLight.indirectColor, 0.0001);
 				if ((0.0 /*_LightingColorMode*/) == 3)
 				{
-					poiLight.directColor = max(poiLight.directColor, (0.513 /*_LightingMinLightBrightness*/));
+					poiLight.directColor = max(poiLight.directColor, (0.572 /*_LightingMinLightBrightness*/));
 				}
 				else
 				{
-					poiLight.directColor = max(poiLight.directColor, poiLight.directColor * min(10000, ((0.513 /*_LightingMinLightBrightness*/) * rcp(calculateluminance(poiLight.directColor)))));
-					poiLight.indirectColor = max(poiLight.indirectColor, poiLight.indirectColor * min(10000, ((0.513 /*_LightingMinLightBrightness*/) * rcp(calculateluminance(poiLight.indirectColor)))));
+					poiLight.directColor = max(poiLight.directColor, poiLight.directColor * min(10000, ((0.572 /*_LightingMinLightBrightness*/) * rcp(calculateluminance(poiLight.directColor)))));
+					poiLight.indirectColor = max(poiLight.indirectColor, poiLight.indirectColor * min(10000, ((0.572 /*_LightingMinLightBrightness*/) * rcp(calculateluminance(poiLight.indirectColor)))));
 				}
-				poiLight.directColor = lerp(poiLight.directColor, dot(poiLight.directColor, float3(0.299, 0.587, 0.114)), (0.0 /*_LightingMonochromatic*/));
-				poiLight.indirectColor = lerp(poiLight.indirectColor, dot(poiLight.indirectColor, float3(0.299, 0.587, 0.114)), (0.0 /*_LightingMonochromatic*/));
+				poiLight.directColor = lerp(poiLight.directColor, dot(poiLight.directColor, float3(0.299, 0.587, 0.114)), (1.0 /*_LightingMonochromatic*/));
+				poiLight.indirectColor = lerp(poiLight.indirectColor, dot(poiLight.indirectColor, float3(0.299, 0.587, 0.114)), (1.0 /*_LightingMonochromatic*/));
 				if ((1.0 /*_LightingCapEnabled*/))
 				{
 					poiLight.directColor = min(poiLight.directColor, (1.0 /*_LightingCap*/));
@@ -3237,7 +3378,40 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 				AudioLinkRimBrightnessBand = (0.0 /*_AudioLinkRimBrightnessBand*/);
 				AudioLinkRimBrightnessAdd = float4(0,0,0,0);
 				#endif
-				ApplyPoiyomiRimLighting(poiFragData, poiMesh, poiCam, poiLight, poiMods, (1.0 /*_Is_NormalMapToRimLight*/), (1.0 /*_RimLightingInvert*/), (1.0 /*_RimPower*/), (0.0 /*_RimStrength*/), (0.0 /*_RimShadowWidth*/), (0.0 /*_RimShadowToggle*/), (1.0 /*_RimWidth*/), (1.0 /*_RimBlendStrength*/), rimMask, (0.0 /*_RimGlobalMask*/), (2.0 /*_RimGlobalMaskBlendType*/), rimColor, float4(1,1,1,1), (0.0 /*_RimLightColorThemeIndex*/), (0.0 /*_RimHueShiftEnabled*/), (0.0 /*_RimHueShift*/), (0.0 /*_RimHueShiftSpeed*/), (0.0 /*_RimSharpness*/), (0.0 /*_RimShadowMaskRampType*/), (0.0 /*_RimShadowMaskInvert*/), (1.0 /*_RimShadowMaskStrength*/), float4(0,0,0,1), (0.0 /*_RimApplyGlobalMaskIndex*/), (2.0 /*_RimApplyGlobalMaskBlendType*/), (0.0 /*_RimBaseColorMix*/), (1.0 /*_RimBrightness*/), (0.0 /*_RimBlendMode*/), AudioLinkRimWidthBand, AudioLinkRimWidthAdd, AudioLinkRimEmissionBand, AudioLinkRimEmissionAdd, AudioLinkRimBrightnessBand, AudioLinkRimBrightnessAdd, (0.0 /*_RimClamp*/));
+				ApplyPoiyomiRimLighting(poiFragData, poiMesh, poiCam, poiLight, poiMods, (1.0 /*_Is_NormalMapToRimLight*/), (0.0 /*_RimLightingInvert*/), (1.0 /*_RimPower*/), (0.0 /*_RimStrength*/), (0.0 /*_RimShadowWidth*/), (0.0 /*_RimShadowToggle*/), (0.37 /*_RimWidth*/), (1.0 /*_RimBlendStrength*/), rimMask, (0.0 /*_RimGlobalMask*/), (2.0 /*_RimGlobalMaskBlendType*/), rimColor, float4(1,1,1,1), (0.0 /*_RimLightColorThemeIndex*/), (0.0 /*_RimHueShiftEnabled*/), (0.0 /*_RimHueShift*/), (0.0 /*_RimHueShiftSpeed*/), (1.0 /*_RimSharpness*/), (0.0 /*_RimShadowMaskRampType*/), (0.0 /*_RimShadowMaskInvert*/), (1.0 /*_RimShadowMaskStrength*/), float4(0,0,0,1), (0.0 /*_RimApplyGlobalMaskIndex*/), (2.0 /*_RimApplyGlobalMaskBlendType*/), (0.0 /*_RimBaseColorMix*/), (1.0 /*_RimBrightness*/), (0.0 /*_RimBlendMode*/), AudioLinkRimWidthBand, AudioLinkRimWidthAdd, AudioLinkRimEmissionBand, AudioLinkRimEmissionAdd, AudioLinkRimBrightnessBand, AudioLinkRimBrightnessAdd, (0.0 /*_RimClamp*/));
+				#endif
+				#endif
+				#ifdef POI_RIM2
+				#ifdef _RIM2STYLE_POIYOMI
+				#if defined(PROP_RIM2MASK) || !defined(OPTIMIZER_ENABLED)
+				float rim2Mask = POI2D_SAMPLER_PAN(_Rim2Mask, _MainTex, poiUV(poiMesh.uv[(0.0 /*_Rim2MaskUV*/)], float4(1,1,0,0)), float4(0,0,0,0))[(0.0 /*_Rim2MaskChannel*/)];
+				#else
+				float rim2Mask = 1;
+				#endif
+				if((0.0 /*_Rim2MaskInvert*/))
+				{
+					rim2Mask = 1 - rim2Mask;
+				}
+				#if defined(PROP_RIM2TEX) || !defined(OPTIMIZER_ENABLED)
+				float4 rim2Color = POI2D_SAMPLER_PAN(_Rim2Tex, _MainTex, poiUV(poiMesh.uv[(0.0 /*_Rim2TexUV*/)], float4(1,1,0,0)), float4(0,0,0,0));
+				#else
+				float4 rim2Color = 1;
+				#endif
+				half AudioLinkRim2WidthBand = 0;
+				float2 AudioLinkRim2WidthAdd = 0;
+				half AudioLinkRim2EmissionBand = 0;
+				float2 AudioLinkRim2EmissionAdd = 0;
+				half AudioLinkRim2BrightnessBand = 0;
+				float2 AudioLinkRim2BrightnessAdd = 0;
+				#ifdef POI_AUDIOLINK
+				AudioLinkRim2WidthBand = (0.0 /*_AudioLinkRim2WidthBand*/);
+				AudioLinkRim2WidthAdd = float4(0,0,0,0);
+				AudioLinkRim2EmissionBand = (0.0 /*_AudioLinkRim2EmissionBand*/);
+				AudioLinkRim2EmissionAdd = float4(0,0,0,0);
+				AudioLinkRim2BrightnessBand = (0.0 /*_AudioLinkRim2BrightnessBand*/);
+				AudioLinkRim2BrightnessAdd = float4(0,0,0,0);
+				#endif
+				ApplyPoiyomiRimLighting(poiFragData, poiMesh, poiCam, poiLight, poiMods, (1.0 /*_Is_NormalMapToRim2Light*/), (0.0 /*_Rim2LightingInvert*/), (1.0 /*_Rim2Power*/), (0.0 /*_Rim2Strength*/), (0.0 /*_Rim2ShadowWidth*/), (0.0 /*_Rim2ShadowToggle*/), (1.0 /*_Rim2Width*/), (1.0 /*_Rim2BlendStrength*/), rim2Mask, (0.0 /*_Rim2GlobalMask*/), (2.0 /*_Rim2GlobalMaskBlendType*/), rim2Color, float4(1,1,1,1), (0.0 /*_Rim2LightColorThemeIndex*/), (0.0 /*_Rim2HueShiftEnabled*/), (0.0 /*_Rim2HueShift*/), (0.0 /*_Rim2HueShiftSpeed*/), (1.0 /*_Rim2Sharpness*/), (0.0 /*_Rim2ShadowMaskRampType*/), (0.0 /*_Rim2ShadowMaskInvert*/), (1.0 /*_Rim2ShadowMaskStrength*/), float4(0,0,0,1), (0.0 /*_Rim2ApplyGlobalMaskIndex*/), (2.0 /*_Rim2ApplyGlobalMaskBlendType*/), (1.0 /*_Rim2BaseColorMix*/), (1.0 /*_Rim2Brightness*/), (0.0 /*_Rim2BlendMode*/), AudioLinkRim2WidthBand, AudioLinkRim2WidthAdd, AudioLinkRim2EmissionBand, AudioLinkRim2EmissionAdd, AudioLinkRim2BrightnessBand, AudioLinkRim2BrightnessAdd, (0.0 /*_Rim2Clamp*/));
 				#endif
 				#endif
 				
@@ -3292,13 +3466,13 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 			BlendOp [_AddBlendOp], [_AddBlendOpAlpha]
 			Blend [_AddSrcBlend] [_AddDstBlend], [_AddSrcBlendAlpha] [_AddDstBlendAlpha]
 			CGPROGRAM
+ #define POI_RIM2 
  #define VIGNETTE_MASKED 
  #define _GLOSSYREFLECTIONS_OFF 
  #define _LIGHTINGMODE_TEXTURERAMP 
  #define _RIM2STYLE_POIYOMI 
  #define _RIMSTYLE_POIYOMI 
  #define _STOCHASTICMODE_DELIOT_HEITZ 
- #define PROP_BUMPMAP 
  #define PROP_RIMTEX 
  #define OPTIMIZER_ENABLED 
 			#pragma target 5.0
@@ -3554,6 +3728,63 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 			float _RimHueShiftEnabled;
 			float _RimHueShiftSpeed;
 			float _RimHueShift;
+			#endif
+			#ifdef POI_RIM2
+			float _Is_NormalMapToRim2Light;
+			float4 _Rim2LightColor;
+			float _Rim2LightColorThemeIndex;
+			float _Rim2Clamp;
+			#ifdef _RIM2STYLE_POIYOMI
+			float _Rim2LightingInvert;
+			float _Rim2Width;
+			float _Rim2Strength;
+			float _Rim2Sharpness;
+			float _Rim2BaseColorMix;
+			float _EnableRim2Lighting;
+			float _Rim2WidthNoiseStrength;
+			float4 _Rim2ShadowAlpha;
+			float _Rim2ShadowWidth;
+			float _Rim2BlendStrength;
+			float _Rim2BlendMode;
+			float _Rim2ShadowToggle;
+			float _Rim2Power;
+			float _Rim2ShadowMaskStrength;
+			float _Rim2ShadowMaskRampType;
+			float _Rim2ShadowMaskInvert;
+			float _Rim2Brightness;
+			#if defined(PROP_RIM2TEX) || !defined(OPTIMIZER_ENABLED)
+			Texture2D _Rim2Tex;
+			#endif
+			float4 _Rim2Tex_ST;
+			float2 _Rim2TexPan;
+			float _Rim2TexUV;
+			#if defined(PROP_RIM2MASK) || !defined(OPTIMIZER_ENABLED)
+			Texture2D _Rim2Mask;
+			#endif
+			float4 _Rim2Mask_ST;
+			float2 _Rim2MaskPan;
+			float _Rim2MaskUV;
+			float _Rim2MaskChannel;
+			float _Rim2MaskInvert;
+			#if defined(PROP_RIM2WIDTHNOISETEXTURE) || !defined(OPTIMIZER_ENABLED)
+			Texture2D _Rim2WidthNoiseTexture;
+			#endif
+			#ifdef POI_AUDIOLINK
+			half _AudioLinkRim2WidthBand;
+			float2 _AudioLinkRim2WidthAdd;
+			half _AudioLinkRim2EmissionBand;
+			float2 _AudioLinkRim2EmissionAdd;
+			half _AudioLinkRim2BrightnessBand;
+			float2 _AudioLinkRim2BrightnessAdd;
+			#endif
+			#endif
+			float _Rim2GlobalMask;
+			float _Rim2GlobalMaskBlendType;
+			float _Rim2ApplyGlobalMaskIndex;
+			float _Rim2ApplyGlobalMaskBlendType;
+			float _Rim2HueShiftEnabled;
+			float _Rim2HueShiftSpeed;
+			float _Rim2HueShift;
 			#endif
 			struct appdata
 			{
@@ -5372,7 +5603,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 				shadowStrength = lerp(0, shadowStrength, _OutlineShadowStrength);
 				#endif
 				#ifdef _LIGHTINGMODE_TEXTURERAMP
-				poiLight.rampedLightMap = lerp(1, UNITY_SAMPLE_TEX2D(_ToonRamp, poiLight.lightMap + (-0.34 /*_ShadowOffset*/)).rgb, shadowStrength);
+				poiLight.rampedLightMap = lerp(1, UNITY_SAMPLE_TEX2D(_ToonRamp, poiLight.lightMap + (-0.18 /*_ShadowOffset*/)).rgb, shadowStrength);
 				poiLight.finalLighting = lerp(float4(1,1,1,1) * lerp(poiLight.indirectColor, poiLight.rampedLightMap * poiLight.directColor, (0.0 /*_LightingIgnoreAmbientColor*/)) * poiLight.occlusion, poiLight.directColor, poiLight.rampedLightMap);
 				#endif
 				#endif
@@ -5804,18 +6035,18 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 					OpenLitShadeSH9ToonDouble(lightDirectionForSH9, poiLight.directColor, poiLight.indirectColor);
 					poiLight.directColor += _LightColor0.rgb;
 				}
-				float lightMapMode = (2.0 /*_LightingMapMode*/);
-				if ((0.0 /*_LightingDirectionMode*/) == 0)
+				float lightMapMode = (0.0 /*_LightingMapMode*/);
+				if ((4.0 /*_LightingDirectionMode*/) == 0)
 				{
 					poiLight.direction = _WorldSpaceLightPos0.xyz + unity_SHAr.xyz + unity_SHAg.xyz + unity_SHAb.xyz;
 				}
-				if ((0.0 /*_LightingDirectionMode*/) == 1 || (0.0 /*_LightingDirectionMode*/) == 2)
+				if ((4.0 /*_LightingDirectionMode*/) == 1 || (4.0 /*_LightingDirectionMode*/) == 2)
 				{
-					if ((0.0 /*_LightingDirectionMode*/) == 1)
+					if ((4.0 /*_LightingDirectionMode*/) == 1)
 					{
 						poiLight.direction = mul(unity_ObjectToWorld, float4(0,0,0,1)).xyz;;
 					}
-					if ((0.0 /*_LightingDirectionMode*/) == 2)
+					if ((4.0 /*_LightingDirectionMode*/) == 2)
 					{
 						poiLight.direction = float4(0,0,0,1);
 					}
@@ -5824,13 +6055,13 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 						lightMapMode == 1;
 					}
 				}
-				if ((0.0 /*_LightingDirectionMode*/) == 3) // UTS
+				if ((4.0 /*_LightingDirectionMode*/) == 3) // UTS
 				{
 					float3 defaultLightDirection = normalize(UNITY_MATRIX_V[2].xyz + UNITY_MATRIX_V[1].xyz);
 					float3 lightDirection = normalize(lerp(defaultLightDirection, _WorldSpaceLightPos0.xyz, any(_WorldSpaceLightPos0.xyz)));
 					poiLight.direction = lightDirection;
 				}
-				if ((0.0 /*_LightingDirectionMode*/) == 4) // OpenLit
+				if ((4.0 /*_LightingDirectionMode*/) == 4) // OpenLit
 				{
 					poiLight.direction = OpenLitLightingDirection(); // float4 customDir = 0; // Do we want to give users to alter this (OpenLit always does!)?
 				}
@@ -5839,7 +6070,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 					poiLight.direction = float3(.4, 1, .4);
 				}
 				poiLight.direction = normalize(poiLight.direction);
-				poiLight.attenuationStrength = (1.0 /*_LightingCastedShadows*/);
+				poiLight.attenuationStrength = (0.0 /*_LightingCastedShadows*/);
 				poiLight.attenuation = 1;
 				if (!all(_LightColor0.rgb == 0.0))
 				{
@@ -5858,7 +6089,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 				if (!any(poiLight.directColor) && !any(poiLight.indirectColor) && lightMapMode == 0)
 				{
 					lightMapMode = 1;
-					if ((0.0 /*_LightingDirectionMode*/) == 0)
+					if ((4.0 /*_LightingDirectionMode*/) == 0)
 					{
 						poiLight.direction = normalize(float3(.4, 1, .4));
 					}
@@ -5903,15 +6134,15 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 				poiLight.indirectColor = max(poiLight.indirectColor, 0.0001);
 				if ((0.0 /*_LightingColorMode*/) == 3)
 				{
-					poiLight.directColor = max(poiLight.directColor, (0.513 /*_LightingMinLightBrightness*/));
+					poiLight.directColor = max(poiLight.directColor, (0.572 /*_LightingMinLightBrightness*/));
 				}
 				else
 				{
-					poiLight.directColor = max(poiLight.directColor, poiLight.directColor * min(10000, ((0.513 /*_LightingMinLightBrightness*/) * rcp(calculateluminance(poiLight.directColor)))));
-					poiLight.indirectColor = max(poiLight.indirectColor, poiLight.indirectColor * min(10000, ((0.513 /*_LightingMinLightBrightness*/) * rcp(calculateluminance(poiLight.indirectColor)))));
+					poiLight.directColor = max(poiLight.directColor, poiLight.directColor * min(10000, ((0.572 /*_LightingMinLightBrightness*/) * rcp(calculateluminance(poiLight.directColor)))));
+					poiLight.indirectColor = max(poiLight.indirectColor, poiLight.indirectColor * min(10000, ((0.572 /*_LightingMinLightBrightness*/) * rcp(calculateluminance(poiLight.indirectColor)))));
 				}
-				poiLight.directColor = lerp(poiLight.directColor, dot(poiLight.directColor, float3(0.299, 0.587, 0.114)), (0.0 /*_LightingMonochromatic*/));
-				poiLight.indirectColor = lerp(poiLight.indirectColor, dot(poiLight.indirectColor, float3(0.299, 0.587, 0.114)), (0.0 /*_LightingMonochromatic*/));
+				poiLight.directColor = lerp(poiLight.directColor, dot(poiLight.directColor, float3(0.299, 0.587, 0.114)), (1.0 /*_LightingMonochromatic*/));
+				poiLight.indirectColor = lerp(poiLight.indirectColor, dot(poiLight.indirectColor, float3(0.299, 0.587, 0.114)), (1.0 /*_LightingMonochromatic*/));
 				if ((1.0 /*_LightingCapEnabled*/))
 				{
 					poiLight.directColor = min(poiLight.directColor, (1.0 /*_LightingCap*/));
@@ -6040,7 +6271,40 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 				AudioLinkRimBrightnessBand = (0.0 /*_AudioLinkRimBrightnessBand*/);
 				AudioLinkRimBrightnessAdd = float4(0,0,0,0);
 				#endif
-				ApplyPoiyomiRimLighting(poiFragData, poiMesh, poiCam, poiLight, poiMods, (1.0 /*_Is_NormalMapToRimLight*/), (1.0 /*_RimLightingInvert*/), (1.0 /*_RimPower*/), (0.0 /*_RimStrength*/), (0.0 /*_RimShadowWidth*/), (0.0 /*_RimShadowToggle*/), (1.0 /*_RimWidth*/), (1.0 /*_RimBlendStrength*/), rimMask, (0.0 /*_RimGlobalMask*/), (2.0 /*_RimGlobalMaskBlendType*/), rimColor, float4(1,1,1,1), (0.0 /*_RimLightColorThemeIndex*/), (0.0 /*_RimHueShiftEnabled*/), (0.0 /*_RimHueShift*/), (0.0 /*_RimHueShiftSpeed*/), (0.0 /*_RimSharpness*/), (0.0 /*_RimShadowMaskRampType*/), (0.0 /*_RimShadowMaskInvert*/), (1.0 /*_RimShadowMaskStrength*/), float4(0,0,0,1), (0.0 /*_RimApplyGlobalMaskIndex*/), (2.0 /*_RimApplyGlobalMaskBlendType*/), (0.0 /*_RimBaseColorMix*/), (1.0 /*_RimBrightness*/), (0.0 /*_RimBlendMode*/), AudioLinkRimWidthBand, AudioLinkRimWidthAdd, AudioLinkRimEmissionBand, AudioLinkRimEmissionAdd, AudioLinkRimBrightnessBand, AudioLinkRimBrightnessAdd, (0.0 /*_RimClamp*/));
+				ApplyPoiyomiRimLighting(poiFragData, poiMesh, poiCam, poiLight, poiMods, (1.0 /*_Is_NormalMapToRimLight*/), (0.0 /*_RimLightingInvert*/), (1.0 /*_RimPower*/), (0.0 /*_RimStrength*/), (0.0 /*_RimShadowWidth*/), (0.0 /*_RimShadowToggle*/), (0.37 /*_RimWidth*/), (1.0 /*_RimBlendStrength*/), rimMask, (0.0 /*_RimGlobalMask*/), (2.0 /*_RimGlobalMaskBlendType*/), rimColor, float4(1,1,1,1), (0.0 /*_RimLightColorThemeIndex*/), (0.0 /*_RimHueShiftEnabled*/), (0.0 /*_RimHueShift*/), (0.0 /*_RimHueShiftSpeed*/), (1.0 /*_RimSharpness*/), (0.0 /*_RimShadowMaskRampType*/), (0.0 /*_RimShadowMaskInvert*/), (1.0 /*_RimShadowMaskStrength*/), float4(0,0,0,1), (0.0 /*_RimApplyGlobalMaskIndex*/), (2.0 /*_RimApplyGlobalMaskBlendType*/), (0.0 /*_RimBaseColorMix*/), (1.0 /*_RimBrightness*/), (0.0 /*_RimBlendMode*/), AudioLinkRimWidthBand, AudioLinkRimWidthAdd, AudioLinkRimEmissionBand, AudioLinkRimEmissionAdd, AudioLinkRimBrightnessBand, AudioLinkRimBrightnessAdd, (0.0 /*_RimClamp*/));
+				#endif
+				#endif
+				#ifdef POI_RIM2
+				#ifdef _RIM2STYLE_POIYOMI
+				#if defined(PROP_RIM2MASK) || !defined(OPTIMIZER_ENABLED)
+				float rim2Mask = POI2D_SAMPLER_PAN(_Rim2Mask, _MainTex, poiUV(poiMesh.uv[(0.0 /*_Rim2MaskUV*/)], float4(1,1,0,0)), float4(0,0,0,0))[(0.0 /*_Rim2MaskChannel*/)];
+				#else
+				float rim2Mask = 1;
+				#endif
+				if((0.0 /*_Rim2MaskInvert*/))
+				{
+					rim2Mask = 1 - rim2Mask;
+				}
+				#if defined(PROP_RIM2TEX) || !defined(OPTIMIZER_ENABLED)
+				float4 rim2Color = POI2D_SAMPLER_PAN(_Rim2Tex, _MainTex, poiUV(poiMesh.uv[(0.0 /*_Rim2TexUV*/)], float4(1,1,0,0)), float4(0,0,0,0));
+				#else
+				float4 rim2Color = 1;
+				#endif
+				half AudioLinkRim2WidthBand = 0;
+				float2 AudioLinkRim2WidthAdd = 0;
+				half AudioLinkRim2EmissionBand = 0;
+				float2 AudioLinkRim2EmissionAdd = 0;
+				half AudioLinkRim2BrightnessBand = 0;
+				float2 AudioLinkRim2BrightnessAdd = 0;
+				#ifdef POI_AUDIOLINK
+				AudioLinkRim2WidthBand = (0.0 /*_AudioLinkRim2WidthBand*/);
+				AudioLinkRim2WidthAdd = float4(0,0,0,0);
+				AudioLinkRim2EmissionBand = (0.0 /*_AudioLinkRim2EmissionBand*/);
+				AudioLinkRim2EmissionAdd = float4(0,0,0,0);
+				AudioLinkRim2BrightnessBand = (0.0 /*_AudioLinkRim2BrightnessBand*/);
+				AudioLinkRim2BrightnessAdd = float4(0,0,0,0);
+				#endif
+				ApplyPoiyomiRimLighting(poiFragData, poiMesh, poiCam, poiLight, poiMods, (1.0 /*_Is_NormalMapToRim2Light*/), (0.0 /*_Rim2LightingInvert*/), (1.0 /*_Rim2Power*/), (0.0 /*_Rim2Strength*/), (0.0 /*_Rim2ShadowWidth*/), (0.0 /*_Rim2ShadowToggle*/), (1.0 /*_Rim2Width*/), (1.0 /*_Rim2BlendStrength*/), rim2Mask, (0.0 /*_Rim2GlobalMask*/), (2.0 /*_Rim2GlobalMaskBlendType*/), rim2Color, float4(1,1,1,1), (0.0 /*_Rim2LightColorThemeIndex*/), (0.0 /*_Rim2HueShiftEnabled*/), (0.0 /*_Rim2HueShift*/), (0.0 /*_Rim2HueShiftSpeed*/), (1.0 /*_Rim2Sharpness*/), (0.0 /*_Rim2ShadowMaskRampType*/), (0.0 /*_Rim2ShadowMaskInvert*/), (1.0 /*_Rim2ShadowMaskStrength*/), float4(0,0,0,1), (0.0 /*_Rim2ApplyGlobalMaskIndex*/), (2.0 /*_Rim2ApplyGlobalMaskBlendType*/), (1.0 /*_Rim2BaseColorMix*/), (1.0 /*_Rim2Brightness*/), (0.0 /*_Rim2BlendMode*/), AudioLinkRim2WidthBand, AudioLinkRim2WidthAdd, AudioLinkRim2EmissionBand, AudioLinkRim2EmissionAdd, AudioLinkRim2BrightnessBand, AudioLinkRim2BrightnessAdd, (0.0 /*_Rim2Clamp*/));
 				#endif
 				#endif
 				if ((0.0 /*_AlphaPremultiply*/))
@@ -6098,13 +6362,13 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/91fa56bb3eeb3bb42980dda12
 			BlendOp [_BlendOp], [_BlendOpAlpha]
 			Blend [_SrcBlend] [_DstBlend], [_SrcBlendAlpha] [_DstBlendAlpha]
 			CGPROGRAM
+ #define POI_RIM2 
  #define VIGNETTE_MASKED 
  #define _GLOSSYREFLECTIONS_OFF 
  #define _LIGHTINGMODE_TEXTURERAMP 
  #define _RIM2STYLE_POIYOMI 
  #define _RIMSTYLE_POIYOMI 
  #define _STOCHASTICMODE_DELIOT_HEITZ 
- #define PROP_BUMPMAP 
  #define PROP_RIMTEX 
  #define OPTIMIZER_ENABLED 
 			#pragma target 5.0

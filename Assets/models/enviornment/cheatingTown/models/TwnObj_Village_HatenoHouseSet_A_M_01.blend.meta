@@ -1,9 +1,87 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 636c57766550e0648858908a0180d643
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects: {}
+=======
+guid: 336375428f3047149b92f97f9cdc03ac
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Cloth_HatenoCarpet_A
+    second: {fileID: 2100000, guid: 95c54c366995d594d8896d0a73c16f4a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Cloth_HatenoChest_A
+    second: {fileID: 2100000, guid: 32b08720875b5f142b6244df3561af34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Cloth_HatenoRope_A
+    second: {fileID: 2100000, guid: df7038c1066202249ac8a60886cf978d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoArticle_B
+    second: {fileID: 2100000, guid: 92a70ced45edc824cbcb223ddaa61df5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoArticles_Book_A
+    second: {fileID: 2100000, guid: ddb47b22f46c8ad4d9ffcdd78cc87d44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoArticles_C
+    second: {fileID: 2100000, guid: e014c642165be034d804ac6060a482e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoArticles_Z
+    second: {fileID: 2100000, guid: da2467f1f5b281c4aabb4820c386a328, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoBasket_A
+    second: {fileID: 2100000, guid: d2352b2a76e9f05479aa664d96459da0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoPot_A
+    second: {fileID: 2100000, guid: 67a8d0e574e37e04389933256c24c9a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoChest_A
+    second: {fileID: 2100000, guid: 4af1faefe73e34445883576b2ce0ad26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoHouseplant01_A
+    second: {fileID: 2100000, guid: fe55089be22bb9441952d51b73d8dfad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_wood_HatenoDesk_A
+    second: {fileID: 2100000, guid: 0b3d6d2c25bb0fd4db3ba76bb01e2079, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_Etc_HatenoFurniture_A
+    second: {fileID: 2100000, guid: f3a06a62f36f0524995f4e02f44344dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_Etc_HatenoHouseBed_A
+    second: {fileID: 2100000, guid: 55809ec56b4b681458632e984d82a7ed, type: 2}
+>>>>>>> bcb5fb250590c9ada8499ff187ca989a6caeb5dd
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,9 +1,57 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: f9e27351a8dc7f146ba6eba082e6072a
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects: {}
+=======
+guid: 5f1aff82e0094d84496567a523ae412a
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Builparts_HatenoHouse_C
+    second: {fileID: 2100000, guid: 6161826871948434888fca43c58bc547, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Builparts_HatenoHouse_D
+    second: {fileID: 2100000, guid: af6738a19761e094bb36d84cf372266e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Etc_HatenoBoard_A
+    second: {fileID: 2100000, guid: 63cde07cce2467f42a314c112d7aeafc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Plant_TempleOfTimeIvy_A
+    second: {fileID: 2100000, guid: 4516cee835ce1b74689dc0f08c5d51af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Sign_HatenoSeal_A
+    second: {fileID: 2100000, guid: 04f20a1c5d462c647af688537f4739e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoHouseHovel_A
+    second: {fileID: 2100000, guid: f86279a58d30faa44888b221fa543caa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_Village_Hateno_G
+    second: {fileID: 2100000, guid: ea12a207f6301344bbbb57d47d5efcf0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_Etc_HatenoPoster_A
+    second: {fileID: 2100000, guid: 179717ebdaf3b3f41a6b1fa3761ac5ae, type: 2}
+>>>>>>> bcb5fb250590c9ada8499ff187ca989a6caeb5dd
   materials:
     materialImportMode: 2
     materialName: 0

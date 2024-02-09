@@ -723,7 +723,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/695210e43c2f0b5468e8663f6
  #define _RIMSTYLE_POIYOMI 
  #define _STOCHASTICMODE_DELIOT_HEITZ 
  #define PROP_ANISOCOLORMAP 
- #define PROP_MATCAP 
  #define PROP_MATCAPMASK 
  #define PROP_RIMTEX 
  #define PROP_RIM2TEX 
@@ -3181,15 +3180,15 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/695210e43c2f0b5468e8663f6
 				float mipCount0 = 9;
 				if ((0.0 /*_MatcapSmoothnessEnabled*/))
 				{
-					if (float4(0.00390625,0.00390625,256,256).z == 8192) mipCount0 = 13;
-					if (float4(0.00390625,0.00390625,256,256).z == 4096) mipCount0 = 12;
-					if (float4(0.00390625,0.00390625,256,256).z == 2048) mipCount0 = 11;
-					if (float4(0.00390625,0.00390625,256,256).z == 1024) mipCount0 = 10;
-					if (float4(0.00390625,0.00390625,256,256).z == 512) mipCount0 = 9;
-					if (float4(0.00390625,0.00390625,256,256).z == 256) mipCount0 = 8;
-					if (float4(0.00390625,0.00390625,256,256).z == 128) mipCount0 = 7;
-					if (float4(0.00390625,0.00390625,256,256).z == 64) mipCount0 = 6;
-					if (float4(0.00390625,0.00390625,256,256).z == 32) mipCount0 = 5;
+					if (float4(1,1,1,1).z == 8192) mipCount0 = 13;
+					if (float4(1,1,1,1).z == 4096) mipCount0 = 12;
+					if (float4(1,1,1,1).z == 2048) mipCount0 = 11;
+					if (float4(1,1,1,1).z == 1024) mipCount0 = 10;
+					if (float4(1,1,1,1).z == 512) mipCount0 = 9;
+					if (float4(1,1,1,1).z == 256) mipCount0 = 8;
+					if (float4(1,1,1,1).z == 128) mipCount0 = 7;
+					if (float4(1,1,1,1).z == 64) mipCount0 = 6;
+					if (float4(1,1,1,1).z == 32) mipCount0 = 5;
 					matcapSmoothness = (1.0 /*_MatcapSmoothness*/);
 					if ((0.0 /*_MatcapMaskSmoothnessApply*/))
 					{
@@ -4106,7 +4105,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/695210e43c2f0b5468e8663f6
  #define _RIMSTYLE_POIYOMI 
  #define _STOCHASTICMODE_DELIOT_HEITZ 
  #define PROP_ANISOCOLORMAP 
- #define PROP_MATCAP 
  #define PROP_MATCAPMASK 
  #define PROP_RIMTEX 
  #define PROP_RIM2TEX 
@@ -6499,15 +6497,15 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/695210e43c2f0b5468e8663f6
 				float mipCount0 = 9;
 				if ((0.0 /*_MatcapSmoothnessEnabled*/))
 				{
-					if (float4(0.00390625,0.00390625,256,256).z == 8192) mipCount0 = 13;
-					if (float4(0.00390625,0.00390625,256,256).z == 4096) mipCount0 = 12;
-					if (float4(0.00390625,0.00390625,256,256).z == 2048) mipCount0 = 11;
-					if (float4(0.00390625,0.00390625,256,256).z == 1024) mipCount0 = 10;
-					if (float4(0.00390625,0.00390625,256,256).z == 512) mipCount0 = 9;
-					if (float4(0.00390625,0.00390625,256,256).z == 256) mipCount0 = 8;
-					if (float4(0.00390625,0.00390625,256,256).z == 128) mipCount0 = 7;
-					if (float4(0.00390625,0.00390625,256,256).z == 64) mipCount0 = 6;
-					if (float4(0.00390625,0.00390625,256,256).z == 32) mipCount0 = 5;
+					if (float4(1,1,1,1).z == 8192) mipCount0 = 13;
+					if (float4(1,1,1,1).z == 4096) mipCount0 = 12;
+					if (float4(1,1,1,1).z == 2048) mipCount0 = 11;
+					if (float4(1,1,1,1).z == 1024) mipCount0 = 10;
+					if (float4(1,1,1,1).z == 512) mipCount0 = 9;
+					if (float4(1,1,1,1).z == 256) mipCount0 = 8;
+					if (float4(1,1,1,1).z == 128) mipCount0 = 7;
+					if (float4(1,1,1,1).z == 64) mipCount0 = 6;
+					if (float4(1,1,1,1).z == 32) mipCount0 = 5;
 					matcapSmoothness = (1.0 /*_MatcapSmoothness*/);
 					if ((0.0 /*_MatcapMaskSmoothnessApply*/))
 					{
@@ -7281,7 +7279,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.2/Poiyomi Pro/695210e43c2f0b5468e8663f6
  #define _RIMSTYLE_POIYOMI 
  #define _STOCHASTICMODE_DELIOT_HEITZ 
  #define PROP_ANISOCOLORMAP 
- #define PROP_MATCAP 
  #define PROP_MATCAPMASK 
  #define PROP_RIMTEX 
  #define PROP_RIM2TEX 

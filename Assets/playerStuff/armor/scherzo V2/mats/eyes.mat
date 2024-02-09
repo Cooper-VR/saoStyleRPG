@@ -8,8 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: eyes
-  m_Shader: {fileID: 4800000, guid: 76a3501b6f96f874abe72562d44fcceb, type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: 4800000, guid: 3db76e91920d05b42b274ee7c16f657b, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - POI_RIM2
   - POSTPROCESS
   - VIGNETTE_MASKED
@@ -18,16 +19,16 @@ Material:
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
     AllLockedGUIDS: c1b57cb234348f541a21c380ab21b7d2
-    OriginalKeywords: POSTPROCESS VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF _LIGHTINGMODE_TEXTURERAMP
-      _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalKeywords: POI_RIM2 POSTPROCESS VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF
+      _LIGHTINGMODE_TEXTURERAMP _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
     OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro
+    RenderType: Opaque
     VRCFallback: Hidden
     _AnisoColorMap_texPack_a_channel: 4
     _AnisoColorMap_texPack_a_fallback: 1
@@ -2280,7 +2281,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1

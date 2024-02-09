@@ -8,8 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: blade
-  m_Shader: {fileID: 4800000, guid: fdf48b740347c3e46aa32ab28176262d, type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: 4800000, guid: 1f529f5cacf8d1d4ca750bb4a32594a6, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - POI_ANISOTROPICS
   - POI_MATCAP0
   - POI_RIM2
@@ -20,7 +21,6 @@ Material:
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -30,7 +30,8 @@ Material:
     OriginalKeywords: POI_ANISOTROPICS POI_MATCAP0 POI_RIM2 VIGNETTE_MASKED _EMISSION
       _GLOSSYREFLECTIONS_OFF _LIGHTINGMODE_TEXTURERAMP _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI
       _STOCHASTICMODE_DELIOT_HEITZ
-    OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro
+    OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro Geometric Dissolve
+    RenderType: Opaque
     _EmissionColorAnimated: 1
     _EmissionStrengthAnimated: 1
     _GeoDissolveAlphaAnimated: 1
@@ -2241,7 +2242,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1

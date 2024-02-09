@@ -1,5 +1,5 @@
 using SAOrpg.playerAPI.RPGstuff.StatsInventory;
-using UnityEditor;
+//using UnityEditor;
 
 namespace SAOrpg.Login
 {
@@ -68,11 +68,12 @@ namespace SAOrpg.Login
 			
 			for (int i = 0; i < stats.weapons.Length; i++)
 			{
-				weaponNames[i] = AssetDatabase.GetAssetPath(stats.weapons[i]);
+				//fuck this doesnt work, might hackfix saving the clases separatly
+				//weaponNames[i] = AssetDatabase.GetAssetPath(stats.weapons[i]);
 			}
 			for (int i = 0; i < stats.items.Length; i++)
 			{
-				itemNames[i] = AssetDatabase.GetAssetPath(stats.items[i]);
+				//itemNames[i] = AssetDatabase.GetAssetPath(stats.items[i]);
 			}
 
 			position[0] = stats.transform.position.x;
