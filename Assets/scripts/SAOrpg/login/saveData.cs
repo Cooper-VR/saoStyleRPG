@@ -68,7 +68,7 @@ namespace SAOrpg.Login
 			
 			for (int i = 0; i < stats.weapons.Length; i++)
 			{
-				//fuck this doesnt work
+				//fuck this doesnt work, might hackfix saving the clases separatly
 				//weaponNames[i] = AssetDatabase.GetAssetPath(stats.weapons[i]);
 			}
 			for (int i = 0; i < stats.items.Length; i++)

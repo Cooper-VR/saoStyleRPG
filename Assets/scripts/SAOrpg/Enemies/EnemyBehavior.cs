@@ -39,9 +39,7 @@ namespace SAOrpg.Enemies
         {
             agent = GetComponent<NavMeshAgent>();
 			startPosition = transform.position;
-			roam();
-            //randomPosition = new Vector3((Random.value - 0.5f) * 4, (Random.value - 0.5f) * 4, (Random.value - 0.5f) * 4) + startPosition;
-
+			roam(); 
         }
 
         private void Update()
