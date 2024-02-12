@@ -38,7 +38,7 @@ namespace SAOrpg.playerAPI
             if (/*(Input.GetAxis("ValveIndex_TriggerLeft") > 0.9 && Input.GetAxis("ValveIndex_TriggerRight") > 0.9) ||*/ calibratedTest)
             {
                 assignTrackers();
-
+                checkDoubles();
                 isCalibrating = false;
                 calibratedTest = false;
             }
@@ -51,7 +51,7 @@ namespace SAOrpg.playerAPI
 
             for(int i = 0; i < transform.childCount; i++)
             {
-                if ((transform.GetChild(i).position - trackedLocation.position).magnitude < distance)
+                if ((transform.GetChild(i).position - trackedLocation.position).magnitude < distance && transform.GetChild(i).gameObject.activeInHierarchy)
                 {
                     distance = (transform.GetChild(i).position - trackedLocation.position).magnitude;
                     closest = transform.GetChild(i);
@@ -87,7 +87,7 @@ namespace SAOrpg.playerAPI
 
             closestTrackers[5].GetChild(0).position = trackedLocations[5].position;
             closestTrackers[5].GetChild(0).rotation = trackedLocations[5].rotation;
-            ikController.solver.rightArm.bendGoal = closestTrackers[5].GetChild(0);
+            ikController.solver.rightLeg.bendGoal = closestTrackers[5].GetChild(0);
 
             closestTrackers[6].GetChild(0).position = trackedLocations[6].position;
             closestTrackers[6].GetChild(0).rotation = trackedLocations[6].rotation;
@@ -109,8 +109,6 @@ namespace SAOrpg.playerAPI
             rightHandOffset.rotation = ikController.references.rightHand.rotation;
             ikController.solver.rightArm.target = rightHandOffset;
 
-
-
             //then assign the child to the goal of the ikController
         }
 
@@ -124,6 +122,51 @@ namespace SAOrpg.playerAPI
             trackedLocations[5] = ikController.references.rightCalf;
             trackedLocations[6] = ikController.references.leftFoot;
             trackedLocations[7] = ikController.references.rightFoot;
+        }
+
+        public void checkDoubles()
+        {
+            #region chestSection
+
+            for (int i = 0; i < 2; i++)
+            {
+                if (closestTrackers[i] == closestTrackers[i+1])
+                {
+                    closestTrackers[i+1] = null;
+                }
+            }
+
+            #endregion
+
+            #region legSection
+
+            if (closestTrackers[4] == closestTrackers[5])
+            {
+                if ((trackedLocations[4].position - closestTrackers[4].position).magnitude < (trackedLocations[5].position - closestTrackers[4].position).magnitude)
+                {
+                    ikController.solver.leftLeg.bendGoal = null;
+                }
+                else
+                {
+                    ikController.solver.rightLeg.bendGoal = null;
+                }
+            }
+
+            if (closestTrackers[6] == closestTrackers[7])
+            {
+                if ((trackedLocations[6].position - closestTrackers[6].position).magnitude < (trackedLocations[7].position - closestTrackers[6].position).magnitude)
+                {
+                    ikController.solver.rightLeg.target = null;
+                }
+                else
+                {
+                    ikController.solver.leftLeg.target = null;
+                }
+            }
+
+
+            #endregion
+
         }
     }
 }
