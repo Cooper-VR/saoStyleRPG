@@ -1,5 +1,5 @@
 using SAOrpg.playerAPI.RPGstuff.StatsInventory;
-using SAOrpg.UI;
+using SAOrpg.UI.Confirmation;
 using TMPro;
 using UnityEngine;
 

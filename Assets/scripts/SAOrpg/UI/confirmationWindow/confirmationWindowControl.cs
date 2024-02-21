@@ -2,7 +2,7 @@ using SAOrpg.playerAPI;
 using TMPro;
 using UnityEngine;
 
-namespace SAOrpg.UI
+namespace SAOrpg.UI.Confirmation
 {
     public class confirmationWindowControl : MonoBehaviour
     {

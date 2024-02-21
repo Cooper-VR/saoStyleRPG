@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SAOrpg.UI
+namespace SAOrpg.UI.Confirmation
 {
 	public class confirmationWindowLogic: MonoBehaviour
 	{

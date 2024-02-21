@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SAOrpg.UI
+namespace SAOrpg.UI.Confirmation
 {
     //idk why this couldnt be done aother way but it works
     public class confirmationWindowMaster : MonoBehaviour

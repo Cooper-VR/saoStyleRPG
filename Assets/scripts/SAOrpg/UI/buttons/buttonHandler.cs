@@ -2,15 +2,15 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 
-namespace SAOrpg.UI
+namespace SAOrpg.UI.Buttons
 {
 	public abstract class buttonHandler : MonoBehaviour
 	{
-		public Animator animator;
+		private Animator animator;
 		public bool isPressed = false;
 		public Color pressedColor;
 		public Sprite pressedSprite;
-		public Sprite defaultSprite;
+		private Sprite defaultSprite;
 		private Image image;
 
 		private void Start()

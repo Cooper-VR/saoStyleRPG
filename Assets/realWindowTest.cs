@@ -1,7 +1,7 @@
 using UnityEngine;
 using SAOrpg.UI;
 
-namespace SAOrpg
+namespace SAOrpg.UI.Confirmation
 {
     public class realWindowTest : confirmationWindowInstaciatingClass
     {
