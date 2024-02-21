@@ -6,13 +6,15 @@ namespace SAOrpg.UI.Buttons
 {
     public class MainMenuButtons : buttonHandler
     {
+
+        //these dont really need to exist for these button (i think)
         public override void ButtonAction()
         {
-            throw new System.NotImplementedException();
+            Debug.Log("i dont think this needs to be called");
         }
         public override void PressedAction()
         {
-            throw new System.NotImplementedException();
+            Debug.Log("i dont think this needs to be called");
         }
     }
 }

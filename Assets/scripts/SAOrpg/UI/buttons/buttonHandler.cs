@@ -4,10 +4,15 @@ using UnityEngine.UI;
 
 namespace SAOrpg.UI.Buttons
 {
+
+	//this should be able to handle all click, inharite this if furture buttons
 	public abstract class buttonHandler : MonoBehaviour
 	{
 		private Animator animator;
+
+		//keep public incase a button uses weird action
 		public bool isPressed = false;
+
 		public Color pressedColor;
 		public Sprite pressedSprite;
 		private Sprite defaultSprite;
@@ -31,6 +36,7 @@ namespace SAOrpg.UI.Buttons
 			image.sprite = defaultSprite;
 		}
 
+		//for non-togglable buttons so that this can just be called
 		public void DoAction()
 		{
             if (!isPressed)
@@ -47,6 +53,7 @@ namespace SAOrpg.UI.Buttons
 
 				if (animator != null)
 				{
+					//mainly for item buttons, but can be used wherever
 					animator.SetBool("ToggleOn", true);
 				}
 
@@ -80,6 +87,7 @@ namespace SAOrpg.UI.Buttons
 
 		}
 
+		//override these, for weird ones like logout or the items
 		public abstract void ButtonAction();
 		public abstract void PressedAction();
 	}
