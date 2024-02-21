@@ -23,10 +23,20 @@ namespace SAOrpg.UI.Buttons
 
 		private void OnCollisionEnter(Collision collision)
 		{
-			if (!isPressed)
-			{
-				//active
-				if (pressedSprite == null)
+			DoAction();
+		}
+
+		private void OnCollisionExit(Collision collision)
+		{
+			image.sprite = defaultSprite;
+		}
+
+		public void DoAction()
+		{
+            if (!isPressed)
+            {
+                //active
+                if (pressedSprite == null)
 				{
 					image.color = pressedColor;
 				}
@@ -67,11 +77,7 @@ namespace SAOrpg.UI.Buttons
 				PressedAction();
 				isPressed = false;
 			}
-		}
 
-		private void OnCollisionExit(Collision collision)
-		{
-			image.sprite = defaultSprite;
 		}
 
 		public abstract void ButtonAction();
