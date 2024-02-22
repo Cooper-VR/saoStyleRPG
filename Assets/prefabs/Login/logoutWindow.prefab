@@ -47,3 +47,4 @@ MonoBehaviour:
   confirmationWindow: {fileID: 0}
   windowText: Are you sure?
   methodName: LogoutClick
+  confirmationWindowLogic: {fileID: 64392907977465984, guid: caa595b4bc7d7d74cae37e35e6666630, type: 3}

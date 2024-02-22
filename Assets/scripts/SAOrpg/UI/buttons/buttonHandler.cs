@@ -30,18 +30,20 @@ namespace SAOrpg.UI.Buttons
 			defaultSprite = image.sprite;
 		}
 
-		private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter (Collider collision)
 		{
-			DoAction();
-		}
+            TurnOthersOff();
+            //DoActionOn();
 
-		private void OnCollisionExit(Collision collision)
+        }
+
+        private void OnTriggerExit(Collider collision)
 		{
 			image.sprite = defaultSprite;
 		}
 
 		//for non-togglable buttons so that this can just be called
-		public void DoAction()
+		public void DoActionOn()
 		{
             if (!isPressed)
             {
@@ -57,8 +59,10 @@ namespace SAOrpg.UI.Buttons
 
 				if (animator != null)
 				{
+					Debug.Log("in the animator part");
+
 					//mainly for item buttons, but can be used wherever
-					animator.SetBool("ToggleOn", true);
+					animator.SetBool("on", true);
 				}
 
 				ButtonAction();
@@ -66,11 +70,13 @@ namespace SAOrpg.UI.Buttons
 				//do stuff here
 
 				isPressed = true;
+
+				return;
 			}
-			if (isPressed)
-			{
-				//make not active
-				if (pressedSprite == null && useColorFallback)
+            else if (isPressed)
+            {
+                //make not active
+                if (pressedSprite == null && useColorFallback)
 				{
 					image.color = Color.white;
 				}
@@ -81,14 +87,27 @@ namespace SAOrpg.UI.Buttons
 
                 if (animator != null)
                 {
-                    animator.SetBool("ToggleOn", false);
+                    animator.SetBool("on", false);
 				}
-
 
 				PressedAction();
 				isPressed = false;
+				return;
 			}
+		}
 
+		
+		private void TurnOthersOff()
+		{
+			for (int i = 0; i < transform.parent.childCount; i++) 
+			{
+				if(transform.parent.GetChild(i).name != this.name)
+				{
+					Debug.Log(transform.parent.GetChild(i).name);
+					transform.parent.GetChild(i).GetComponent<Animator>().SetBool("on", false);
+				}
+			}
+			DoActionOn();
 		}
 
 		//override these, for weird ones like logout or the items

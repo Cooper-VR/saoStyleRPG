@@ -47,8 +47,8 @@ namespace SAOrpg.World
         {
             clouds.position = transform.position;
 
-            time = System.DateTime.Now.TimeOfDay;
-            date = System.DateTime.Now.Date;
+            time = DateTime.Now.TimeOfDay;
+            date = DateTime.Now.Date;
 
             colorSet();
             RotateObjects();

@@ -16247,6 +16247,9 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   renderer: {fileID: 678128344}
   percent: 0
+  healthChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &375826914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19977,7 +19980,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: bf0ca203a0f1dde488b211fd15c4cffc, type: 2}
     - target: {fileID: 597948606, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1000014254142504, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -20089,6 +20092,7 @@ MonoBehaviour:
   confirmationWindow: {fileID: 1484297216960633508, guid: caa595b4bc7d7d74cae37e35e6666630, type: 3}
   windowText: this is text
   methodName: testMethod
+  confirmationWindowLogic: {fileID: 0}
 --- !u!1001 &463126280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41217,6 +41221,21 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   renderer: {fileID: 771927389}
   percent: 0
+  healthChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 986211077}
+        m_TargetAssemblyTypeName: SAOrpg.Enemies.EnemyHealthHandler, Assembly-CSharp
+        m_MethodName: updateHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &986499687
 GameObject:
   m_ObjectHideFlags: 0
@@ -95818,63 +95837,6 @@ PrefabInstance:
     - {fileID: 3953923424979227792, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
     - {fileID: 3953923423916022531, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
---- !u!1001 &5311313739562043756
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5296929373106651344, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
-      propertyPath: m_Name
-      value: logoutWindow
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711369002567275373, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
-      propertyPath: m_RootOrder
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711369002567275373, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.7474328
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711369002567275373, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5774474
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711369002567275373, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.10000515
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711369002567275373, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711369002567275373, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711369002567275373, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711369002567275373, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711369002567275373, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711369002567275373, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711369002567275373, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
 --- !u!1001 &7674587751854850363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96085,6 +96047,10 @@ PrefabInstance:
     - target: {fileID: 7674587752882404428, guid: eb350a6ed4d54c9468d25a33dfec9278, type: 3}
       propertyPath: m_Name
       value: button3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7674587752882404428, guid: eb350a6ed4d54c9468d25a33dfec9278, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7674587752882404428, guid: eb350a6ed4d54c9468d25a33dfec9278, type: 3}
       propertyPath: m_StaticEditorFlags

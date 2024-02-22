@@ -13,7 +13,7 @@ namespace SAOrpg.UI.Buttons
         {
             Instantiate(logoutPrefab);
             isPressed = false;
-            DoAction();
+            DoActionOn();
         }
         public override void PressedAction()
         {

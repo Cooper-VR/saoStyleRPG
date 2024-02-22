@@ -11,7 +11,7 @@ namespace SAOrpg.UI.Confirmation
         public string windowText;
         public string methodName;
 
-        private confirmationWindowLogic confirmationWindowLogic;
+        public confirmationWindowLogic confirmationWindowLogic;
 
         public void OpenTheWindow()
         {

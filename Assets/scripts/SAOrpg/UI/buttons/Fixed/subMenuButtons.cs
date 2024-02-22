@@ -8,11 +8,11 @@ namespace SAOrpg.UI.Buttons
     {
         public override void ButtonAction()
         {
-            throw new System.NotImplementedException();
+            Debug.Log("not needed");
         }
         public override void PressedAction()
         {
-            throw new System.NotImplementedException();
+            Debug.Log("not needed");
         }
     }
 }
