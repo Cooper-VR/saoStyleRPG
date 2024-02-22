@@ -13,12 +13,16 @@ namespace SAOrpg.UI.Buttons
 		//keep public incase a button uses weird action
 		public bool isPressed = false;
 
+	
 		public Color pressedColor;
 		public Sprite pressedSprite;
 		private Sprite defaultSprite;
 		private Image image;
 
-		private void Start()
+		[Header("for item buttons")]
+		public bool useColorFallback = true;
+
+        private void Start()
 		{
 			animator = GetComponent<Animator>();
 			image = GetComponent<Image>();
@@ -42,7 +46,7 @@ namespace SAOrpg.UI.Buttons
             if (!isPressed)
             {
                 //active
-                if (pressedSprite == null)
+                if (pressedSprite == null && useColorFallback)
 				{
 					image.color = pressedColor;
 				}
@@ -66,7 +70,7 @@ namespace SAOrpg.UI.Buttons
 			if (isPressed)
 			{
 				//make not active
-				if (pressedSprite == null)
+				if (pressedSprite == null && useColorFallback)
 				{
 					image.color = Color.white;
 				}

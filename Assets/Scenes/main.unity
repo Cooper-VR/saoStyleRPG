@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 1375510}
   - component: {fileID: 1375509}
   - component: {fileID: 1375508}
-  - component: {fileID: 1375507}
   - component: {fileID: 1375506}
   m_Layer: 5
   m_Name: diplayNameText
@@ -178,23 +177,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   master: {fileID: 1052971981}
   testBool: 0
---- !u!114 &1375507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collidedObject: 
-  collidedGameobject: {fileID: 0}
-  entered: 0
-  exited: 0
-  currentlyTouching: 0
 --- !u!65 &1375508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13840,6 +13822,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 0.68602705, b: 0, a: 1}
   pressedSprite: {fileID: 0}
+  useColorFallback: 1
 --- !u!95 &330538198
 Animator:
   serializedVersion: 5
@@ -13850,7 +13833,7 @@ Animator:
   m_GameObject: {fileID: 330538189}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6c53dbb9c61a47459bd54524d08b681, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4937150bd41c1f544b2a794364ef82af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -18349,7 +18332,6 @@ GameObject:
   - component: {fileID: 434393257}
   - component: {fileID: 434393256}
   - component: {fileID: 434393255}
-  - component: {fileID: 434393254}
   - component: {fileID: 434393253}
   m_Layer: 5
   m_Name: userName
@@ -18392,23 +18374,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   master: {fileID: 688186338}
   testBool: 0
---- !u!114 &434393254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434393251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collidedObject: 
-  collidedGameobject: {fileID: 0}
-  entered: 0
-  exited: 0
-  currentlyTouching: 0
 --- !u!65 &434393255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20047,40 +20012,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 124034, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
   m_PrefabInstance: {fileID: 457866649}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &457866654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457866652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collidedObject: 
-  collidedGameobject: {fileID: 0}
-  entered: 0
-  exited: 0
-  currentlyTouching: 0
---- !u!114 &457866655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457866653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collidedObject: 
-  collidedGameobject: {fileID: 0}
-  entered: 0
-  exited: 0
-  currentlyTouching: 0
 --- !u!114 &457866663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22030,7 +21961,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513977297}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -25523,6 +25454,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 0.68602705, b: 0, a: 1}
   pressedSprite: {fileID: 0}
+  useColorFallback: 1
 --- !u!95 &606679573
 Animator:
   serializedVersion: 5
@@ -25533,7 +25465,7 @@ Animator:
   m_GameObject: {fileID: 606679564}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6c53dbb9c61a47459bd54524d08b681, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4937150bd41c1f544b2a794364ef82af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -27272,6 +27204,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   pressedSprite: {fileID: 21300000, guid: 4559b5a29e10ba649af488af896cfada, type: 3}
+  useColorFallback: 1
 --- !u!95 &643605013
 Animator:
   serializedVersion: 5
@@ -30587,7 +30520,6 @@ GameObject:
   - component: {fileID: 723193912}
   - component: {fileID: 723193908}
   - component: {fileID: 723193911}
-  - component: {fileID: 723193910}
   - component: {fileID: 723193909}
   - component: {fileID: 723193914}
   m_Layer: 5
@@ -30700,23 +30632,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   master: {fileID: 1052971981}
   testBool: 0
---- !u!114 &723193910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723193907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collidedObject: 
-  collidedGameobject: {fileID: 0}
-  entered: 0
-  exited: 0
-  currentlyTouching: 0
 --- !u!65 &723193911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30926,7 +30841,6 @@ GameObject:
   - component: {fileID: 730005164}
   - component: {fileID: 730005163}
   - component: {fileID: 730005162}
-  - component: {fileID: 730005161}
   - component: {fileID: 730005160}
   m_Layer: 5
   m_Name: password
@@ -30969,23 +30883,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   master: {fileID: 688186338}
   testBool: 0
---- !u!114 &730005161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730005158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collidedObject: 
-  collidedGameobject: {fileID: 0}
-  entered: 0
-  exited: 0
-  currentlyTouching: 0
 --- !u!65 &730005162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31288,7 +31185,6 @@ GameObject:
   - component: {fileID: 736698909}
   - component: {fileID: 736698908}
   - component: {fileID: 736698907}
-  - component: {fileID: 736698906}
   - component: {fileID: 736698905}
   - component: {fileID: 736698910}
   m_Layer: 5
@@ -31332,23 +31228,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   master: {fileID: 1052971981}
   testBool: 0
---- !u!114 &736698906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736698903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collidedObject: 
-  collidedGameobject: {fileID: 0}
-  entered: 0
-  exited: 0
-  currentlyTouching: 0
 --- !u!65 &736698907
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32491,6 +32370,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 0.6060061, b: 0, a: 1}
   pressedSprite: {fileID: 0}
+  useColorFallback: 1
   logoutPrefab: {fileID: 5296929373106651344, guid: 34e7f5ee22b542844be27245ba05c102, type: 3}
 --- !u!114 &753660166
 MonoBehaviour:
@@ -32507,6 +32387,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 0.68602705, b: 0, a: 1}
   pressedSprite: {fileID: 0}
+  useColorFallback: 1
 --- !u!95 &753660167
 Animator:
   serializedVersion: 5
@@ -32517,7 +32398,7 @@ Animator:
   m_GameObject: {fileID: 753660157}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6c53dbb9c61a47459bd54524d08b681, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4937150bd41c1f544b2a794364ef82af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -33603,7 +33484,6 @@ GameObject:
   - component: {fileID: 789103707}
   - component: {fileID: 789103708}
   - component: {fileID: 789103706}
-  - component: {fileID: 789103705}
   - component: {fileID: 789103704}
   - component: {fileID: 789103709}
   m_Layer: 5
@@ -33647,23 +33527,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   master: {fileID: 1052971981}
   testBool: 0
---- !u!114 &789103705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789103702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collidedObject: 
-  collidedGameobject: {fileID: 0}
-  entered: 0
-  exited: 0
-  currentlyTouching: 0
 --- !u!65 &789103706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34790,6 +34653,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   pressedSprite: {fileID: 21300000, guid: b737b60bc4c04e64a9bd90f164d063f0, type: 3}
+  useColorFallback: 1
 --- !u!95 &810186476
 Animator:
   serializedVersion: 5
@@ -45012,6 +44876,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   pressedSprite: {fileID: 21300000, guid: 1c9e5ad2fbaf2fb408378a471da3e034, type: 3}
+  useColorFallback: 1
 --- !u!95 &1114452047
 Animator:
   serializedVersion: 5
@@ -48153,6 +48018,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 0.68602705, b: 0, a: 1}
   pressedSprite: {fileID: 0}
+  useColorFallback: 1
 --- !u!95 &1202172339
 Animator:
   serializedVersion: 5
@@ -48163,7 +48029,7 @@ Animator:
   m_GameObject: {fileID: 1202172330}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6c53dbb9c61a47459bd54524d08b681, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4937150bd41c1f544b2a794364ef82af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -49189,6 +49055,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 0.68602705, b: 0, a: 1}
   pressedSprite: {fileID: 0}
+  useColorFallback: 1
 --- !u!95 &1243264243
 Animator:
   serializedVersion: 5
@@ -49199,7 +49066,7 @@ Animator:
   m_GameObject: {fileID: 1243264234}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6c53dbb9c61a47459bd54524d08b681, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4937150bd41c1f544b2a794364ef82af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -51227,6 +51094,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 1, b: 1, a: 0}
   pressedSprite: {fileID: 21300000, guid: 7e126079fb087e8418604ad588c3becb, type: 3}
+  useColorFallback: 1
 --- !u!95 &1284863192
 Animator:
   serializedVersion: 5
@@ -56571,7 +56439,62 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3953923423683978122, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423329541750, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424824031922, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423363820258, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423343237466, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423722780882, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423214412389, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423238402263, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424053133578, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423940245622, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423092734723, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424257586330, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424445151191, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923422977480261, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424549977225, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424116661408, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923422999455069, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423377882263, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423887280071, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424955518716, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424185178402, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923422880541979, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423776612148, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423229805720, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424601056034, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423717439935, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 8924059918531885689, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423805248567, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423975055215, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424721925585, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424898306454, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423595267855, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423297607968, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923422959968587, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423546197314, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424111344432, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424896789929, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424309855956, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423609570287, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424949036432, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424645573046, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424724516646, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424558018800, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424087943482, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424863410408, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423913003612, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423182339762, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423370989135, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424968394426, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424977150628, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424979227792, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423916022531, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424061230101, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424991959011, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423295320284, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
 --- !u!1 &1390407901 stripped
 GameObject:
@@ -61243,6 +61166,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   pressedSprite: {fileID: 21300000, guid: 49624fe687081e745bf32cd4f0ff32c2, type: 3}
+  useColorFallback: 1
 --- !u!95 &1503087567
 Animator:
   serializedVersion: 5
@@ -64928,6 +64852,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 0.68602705, b: 0, a: 1}
   pressedSprite: {fileID: 0}
+  useColorFallback: 1
 --- !u!95 &1607924272
 Animator:
   serializedVersion: 5
@@ -64938,7 +64863,7 @@ Animator:
   m_GameObject: {fileID: 1607924263}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6c53dbb9c61a47459bd54524d08b681, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4937150bd41c1f544b2a794364ef82af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -76628,6 +76553,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   pressedSprite: {fileID: 21300000, guid: 409fa1188e9d466469056590b7eaa13a, type: 3}
+  useColorFallback: 1
 --- !u!95 &1745930414
 Animator:
   serializedVersion: 5
@@ -83067,6 +82993,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 0.68602705, b: 0, a: 1}
   pressedSprite: {fileID: 0}
+  useColorFallback: 1
 --- !u!95 &1903191901
 Animator:
   serializedVersion: 5
@@ -83077,7 +83004,7 @@ Animator:
   m_GameObject: {fileID: 1903191892}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6c53dbb9c61a47459bd54524d08b681, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4937150bd41c1f544b2a794364ef82af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -84817,6 +84744,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 0.68602705, b: 0, a: 1}
   pressedSprite: {fileID: 0}
+  useColorFallback: 1
 --- !u!95 &1925015695
 Animator:
   serializedVersion: 5
@@ -84827,7 +84755,7 @@ Animator:
   m_GameObject: {fileID: 1925015686}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6c53dbb9c61a47459bd54524d08b681, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4937150bd41c1f544b2a794364ef82af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -89819,6 +89747,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 0.68602705, b: 0, a: 1}
   pressedSprite: {fileID: 0}
+  useColorFallback: 1
 --- !u!95 &2037387391
 Animator:
   serializedVersion: 5
@@ -89829,7 +89758,7 @@ Animator:
   m_GameObject: {fileID: 2037387382}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6c53dbb9c61a47459bd54524d08b681, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4937150bd41c1f544b2a794364ef82af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -94518,6 +94447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3110599922632396656, guid: 312bbb5e484a41342bba325023137a34, type: 3}
+    - {fileID: 3110599922632396659, guid: 312bbb5e484a41342bba325023137a34, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 312bbb5e484a41342bba325023137a34, type: 3}
 --- !u!224 &3163791812523961361
 RectTransform:
@@ -95831,7 +95761,62 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3953923423229805720, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923422999455069, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423776612148, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424185178402, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923422977480261, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423377882263, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923422880541979, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424955518716, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424116661408, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423717439935, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423683978122, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423329541750, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424824031922, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423363820258, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423343237466, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423722780882, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423214412389, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423238402263, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424053133578, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423940245622, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423092734723, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424257586330, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423887280071, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424445151191, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424601056034, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424549977225, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 8924059918531885689, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424898306454, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424721925585, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423975055215, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423805248567, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423595267855, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423297607968, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423546197314, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923422959968587, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424896789929, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423609570287, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424949036432, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424309855956, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424111344432, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424645573046, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424724516646, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424558018800, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423370989135, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423182339762, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423913003612, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424863410408, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424087943482, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424968394426, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424991959011, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423295320284, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424061230101, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424977150628, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923424979227792, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
+    - {fileID: 3953923423916022531, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad99254d4b6f2f64fb0b84ee6fc7880a, type: 3}
 --- !u!1001 &5311313739562043756
 PrefabInstance:
@@ -95920,6 +95905,10 @@ PrefabInstance:
     - target: {fileID: 4094689160480517138, guid: eb350a6ed4d54c9468d25a33dfec9278, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254366035748386918, guid: eb350a6ed4d54c9468d25a33dfec9278, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7674587751713167669, guid: eb350a6ed4d54c9468d25a33dfec9278, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -96253,6 +96242,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8407793716221105173, guid: eb350a6ed4d54c9468d25a33dfec9278, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -272.69995
+      objectReference: {fileID: 0}
     - target: {fileID: 8800948590032750179, guid: eb350a6ed4d54c9468d25a33dfec9278, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -96322,6 +96315,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 0.68602705, b: 0, a: 1}
   pressedSprite: {fileID: 0}
+  useColorFallback: 1
 --- !u!95 &7674587751854850367
 Animator:
   serializedVersion: 5
@@ -96332,7 +96326,7 @@ Animator:
   m_GameObject: {fileID: 7674587751854850364}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6c53dbb9c61a47459bd54524d08b681, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4937150bd41c1f544b2a794364ef82af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -96358,6 +96352,7 @@ MonoBehaviour:
   isPressed: 0
   pressedColor: {r: 1, g: 0.68602705, b: 0, a: 1}
   pressedSprite: {fileID: 0}
+  useColorFallback: 1
 --- !u!95 &7674587751854850374
 Animator:
   serializedVersion: 5
@@ -96368,7 +96363,7 @@ Animator:
   m_GameObject: {fileID: 7674587751854850365}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6c53dbb9c61a47459bd54524d08b681, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4937150bd41c1f544b2a794364ef82af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

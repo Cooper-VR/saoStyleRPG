@@ -566,8 +566,8 @@ GameObject:
   - component: {fileID: 5322126129004546659}
   - component: {fileID: 2810455479092125888}
   - component: {fileID: 8771210885430690335}
-  - component: {fileID: 8195472478047335830}
   - component: {fileID: 8232862134881700426}
+  - component: {fileID: 6488932373575425486}
   m_Layer: 0
   m_Name: itemSlot
   m_TagString: Untagged
@@ -666,22 +666,6 @@ MonoBehaviour:
   entered: 0
   exited: 0
   currentlyTouching: 0
---- !u!114 &8195472478047335830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9114516895989674790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d57de5e91aaf02c4f806ccf726a34c79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alternalColor: {r: 1, g: 0.6399196, b: 0, a: 1}
-  removeButton: {fileID: 9017286773270168100}
-  spawnButton: {fileID: 3025643828116619619}
-  testBool: 0
 --- !u!95 &8232862134881700426
 Animator:
   serializedVersion: 5
@@ -692,7 +676,7 @@ Animator:
   m_GameObject: {fileID: 9114516895989674790}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6c53dbb9c61a47459bd54524d08b681, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4937150bd41c1f544b2a794364ef82af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -703,3 +687,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6488932373575425486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9114516895989674790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe753949b058e049b3c9e78f7791582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPressed: 0
+  pressedColor: {r: 0, g: 0, b: 0, a: 1}
+  pressedSprite: {fileID: 0}
+  useColorFallback: 0

@@ -9,17 +9,12 @@ namespace SAOrpg.Login
     public class textSelector : MonoBehaviour
     {
         public keyBoardMaster master;
-        private collisionChecker checker;
         public bool testBool;
 
-        private void Start()
-        {
-            checker = GetComponent<collisionChecker>();
-        }
 
-        private void Update()
+        private void OnCollisionEnter(Collision collision)
         {
-            if (checker.entered && checker.collidedObject.Contains("finger"))
+            if (collision.gameObject.name.Contains("finger"))
             {
                 master.currentText = GetComponent<TMP_Text>();
                 testBool = false;
