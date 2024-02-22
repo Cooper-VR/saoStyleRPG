@@ -8,34 +8,31 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: blade
-  m_Shader: {fileID: 4800000, guid: 1f529f5cacf8d1d4ca750bb4a32594a6, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_Shader: {fileID: 4800000, guid: 4a841eb4abb430540aea4b3bd4c88391, type: 3}
+  m_ValidKeywords:
   - POI_ANISOTROPICS
+  - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
+  - POI_LIGHT_DATA_ADDITIVE_ENABLE
   - POI_MATCAP0
   - POI_RIM2
+  - POI_VERTEXLIGHT_ON
   - VIGNETTE_MASKED
-  - _EMISSION
   - _GLOSSYREFLECTIONS_OFF
   - _LIGHTINGMODE_TEXTURERAMP
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
+  m_InvalidKeywords:
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
-    AllLockedGUIDS: 695210e43c2f0b5468e8663f66eb7375
-    OriginalKeywords: POI_ANISOTROPICS POI_MATCAP0 POI_RIM2 VIGNETTE_MASKED _EMISSION
-      _GLOSSYREFLECTIONS_OFF _LIGHTINGMODE_TEXTURERAMP _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI
-      _STOCHASTICMODE_DELIOT_HEITZ
-    OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro Geometric Dissolve
-    RenderType: Opaque
-    _EmissionColorAnimated: 1
-    _EmissionStrengthAnimated: 1
-    _GeoDissolveAlphaAnimated: 1
-    _GeoDissolveGradientTypeAnimated: 1
+    AllLockedGUIDS: 1ba0b066c70d09045a047544d105790d
+    OriginalKeywords: POI_MATCAP0 POI_RIM2 VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF
+      _LIGHTINGMODE_TEXTURERAMP _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -85,7 +82,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClearCoatMaps:
-        m_Texture: {fileID: 2800000, guid: e7c120ef2798a8049b687526c2b5b68c, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClippingMask:
@@ -189,7 +186,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 747bbae18046b474db46855796185118, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap1:
@@ -245,10 +242,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GeoDissolveGradient:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _GeoDissolveMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -377,7 +370,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatcapMask:
-        m_Texture: {fileID: 2800000, guid: c1586f4ef5bbe9641b68f795f36a75b0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 747bbae18046b474db46855796185118, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -544,10 +537,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _UnderWaveTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _VertexGlitchMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -573,14 +562,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _VoronoiNoise:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _WaveMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _WaveTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -679,30 +660,30 @@ Material:
     - _AngleType: 0
     - _Aniso0Blur: 0
     - _Aniso0Edge: 0.5
-    - _Aniso0Offset: -0.5
-    - _Aniso0OffsetMapStrength: 0.03
-    - _Aniso0Power: 0.149
+    - _Aniso0Offset: 0
+    - _Aniso0OffsetMapStrength: 0
+    - _Aniso0Power: 0
     - _Aniso0Strength: 1
     - _Aniso0SwitchDirection: 0
     - _Aniso0TintIndex: 0
     - _Aniso0ToonMode: 0
     - _Aniso1Blur: 0
     - _Aniso1Edge: 0.5
-    - _Aniso1Offset: 0.06
-    - _Aniso1OffsetMapStrength: 0.018
+    - _Aniso1Offset: 0
+    - _Aniso1OffsetMapStrength: 0
     - _Aniso1Power: 0.1
     - _Aniso1Strength: 1
     - _Aniso1SwitchDirection: 0
     - _Aniso1TintIndex: 0
     - _Aniso1ToonMode: 0
-    - _AnisoAdd: 0.655
+    - _AnisoAdd: 0.252
     - _AnisoColorMapUV: 1
     - _AnisoDebugMode: 0
     - _AnisoDebugToggle: 0
     - _AnisoHideInShadow: 1
     - _AnisoReplace: 0
-    - _AnisoUseBaseColor: 0.976
-    - _AnisoUseLightColor: 1
+    - _AnisoUseBaseColor: 1
+    - _AnisoUseLightColor: 0.381
     - _Ap_Rim2Light_FeatherOff: 0
     - _Ap_Rim2Light_Power: 0.1
     - _Ap_RimLight_FeatherOff: 0
@@ -865,7 +846,7 @@ Material:
     - _ClearCoatMapsRoughnessChannel: 1
     - _ClearCoatMapsSpecularMaskChannel: 3
     - _ClearCoatMapsStochastic: 0
-    - _ClearCoatMapsUV: 1
+    - _ClearCoatMapsUV: 0
     - _ClearCoatMaskInvert: 0
     - _ClearCoatNormalSelect: 0
     - _ClearCoatReflectionMaskInvert: 0
@@ -968,6 +949,7 @@ Material:
     - _Decal3ChannelSeparationAngleStrength: 0
     - _Decal3ChannelSeparationEnable: 0
     - _Decal3ChannelSeparationHue: 0
+    - _Decal3ChannelSeparationMode: 0
     - _Decal3ChannelSeparationPremultiply: 0
     - _Decal3ChannelSeparationVertical: 0
     - _Decal3Depth: 0
@@ -1218,7 +1200,7 @@ Material:
     - _EmissionMaskInvert2: 0
     - _EmissionMaskInvert3: 0
     - _EmissionMaskUV: 0
-    - _EmissionReplace0: 1
+    - _EmissionReplace0: 0
     - _EmissionReplace1: 0
     - _EmissionReplace2: 0
     - _EmissionReplace3: 0
@@ -1271,7 +1253,7 @@ Material:
     - _EnableDissolveAudioLink: 0
     - _EnableDistortion: 0
     - _EnableDistortionAudioLink: 0
-    - _EnableEmission: 1
+    - _EnableEmission: 0
     - _EnableEmission1: 0
     - _EnableEmission2: 0
     - _EnableEmission3: 0
@@ -1353,31 +1335,14 @@ Material:
     - _GITDEWorldOrMesh1: 0
     - _GITDEWorldOrMesh2: 0
     - _GITDEWorldOrMesh3: 0
-    - _GeoDissolveAlpha: 1
-    - _GeoDissolveBlendType: 0
+    - _GeoDissolveAlpha: 0
     - _GeoDissolveColorThemeIndex: 0
-    - _GeoDissolveExpansionTime: 0.454
-    - _GeoDissolveGradientType: 1
-    - _GeoDissolveMaskInvert: 0
-    - _GeoDissolveMaskUV: 0
-    - _GeoDissolveNoiseSpeed: 2
-    - _GeoDissolveNoiseThreshold: 0.646
-    - _GeoDissolvePointToPointDebug: 0
-    - _GeoDissolveShapeType: 0
+    - _GeoDissolveExpansionTime: 1
+    - _GeoDissolveGradientType: 0
+    - _GeoDissolveSpiral: 0
     - _GeoDissolveTextureUV: 0
-    - _GeoDissolveTravelDistance: 0.1
-    - _GeoDissolveUV: 0
+    - _GeoDissolveTravelDistance: 0.2
     - _GeoDissolveVertexColor: 0
-    - _GeoDissolveWireframeColorToggle: 1
-    - _GeoDissolveWireframeEmissionToggle: 1
-    - _GeoDissolveWireframeOffset: 0.11
-    - _GeoDissolveWireframeOnlyToggle: 0
-    - _GeoDissolveWireframeThickness: 0
-    - _GeoDissolveWireframeToggle: 1
-    - _GeometricDissolveUVLocalPos0: 0
-    - _GeometricDissolveUVLocalPos1: 1
-    - _GeometricDissolveUVWorldPos0: 0
-    - _GeometricDissolveUVWorldPos1: 1
     - _GlitterAngleRange: 90
     - _GlitterBias: 0.8
     - _GlitterBlendType: 0
@@ -1748,7 +1713,7 @@ Material:
     - _LightingGradientStart: 0
     - _LightingIgnoreAmbientColor: 1
     - _LightingIndirectUsesNormals: 0
-    - _LightingMapMode: 0
+    - _LightingMapMode: 2
     - _LightingMinLightBrightness: 0.572
     - _LightingMode: 0
     - _LightingMonochromatic: 1
@@ -1848,6 +1813,7 @@ Material:
     - _Matcap3MaskSmoothnessApply: 0
     - _Matcap3MaskSmoothnessChannel: 3
     - _Matcap3MaskUV: 0
+    - _Matcap3Mixed: 0
     - _Matcap3Multiply: 0
     - _Matcap3Normal: 1
     - _Matcap3NormalMapScale: 1
@@ -1881,6 +1847,7 @@ Material:
     - _Matcap4MaskSmoothnessApply: 0
     - _Matcap4MaskSmoothnessChannel: 3
     - _Matcap4MaskUV: 0
+    - _Matcap4Mixed: 0
     - _Matcap4Multiply: 0
     - _Matcap4Normal: 1
     - _Matcap4Replace: 0
@@ -1892,7 +1859,7 @@ Material:
     - _Matcap4TPSMaskStrength: 1
     - _Matcap4UVMode: 1
     - _Matcap4UVToBlend: 1
-    - _MatcapAdd: 0.248
+    - _MatcapAdd: 0.903
     - _MatcapAddToLight: 0
     - _MatcapAlphaOverride: 0
     - _MatcapBaseColorMix: 0
@@ -1903,7 +1870,7 @@ Material:
     - _MatcapHueShift: 0
     - _MatcapHueShiftEnabled: 0
     - _MatcapHueShiftSpeed: 0
-    - _MatcapIntensity: 0.36
+    - _MatcapIntensity: 0
     - _MatcapLightMask: 0
     - _MatcapMaskChannel: 0
     - _MatcapMaskGlobalMask: 0
@@ -1912,10 +1879,10 @@ Material:
     - _MatcapMaskSmoothnessApply: 0
     - _MatcapMaskSmoothnessChannel: 3
     - _MatcapMaskUV: 0
-    - _MatcapMixed: 0.19
-    - _MatcapMultiply: 0
+    - _MatcapMixed: 0.079
+    - _MatcapMultiply: 0.086
     - _MatcapNormal: 1
-    - _MatcapReplace: 0.098
+    - _MatcapReplace: 0.254
     - _MatcapRotation: 0
     - _MatcapScreen: 0
     - _MatcapSmoothness: 1
@@ -2242,7 +2209,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 1
+    - _ShaderOptimizerEnabled: 0
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
@@ -2260,7 +2227,7 @@ Material:
     - _ShadowBorderRange: 0
     - _ShadowColorTexUV: 0
     - _ShadowMainStrength: 0
-    - _ShadowOffset: -0.61
+    - _ShadowOffset: -0.31
     - _ShadowReceive: 0
     - _ShadowStrength: 0.819
     - _Shape1Depth: 0.1
@@ -2269,8 +2236,6 @@ Material:
     - _Shape2Duration: 0.1
     - _Shape3Depth: 0.3
     - _Shape3Duration: 0.1
-    - _ShatterWaveAudioLinkEnabled: 0
-    - _ShowUnderWave: 1
     - _SkinThicknessMapInvert: 0
     - _SkinThicknessMapUV: 0
     - _SkinThicknessPower: 1
@@ -2390,6 +2355,8 @@ Material:
     - _TruchetMaskIntensity: 1
     - _TruchetMaskInvert: 0
     - _TruchetMaskUV: 0
+    - _TruchetPan: 10
+    - _TruchetShape: 1
     - _TruchetThiccness: 0.1
     - _TruchetUV: 0
     - _Tweak_HighColorMaskLevel: 0
@@ -2440,10 +2407,6 @@ Material:
     - _UVTileDissolveDiscardAtMax: 1
     - _UVTileDissolveEnabled: 0
     - _UVTileDissolveUV: 0
-    - _UnderWaveEmission: 0
-    - _UnderWaveGlobalMaskBlendType: 0
-    - _UnderWaveGlobalMaskIndex: 0
-    - _UnderWaveTextureUV: 0
     - _Unlit_Intensity: 1
     - _UseLightColor: 1
     - _Use_1stAs2nd: 0
@@ -2532,30 +2495,11 @@ Material:
     - _VoronoiScale: 5
     - _VoronoiSpace: 0
     - _VoronoiType: 1
-    - _WaveChronoBand: 0
-    - _WaveChronoIntensity: 0
-    - _WaveChronoSpeed: 0.5
-    - _WaveChronoType: 0
-    - _WaveEmission: 1
-    - _WaveEmissionALAddBand: 0
-    - _WaveEmissionALMultiplierBand: 0
-    - _WaveGlobalMaskBlendType: 0
-    - _WaveGlobalMaskIndex: 0
-    - _WaveHeight: 0
-    - _WaveHeightALAddBand: 0
-    - _WaveHeightALMultiplierBand: 0
-    - _WaveHeightThreshold: 0.98
-    - _WaveHeightThresholdALAddBand: 0
-    - _WaveHeightThresholdALMultiplierBand: 0
-    - _WaveMaskChannel: 0
-    - _WaveMaskUV: 0
-    - _WaveTextureUV: 0
-    - _WaveVertexMask: 0
     - _Wriggle: 0
     - _WriggleSpeed: 0.28
     - _ZTest: 4
     - _ZWrite: 1
-    - _geoEmissionStrength: 1
+    - _geoEmissionStrength: 0
     - _glitterFrequencyLinearEmissive: 20
     - footer_discord: 0
     - footer_github: 0
@@ -2585,9 +2529,6 @@ Material:
     - g_end_decal3_position: 0
     - g_end_decal_position: 0
     - g_end_deliot: 0
-    - g_end_geoDissolveColorEmission: 0
-    - g_end_geoDissolveMotionSize: 0
-    - g_end_geoDissolveWireframeBorder: 0
     - g_end_hextile: 0
     - g_start_BRDFTPSMaskGroup: 0
     - g_start_ClearCoatTPSMaskGroup: 0
@@ -2612,9 +2553,6 @@ Material:
     - g_start_decal3_position: 0
     - g_start_decal_position: 0
     - g_start_deliot: 0
-    - g_start_geoDissolveColorEmission: 0
-    - g_start_geoDissolveMotionSize: 0
-    - g_start_geoDissolveWireframeBorder: 0
     - g_start_hextile: 0
     - m_AudioLinkCategory: 0
     - m_end_ALDecalSpectrum: 0
@@ -2744,7 +2682,6 @@ Material:
     - m_end_rim1LightOptions: 0
     - m_end_rim2LightOptions: 0
     - m_end_rimLightOptions: 0
-    - m_end_shatterWaveAudioLink: 0
     - m_end_stylizedSpec: 0
     - m_end_subsurfaceScattering: 0
     - m_end_tps_penetrator: 0
@@ -2759,19 +2696,18 @@ Material:
     - m_end_videoEffects: 0
     - m_end_voronoi: 0
     - m_end_voronoiRandom: 0
-    - m_geoDissolve: 1
-    - m_lightingCategory: 0
-    - m_mainCategory: 0
+    - m_geoDissolve: 0
+    - m_lightingCategory: 1
+    - m_mainCategory: 1
     - m_modifierCategory: 0
     - m_postprocessing: 0
     - m_renderingCategory: 0
-    - m_shatterWaveCategory: 1
     - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
     - m_start_ALVolumeColor: 0
     - m_start_Alpha: 0
     - m_start_AlphaGlobalMask: 0
-    - m_start_Aniso: 1
+    - m_start_Aniso: 0
     - m_start_BlackLightMasking: 0
     - m_start_BonusSliders: 0
     - m_start_CRT: 0
@@ -2873,7 +2809,7 @@ Material:
     - m_start_emission1Options: 0
     - m_start_emission2Options: 0
     - m_start_emission3Options: 0
-    - m_start_emissionOptions: 1
+    - m_start_emissionOptions: 0
     - m_start_flipBook: 0
     - m_start_glitter: 0
     - m_start_internalparallax: 0
@@ -2891,10 +2827,9 @@ Material:
     - m_start_ralivPenetrator: 0
     - m_start_reflectionRim: 0
     - m_start_rgbanormals: 0
-    - m_start_rim2LightOptions: 1
-    - m_start_rimLight1Options: 0
-    - m_start_rimLightOptions: 0
-    - m_start_shatterWaveAudioLink: 0
+    - m_start_rim2LightOptions: 0
+    - m_start_rimLight1Options: 1
+    - m_start_rimLightOptions: 1
     - m_start_stylizedSpec: 0
     - m_start_subsurfaceScattering: 0
     - m_start_tps_penetrator: 0
@@ -3068,7 +3003,7 @@ Material:
     - _EmissionAL2StrengthMod: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionAL3Multipliers: {r: 1, g: 1, b: 0, a: 0}
     - _EmissionAL3StrengthMod: {r: 0, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 1, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor2: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor3: {r: 1, g: 1, b: 1, a: 1}
@@ -3093,17 +3028,13 @@ Material:
     - _FlipbookSideOffset: {r: 0, g: 0, b: 0, a: 0}
     - _FlipbookTexArrayPan: {r: 0, g: 0, b: 0, a: 0}
     - _GeoDissolveColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GeoDissolveColorRange: {r: 0, g: 0.75, b: 0, a: 0}
-    - _GeoDissolveEmissionRange: {r: 0, g: 0.75, b: 0, a: 0}
-    - _GeoDissolveEndPoint: {r: 0, g: 0, b: 1, a: 1}
+    - _GeoDissolveColorRange: {r: 0, g: 1, b: 0, a: 0}
+    - _GeoDissolveEmissionRange: {r: 0, g: 1, b: 0, a: 0}
+    - _GeoDissolveEndPoint: {r: 0, g: 1, b: 0, a: 1}
     - _GeoDissolveGradientPan: {r: 0, g: 0, b: 0, a: 0}
-    - _GeoDissolveHeightRange: {r: 0, g: 1, b: 0, a: 0.2}
-    - _GeoDissolveMaskPan: {r: 0, g: 0, b: 0, a: 0}
-    - _GeoDissolveNoiseDensity: {r: 3, g: 3, b: 0, a: 0}
-    - _GeoDissolveRotationMax: {r: 400, g: 400, b: 400, a: 1}
-    - _GeoDissolveRotationMin: {r: -400, g: -400, b: -400, a: 1}
-    - _GeoDissolveScaleRange: {r: 1, g: 0, b: 0, a: 1}
-    - _GeoDissolveStartPoint: {r: 0, g: 0, b: 0, a: 1}
+    - _GeoDissolveScaleRange: {r: 0, g: 1, b: 0, a: 0}
+    - _GeoDissolveSpin: {r: 1, g: 0, b: 1, a: 3}
+    - _GeoDissolveStartPoint: {r: 0, g: -1, b: 0, a: 1}
     - _GeoDissolveTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _GlitterColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlitterColorMapPan: {r: 0, g: 0, b: 0, a: 0}
@@ -3304,8 +3235,6 @@ Material:
     - _TruchetMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _TruchetPanOffset: {r: 0, g: 0, b: 0, a: 0}
     - _TruchetTexPan: {r: 0, g: 0, b: 0, a: 0}
-    - _UnderWaveColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderWaveTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _VertexLocalRotationAL: {r: 0, g: 0, b: 0, a: 1}
     - _VertexLocalRotationCTALSpeed: {r: 0, g: 0, b: 0, a: 1}
     - _VertexLocalScaleALMax: {r: 0, g: 0, b: 0, a: 0}
@@ -3335,16 +3264,4 @@ Material:
     - _VoronoiRandomMinMaxBrightness: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiRandomMinMaxSaturation: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiSpeed: {r: 1, g: 1, b: 1, a: 1}
-    - _WaveColor: {r: 1, g: 1, b: 1, a: 1}
-    - _WaveDensity: {r: 10, g: 8, b: 9, a: 0}
-    - _WaveEmissionALAdd: {r: 0, g: 0, b: 0, a: 0}
-    - _WaveEmissionALMultiplier: {r: 1, g: 1, b: 0, a: 0}
-    - _WaveHeightALAdd: {r: 0, g: 0, b: 0, a: 0}
-    - _WaveHeightALMultiplier: {r: 1, g: 1, b: 0, a: 0}
-    - _WaveHeightThresholdALAdd: {r: 0, g: 0, b: 0, a: 0}
-    - _WaveHeightThresholdALMultiplier: {r: 1, g: 1, b: 0, a: 0}
-    - _WaveMaskPan: {r: 0, g: 0, b: 0, a: 0}
-    - _WaveSlope: {r: 2, g: 2, b: 2, a: 0}
-    - _WaveSpeed: {r: 0.5, g: 0.6, b: 0.7, a: 0}
-    - _WaveTexturePan: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

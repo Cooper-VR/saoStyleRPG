@@ -12,12 +12,10 @@ GameObject:
   - component: {fileID: 6862022017030767708}
   - component: {fileID: 8612404715595310034}
   - component: {fileID: 6891609392240812086}
-  - component: {fileID: 5140988629913183585}
   - component: {fileID: 8718681255101953681}
-  - component: {fileID: 8378562626316727957}
   m_Layer: 0
   m_Name: scherzoSwordRoot
-  m_TagString: Untagged
+  m_TagString: sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,23 +81,6 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0}
   rigidBodyBehavior: 0
   controller: {fileID: 0}
---- !u!114 &5140988629913183585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137475870787665822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a213148e113ea44bed8cb34c1effe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collidedObject: 
-  collidedGameobject: {fileID: 0}
-  entered: 0
-  exited: 0
-  currentlyTouching: 0
 --- !u!114 &8718681255101953681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,30 +96,6 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
---- !u!114 &8378562626316727957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137475870787665822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e69d629dae0d1438c7c9262687a6e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharpDirection: 0
-  strengthRequirement: 35
-  duribility: 35
-  maxDamage: 43
-  playerCamera: {fileID: 0}
-  lastHitDirection: 0
-  topDownDirection: 0
-  sideSideDirection: 0
-  topDownCam: {x: 0, y: 0, z: 0}
-  sideSideCam: {x: 0, y: 0, z: 0}
-  topDownVelocity: {x: 0, y: 0, z: 0}
-  sideSideVeclocity: {x: 0, y: 0, z: 0}
 --- !u!1 &5250507583544831166
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,8 +158,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b6fec34af2b19b041a5c49783372fc63, type: 2}
-  - {fileID: 2100000, guid: 695210e43c2f0b5468e8663f66eb7375, type: 2}
+  - {fileID: 2100000, guid: b80cb62d18cb4d746bb65d94fa0902d7, type: 2}
+  - {fileID: 2100000, guid: 04ff67609f5838a4ba96bbc8e82e8302, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

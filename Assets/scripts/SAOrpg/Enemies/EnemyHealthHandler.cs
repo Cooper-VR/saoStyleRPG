@@ -27,6 +27,15 @@ namespace SAOrpg.Enemies
 
         }
 
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.tag == "weapon") 
+            {
+                enemy.health -= 10;
+                updateHealth();
+            }
+        }
+
         public UnityEvent healthChange;
     }
 }
