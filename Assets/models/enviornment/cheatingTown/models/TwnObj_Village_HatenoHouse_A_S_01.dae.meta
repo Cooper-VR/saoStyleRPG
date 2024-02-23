@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: e9494ffe7632ad84ba3e72bbd706ef4b
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Builparts_HatenoHouse_C
+    second: {fileID: 2100000, guid: 8c88d9c5b6a8e8448a96c847ea9eca3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Builparts_HatenoHouse_D
+    second: {fileID: 2100000, guid: 1498d0e0cc5291f4cb81660e0a69f5d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Glass_HatenoHouseWindow_Inside_A
+    second: {fileID: 2100000, guid: 73348da16a3b6d649b2a748834aa186e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Glass_HatenoHouseWindow_Outside_A
+    second: {fileID: 2100000, guid: 32ae9fee6ad64c54fa2101ed47a0cac8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Plant_TempleOfTimeIvy_A
+    second: {fileID: 2100000, guid: 9889d1503903ed440b9a9b019f360298, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Rock_HatenoHouse_A
+    second: {fileID: 2100000, guid: 88b91c3d55410f842923d57fc35c8598, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouseEdge_C
+    second: {fileID: 2100000, guid: ab1c0d9b1e3ceb841ab6aad511de773e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_N_blend
+    second: {fileID: 2100000, guid: b668d451540252d44bc72eab76860695, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_P
+    second: {fileID: 2100000, guid: 356a78200b67a4d4d9743a01ee689deb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_Q
+    second: {fileID: 2100000, guid: 2e796385ad7a03240aaedb4e705f5cc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_Q_02
+    second: {fileID: 2100000, guid: 2e796385ad7a03240aaedb4e705f5cc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_R
+    second: {fileID: 2100000, guid: 5fb815dc2383caf4fb2f56a2bab03278, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_S
+    second: {fileID: 2100000, guid: 171b8a81fa80b884683a54728b5c04bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wall_HatenoHouse_T
+    second: {fileID: 2100000, guid: 8683c4ff2d243fb469db0303224176c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoCeiling_A
+    second: {fileID: 2100000, guid: 81b8d0ee7e2b5c044927c630c7fc93ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoHouseHovel_A
+    second: {fileID: 2100000, guid: 724b391b8fa37ea4b81c1783e86dd2a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoHousefloor_A
+    second: {fileID: 2100000, guid: 8a2981ddd5ac5214089955988d3c94ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoPillar_A
+    second: {fileID: 2100000, guid: 818cb703b99f9d04390cb2de4bac60e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_CmnTex_Wood_HatenoShutter_A
+    second: {fileID: 2100000, guid: 7475f56dfefac9241a2dccd2b59e1e9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mt_InsideMat_A
+    second: {fileID: 2100000, guid: 9889d1503903ed440b9a9b019f360298, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
