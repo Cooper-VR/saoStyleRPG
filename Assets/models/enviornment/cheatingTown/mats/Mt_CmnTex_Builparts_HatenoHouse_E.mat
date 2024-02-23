@@ -2568,7 +2568,7 @@ Material:
     - m_start_Matcap4: 0
     - m_start_PathAudioLink: 0
     - m_start_PoiLightData: 0
-    - m_start_PoiShading: 1
+    - m_start_PoiShading: 0
     - m_start_RGBAColors: 0
     - m_start_RGBMask: 0
     - m_start_Rim2AudioLink: 0
@@ -2635,7 +2635,7 @@ Material:
     - m_start_vertexManipulation: 0
     - m_start_videoEffects: 0
     - m_thirdpartyCategory: 0
-    - shader_is_using_thry_editor: 0
+    - shader_is_using_thry_editor: 69
     - shader_locale: 0
     - shader_master_label: 0
     m_Colors:

@@ -2294,7 +2294,7 @@ Material:
     - _VertexLocalRotationCTALTypeZ: 0
     - _VertexLocalScaleALBand: 0
     - _VertexLocalTranslationALBand: 0
-    - _VertexManipulationHeight: 0.01
+    - _VertexManipulationHeight: 0
     - _VertexManipulationHeightBand: 0
     - _VertexManipulationHeightBias: 0
     - _VertexManipulationHeightMaskChannel: 0

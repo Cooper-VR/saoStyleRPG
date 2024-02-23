@@ -2294,7 +2294,7 @@ Material:
     - _VertexLocalRotationCTALTypeZ: 0
     - _VertexLocalScaleALBand: 0
     - _VertexLocalTranslationALBand: 0
-    - _VertexManipulationHeight: 0.01
+    - _VertexManipulationHeight: 0.001
     - _VertexManipulationHeightBand: 0
     - _VertexManipulationHeightBias: 0
     - _VertexManipulationHeightMaskChannel: 0
@@ -2637,7 +2637,7 @@ Material:
     - m_start_vertexManipulation: 1
     - m_start_videoEffects: 0
     - m_thirdpartyCategory: 0
-    - shader_is_using_thry_editor: 0
+    - shader_is_using_thry_editor: 69
     - shader_locale: 0
     - shader_master_label: 0
     m_Colors:
