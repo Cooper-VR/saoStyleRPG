@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset />
+  <library_images>
+    <image id="CmnTex_Etc_HatenoPot_A_Alb">
+      <init_from>CmnTex_Etc_HatenoPot_A_Alb.png</init_from>
+    </image>
+    <image id="CmnTex_Etc_HatenoPot_A_Nrm">
+      <init_from>CmnTex_Etc_HatenoPot_A_Nrm.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Mt_CmnTex_Etc_HatenoPot_A">
+      <instance_effect url="#Effect_Mt_CmnTex_Etc_HatenoPot_A" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="Effect_Mt_CmnTex_Etc_HatenoPot_A">
+      <profile_COMMON>
+        <newparam sid="surface_Mt_CmnTex_Etc_HatenoPot_A-diffuse">
+          <surface type="2D">
+            <init_from>CmnTex_Etc_HatenoPot_A_Alb</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_Mt_CmnTex_Etc_HatenoPot_A-diffuse">
+          <sampler2D>
+            <source>surface_Mt_CmnTex_Etc_HatenoPot_A-diffuse</source>
+            <wrap_s>MIRROR</wrap_s>
+            <wrap_t>MIRROR</wrap_t>
+          </sampler2D>
+        </newparam>
+        <newparam sid="surface_Mt_CmnTex_Etc_HatenoPot_A-bump">
+          <surface type="2D">
+            <init_from>CmnTex_Etc_HatenoPot_A_Nrm</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_Mt_CmnTex_Etc_HatenoPot_A-bump">
+          <sampler2D>
+            <source>surface_Mt_CmnTex_Etc_HatenoPot_A-bump</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <texture texture="sampler_Mt_CmnTex_Etc_HatenoPot_A-diffuse" texcoord="CHANNEL0" />
+            </diffuse>
+            <bump>
+              <texture texture="sampler_Mt_CmnTex_Etc_HatenoPot_A-bump" texcoord="CHANNEL0" />
+            </bump>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh" name="pot_s1__Mt_CmnTex_Etc_HatenoPot_A">
+      <mesh>
+        <source id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-position">
+          <float_array id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-position-array" count="186">0.1453857 0.03686523 0.02322388 0.1422119 0.04101563 -0.01794434 0.125 0.09796143 -0.01141357 0.1262207 0.09863281 0.0279541 0.06787109 0.1827393 -0.0003938675 0.0680542 0.1829834 0.03961182 -0.1048584 -0.02003479 0.03039551 -0.1087646 -0.1085205 0.003156662 -0.109314 -0.1086426 0.04489136 -0.1074829 -0.01921082 -0.009613037 -0.1195068 0.04107666 0.02987671 -0.1223755 0.04116821 -0.008178711 -0.1231689 0.1072388 -0.00270462 -0.118103 0.1068726 0.03503418 -0.118103 0.1068726 0.03503418 -0.04040527 0.1343994 -0.008979797 -0.1231689 0.1072388 -0.00270462 -0.04055786 0.1350098 0.03219604 0.06787109 0.1827393 -0.0003938675 0.0680542 0.1829834 0.03961182 0.1453857 0.03686523 0.02322388 0.09460449 -0.04388428 -0.01809692 0.1422119 0.04101563 -0.01794434 0.09869385 -0.0463562 0.02339172 0.02441406 -0.1143188 -0.009498596 0.02613831 -0.1140747 0.03167725 0.02613831 -0.1140747 0.03167725 -0.02209473 -0.1315918 -0.005638123 0.02441406 -0.1143188 -0.009498596 -0.02203369 -0.1292725 0.03512573 -0.1087646 -0.1085205 0.003156662 -0.109314 -0.1086426 0.04489136 -0.04196167 0.0960083 -0.01597595 -0.1231689 0.1072388 -0.00270462 -0.04040527 0.1343994 -0.008979797 0.06787109 0.1827393 -0.0003938675 -0.1223755 0.04116821 -0.008178711 0.05703735 0.09912109 -0.01731873 0.125 0.09796143 -0.01141357 -0.03070068 -0.0214386 -0.02020264 -0.1074829 -0.01921082 -0.009613037 -0.1087646 -0.1085205 0.003156662 -0.02209473 -0.1315918 -0.005638123 0.02441406 -0.1143188 -0.009498596 0.09460449 -0.04388428 -0.01809692 0.05105591 0.02886963 -0.02687073 0.1422119 0.04101563 -0.01794434 0.05426025 0.02363586 0.007896423 0.09869385 -0.0463562 0.02339172 0.1453857 0.03686523 0.02322388 0.1262207 0.09863281 0.0279541 0.02613831 -0.1140747 0.03167725 0.04962158 0.09771729 0.01902771 0.0680542 0.1829834 0.03961182 -0.04055786 0.1350098 0.03219604 -0.02671814 -0.009506226 0.01020813 -0.02203369 -0.1292725 0.03512573 -0.109314 -0.1086426 0.04489136 -0.1048584 -0.02003479 0.03039551 -0.1195068 0.04107666 0.02987671 -0.03536987 0.08789063 0.01806641 -0.118103 0.1068726 0.03503418</float_array>
+          <technique_common>
+            <accessor source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-position-array" count="62" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-normal">
+          <float_array id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-normal-array" count="186">0.9549902 0.295499 -0.03913894 0.9549902 0.295499 -0.03913894 0.888454 0.4579256 -0.02739726 0.8806262 0.4755382 -0.02739726 0.8258317 0.5655577 -0.01956947 0.8258317 0.5655577 -0.01956947 -0.9960861 -0.06457926 0.04109589 -0.9980431 0.037182 0.02544031 -0.9980431 0.037182 0.02544031 -0.9960861 -0.08219178 0.04305284 -0.9902152 -0.1174168 0.08610567 -0.9882583 -0.1232877 0.08414873 -0.9941292 -0.003913894 0.1037182 -0.9941292 -0.003913894 0.1037182 -0.3268102 0.9452055 0.01761252 -0.3737769 0.9275929 0.001956947 -0.3268102 0.9452055 0.01761252 -0.3737769 0.9275929 0.001956947 -0.4050881 0.9138943 -0.007827789 -0.4050881 0.9138943 -0.007827789 0.8669276 -0.4853229 -0.1154599 0.7866927 -0.6105675 -0.09393346 0.8669276 -0.4853229 -0.1154599 0.7847358 -0.6144814 -0.09197652 0.5851272 -0.8101761 -0.03913894 0.5772994 -0.816047 -0.037182 0.5772994 -0.816047 -0.037182 -0.02544031 -1 0.02544031 0.5851272 -0.8101761 -0.03913894 -0.05479452 -0.9980431 0.02544031 -0.2407045 -0.9706458 0.02544031 -0.2407045 -0.9706458 0.02544031 -0.08414873 0.09589041 -0.9921722 -0.146771 0.09589041 -0.9843444 -0.04500978 0.1800391 -0.9823875 0.02152642 0.1937378 -0.9804305 -0.1272016 0.0332681 -0.9921722 0.02348337 0.1682975 -0.9863014 0.08414873 0.1526419 -0.9843444 -0.08414873 -0.06457926 -0.9941292 -0.1389433 -0.08219178 -0.9863014 -0.1369863 -0.1389433 -0.9804305 -0.0998043 -0.1389433 -0.9863014 -0.01369863 -0.1232877 -0.9921722 0.02935421 -0.0998043 -0.9941292 0.001956947 0.003913894 -1 0.09197652 0.04696673 -0.9941292 -0.06066536 0.02348337 0.9980431 -0.0998043 0.1545988 0.9823875 -0.1624266 -0.02348337 0.9863014 -0.1252446 -0.1643836 0.9784736 -0.02739726 0.1898239 0.9823875 -0.0332681 -0.1976517 0.9804305 -0.01956947 -0.2309198 0.9726027 0.06457926 -0.2622309 0.962818 0.08610567 0.08610567 0.9921722 0.1037182 0.2074364 0.9726027 0.1780822 0.1898239 0.964775 0.2348337 0.1135029 0.964775 0.1917808 -0.03913894 0.9804305 0.0998043 -0.1448141 0.9843444 0.1722113 -0.1272016 0.9765166</float_array>
+          <technique_common>
+            <accessor source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-normal-array" count="62" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-color">
+          <float_array id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-color-array" count="248">0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1 0.6509804 0.6509804 0.6509804 1</float_array>
+          <technique_common>
+            <accessor source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-color-array" count="62" stride="4">
+              <param name="R" type="float" />
+              <param name="G" type="float" />
+              <param name="B" type="float" />
+              <param name="A" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-texcoord">
+          <float_array id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-texcoord-array" count="124">2.285156 -0.8525391 2.285156 -0.8183594 2.246094 -0.8183594 2.246094 -0.8525391 2.191406 -0.8183594 2.191406 -0.8525391 2.09375 -0.8525391 2.191406 -0.8183594 2.191406 -0.8525391 2.09375 -0.8183594 2.052734 -0.8525391 2.052734 -0.8183594 2.003906 -0.8183594 2.003906 -0.8525391 2.003906 -0.8525391 2.09375 -0.8183594 2.003906 -0.8183594 2.09375 -0.8525391 2.191406 -0.8183594 2.191406 -0.8525391 2.285156 -0.8525391 2.339844 -0.8183594 2.285156 -0.8183594 2.339844 -0.8525391 2.375 -0.8183594 2.375 -0.8525391 2.375 -0.8525391 2.314453 -0.8183594 2.375 -0.8183594 2.314453 -0.8525391 2.191406 -0.8183594 2.191406 -0.8525391 2.902344 0.3623047 2.947266 0.3662109 2.892578 0.3974609 2.833984 0.4057617 2.957031 0.3295898 2.853516 0.3618164 2.804688 0.359375 2.898438 0.2944336 2.957031 0.2949219 2.953125 0.2290039 2.896484 0.2226563 2.867188 0.2324219 2.820313 0.2861328 2.847656 0.3208008 2.794922 0.3295898 3.189453 1.313477 3.197266 1.337646 3.166016 1.335449 3.154297 1.31958 3.228516 1.332764 3.169922 1.298096 3.142578 1.287354 3.167969 1.270264 3.212891 1.299805 3.242188 1.324219 3.257813 1.299072 3.232422 1.275146 3.216797 1.265137 3.185547 1.277344 3.199219 1.257568</float_array>
+          <technique_common>
+            <accessor source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-texcoord-array" count="62" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-vertex">
+          <input semantic="POSITION" source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-position" />
+        </vertices>
+        <triangles material="Mt_CmnTex_Etc_HatenoPot_A" count="56">
+          <input semantic="VERTEX" source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-vertex" offset="0" />
+          <input semantic="NORMAL" source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-normal" offset="1" />
+          <input semantic="COLOR" source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-color" offset="2" set="0" />
+          <input semantic="TEXCOORD" source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-texcoord" offset="3" set="0" />
+          <p>0 0 0 0 1 1 1 1 2 2 2 2 3 3 3 3 0 0 0 0 2 2 2 2 3 3 3 3 2 2 2 2 4 4 4 4 5 5 5 5 3 3 3 3 4 4 4 4 6 6 6 6 7 7 7 7 8 8 8 8 9 9 9 9 7 7 7 7 6 6 6 6 10 10 10 10 9 9 9 9 6 6 6 6 10 10 10 10 11 11 11 11 9 9 9 9 12 12 12 12 11 11 11 11 10 10 10 10 13 13 13 13 12 12 12 12 10 10 10 10 14 14 14 14 15 15 15 15 16 16 16 16 14 14 14 14 17 17 17 17 15 15 15 15 15 15 15 15 17 17 17 17 18 18 18 18 17 17 17 17 19 19 19 19 18 18 18 18 20 20 20 20 21 21 21 21 22 22 22 22 20 20 20 20 23 23 23 23 21 21 21 21 21 21 21 21 23 23 23 23 24 24 24 24 23 23 23 23 25 25 25 25 24 24 24 24 26 26 26 26 27 27 27 27 28 28 28 28 26 26 26 26 29 29 29 29 27 27 27 27 27 27 27 27 29 29 29 29 30 30 30 30 29 29 29 29 31 31 31 31 30 30 30 30 32 32 32 32 33 33 33 33 34 34 34 34 35 35 35 35 32 32 32 32 34 34 34 34 32 32 32 32 36 36 36 36 33 33 33 33 37 37 37 37 32 32 32 32 35 35 35 35 38 38 38 38 37 37 37 37 35 35 35 35 39 39 39 39 36 36 36 36 32 32 32 32 39 39 39 39 40 40 40 40 36 36 36 36 39 39 39 39 41 41 41 41 40 40 40 40 39 39 39 39 42 42 42 42 41 41 41 41 43 43 43 43 42 42 42 42 39 39 39 39 44 44 44 44 43 43 43 43 39 39 39 39 45 45 45 45 39 39 39 39 32 32 32 32 44 44 44 44 39 39 39 39 45 45 45 45 37 37 37 37 45 45 45 45 32 32 32 32 38 38 38 38 45 45 45 45 37 37 37 37 46 46 46 46 44 44 44 44 45 45 45 45 46 46 46 46 45 45 45 45 38 38 38 38 47 47 47 47 48 48 48 48 49 49 49 49 50 50 50 50 47 47 47 47 49 49 49 49 47 47 47 47 51 51 51 51 48 48 48 48 52 52 52 52 47 47 47 47 50 50 50 50 53 53 53 53 52 52 52 52 50 50 50 50 53 53 53 53 54 54 54 54 52 52 52 52 47 47 47 47 55 55 55 55 51 51 51 51 55 55 55 55 56 56 56 56 51 51 51 51 55 55 55 55 57 57 57 57 56 56 56 56 55 55 55 55 58 58 58 58 57 57 57 57 59 59 59 59 58 58 58 58 55 55 55 55 60 60 60 60 55 55 55 55 47 47 47 47 60 60 60 60 59 59 59 59 55 55 55 55 52 52 52 52 60 60 60 60 47 47 47 47 52 52 52 52 54 54 54 54 60 60 60 60 60 60 60 60 61 61 61 61 59 59 59 59 54 54 54 54 61 61 61 61 60 60 60 60 </p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="Armature_pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh">
+      <skin source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-joint">
+          <Name_array id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-joint-array" count="1">Root</Name_array>
+          <technique_common>
+            <accessor source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-joint-array" count="1" stride="1">
+              <param name="JOINT" type="name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-inv_bind_matrix">
+          <float_array id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-inv_bind_matrix-array" count="16">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-inv_bind_matrix-array" count="1" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-weight">
+          <float_array id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-weight-array" count="1">1</float_array>
+          <technique_common>
+            <accessor source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-weight-array" count="1" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-joint" />
+          <input semantic="INV_BIND_MATRIX" source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-inv_bind_matrix" />
+        </joints>
+        <vertex_weights count="62">
+          <input semantic="JOINT" source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-joint" offset="0" />
+          <input semantic="WEIGHT" source="#pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh-weight" offset="1" />
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+          <v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Armature" name="Armature" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="Armature_Root" name="Root" sid="Root" type="JOINT">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+      </node>
+      <node id="pot_s1__Mt_CmnTex_Etc_HatenoPot_A" name="pot_s1__Mt_CmnTex_Etc_HatenoPot_A" type="NODE">
+        <instance_controller url="#Armature_pot_s1__Mt_CmnTex_Etc_HatenoPot_A-mesh">
+          <skeleton>#Armature_Root</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Mt_CmnTex_Etc_HatenoPot_A" target="#Mt_CmnTex_Etc_HatenoPot_A" />
+              <bind_vertex_input semantic="CHANNEL0" input_semantic="TEXCOORD" input_set="0" />
+              <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1" />
+              <bind_vertex_input semantic="CHANNEL2" input_semantic="TEXCOORD" input_set="2" />
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene" />
+  </scene>
+</COLLADA>

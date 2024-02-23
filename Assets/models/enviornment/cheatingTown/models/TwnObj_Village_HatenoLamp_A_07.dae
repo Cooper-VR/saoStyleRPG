@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset />
+  <library_images>
+    <image id="CmnTex_Metal_IchikaraHouse_A_Alb">
+      <init_from>CmnTex_Metal_IchikaraHouse_A_Alb.png</init_from>
+    </image>
+    <image id="CmnTex_Metal_IchikaraHouse_A_Nrm">
+      <init_from>CmnTex_Metal_IchikaraHouse_A_Nrm.png</init_from>
+    </image>
+    <image id="CmnTex_Etc_IchikaraFurniture_B_Alb">
+      <init_from>CmnTex_Etc_IchikaraFurniture_B_Alb.png</init_from>
+    </image>
+    <image id="CmnTex_Etc_IchikaraFurniture_B_Nrm">
+      <init_from>CmnTex_Etc_IchikaraFurniture_B_Nrm.png</init_from>
+    </image>
+    <image id="CmnTex_Etc_IchikaraFurniture_B_Emm">
+      <init_from>CmnTex_Etc_IchikaraFurniture_B_Emm.png</init_from>
+    </image>
+    <image id="CmnTex_Etc_IchikaraHouse_A_Alb">
+      <init_from>CmnTex_Etc_IchikaraHouse_A_Alb.png</init_from>
+    </image>
+    <image id="CmnTex_Etc_IchikaraHouse_A_Nrm">
+      <init_from>CmnTex_Etc_IchikaraHouse_A_Nrm.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A">
+      <instance_effect url="#Effect_Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A" />
+    </material>
+    <material id="Mt_CmnTex_Etc_IchikaraFurniture_B">
+      <instance_effect url="#Effect_Mt_CmnTex_Etc_IchikaraFurniture_B" />
+    </material>
+    <material id="Mt_CmnTex_Etc_IchikaraFurniture_B1">
+      <instance_effect url="#Effect_Mt_CmnTex_Etc_IchikaraFurniture_B1" />
+    </material>
+    <material id="Mt_CmnTex_Etc_IchikaraHouse_A">
+      <instance_effect url="#Effect_Mt_CmnTex_Etc_IchikaraHouse_A" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="Effect_Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A">
+      <profile_COMMON>
+        <newparam sid="surface_Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-diffuse">
+          <surface type="2D">
+            <init_from>CmnTex_Metal_IchikaraHouse_A_Alb</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-diffuse">
+          <sampler2D>
+            <source>surface_Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-diffuse</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+          </sampler2D>
+        </newparam>
+        <newparam sid="surface_Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-bump">
+          <surface type="2D">
+            <init_from>CmnTex_Metal_IchikaraHouse_A_Nrm</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-bump">
+          <sampler2D>
+            <source>surface_Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-bump</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <texture texture="sampler_Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-diffuse" texcoord="CHANNEL0" />
+            </diffuse>
+            <bump>
+              <texture texture="sampler_Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-bump" texcoord="CHANNEL0" />
+            </bump>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Effect_Mt_CmnTex_Etc_IchikaraFurniture_B">
+      <profile_COMMON>
+        <newparam sid="surface_Mt_CmnTex_Etc_IchikaraFurniture_B-diffuse">
+          <surface type="2D">
+            <init_from>CmnTex_Etc_IchikaraFurniture_B_Alb</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_Mt_CmnTex_Etc_IchikaraFurniture_B-diffuse">
+          <sampler2D>
+            <source>surface_Mt_CmnTex_Etc_IchikaraFurniture_B-diffuse</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+          </sampler2D>
+        </newparam>
+        <newparam sid="surface_Mt_CmnTex_Etc_IchikaraFurniture_B-bump">
+          <surface type="2D">
+            <init_from>CmnTex_Etc_IchikaraFurniture_B_Nrm</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_Mt_CmnTex_Etc_IchikaraFurniture_B-bump">
+          <sampler2D>
+            <source>surface_Mt_CmnTex_Etc_IchikaraFurniture_B-bump</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <texture texture="sampler_Mt_CmnTex_Etc_IchikaraFurniture_B-diffuse" texcoord="CHANNEL0" />
+            </diffuse>
+            <bump>
+              <texture texture="sampler_Mt_CmnTex_Etc_IchikaraFurniture_B-bump" texcoord="CHANNEL0" />
+            </bump>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Effect_Mt_CmnTex_Etc_IchikaraFurniture_B1">
+      <profile_COMMON>
+        <newparam sid="surface_Mt_CmnTex_Etc_IchikaraFurniture_B1-diffuse">
+          <surface type="2D">
+            <init_from>CmnTex_Etc_IchikaraFurniture_B_Alb</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_Mt_CmnTex_Etc_IchikaraFurniture_B1-diffuse">
+          <sampler2D>
+            <source>surface_Mt_CmnTex_Etc_IchikaraFurniture_B1-diffuse</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+          </sampler2D>
+        </newparam>
+        <newparam sid="surface_Mt_CmnTex_Etc_IchikaraFurniture_B1-emission">
+          <surface type="2D">
+            <init_from>CmnTex_Etc_IchikaraFurniture_B_Emm</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_Mt_CmnTex_Etc_IchikaraFurniture_B1-emission">
+          <sampler2D>
+            <source>surface_Mt_CmnTex_Etc_IchikaraFurniture_B1-emission</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <texture texture="sampler_Mt_CmnTex_Etc_IchikaraFurniture_B1-diffuse" texcoord="CHANNEL0" />
+            </diffuse>
+            <emission>
+              <texture texture="sampler_Mt_CmnTex_Etc_IchikaraFurniture_B1-emission" texcoord="CHANNEL0" />
+            </emission>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Effect_Mt_CmnTex_Etc_IchikaraHouse_A">
+      <profile_COMMON>
+        <newparam sid="surface_Mt_CmnTex_Etc_IchikaraHouse_A-diffuse">
+          <surface type="2D">
+            <init_from>CmnTex_Etc_IchikaraHouse_A_Alb</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_Mt_CmnTex_Etc_IchikaraHouse_A-diffuse">
+          <sampler2D>
+            <source>surface_Mt_CmnTex_Etc_IchikaraHouse_A-diffuse</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+          </sampler2D>
+        </newparam>
+        <newparam sid="surface_Mt_CmnTex_Etc_IchikaraHouse_A-bump">
+          <surface type="2D">
+            <init_from>CmnTex_Etc_IchikaraHouse_A_Nrm</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_Mt_CmnTex_Etc_IchikaraHouse_A-bump">
+          <sampler2D>
+            <source>surface_Mt_CmnTex_Etc_IchikaraHouse_A-bump</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <texture texture="sampler_Mt_CmnTex_Etc_IchikaraHouse_A-diffuse" texcoord="CHANNEL0" />
+            </diffuse>
+            <bump>
+              <texture texture="sampler_Mt_CmnTex_Etc_IchikaraHouse_A-bump" texcoord="CHANNEL0" />
+            </bump>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh" name="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A">
+      <mesh>
+        <source id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-position">
+          <float_array id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-position-array" count="48">0.08953857 0.09020996 0.151123 -0.003978729 0.1837158 0.151123 -0.003978729 0 0.151123 -0.09417725 0.09350586 0.151123 0.1917725 0.01260376 -0.06219482 0.1917725 0.6567383 -0.06219482 0.1917725 0.01260376 0.06085205 0.1917725 0.6567383 0.06085205 -0.206543 0.01260376 -0.06219482 -0.206543 0.01260376 0.06085205 -0.206543 0.6567383 -0.06219482 -0.206543 0.6567383 0.06085205 0.08953857 0.09020996 -0.1580811 -0.003978729 0 -0.1580811 -0.003978729 0.1837158 -0.1580811 -0.09417725 0.09350586 -0.1580811</float_array>
+          <technique_common>
+            <accessor source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-position-array" count="16" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-normal">
+          <float_array id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-normal-array" count="48">0 0 1 0 0 1 0 0 1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-normal-array" count="16" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-texcoord">
+          <float_array id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-texcoord-array" count="32">0.9989471 0.001495361 0.9989471 0.1702754 0.6718547 0.001495361 0.6718547 0.1702754 0.005828946 0.188098 1 0.188098 0.005828946 0.2835584 1 0.2835584 0.005828946 0.2835584 0.005828946 0.188098 1 0.2835584 1 0.188098 0.9989471 0.001495361 0.6718547 0.001495361 0.9989471 0.1702754 0.6718547 0.1702754</float_array>
+          <technique_common>
+            <accessor source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-texcoord-array" count="16" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-vertex">
+          <input semantic="POSITION" source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-position" />
+        </vertices>
+        <triangles material="Mt_CmnTex_Etc_IchikaraHouse_A" count="8">
+          <input semantic="VERTEX" source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-vertex" offset="0" />
+          <input semantic="NORMAL" source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-texcoord" offset="2" set="0" />
+          <p>0 0 0 1 1 1 2 2 2 1 1 1 3 3 3 2 2 2 4 4 4 5 5 5 6 6 6 5 5 5 7 7 7 6 6 6 8 8 8 9 9 9 10 10 10 9 9 9 11 11 11 10 10 10 12 12 12 13 13 13 14 14 14 13 13 13 15 15 15 14 14 14 </p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh" name="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B">
+      <mesh>
+        <source id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-position">
+          <float_array id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-position-array" count="279">0.1173096 0.2042236 -0.09838867 -0.1329346 0.2042236 -0.09838867 0.1173096 0.2042236 0.08984375 -0.1329346 0.2042236 0.08984375 0.1173096 0.4562988 -0.09838867 0.1173096 0.4562988 0.08984375 -0.1329346 0.4562988 -0.09838867 -0.1329346 0.4562988 0.08984375 -0.2052002 0 -0.1571045 0.1894531 0 -0.1571045 -0.2052002 0 0.1485596 0.1894531 0 0.1485596 -0.2052002 0.6708984 -0.1571045 -0.2052002 0.6708984 0.1485596 0.1894531 0.6708984 -0.1571045 0.1894531 0.6708984 0.1485596 -0.2052002 0.4562988 0.08984375 -0.2052002 0.2042236 0.08984375 -0.1329346 0.4562988 0.08984375 -0.1329346 0.2042236 0.08984375 -0.1329346 0.2042236 -0.09838867 -0.2052002 0.2042236 -0.09838867 -0.1329346 0.4562988 -0.09838867 -0.2052002 0.4562988 -0.09838867 -0.2052002 0.2042236 -0.09838867 -0.2052002 0.2042236 0.08984375 -0.2052002 0.4562988 -0.09838867 -0.2052002 0.4562988 0.08984375 0.1894531 0.4562988 0.08984375 0.1173096 0.4562988 0.08984375 0.1894531 0.2042236 0.08984375 0.1173096 0.2042236 0.08984375 0.1173096 0.2042236 -0.09838867 0.1173096 0.4562988 -0.09838867 0.1894531 0.2042236 -0.09838867 0.1894531 0.4562988 -0.09838867 0.1173096 0.4562988 0.08984375 0.1173096 0.4562988 -0.09838867 0.1173096 0.2042236 0.08984375 0.1173096 0.2042236 -0.09838867 -0.1329346 0.4562988 0.08984375 -0.1329346 0.2042236 0.08984375 -0.1329346 0.4562988 -0.09838867 -0.1329346 0.2042236 -0.09838867 0.1894531 0.2042236 0.08984375 -0.2052002 0.2042236 0.08984375 -0.2052002 0.1813965 0.1485596 0.1894531 0.1813965 0.1485596 -0.2052002 0 0.1485596 0.1894531 0 0.1485596 0.1894531 0 0.1485596 0.1894531 0 -0.1571045 0.1894531 0.1813965 -0.1571045 0.1894531 0.1813965 0.1485596 0.1894531 0.2042236 -0.09838867 0.1894531 0.2042236 0.08984375 0.1894531 0.4562988 -0.09838867 0.1894531 0.2042236 0.08984375 0.1894531 0.4562988 0.08984375 0.1894531 0.479248 0.1485596 0.1894531 0.479248 -0.1571045 0.1894531 0.6708984 0.1485596 0.1894531 0.6708984 -0.1571045 -0.2052002 0.2042236 -0.09838867 0.1894531 0.2042236 -0.09838867 0.1894531 0.1813965 -0.1571045 -0.2052002 0.1813965 -0.1571045 0.1894531 0 -0.1571045 -0.2052002 0 -0.1571045 -0.2052002 0 -0.1571045 -0.2052002 0 0.1485596 -0.2052002 0.1813965 0.1485596 -0.2052002 0.1813965 -0.1571045 -0.2052002 0.2042236 0.08984375 -0.2052002 0.2042236 -0.09838867 -0.2052002 0.4562988 -0.09838867 -0.2052002 0.4562988 0.08984375 -0.2052002 0.479248 -0.1571045 -0.2052002 0.479248 0.1485596 -0.2052002 0.6708984 -0.1571045 -0.2052002 0.6708984 0.1485596 0.1894531 0.4562988 0.08984375 -0.2052002 0.479248 0.1485596 -0.2052002 0.4562988 0.08984375 0.1894531 0.479248 0.1485596 -0.2052002 0.6708984 0.1485596 0.1894531 0.6708984 0.1485596 -0.2052002 0.4562988 -0.09838867 0.1894531 0.479248 -0.1571045 0.1894531 0.4562988 -0.09838867 -0.2052002 0.479248 -0.1571045 0.1894531 0.6708984 -0.1571045 -0.2052002 0.6708984 -0.1571045</float_array>
+          <technique_common>
+            <accessor source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-position-array" count="93" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-normal">
+          <float_array id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-normal-array" count="279">0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 0.9315069 0.3639922 0 0.9315069 0.3639922 0 0.2759295 0.960861 0 0.2759295 0.960861 0 0 1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 0.9315069 -0.3639922 0 0.9315069 -0.3639922 0 0.2759295 -0.960861 0 0.2759295 -0.960861 0 0 -1 0 0 -1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 -0.9315069 0.3639922 0 -0.2641879 0.964775 0 -0.9315069 0.3639922 0 -0.2641879 0.964775 0 0 1 0 0 1 0 -0.9315069 -0.3639922 0 -0.2641879 -0.964775 0 -0.9315069 -0.3639922 0 -0.2641879 -0.964775 0 0 -1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-normal-array" count="93" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-texcoord">
+          <float_array id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-texcoord-array" count="186">0.6688334 0.1267414 0.5025864 0.1267414 0.6688334 0.07075608 0.5025864 0.07075608 0.6688334 0.07075608 0.6688334 0.1267414 0.5025864 0.07075608 0.5025864 0.1267414 0.5015488 0.1291981 0.7388113 0.1291981 0.5015488 0.2166781 0.7388113 0.2166781 0.5015488 0.2166781 0.5015488 0.1291981 0.7388113 0.2166781 0.7388113 0.1291981 0.9436485 0.08145267 0.9436485 0.001708984 0.9902495 0.08145267 0.9902495 0.001708984 0.9436485 0.08580148 0.9902495 0.08580148 0.9436485 0.1655451 0.9902495 0.1655451 0.7836729 0.0696727 0.9000992 0.0696727 0.7836729 0.1486534 0.9000992 0.1486534 0.9902495 0.08145267 0.9436485 0.08145267 0.9902495 0.001708984 0.9436485 0.001708984 0.9902495 0.001708984 0.9902495 0.08145267 0.9436485 0.001708984 0.9436485 0.08145267 0.9000992 0.1486534 0.7836729 0.1486534 0.9000992 0.0696727 0.7836729 0.0696727 0.7836729 0.1486534 0.7836729 0.0696727 0.9000992 0.1486534 0.9000992 0.0696727 0.7388113 0.0675059 0.5015488 0.0675059 0.5015488 0.05241472 0.7388113 0.05241472 0.5015488 0.001708984 0.7388113 0.001708984 0.7470054 0.001708984 0.935317 0.001708984 0.935317 0.05951017 0.7470054 0.05951017 0.9000992 0.0696727 0.7836729 0.0696727 0.9000992 0.1486534 0.7836729 0.0696727 0.7836729 0.1486534 0.7470054 0.1588159 0.9351949 0.1588159 0.7470054 0.226688 0.9351949 0.226688 0.7388113 0.0675059 0.5015488 0.0675059 0.5015488 0.05241472 0.7388113 0.05241472 0.5015488 0.001708984 0.7388113 0.001708984 0.7470054 0.001708984 0.935317 0.001708984 0.935317 0.05951017 0.7470054 0.05951017 0.9000992 0.0696727 0.7836729 0.0696727 0.7836729 0.1486534 0.9000992 0.1486534 0.7470054 0.1588159 0.9351949 0.1588159 0.7470054 0.226688 0.9351949 0.226688 0.5015488 0.06695658 0.7388113 0.05197221 0.7388113 0.06695658 0.5015488 0.05197221 0.7388113 0.0005187988 0.5015488 0.0005187988 0.5015488 0.06695658 0.7388113 0.05197221 0.7388113 0.06695658 0.5015488 0.05197221 0.7388113 0.0005187988 0.5015488 0.0005187988</float_array>
+          <technique_common>
+            <accessor source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-texcoord-array" count="93" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-vertex">
+          <input semantic="POSITION" source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-position" />
+        </vertices>
+        <triangles material="Mt_CmnTex_Etc_IchikaraFurniture_B" count="56">
+          <input semantic="VERTEX" source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-vertex" offset="0" />
+          <input semantic="NORMAL" source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-texcoord" offset="2" set="0" />
+          <p>0 0 0 1 1 1 2 2 2 1 1 1 3 3 3 2 2 2 4 4 4 5 5 5 6 6 6 5 5 5 7 7 7 6 6 6 8 8 8 9 9 9 10 10 10 9 9 9 11 11 11 10 10 10 12 12 12 13 13 13 14 14 14 13 13 13 15 15 15 14 14 14 16 16 16 17 17 17 18 18 18 17 17 17 19 19 19 18 18 18 20 20 20 21 21 21 22 22 22 21 21 21 23 23 23 22 22 22 24 24 24 25 25 25 26 26 26 25 25 25 27 27 27 26 26 26 28 28 28 29 29 29 30 30 30 29 29 29 31 31 31 30 30 30 32 32 32 33 33 33 34 34 34 33 33 33 35 35 35 34 34 34 36 36 36 37 37 37 38 38 38 37 37 37 39 39 39 38 38 38 40 40 40 41 41 41 42 42 42 41 41 41 43 43 43 42 42 42 44 44 44 45 45 45 46 46 46 44 44 44 46 46 46 47 47 47 46 46 46 48 48 48 47 47 47 47 47 47 48 48 48 49 49 49 50 50 50 51 51 51 52 52 52 53 53 53 50 50 50 52 52 52 53 53 53 52 52 52 54 54 54 55 55 55 53 53 53 54 54 54 54 54 54 56 56 56 57 57 57 56 56 56 58 58 58 57 57 57 56 56 56 59 59 59 58 58 58 56 56 56 60 60 60 59 59 59 60 60 60 61 61 61 59 59 59 60 60 60 62 62 62 61 61 61 63 63 63 64 64 64 65 65 65 63 63 63 65 65 65 66 66 66 65 65 65 67 67 67 66 66 66 66 66 66 67 67 67 68 68 68 69 69 69 70 70 70 71 71 71 72 72 72 69 69 69 71 71 71 72 72 72 71 71 71 73 73 73 74 74 74 72 72 72 73 73 73 75 75 75 76 76 76 77 77 77 76 76 76 78 78 78 77 77 77 77 77 77 78 78 78 79 79 79 78 78 78 80 80 80 79 79 79 81 81 81 82 82 82 83 83 83 81 81 81 84 84 84 82 82 82 82 82 82 84 84 84 85 85 85 84 84 84 86 86 86 85 85 85 87 87 87 88 88 88 89 89 89 87 87 87 90 90 90 88 88 88 88 88 88 90 90 90 91 91 91 90 90 90 92 92 92 91 91 91 </p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh" name="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1">
+      <mesh>
+        <source id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-position">
+          <float_array id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-position-array" count="48">-0.1014404 0.4938965 0.1207886 -0.1014404 0.1855469 0.1207886 0.08569336 0.4938965 0.1207886 0.08569336 0.1855469 0.1207886 0.08569336 0.4938965 0.1207886 0.08569336 0.1855469 0.1207886 0.08569336 0.4938965 -0.1359863 0.08569336 0.1855469 -0.1359863 0.08569336 0.4938965 -0.1359863 0.08569336 0.1855469 -0.1359863 -0.1014404 0.4938965 -0.1359863 -0.1014404 0.1855469 -0.1359863 -0.1014404 0.4938965 -0.1359863 -0.1014404 0.1855469 -0.1359863 -0.1014404 0.4938965 0.1207886 -0.1014404 0.1855469 0.1207886</float_array>
+          <technique_common>
+            <accessor source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-position-array" count="16" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-normal">
+          <float_array id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-normal-array" count="48">0 0 1 0 0 1 0 0 1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-normal-array" count="16" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-texcoord">
+          <float_array id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-texcoord-array" count="32">0.3098039 1 0.3098039 0.9176471 0.4039216 1 0.4039216 0.9176471 0.1529412 1 0.1529412 0.9176471 0.3098039 1 0.3098039 0.9176471 0.3098039 1 0.3098039 0.9176471 0.4039216 1 0.4039216 0.9176471 0.1529412 1 0.1529412 0.9176471 0.3098039 1 0.3098039 0.9176471</float_array>
+          <technique_common>
+            <accessor source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-texcoord-array" count="16" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-vertex">
+          <input semantic="POSITION" source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-position" />
+        </vertices>
+        <triangles material="Mt_CmnTex_Etc_IchikaraFurniture_B1" count="8">
+          <input semantic="VERTEX" source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-vertex" offset="0" />
+          <input semantic="NORMAL" source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-texcoord" offset="2" set="0" />
+          <p>0 0 0 1 1 1 2 2 2 1 1 1 3 3 3 2 2 2 4 4 4 5 5 5 6 6 6 5 5 5 7 7 7 6 6 6 8 8 8 9 9 9 10 10 10 9 9 9 11 11 11 10 10 10 12 12 12 13 13 13 14 14 14 13 13 13 15 15 15 14 14 14 </p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh" name="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A">
+      <mesh>
+        <source id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-position">
+          <float_array id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-position-array" count="288">-0.04467773 0.6933594 -0.1416016 -0.04519653 0.6938477 0.1320801 -0.0447998 0.7441406 -0.09759521 -0.0451355 0.7446289 0.0880127 -0.04519653 0.6938477 0.1320801 -0.04525757 0.9970703 0.1566162 -0.0451355 0.7446289 0.0880127 -0.0451355 0.996582 0.09735107 -0.0451355 0.7446289 0.0880127 0.02656555 0.7446289 0.08789063 -0.0447998 0.7441406 -0.09759521 0.02687073 0.7441406 -0.09765625 -0.0451355 0.7446289 0.0880127 -0.0451355 0.996582 0.09735107 0.02656555 0.7446289 0.08789063 0.02659607 0.996582 0.09729004 -0.04473877 0.9956055 -0.100769 -0.04455566 0.9951172 -0.1586914 -0.0447998 0.7441406 -0.09759521 -0.04467773 0.6933594 -0.1416016 0.02703857 0.9956055 -0.1008301 -0.04473877 0.9956055 -0.100769 0.02687073 0.7441406 -0.09765625 -0.0447998 0.7441406 -0.09759521 -0.04519653 0.6938477 0.1320801 -0.04467773 0.6933594 -0.1416016 0.02651978 0.6938477 0.131958 0.02688599 0.6933594 -0.1417236 -0.04467773 0.6933594 -0.1416016 -0.04455566 0.9951172 -0.1586914 0.02688599 0.6933594 -0.1417236 0.02700806 0.9951172 -0.1588135 -0.04525757 0.9970703 0.1566162 -0.04519653 0.6938477 0.1320801 0.02645874 0.9970703 0.1564941 0.02651978 0.6938477 0.131958 0.02688599 0.6933594 -0.1417236 0.02687073 0.7441406 -0.09765625 0.02651978 0.6938477 0.131958 0.02656555 0.7446289 0.08789063 0.02688599 0.6933594 -0.1417236 0.02700806 0.9951172 -0.1588135 0.02687073 0.7441406 -0.09765625 0.02703857 0.9956055 -0.1008301 0.02651978 0.6938477 0.131958 0.02656555 0.7446289 0.08789063 0.02645874 0.9970703 0.1564941 0.02659607 0.996582 0.09729004 0.1085205 0.7954102 0.02844238 -0.1164551 0.7944336 0.02894592 0.06451416 0.7446289 0.02856445 -0.07232666 0.7441406 0.02890015 -0.1164551 0.7944336 0.02894592 -0.1409912 0.6455078 0.02900696 -0.07232666 0.7441406 0.02890015 -0.08172607 0.6459961 0.02888489 -0.07232666 0.7441406 0.02890015 -0.07226563 0.7441406 -0.04281616 0.06451416 0.7446289 0.02856445 0.0645752 0.7446289 -0.04312134 -0.07232666 0.7441406 0.02890015 -0.08172607 0.6459961 0.02888489 -0.07226563 0.7441406 -0.04281616 -0.08166504 0.6459961 -0.04284668 0.06768799 0.6469727 0.02848816 0.1256104 0.6474609 0.02833557 0.06451416 0.7446289 0.02856445 0.1085205 0.7954102 0.02844238 0.06768799 0.6469727 -0.04327393 0.06768799 0.6469727 0.02848816 0.0645752 0.7446289 -0.04312134 0.06451416 0.7446289 0.02856445 -0.1164551 0.7944336 0.02894592 0.1085205 0.7954102 0.02844238 -0.116394 0.7949219 -0.04275513 0.1085815 0.7954102 -0.04312134 0.1085205 0.7954102 0.02844238 0.1256104 0.6474609 0.02833557 0.1085815 0.7954102 -0.04312134 0.1256104 0.6474609 -0.04324341 -0.1409912 0.6455078 0.02900696 -0.1164551 0.7944336 0.02894592 -0.1408691 0.6455078 -0.04269409 -0.116394 0.7949219 -0.04275513 0.1085815 0.7954102 -0.04312134 0.0645752 0.7446289 -0.04312134 -0.116394 0.7949219 -0.04275513 -0.07226563 0.7441406 -0.04281616 0.1085815 0.7954102 -0.04312134 0.1256104 0.6474609 -0.04324341 0.0645752 0.7446289 -0.04312134 0.06768799 0.6469727 -0.04327393 -0.116394 0.7949219 -0.04275513 -0.07226563 0.7441406 -0.04281616 -0.1408691 0.6455078 -0.04269409 -0.08166504 0.6459961 -0.04284668</float_array>
+          <technique_common>
+            <accessor source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-position-array" count="96" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-normal">
+          <float_array id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-normal-array" count="288">-1 0 -0.001956947 -1 0 -0.001956947 -1 0 -0.001956947 -1 0 -0.001956947 -1 0 -0.001956947 -1 0 -0.001956947 -1 0 -0.001956947 -1 0 -0.001956947 0 1 -0.001956947 0 1 -0.001956947 0 1 -0.001956947 0 1 -0.001956947 0 0.037182 -1 0 0.037182 -1 0 0.037182 -1 0 0.037182 -1 -1 0 -0.001956947 -1 0 -0.001956947 -1 0 -0.001956947 -1 0 -0.001956947 0 0.01174168 1 0 0.01174168 1 0 0.01174168 1 0 0.01174168 1 0 -1 0.001956947 0 -1 0.001956947 0 -1 0.001956947 0 -1 0.001956947 0 -0.05675147 -0.9980431 0 -0.05675147 -0.9980431 0 -0.05675147 -0.9980431 0 -0.05675147 -0.9980431 0 -0.08023483 0.9960861 0 -0.08023483 0.9960861 0 -0.08023483 0.9960861 0 -0.08023483 0.9960861 1 0 0.001956947 1 0 0.001956947 1 0 0.001956947 1 0 0.001956947 1 0 0.001956947 1 0 0.001956947 1 0 0.001956947 1 0 0.001956947 1 0 0.001956947 1 0 0.001956947 1 0 0.001956947 1 0 0.001956947 0.001956947 0 1 0.001956947 0 1 0.001956947 0 1 0.001956947 0 1 0.001956947 0 1 0.001956947 0 1 0.001956947 0 1 0.001956947 0 1 0.001956947 -1 0 0.001956947 -1 0 0.001956947 -1 0 0.001956947 -1 0 0.9960861 -0.09393346 0 0.9960861 -0.09393346 0 0.9960861 -0.09393346 0 0.9960861 -0.09393346 0 0.001956947 0 1 0.001956947 0 1 0.001956947 0 1 0.001956947 0 1 -1 -0.0332681 0 -1 -0.0332681 0 -1 -0.0332681 0 -1 -0.0332681 0 -0.001956947 1 0 -0.001956947 1 0 -0.001956947 1 0 -0.001956947 1 0 0.9941292 0.1154599 0 0.9941292 0.1154599 0 0.9941292 0.1154599 0 0.9941292 0.1154599 0 -0.9863014 0.1624266 0 -0.9863014 0.1624266 0 -0.9863014 0.1624266 0 -0.9863014 0.1624266 0 -0.001956947 0 -1 -0.001956947 0 -1 -0.001956947 0 -1 -0.001956947 0 -1 -0.001956947 0 -1 -0.001956947 0 -1 -0.001956947 0 -1 -0.001956947 0 -1 -0.001956947 0 -1 -0.001956947 0 -1 -0.001956947 0 -1 -0.001956947 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-normal-array" count="96" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-texcoord">
+          <float_array id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-texcoord-array" count="192">0.3217823 0.8650035 0.02894636 0.8650035 0.2595102 0.7222248 0.09123369 0.7222248 0.02894636 0.8650035 0.003128099 0.3669795 0.09123369 0.7222248 0.07336538 0.3669795 0.5130388 0.8816358 0.5130388 0.9922637 0.2206149 0.8816358 0.2206149 0.9922637 0.2206149 0.9922637 0.0009765774 0.9922637 0.2206149 0.8816358 0.0009765774 0.8816358 0.2773785 0.3669795 0.3476005 0.3669795 0.2595102 0.7222248 0.3217823 0.8650035 0.0009765774 0.9922484 0.0009765774 0.8816358 0.2206149 0.9922637 0.2206149 0.8816358 0.5130388 0.9922637 0.2206149 0.9922637 0.5130388 0.8816358 0.2206149 0.8816358 0.2206149 0.9922637 0.0009765774 0.9922484 0.2206149 0.8816358 0.0009765774 0.8816358 0.0009765774 0.8816358 0.2206149 0.8816358 0.0009765774 0.9922637 0.2206149 0.9922637 0.02894636 0.8650035 0.09123369 0.7222248 0.3217823 0.8650035 0.2595102 0.7222248 0.02894636 0.8650035 0.003128099 0.3669795 0.09123369 0.7222248 0.07336538 0.3669795 0.3217823 0.8650035 0.2595102 0.7222248 0.3476005 0.3669795 0.2773785 0.3669795 0.3217823 0.8650035 0.02894636 0.8650035 0.2595102 0.7222248 0.09123369 0.7222248 0.02894636 0.8650035 0.003128099 0.4106508 0.09123369 0.7222248 0.07336538 0.4106508 0.5130388 0.8816358 0.5130388 0.9922637 0.2206149 0.8816358 0.2206149 0.9922637 0.2206149 0.9922637 0.0009765774 0.9922637 0.2206149 0.8816358 0.0009765774 0.8816358 0.2773785 0.4106508 0.3476005 0.4106508 0.2595102 0.7222248 0.3217823 0.8650035 0.0009765774 0.9922484 0.0009765774 0.8816358 0.2206149 0.9922637 0.2206149 0.8816358 0.5130388 0.9922637 0.2206149 0.9922637 0.5130388 0.8816358 0.2206149 0.8816358 0.2206149 0.9922637 0.0009765774 0.9922484 0.2206149 0.8816358 0.0009765774 0.8816358 0.0009765774 0.8816358 0.2206149 0.8816358 0.0009765774 0.9922637 0.2206149 0.9922637 0.02894636 0.8650035 0.09123369 0.7222248 0.3217823 0.8650035 0.2595102 0.7222248 0.02894636 0.8650035 0.003128099 0.4106508 0.09123369 0.7222248 0.07336538 0.4106508 0.3217823 0.8650035 0.2595102 0.7222248 0.3476005 0.4106508 0.2773785 0.4106508</float_array>
+          <technique_common>
+            <accessor source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-texcoord-array" count="96" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-vertex">
+          <input semantic="POSITION" source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-position" />
+        </vertices>
+        <triangles material="Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A" count="48">
+          <input semantic="VERTEX" source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-vertex" offset="0" />
+          <input semantic="NORMAL" source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-texcoord" offset="2" set="0" />
+          <p>0 0 0 1 1 1 2 2 2 1 1 1 3 3 3 2 2 2 4 4 4 5 5 5 6 6 6 5 5 5 7 7 7 6 6 6 8 8 8 9 9 9 10 10 10 9 9 9 11 11 11 10 10 10 12 12 12 13 13 13 14 14 14 13 13 13 15 15 15 14 14 14 16 16 16 17 17 17 18 18 18 17 17 17 19 19 19 18 18 18 20 20 20 21 21 21 22 22 22 21 21 21 23 23 23 22 22 22 24 24 24 25 25 25 26 26 26 25 25 25 27 27 27 26 26 26 28 28 28 29 29 29 30 30 30 29 29 29 31 31 31 30 30 30 32 32 32 33 33 33 34 34 34 33 33 33 35 35 35 34 34 34 36 36 36 37 37 37 38 38 38 37 37 37 39 39 39 38 38 38 40 40 40 41 41 41 42 42 42 41 41 41 43 43 43 42 42 42 44 44 44 45 45 45 46 46 46 45 45 45 47 47 47 46 46 46 48 48 48 49 49 49 50 50 50 49 49 49 51 51 51 50 50 50 52 52 52 53 53 53 54 54 54 53 53 53 55 55 55 54 54 54 56 56 56 57 57 57 58 58 58 57 57 57 59 59 59 58 58 58 60 60 60 61 61 61 62 62 62 61 61 61 63 63 63 62 62 62 64 64 64 65 65 65 66 66 66 65 65 65 67 67 67 66 66 66 68 68 68 69 69 69 70 70 70 69 69 69 71 71 71 70 70 70 72 72 72 73 73 73 74 74 74 73 73 73 75 75 75 74 74 74 76 76 76 77 77 77 78 78 78 77 77 77 79 79 79 78 78 78 80 80 80 81 81 81 82 82 82 81 81 81 83 83 83 82 82 82 84 84 84 85 85 85 86 86 86 85 85 85 87 87 87 86 86 86 88 88 88 89 89 89 90 90 90 89 89 89 91 91 91 90 90 90 92 92 92 93 93 93 94 94 94 93 93 93 95 95 95 94 94 94 </p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="Armature_Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh">
+      <skin source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-joint">
+          <Name_array id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-joint-array" count="1">Root</Name_array>
+          <technique_common>
+            <accessor source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-joint-array" count="1" stride="1">
+              <param name="JOINT" type="name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-inv_bind_matrix">
+          <float_array id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-inv_bind_matrix-array" count="16">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-inv_bind_matrix-array" count="1" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-weight">
+          <float_array id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-weight-array" count="1">1</float_array>
+          <technique_common>
+            <accessor source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-weight-array" count="1" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-joint" />
+          <input semantic="INV_BIND_MATRIX" source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-inv_bind_matrix" />
+        </joints>
+        <vertex_weights count="16">
+          <input semantic="JOINT" source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-joint" offset="0" />
+          <input semantic="WEIGHT" source="#Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh-weight" offset="1" />
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+          <v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="Armature_Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh">
+      <skin source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-joint">
+          <Name_array id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-joint-array" count="1">Root</Name_array>
+          <technique_common>
+            <accessor source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-joint-array" count="1" stride="1">
+              <param name="JOINT" type="name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-inv_bind_matrix">
+          <float_array id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-inv_bind_matrix-array" count="16">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-inv_bind_matrix-array" count="1" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-weight">
+          <float_array id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-weight-array" count="1">1</float_array>
+          <technique_common>
+            <accessor source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-weight-array" count="1" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-joint" />
+          <input semantic="INV_BIND_MATRIX" source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-inv_bind_matrix" />
+        </joints>
+        <vertex_weights count="93">
+          <input semantic="JOINT" source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-joint" offset="0" />
+          <input semantic="WEIGHT" source="#Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh-weight" offset="1" />
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+          <v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="Armature_Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh">
+      <skin source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-joint">
+          <Name_array id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-joint-array" count="1">Root</Name_array>
+          <technique_common>
+            <accessor source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-joint-array" count="1" stride="1">
+              <param name="JOINT" type="name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-inv_bind_matrix">
+          <float_array id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-inv_bind_matrix-array" count="16">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-inv_bind_matrix-array" count="1" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-weight">
+          <float_array id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-weight-array" count="1">1</float_array>
+          <technique_common>
+            <accessor source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-weight-array" count="1" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-joint" />
+          <input semantic="INV_BIND_MATRIX" source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-inv_bind_matrix" />
+        </joints>
+        <vertex_weights count="16">
+          <input semantic="JOINT" source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-joint" offset="0" />
+          <input semantic="WEIGHT" source="#Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh-weight" offset="1" />
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+          <v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="Armature_Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh">
+      <skin source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-joint">
+          <Name_array id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-joint-array" count="1">Root</Name_array>
+          <technique_common>
+            <accessor source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-joint-array" count="1" stride="1">
+              <param name="JOINT" type="name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-inv_bind_matrix">
+          <float_array id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-inv_bind_matrix-array" count="16">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-inv_bind_matrix-array" count="1" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-weight">
+          <float_array id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-weight-array" count="1">1</float_array>
+          <technique_common>
+            <accessor source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-weight-array" count="1" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-joint" />
+          <input semantic="INV_BIND_MATRIX" source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-inv_bind_matrix" />
+        </joints>
+        <vertex_weights count="96">
+          <input semantic="JOINT" source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-joint" offset="0" />
+          <input semantic="WEIGHT" source="#Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh-weight" offset="1" />
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+          <v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Armature" name="Armature" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="Armature_Root" name="Root" sid="Root" type="JOINT">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <node id="Armature_IC_Po_OrangeRamp_D_00" name="IC_Po_OrangeRamp_D_00" sid="IC_Po_OrangeRamp_D_00" type="JOINT">
+            <matrix sid="transform">1 0 0 0 0 1 0 0.3255952 0 0 1 0 0 0 0 1</matrix>
+          </node>
+        </node>
+      </node>
+      <node id="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A" name="Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A" type="NODE">
+        <instance_controller url="#Armature_Cel_2__Mt_CmnTex_Etc_IchikaraHouse_A-mesh">
+          <skeleton>#Armature_Root</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Mt_CmnTex_Etc_IchikaraHouse_A" target="#Mt_CmnTex_Etc_IchikaraHouse_A" />
+              <bind_vertex_input semantic="CHANNEL0" input_semantic="TEXCOORD" input_set="0" />
+              <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1" />
+              <bind_vertex_input semantic="CHANNEL2" input_semantic="TEXCOORD" input_set="2" />
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+      </node>
+      <node id="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B" name="Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B" type="NODE">
+        <instance_controller url="#Armature_Lamp_Inroom_Green_1__Mt_CmnTex_Etc_IchikaraFurniture_B-mesh">
+          <skeleton>#Armature_Root</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Mt_CmnTex_Etc_IchikaraFurniture_B" target="#Mt_CmnTex_Etc_IchikaraFurniture_B" />
+              <bind_vertex_input semantic="CHANNEL0" input_semantic="TEXCOORD" input_set="0" />
+              <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1" />
+              <bind_vertex_input semantic="CHANNEL2" input_semantic="TEXCOORD" input_set="2" />
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+      </node>
+      <node id="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1" name="Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1" type="NODE">
+        <instance_controller url="#Armature_Lamp_Inroom_Green_2__Mt_CmnTex_Etc_IchikaraFurniture_B1-mesh">
+          <skeleton>#Armature_Root</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Mt_CmnTex_Etc_IchikaraFurniture_B1" target="#Mt_CmnTex_Etc_IchikaraFurniture_B1" />
+              <bind_vertex_input semantic="CHANNEL0" input_semantic="TEXCOORD" input_set="0" />
+              <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1" />
+              <bind_vertex_input semantic="CHANNEL2" input_semantic="TEXCOORD" input_set="2" />
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+      </node>
+      <node id="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A" name="Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A" type="NODE">
+        <instance_controller url="#Armature_Metal_1__Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A-mesh">
+          <skeleton>#Armature_Root</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A" target="#Mt_CmnTex_CmnTex_Metal_IchikaraHouse_A" />
+              <bind_vertex_input semantic="CHANNEL0" input_semantic="TEXCOORD" input_set="0" />
+              <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1" />
+              <bind_vertex_input semantic="CHANNEL2" input_semantic="TEXCOORD" input_set="2" />
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene" />
+  </scene>
+</COLLADA>
