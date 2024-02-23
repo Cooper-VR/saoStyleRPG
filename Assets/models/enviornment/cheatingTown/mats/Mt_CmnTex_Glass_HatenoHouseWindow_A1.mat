@@ -10,16 +10,17 @@ Material:
   m_Name: Mt_CmnTex_Glass_HatenoHouseWindow_A1
   m_Shader: {fileID: 4800000, guid: 784867d15973a4847b1a6048d42c1565, type: 3}
   m_ValidKeywords:
+  - POI_CLEARCOAT
   - VIGNETTE_MASKED
   - _LIGHTINGMODE_MULTILAYER_MATH
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -174,7 +175,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b618a4628e3797945a7c292202931a32, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap1:
@@ -576,8 +577,8 @@ Material:
     - _AddBlendOpAlpha: 0
     - _AddDstBlend: 1
     - _AddDstBlendAlpha: 1
-    - _AddSrcBlend: 1
-    - _AddSrcBlendAlpha: 1
+    - _AddSrcBlend: 5
+    - _AddSrcBlendAlpha: 0
     - _Add_Antipodean_Rim2Light: 0
     - _Add_Antipodean_RimLight: 0
     - _AlphaAlphaAdd: 0
@@ -772,7 +773,7 @@ Material:
     - _CenterOutDissolveMode: 1
     - _CenterOutDissolveNormals: 0
     - _CenterOutDissolvePower: 1
-    - _ClearCoatBRDF: 0
+    - _ClearCoatBRDF: 1
     - _ClearCoatForceFallback: 0
     - _ClearCoatGSAAEnabled: 1
     - _ClearCoatGSAAThreshold: 0.1
@@ -789,20 +790,20 @@ Material:
     - _ClearCoatMaskInvert: 0
     - _ClearCoatNormalSelect: 0
     - _ClearCoatReflectionMaskInvert: 0
-    - _ClearCoatReflectionStrength: 1
+    - _ClearCoatReflectionStrength: 0.85
     - _ClearCoatReflectionStrengthGlobalMask: 0
     - _ClearCoatReflectionStrengthGlobalMaskBlendType: 2
     - _ClearCoatReflectionTintThemeIndex: 0
-    - _ClearCoatSmoothness: 1
+    - _ClearCoatSmoothness: 0.68
     - _ClearCoatSmoothnessGlobalMask: 0
     - _ClearCoatSmoothnessGlobalMaskBlendType: 2
     - _ClearCoatSmoothnessMapInvert: 0
     - _ClearCoatSpecularMaskInvert: 0
-    - _ClearCoatSpecularStrength: 1
+    - _ClearCoatSpecularStrength: 0.583
     - _ClearCoatSpecularStrengthGlobalMask: 0
     - _ClearCoatSpecularStrengthGlobalMaskBlendType: 2
     - _ClearCoatSpecularTintThemeIndex: 0
-    - _ClearCoatStrength: 1
+    - _ClearCoatStrength: 0.348
     - _ClearCoatTPSDepthMaskEnabled: 0
     - _ClearCoatTPSMaskStrength: 1
     - _ClearcoatFresnel: 1
@@ -838,7 +839,7 @@ Material:
     - _CurvFix: 1
     - _CurvatureU: 0
     - _CurvatureV: 0
-    - _Cutoff: 0.5
+    - _Cutoff: 0
     - _Decal0ApplyGlobalMaskBlendType: 0
     - _Decal0ApplyGlobalMaskIndex: 0
     - _Decal0ChannelSeparation: 0
@@ -1063,7 +1064,7 @@ Material:
     - _DistortionStrength1AudioLinkBand: 0
     - _DistortionStrengthAudioLinkBand: 0
     - _DistortionUvToDistort: 0
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _DstBlendAlpha: 1
     - _EmissionAL0Enabled: 0
     - _EmissionAL0MultipliersBand: 0
@@ -1850,7 +1851,7 @@ Material:
     - _MochieSpecularStrengthGlobalMask: 0
     - _MochieSpecularStrengthGlobalMaskBlendType: 2
     - _MochieSpecularTintThemeIndex: 0
-    - _Mode: 0
+    - _Mode: 2
     - _ModelAngleMax: 90
     - _ModelAngleMin: 45
     - _MultilayerMathBlurMapUV: 0
@@ -2152,7 +2153,7 @@ Material:
     - _SphericalDissolveClamp: 0
     - _SphericalDissolveInvert: 0
     - _SphericalDissolveRadius: 1.5
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _SrcBlendAlpha: 1
     - _SssBumpBlur: 0.7
     - _SssScale: 1
@@ -2326,7 +2327,7 @@ Material:
     - _VisibilityVRCMirrorVR: 1
     - _VisibilityVRCRegular: 1
     - _ZTest: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     - _glitterFrequencyLinearEmissive: 20
     - footer_discord: 0
     - footer_github: 0
@@ -2498,7 +2499,7 @@ Material:
     - m_end_vertexManipulation: 0
     - m_end_videoEffects: 0
     - m_lightingCategory: 1
-    - m_mainCategory: 0
+    - m_mainCategory: 1
     - m_modifierCategory: 0
     - m_postprocessing: 0
     - m_renderingCategory: 0
@@ -2568,7 +2569,7 @@ Material:
     - m_start_Matcap4: 0
     - m_start_PathAudioLink: 0
     - m_start_PoiLightData: 0
-    - m_start_PoiShading: 1
+    - m_start_PoiShading: 0
     - m_start_RGBAColors: 0
     - m_start_RGBMask: 0
     - m_start_Rim2AudioLink: 0
@@ -2635,7 +2636,7 @@ Material:
     - m_start_vertexManipulation: 0
     - m_start_videoEffects: 0
     - m_thirdpartyCategory: 0
-    - shader_is_using_thry_editor: 0
+    - shader_is_using_thry_editor: 69
     - shader_locale: 0
     - shader_master_label: 0
     m_Colors:
@@ -2736,7 +2737,7 @@ Material:
     - _ClearCoatSpecularTint: {r: 1, g: 1, b: 1, a: 1}
     - _ClippingMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClothMetallicSmoothnessMapPan: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.40392157}
     - _CubeMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _CubeMapMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _CubeMapRotation: {r: 0, g: 0, b: 0, a: 0}
@@ -2791,7 +2792,7 @@ Material:
     - _EmissionAL2StrengthMod: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionAL3Multipliers: {r: 1, g: 1, b: 0, a: 0}
     - _EmissionAL3StrengthMod: {r: 0, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor2: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor3: {r: 1, g: 1, b: 1, a: 1}

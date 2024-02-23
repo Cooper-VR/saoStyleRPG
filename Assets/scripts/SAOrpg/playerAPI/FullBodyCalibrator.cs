@@ -28,6 +28,9 @@ namespace SAOrpg.playerAPI
         {
             if (isCalibrating)
             {
+                ikController.solver.IKPositionWeight = 0;
+                ikController.GetComponent<Animator>().SetBool("t-pose", true);
+
                 for (int i = 0; i < trackedLocations.Length; i++)
                 {
                     closestTrackers[i] = getClosestTracker(trackedLocations[i]);
@@ -41,6 +44,9 @@ namespace SAOrpg.playerAPI
                 checkDoubles();
                 isCalibrating = false;
                 calibratedTest = false;
+
+                ikController.solver.IKPositionWeight = 1;
+                ikController.GetComponent<Animator>().SetBool("t-pose", false);
             }
         }
 
@@ -97,6 +103,7 @@ namespace SAOrpg.playerAPI
             closestTrackers[7].GetChild(0).rotation = trackedLocations[7].rotation;
             ikController.solver.rightLeg.target = closestTrackers[7].GetChild(0);
 
+            /*
             headOffset.position = ikController.references.head.position;
             headOffset.rotation = ikController.references.head.rotation;
             ikController.solver.spine.headTarget = headOffset;
@@ -108,7 +115,7 @@ namespace SAOrpg.playerAPI
             rightHandOffset.position = ikController.references.rightHand.position;
             rightHandOffset.rotation = ikController.references.rightHand.rotation;
             ikController.solver.rightArm.target = rightHandOffset;
-
+            */
             //then assign the child to the goal of the ikController
         }
 
