@@ -23,3 +23,4 @@ We welcome any and all contributions! Here are some ways you can get started:
 
 <br> -This does NOT have controls for quest. I do not own one so I've only focused on Index. Some funcitons might work but they are untested
 <br> -I've not kept up on documentation
+<br> -_PoiyomiShaders gives errors, its fine, there's no pick so its cool
