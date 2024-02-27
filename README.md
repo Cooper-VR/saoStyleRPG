@@ -2,6 +2,7 @@
 
 ## Description
 This is a VR game meant to be a sort of demo of what I think SAO would be like. It has 11-point FTB and mostly from the ground up input.
+This does NOT have controls for quest. I do not own one so I've only focused on Index. Some funcitons might work but they are untested
 
 ## Contributing
 We welcome any and all contributions! Here are some ways you can get started:
