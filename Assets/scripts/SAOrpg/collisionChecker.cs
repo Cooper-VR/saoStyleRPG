@@ -4,7 +4,7 @@ using UnityEngine;
 namespace SAOrpg
 {
 
-    //made this cause  unity collision suck dick
+    //made this cause  unity collision suck dick. basically i can get collision data from external classes with this
     public class collisionChecker : MonoBehaviour
     {
         #region collision states

@@ -29,6 +29,7 @@ namespace SAOrpg.Login
             {
                 try
                 {
+                    //for getting value based on gameobject name
                     textValue = gameObject.name.Split('/')[1];
                 }
                 catch
@@ -57,8 +58,11 @@ namespace SAOrpg.Login
 
             //}
         }
+
+        
         private void OnCollisionEnter(Collision collision)
         {
+            //for the spacial keys
             if (textValue == "backspace" &&  collision.gameObject.name.Contains("finger"))
             {
                 master.removeText(1);

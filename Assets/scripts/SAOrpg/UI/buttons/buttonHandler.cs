@@ -30,10 +30,10 @@ namespace SAOrpg.UI.Buttons
 			defaultSprite = image.sprite;
 		}
 
+
         private void OnTriggerEnter (Collider collision)
 		{
             TurnOthersOff();
-            //DoActionOn();
 
         }
 
@@ -43,6 +43,10 @@ namespace SAOrpg.UI.Buttons
 		}
 
 		//for non-togglable buttons so that this can just be called
+
+		/// <summary>
+		/// handles the buttons toggles, works for both toggles and regular buttons. that setting can be controlled by the isPressed and called this again
+		/// </summary>
 		public void DoActionOn()
 		{
             if (!isPressed)
@@ -96,7 +100,9 @@ namespace SAOrpg.UI.Buttons
 			}
 		}
 
-		
+		/// <summary>
+		/// turns other buttons off
+		/// </summary>
 		private void TurnOthersOff()
 		{
 			for (int i = 0; i < transform.parent.childCount; i++) 

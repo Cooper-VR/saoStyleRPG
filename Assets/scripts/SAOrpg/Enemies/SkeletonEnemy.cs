@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace SAOrpg
+namespace SAOrpg.Enemies
 {
     public class SkeletonEnemy : MonoBehaviour
     {
