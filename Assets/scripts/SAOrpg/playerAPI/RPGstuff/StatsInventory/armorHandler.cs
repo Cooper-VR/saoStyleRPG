@@ -56,11 +56,11 @@ namespace SAOrpg.playerAPI.RPGstuff.StatsInventory
                 currentUpper = Instantiate(upperOBJ, transform.position, transform.rotation, transform);
                 currentLower = Instantiate(lowerOBJ, transform.position, transform.rotation, transform);
 
+                armorObject1 = currentUpper.GetComponent<Animator>();
+                armorObject2 = currentLower.GetComponent<Animator>();
+
                 //get rotation offsets (for fingers)
             }
-
-            armorObject1 = currentUpper.GetComponent<Animator>();
-            armorObject2 = currentLower.GetComponent<Animator>();
 
             previousUpper = upperOBJ;
             previousLower = lowerOBJ;
