@@ -32,3 +32,4 @@ We welcome any and all contributions! Here are some ways you can get started:
 6. in-game tutorial
 7. world building (I'm not good at it)
 8. more weapons
+9. enemy spawning
