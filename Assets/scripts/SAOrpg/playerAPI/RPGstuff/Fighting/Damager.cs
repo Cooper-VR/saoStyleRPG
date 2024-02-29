@@ -10,13 +10,14 @@ namespace SAOrpg.playerAPI.RPGstuff.Fighting
         public collisionChecker[] playerColliders = new collisionChecker[5];
         private playerStats stats;
         public bool hit;
+        public float coolDown;
 
         #endregion
 
 
         private void Start()
         {
-            
+            stats = GetComponent<playerStats>(); 
         }
 
         private void FixedUpdate()
@@ -41,11 +42,19 @@ namespace SAOrpg.playerAPI.RPGstuff.Fighting
 
             }
 
-            if (hit)
+            //prevent memey leak
+            if (coolDown > -1f)
+            {
+                coolDown -= Time.deltaTime;
+            }
+
+            if (hit && coolDown <= 0f)
             {
 
                 stats.health -= 10;
                 hit = false;
+
+                coolDown = 1f;
 
                 //-10
             }
