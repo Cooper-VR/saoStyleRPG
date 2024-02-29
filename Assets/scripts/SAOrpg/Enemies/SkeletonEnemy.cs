@@ -8,6 +8,7 @@ namespace SAOrpg.Enemies
     public class SkeletonEnemy : MonoBehaviour
     {
         public float health = 250f;
+        public float maxHealth = 250f;
 
         public GameObject player;
         private Animator animator;
@@ -82,6 +83,8 @@ namespace SAOrpg.Enemies
             {
                 health -= 10f;
                 animator.SetTrigger("damage");
+                GetComponent<EnemyHealthHandler>().updateHealth();
+
             }
         }
     }

@@ -7,14 +7,14 @@ namespace SAOrpg.Enemies
 {
     public class EnemyHealthHandler : MonoBehaviour
     {
-        private EnemyBehavior enemy;
+        private SkeletonEnemy enemy;
         public Gradient barColor;
         public MeshRenderer renderer;
         public float percent;
 
         private void Start()
         {
-            enemy = GetComponent<EnemyBehavior>();
+            enemy = GetComponent<SkeletonEnemy>();
         }
 
 
@@ -26,16 +26,5 @@ namespace SAOrpg.Enemies
             renderer.material.SetColor("_DissolveTextureColor", barColor.Evaluate(percent));
 
         }
-
-        private void OnCollisionEnter(Collision other)
-        {
-            if (other.gameObject.tag == "weapon") 
-            {
-                enemy.health -= 10;
-                updateHealth();
-            }
-        }
-
-        public UnityEvent healthChange;
     }
 }
