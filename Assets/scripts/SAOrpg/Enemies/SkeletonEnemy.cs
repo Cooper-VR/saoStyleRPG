@@ -16,6 +16,8 @@ namespace SAOrpg.Enemies
         public float attackRange = 1f;
         public float agroRange = 4f;
 
+        public float coolDown;
+
         private NavMeshAgent agnet;
         float timePassed;
         float newDestinationCD = 0.5f;
@@ -42,6 +44,12 @@ namespace SAOrpg.Enemies
             }
             newDestinationCD -= Time.deltaTime;
             //transform.LookAt(player.transform);
+
+            if (coolDown > -1f)
+            {
+                coolDown -= Time.deltaTime;
+            }
+
         }
 
         private void Start()
@@ -66,6 +74,15 @@ namespace SAOrpg.Enemies
         private void Die()
         {
             Destroy(gameObject);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag.Contains("sword") && coolDown <= 0)
+            {
+                health -= 10f;
+                animator.SetTrigger("damage");
+            }
         }
     }
 }
